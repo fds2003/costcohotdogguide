@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PriceHistoryChart from '../../components/PriceHistoryChart.astro';
+
+const prices = [
+  { location: 'United States', price: '$1.50', combo: 'Hot dog + 20 oz soda' },
+  { location: 'Canada', price: '$1.99 CAD', combo: 'Hot dog + 20 oz soda' },
+  { location: 'United Kingdom', price: '1.50 GBP', combo: 'Hot dog + drink' },
+  { location: 'Australia', price: '$1.99 AUD', combo: 'Hot dog + drink' },
+  { location: 'Japan', price: '180 JPY', combo: 'Hot dog + drink' },
+  { location: 'Mexico', price: '$25 MXN', combo: 'Hot dog + drink' },
+];
+---
+
+<BaseLayout
+  title="Costco Hot Dog Price"
+  description="How much is a Costco hot dog? Current prices by country, price history, and why it has never changed."
+  type="website"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Price & History</h1>
+    <p class="text-lg text-gray-600 mb-8">Current prices around the world and the story behind the 40-year freeze.</p>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-10">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Location</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Price</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Combo</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          {prices.map(p => (
+            <tr>
+              <td class="px-6 py-3 font-medium">{p.location}</td>
+              <td class="px-6 py-3 text-green-700 font-semibold">{p.price}</td>
+              <td class="px-6 py-3 text-gray-600">{p.combo}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <PriceHistoryChart />
+
+    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+      <h2 class="text-xl font-bold text-yellow-800 mb-2">Price Increase History</h2>
+      <p class="text-yellow-800">
+        There has never been an official price increase for the Costco hot dog combo in the United States. The price has remained $1.50 since 1985 — over 40 years. Adjusted for inflation, $1.50 in 1985 is equivalent to approximately $4.30 in 2026 dollars.
+      </p>
+      <p class="mt-4">
+        <a href="/business/why-so-cheap/" class="text-red-700 font-semibold hover:underline">Read why Costco refuses to raise the price &rarr;</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

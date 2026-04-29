@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const pages = [
+  { title: 'Calories', href: '/nutrition/calories/', desc: 'Full calorie breakdown with and without bun.' },
+  { title: 'Calories Without Bun', href: '/nutrition/calories-without-bun/', desc: 'Just the hot dog, no bun.' },
+  { title: 'Protein', href: '/nutrition/protein/', desc: 'How much protein per serving.' },
+  { title: 'Macros', href: '/nutrition/macros/', desc: 'Fat, carbs, and protein ratios.' },
+  { title: 'Weight Watchers Points', href: '/nutrition/weight-watchers-points/', desc: 'WW points calculation.' },
+];
+---
+
+<BaseLayout
+  title="Costco Hot Dog Nutrition Facts"
+  description="Complete nutrition information for Costco hot dogs. Calories, protein, fat, carbs, and Weight Watchers points."
+  type="website"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Nutrition</h1>
+    <p class="text-lg text-gray-600 mb-8">Detailed nutritional information to help you make informed dietary choices.</p>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-10">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Nutrient</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-900">Per Serving (with bun)</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-6 py-3">Calories</td><td class="px-6 py-3 font-medium">570</td></tr>
+          <tr><td class="px-6 py-3">Total Fat</td><td class="px-6 py-3">33g</td></tr>
+          <tr><td class="px-6 py-3">Saturated Fat</td><td class="px-6 py-3">12g</td></tr>
+          <tr><td class="px-6 py-3">Cholesterol</td><td class="px-6 py-3">70mg</td></tr>
+          <tr><td class="px-6 py-3">Sodium</td><td class="px-6 py-3">1,750mg</td></tr>
+          <tr><td class="px-6 py-3">Total Carbohydrates</td><td class="px-6 py-3">46g</td></tr>
+          <tr><td class="px-6 py-3">Dietary Fiber</td><td class="px-6 py-3">2g</td></tr>
+          <tr><td class="px-6 py-3">Sugars</td><td class="px-6 py-3">7g</td></tr>
+          <tr><td class="px-6 py-3">Protein</td><td class="px-6 py-3 font-medium text-green-700">24g</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Detailed Pages</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+      {pages.map(p => (
+        <a href={p.href} class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">{p.title}</span>
+          <span class="block text-sm text-gray-600 mt-1">{p.desc}</span>
+        </a>
+      ))}
+    </div>
+
+    <RelatedProducts category="Health" title="Health Products We Recommend" />
+  </div>
+</BaseLayout>

@@ -1,0 +1,7 @@
+{
+  "_comment": "Replace productUrl with your real Gumroad product URL. Set enabled to true after creating product.",
+  "enabled": false,
+  "productUrl": "https://gumroad.com/l/YOUR-PRODUCT",
+  "productName": "The Costco Shopping Guide",
+  "price": "$9.99"
+}

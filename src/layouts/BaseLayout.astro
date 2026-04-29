@@ -1,0 +1,64 @@
+---
+import SEO from '../components/SEO.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import adsConfig from '../data/ads.json';
+import gaConfig from '../data/ga.json';
+
+export interface Props {
+  title: string;
+  description: string;
+  type?: 'website' | 'article' | 'faq' | 'howto' | 'review';
+  publishedAt?: string;
+  modifiedAt?: string;
+  image?: string;
+  faqData?: Array<{ question: string; answer: string }>;
+  articleSchema?: {
+    headline?: string;
+    author?: string;
+    datePublished?: string;
+    dateModified?: string;
+  };
+}
+
+const props = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <SEO {...props} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    {adsConfig.enabled && adsConfig.network === 'adsense' && (
+      <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsConfig.adsense.clientId}`} crossorigin="anonymous"></script>
+    )}
+    {adsConfig.enabled && adsConfig.network === 'medianet' && (
+      <script async src={`https://contextual.media.net/dmedianet.js?cid=${adsConfig.medianet.cid}`}></script>
+    )}
+    {adsConfig.enabled && adsConfig.network === 'adsterra' && (
+      <script is:inline async="async" data-cfasync="false" src={`https://pl29292920.profitablecpmratenetwork.com/${(adsConfig.adsterra as any)?.slots?.['homepage_top'] || '22a26d6ed1b2ad5c819ad3d70b369826'}/invoke.js`}></script>
+    )}
+    {gaConfig.enabled && gaConfig.measurementId && gaConfig.measurementId !== 'G-XXXXXXXXXX' && (
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaConfig.measurementId}`}></script>
+      <script is:inline define:vars={{ measurementId: gaConfig.measurementId }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', measurementId);
+      </script>
+    )}
+    <style>
+      body { font-family: 'Inter', system-ui, sans-serif; }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
+    <Navigation />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

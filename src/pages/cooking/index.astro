@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const methods = [
+  { title: 'At Home (Boil/Grill)', href: '/cooking/at-home/', desc: 'Classic stovetop and grill methods.' },
+  { title: 'Air Fryer', href: '/cooking/air-fryer/', desc: 'Crispy skin with less oil.' },
+  { title: 'Recipe', href: '/cooking/recipe/', desc: 'Full copycat recipe.' },
+];
+---
+
+<BaseLayout
+  title="How to Cook Costco Hot Dogs at Home"
+  description="Step-by-step guides for cooking Costco hot dogs at home. Air fryer, boil, grill, and oven methods."
+  type="website"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Cooking at Home</h1>
+    <p class="text-lg text-gray-600 mb-8">How to recreate the Costco hot dog experience in your own kitchen.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      {methods.map(m => (
+        <a href={m.href} class="block bg-white border border-gray-200 rounded-lg p-5 hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">{m.title}</span>
+          <span class="block text-sm text-gray-600 mt-1">{m.desc}</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">Quick Method: Air Fryer</h2>
+      <ol class="list-decimal list-inside space-y-2 text-gray-700">
+        <li>Preheat air fryer to 400 degrees F</li>
+        <li>Place hot dogs in basket (do not overcrowd)</li>
+        <li>Cook for 5-6 minutes until desired crispiness</li>
+        <li>Toast bun separately for 1-2 minutes</li>
+        <li>Add toppings and serve</li>
+      </ol>
+      <p class="mt-4">
+        <a href="/cooking/air-fryer/" class="text-red-700 font-semibold hover:underline">Full air fryer guide &rarr;</a>
+      </p>
+    </div>
+
+    <RelatedProducts category="Kitchen" title="Kitchen Tools for Hot Dogs" />
+  </div>
+</BaseLayout>

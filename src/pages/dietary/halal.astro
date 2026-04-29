@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqData = [
+  {
+    question: "Is Costco hot dog halal?",
+    answer: "No. Costco hot dogs are not officially certified halal. They are 100% beef but lack religious certification."
+  },
+  {
+    question: "Does Costco hot dog contain pork?",
+    answer: "No. Costco hot dogs are 100% beef and do not contain any pork."
+  }
+];
+---
+
+<BaseLayout
+  title="Is Costco Hot Dog Halal?"
+  description="No — Costco hot dogs are not halal certified. They are 100% beef but lack official religious certification."
+  type="faq"
+  faqData={faqData}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-8 text-center mb-10">
+      <p class="text-sm text-yellow-700 font-medium uppercase tracking-wide">Answer</p>
+      <p class="text-4xl font-bold text-yellow-800 mt-2">Uncertified</p>
+      <p class="text-yellow-700 mt-2">Not officially halal certified</p>
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Is Costco Hot Dog Halal?</h1>
+    <p class="text-gray-600 mb-8">Understanding halal status and what it means for Muslim shoppers.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Halal Certification</h2>
+    <p class="text-gray-700 mb-6">Costco hot dogs are not officially certified halal by any recognized Islamic authority. While the ingredients list shows 100% beef with no pork or pork by-products, the absence of certification means Muslim consumers should make their own informed decisions.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Ingredients Analysis</h2>
+    <p class="text-gray-700 mb-6">The hot dog contains only beef, water, salt, and preservatives. There are no pork-derived ingredients, alcohol, or other obviously haram ingredients. However, the source of the beef and the slaughter method are unknown.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">UK Specific</h2>
+    <p class="text-gray-700 mb-6">In the UK, Costco has been known to stock halal-certified products in some locations, but the food court hot dog is not universally halal certified. Check with your local UK Costco for specific certification status.</p>
+  </article>
+</BaseLayout>

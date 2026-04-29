@@ -1,0 +1,153 @@
+---
+import nutritionData from '../data/nutrition.json';
+
+const servings = nutritionData.servings;
+const daily = nutritionData.dailyValues;
+
+// Build JS data for the client script
+const calcData = {
+  servings: {
+    hotDogOnly: { calories: servings.hotDogOnly.calories, protein: servings.hotDogOnly.protein, totalFat: servings.hotDogOnly.totalFat, totalCarbs: servings.hotDogOnly.totalCarbs, saturatedFat: servings.hotDogOnly.saturatedFat, cholesterol: servings.hotDogOnly.cholesterol, sodium: servings.hotDogOnly.sodium, dietaryFiber: servings.hotDogOnly.dietaryFiber, sugars: servings.hotDogOnly.sugars },
+    bun: { calories: servings.bun.calories, protein: servings.bun.protein, totalFat: servings.bun.totalFat, totalCarbs: servings.bun.totalCarbs, saturatedFat: servings.bun.saturatedFat, cholesterol: servings.bun.cholesterol, sodium: servings.bun.sodium, dietaryFiber: servings.bun.dietaryFiber, sugars: servings.bun.sugars },
+    ketchup: { calories: servings.ketchup.calories, protein: servings.ketchup.protein, totalFat: servings.ketchup.totalFat, totalCarbs: servings.ketchup.totalCarbs, saturatedFat: servings.ketchup.saturatedFat, cholesterol: servings.ketchup.cholesterol, sodium: servings.ketchup.sodium, dietaryFiber: servings.ketchup.dietaryFiber, sugars: servings.ketchup.sugars },
+    mustard: { calories: servings.mustard.calories, protein: servings.mustard.protein, totalFat: servings.mustard.totalFat, totalCarbs: servings.mustard.totalCarbs, saturatedFat: servings.mustard.saturatedFat, cholesterol: servings.mustard.cholesterol, sodium: servings.mustard.sodium, dietaryFiber: servings.mustard.dietaryFiber, sugars: servings.mustard.sugars },
+    relish: { calories: servings.relish.calories, protein: servings.relish.protein, totalFat: servings.relish.totalFat, totalCarbs: servings.relish.totalCarbs, saturatedFat: servings.relish.saturatedFat, cholesterol: servings.relish.cholesterol, sodium: servings.relish.sodium, dietaryFiber: servings.relish.dietaryFiber, sugars: servings.relish.sugars },
+    onions: { calories: servings.onions.calories, protein: servings.onions.protein, totalFat: servings.onions.totalFat, totalCarbs: servings.onions.totalCarbs, saturatedFat: servings.onions.saturatedFat, cholesterol: servings.onions.cholesterol, sodium: servings.onions.sodium, dietaryFiber: servings.onions.dietaryFiber, sugars: servings.onions.sugars }
+  },
+  daily: { calories: daily.calories, totalFat: daily.totalFat, saturatedFat: daily.saturatedFat, cholesterol: daily.cholesterol, sodium: daily.sodium, totalCarbs: daily.totalCarbs, dietaryFiber: daily.dietaryFiber, protein: daily.protein }
+};
+---
+
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8" id="nutrition-calculator">
+  <h3 class="text-xl font-bold text-gray-900 mb-4">Interactive Nutrition Calculator</h3>
+  <p class="text-gray-600 mb-6">Toggle options to see how each component affects the total nutrition.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <div class="space-y-3">
+      <h4 class="font-semibold text-gray-800">Base</h4>
+      <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+        <input type="checkbox" id="calc-bun" checked class="w-5 h-5 text-red-600 rounded focus:ring-red-500" />
+        <span class="text-gray-700">Include Bun</span>
+      </label>
+
+      <h4 class="font-semibold text-gray-800 pt-2">Condiments</h4>
+      <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+        <input type="checkbox" id="calc-ketchup" class="w-5 h-5 text-red-600 rounded focus:ring-red-500" />
+        <span class="text-gray-700">Ketchup (1 packet)</span>
+      </label>
+      <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+        <input type="checkbox" id="calc-mustard" checked class="w-5 h-5 text-red-600 rounded focus:ring-red-500" />
+        <span class="text-gray-700">Mustard (1 tsp)</span>
+      </label>
+      <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+        <input type="checkbox" id="calc-relish" class="w-5 h-5 text-red-600 rounded focus:ring-red-500" />
+        <span class="text-gray-700">Relish (1 tbsp)</span>
+      </label>
+      <label class="flex items-center space-x-3 cursor-pointer p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition">
+        <input type="checkbox" id="calc-onions" class="w-5 h-5 text-red-600 rounded focus:ring-red-500" />
+        <span class="text-gray-700">Diced Onions (2 tbsp)</span>
+      </label>
+    </div>
+
+    <div class="bg-red-50 rounded-xl p-6">
+      <h4 class="font-semibold text-red-800 mb-4">Nutrition Summary</h4>
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between items-baseline mb-1">
+            <span class="text-gray-700">Calories</span>
+            <span class="text-2xl font-bold text-red-700" id="res-calories">570</span>
+          </div>
+          <div class="w-full bg-red-200 rounded-full h-2">
+            <div id="bar-calories" class="bg-red-600 h-2 rounded-full transition-all duration-300" style="width: 28.5%"></div>
+          </div>
+          <p class="text-xs text-gray-500 mt-1" id="pct-calories">28.5% of daily value</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="text-center p-3 bg-white rounded-lg">
+            <p class="text-2xl font-bold text-gray-900" id="res-protein">24g</p>
+            <p class="text-xs text-gray-500">Protein (<span id="pct-protein">48%</span>)</p>
+          </div>
+          <div class="text-center p-3 bg-white rounded-lg">
+            <p class="text-2xl font-bold text-gray-900" id="res-fat">34g</p>
+            <p class="text-xs text-gray-500">Total Fat (<span id="pct-fat">44%</span>)</p>
+          </div>
+          <div class="text-center p-3 bg-white rounded-lg">
+            <p class="text-2xl font-bold text-gray-900" id="res-carbs">38g</p>
+            <p class="text-xs text-gray-500">Carbs (<span id="pct-carbs">14%</span>)</p>
+          </div>
+          <div class="text-center p-3 bg-white rounded-lg">
+            <p class="text-2xl font-bold text-gray-900" id="res-sodium">1330mg</p>
+            <p class="text-xs text-gray-500">Sodium (<span id="pct-sodium">58%</span>)</p>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-red-200">
+          <div class="flex justify-between text-sm">
+            <span class="text-gray-600">Saturated Fat</span>
+            <span class="font-medium text-gray-900" id="res-satfat">12.5g</span>
+          </div>
+          <div class="flex justify-between text-sm mt-1">
+            <span class="text-gray-600">Cholesterol</span>
+            <span class="font-medium text-gray-900" id="res-cholesterol">60mg</span>
+          </div>
+          <div class="flex justify-between text-sm mt-1">
+            <span class="text-gray-600">Fiber</span>
+            <span class="font-medium text-gray-900" id="res-fiber">1.2g</span>
+          </div>
+          <div class="flex justify-between text-sm mt-1">
+            <span class="text-gray-600">Sugars</span>
+            <span class="font-medium text-gray-900" id="res-sugars">6g</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ calcData }}>
+  function updateCalc() {
+    const bun = document.getElementById('calc-bun').checked;
+    const ketchup = document.getElementById('calc-ketchup').checked;
+    const mustard = document.getElementById('calc-mustard').checked;
+    const relish = document.getElementById('calc-relish').checked;
+    const onions = document.getElementById('calc-onions').checked;
+
+    let totals = { ...calcData.servings.hotDogOnly };
+    const add = (key) => {
+      if (bun) totals[key] += calcData.servings.bun[key];
+      if (ketchup) totals[key] += calcData.servings.ketchup[key];
+      if (mustard) totals[key] += calcData.servings.mustard[key];
+      if (relish) totals[key] += calcData.servings.relish[key];
+      if (onions) totals[key] += calcData.servings.onions[key];
+    };
+
+    ['calories', 'protein', 'totalFat', 'totalCarbs', 'saturatedFat', 'cholesterol', 'sodium', 'dietaryFiber', 'sugars'].forEach(add);
+
+    document.getElementById('res-calories').textContent = totals.calories;
+    document.getElementById('bar-calories').style.width = Math.min((totals.calories / calcData.daily.calories) * 100, 100) + '%';
+    document.getElementById('pct-calories').textContent = ((totals.calories / calcData.daily.calories) * 100).toFixed(1) + '% of daily value';
+
+    document.getElementById('res-protein').textContent = totals.protein + 'g';
+    document.getElementById('pct-protein').textContent = Math.round((totals.protein / calcData.daily.protein) * 100) + '%';
+
+    document.getElementById('res-fat').textContent = totals.totalFat + 'g';
+    document.getElementById('pct-fat').textContent = Math.round((totals.totalFat / calcData.daily.totalFat) * 100) + '%';
+
+    document.getElementById('res-carbs').textContent = totals.totalCarbs + 'g';
+    document.getElementById('pct-carbs').textContent = Math.round((totals.totalCarbs / calcData.daily.totalCarbs) * 100) + '%';
+
+    document.getElementById('res-sodium').textContent = totals.sodium + 'mg';
+    document.getElementById('pct-sodium').textContent = Math.round((totals.sodium / calcData.daily.sodium) * 100) + '%';
+
+    document.getElementById('res-satfat').textContent = totals.saturatedFat.toFixed(1) + 'g';
+    document.getElementById('res-cholesterol').textContent = totals.cholesterol + 'mg';
+    document.getElementById('res-fiber').textContent = totals.dietaryFiber.toFixed(1) + 'g';
+    document.getElementById('res-sugars').textContent = totals.sugars + 'g';
+  }
+
+  ['calc-bun', 'calc-ketchup', 'calc-mustard', 'calc-relish', 'calc-onions'].forEach(id => {
+    document.getElementById(id)?.addEventListener('change', updateCalc);
+  });
+  updateCalc();
+</script>

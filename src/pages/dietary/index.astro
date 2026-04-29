@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const items = [
+  { label: 'Dairy Free', href: '/dietary/dairy-free/', answer: 'Yes', status: 'good' },
+  { label: 'Gluten Free', href: '/dietary/gluten-free/', answer: 'No', status: 'bad' },
+  { label: 'Vegan', href: '/dietary/vegan/', answer: 'No', status: 'bad' },
+  { label: 'Halal', href: '/dietary/halal/', answer: 'Uncertified', status: 'warn' },
+  { label: 'Kosher', href: '/dietary/kosher/', answer: 'Uncertified', status: 'warn' },
+  { label: 'Contains Pork', href: '/dietary/pork/', answer: 'No', status: 'good' },
+  { label: 'Contains Nitrates', href: '/dietary/nitrates/', answer: 'Yes', status: 'warn' },
+];
+
+const statusClass = {
+  good: 'bg-green-100 text-green-800',
+  bad: 'bg-red-100 text-red-800',
+  warn: 'bg-yellow-100 text-yellow-800',
+};
+---
+
+<BaseLayout
+  title="Costco Hot Dog Dietary Information"
+  description="Is the Costco hot dog halal, kosher, dairy-free, or gluten-free? Complete dietary restriction guide."
+  type="website"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Dietary Information</h1>
+    <p class="text-lg text-gray-600 mb-8">Quick answers for common dietary restrictions and allergies.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {items.map(item => (
+        <a href={item.href} class="block bg-white border border-gray-200 rounded-lg p-5 hover:border-red-300 hover:shadow transition">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-semibold text-gray-900">{item.label}</span>
+            <span class={`text-xs font-bold px-2 py-1 rounded-full ${statusClass[item.status as keyof typeof statusClass]}`}>
+              {item.answer}
+            </span>
+          </div>
+          <span class="text-sm text-red-600">Read details &rarr;</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+      <p class="text-sm text-yellow-800">
+        <strong>Note:</strong> Information is based on publicly available ingredient lists and may change. Always check with Costco directly if you have severe allergies or strict dietary requirements.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

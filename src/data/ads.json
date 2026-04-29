@@ -1,0 +1,55 @@
+{
+  "_comment": "Set enabled to true and fill in your real ad IDs after approval",
+  "enabled": false,
+  "network": "adsense",
+  "adsense": {
+    "clientId": "ca-pub-XXXXXXXXXXXXXXXX",
+    "slots": {
+      "homepage_top": "1234567890",
+      "in_content_1": "1234567891",
+      "in_content_2": "1234567892",
+      "in_content_3": "1234567895",
+      "sidebar": "1234567893",
+      "sticky_footer": "1234567894"
+    }
+  },
+  "medianet": {
+    "cid": "8XXXXXXXXXX",
+    "crid": "4XXXXXXXXXX"
+  },
+  "amazon": {
+    "trackingId": "costcoguide-20"
+  },
+  "adsterra": {
+    "slots": {
+      "homepage_top": "22a26d6ed1b2ad5c819ad3d70b369826",
+      "in_content_1": "22a26d6ed1b2ad5c819ad3d70b369826",
+      "in_content_2": "22a26d6ed1b2ad5c819ad3d70b369826",
+      "in_content_3": "22a26d6ed1b2ad5c819ad3d70b369826"
+    },
+    "banners": {
+      "leaderboard_header": {
+        "key": "430483682f9914a259756e4206a7e9e0",
+        "format": "iframe",
+        "height": 90,
+        "width": 728
+      },
+      "medium_rectangle_content": {
+        "key": "df7d5e6a84861562a45572bdd66dcfa1",
+        "format": "iframe",
+        "height": 250,
+        "width": 300
+      },
+      "mobile_banner_sticky": {
+        "key": "a9ed9968de08caf1998fcf7ccbc96ebd",
+        "format": "iframe",
+        "height": 50,
+        "width": 320
+      }
+    }
+  },
+  "placeholder": {
+    "showInDev": true,
+    "label": "Advertisement"
+  }
+}

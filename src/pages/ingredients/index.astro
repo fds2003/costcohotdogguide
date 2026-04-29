@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pages = [
+  { title: 'Ingredients List', href: '/ingredients/ingredients-list/', desc: 'Complete ingredient breakdown.' },
+  { title: 'Beef or Pork?', href: '/ingredients/beef-or-pork/', desc: 'What meat is used?' },
+  { title: 'All Beef?', href: '/ingredients/all-beef/', desc: 'Confirmation of 100% beef.' },
+  { title: 'Brand', href: '/ingredients/brand/', desc: 'Who makes Costco hot dogs?' },
+];
+---
+
+<BaseLayout
+  title="Costco Hot Dog Ingredients"
+  description="What is in a Costco hot dog? Full ingredient list, brand information, and allergen details."
+  type="website"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Ingredients</h1>
+    <p class="text-lg text-gray-600 mb-8">Full ingredient breakdown for Costco hot dogs and buns.</p>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">Hot Dog</h2>
+      <p class="text-gray-700">Beef, water, salt, contains 2% or less of corn syrup, dextrose, flavorings, paprika, sodium erythorbate, sodium nitrite.</p>
+      <h2 class="text-xl font-bold text-gray-900 mb-3 mt-6">Bun</h2>
+      <p class="text-gray-700">Enriched wheat flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), water, sugar, yeast, soybean oil, salt, preservatives.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {pages.map(p => (
+        <a href={p.href} class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">{p.title}</span>
+          <span class="block text-sm text-gray-600 mt-1">{p.desc}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

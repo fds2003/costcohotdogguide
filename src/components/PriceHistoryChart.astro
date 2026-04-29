@@ -1,0 +1,109 @@
+---
+import priceData from '../data/prices-history.json';
+
+const { timeline, currentPrice, rumors } = priceData;
+const maxInflation = Math.max(...timeline.map(t => t.inflationAdjusted));
+---
+
+<div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+  <h3 class="text-xl font-bold text-gray-900 mb-2">Costco Hot Dog Price History</h3>
+  <p class="text-gray-600 mb-6">The $1.50 combo has remained unchanged for over 40 years. The gray area shows what the price would be if it kept up with inflation.</p>
+
+  <div class="relative h-64 md:h-80 mb-6 overflow-x-auto">
+    <svg viewBox={`0 0 ${timeline.length * 60 + 40} 300`} class="h-full w-full min-w-[600px]" preserveAspectRatio="xMidYMid meet">
+      {/* Grid lines */}
+      {[0, 1, 2, 3, 4, 5].map(i => {
+        const y = 250 - (i * 50);
+        return (
+          <g>
+            <line x1="40" y1={y} x2={timeline.length * 60 + 20} stroke="#e5e7eb" stroke-width="1" />
+            <text x="35" y={y + 4} text-anchor="end" font-size="10" fill="#9ca3af">${i}</text>
+          </g>
+        );
+      })}
+
+      {/* Inflation-adjusted area */}
+      <polygon
+        fill="#e5e7eb"
+        points={`40,250 ${timeline.map((t, i) => `${40 + i * 60},${250 - (t.inflationAdjusted / 5) * 50}`).join(' ')} ${40 + (timeline.length - 1) * 60},250`}
+      />
+
+      {/* Inflation line */}
+      <polyline
+        fill="none"
+        stroke="#9ca3af"
+        stroke-width="2"
+        stroke-dasharray="4,4"
+        points={timeline.map((t, i) => `${40 + i * 60},${250 - (t.inflationAdjusted / 5) * 50}`).join(' ')}
+      />
+
+      {/* Actual price line */}
+      <polyline
+        fill="none"
+        stroke="#dc2626"
+        stroke-width="3"
+        points={timeline.map((t, i) => `${40 + i * 60},${250 - (t.price / 5) * 50}`).join(' ')}
+      />
+
+      {/* Data points */}
+      {timeline.map((t, i) => (
+        <g>
+          <circle cx={40 + i * 60} cy={250 - (t.price / 5) * 50} r="5" fill="#dc2626" stroke="white" stroke-width="2" />
+          <text x={40 + i * 60} y="280" text-anchor="middle" font-size="10" fill="#6b7280">{t.year}</text>
+        </g>
+      ))}
+
+      {/* Legend */}
+      <g transform={`translate(${timeline.length * 60 - 180}, 20)`}>
+        <rect x="0" y="0" width="180" height="50" fill="white" stroke="#e5e7eb" rx="6" />
+        <line x1="12" y1="18" x2="32" y2="18" stroke="#dc2626" stroke-width="3" />
+        <text x="38" y="22" font-size="11" fill="#374151">Actual Price ($1.50)</text>
+        <line x1="12" y1="36" x2="32" y2="36" stroke="#9ca3af" stroke-width="2" stroke-dasharray="4,4" />
+        <text x="38" y="40" font-size="11" fill="#374151">Inflation-Adjusted</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="bg-red-50 rounded-lg p-4 text-center">
+      <p class="text-3xl font-bold text-red-700">${currentPrice.toFixed(2)}</p>
+      <p class="text-sm text-red-600">Current Price (Since 1985)</p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-4 text-center">
+      <p class="text-3xl font-bold text-gray-700">${timeline[timeline.length - 1].inflationAdjusted.toFixed(2)}</p>
+      <p class="text-sm text-gray-600">2026 Inflation-Adjusted Price</p>
+    </div>
+    <div class="bg-yellow-50 rounded-lg p-4 text-center">
+      <p class="text-3xl font-bold text-yellow-700">{timeline.length}</p>
+      <p class="text-sm text-yellow-600">Years Without a Price Change</p>
+    </div>
+  </div>
+
+  {rumors.length > 0 && (
+    <div class="mt-6">
+      <h4 class="font-semibold text-gray-800 mb-3">Price Increase Rumors</h4>
+      <div class="space-y-3">
+        {rumors.map(rumor => (
+          <div class="bg-gray-50 rounded-lg p-4 border-l-4 border-yellow-400">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="font-medium text-gray-900">{rumor.claim}</p>
+                <p class="text-sm text-gray-500 mt-1">Source: {rumor.source} ({rumor.date})</p>
+              </div>
+              <span class={`text-xs font-medium px-2 py-1 rounded ${
+                rumor.status.includes('Denied') || rumor.status.includes('False')
+                  ? 'bg-green-100 text-green-700'
+                  : rumor.status.includes('Partially')
+                  ? 'bg-yellow-100 text-yellow-700'
+                  : 'bg-gray-100 text-gray-700'
+              }`}>
+                {rumor.status}
+              </span>
+            </div>
+            <p class="text-sm text-gray-600 mt-2">{rumor.resolution}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+</div>

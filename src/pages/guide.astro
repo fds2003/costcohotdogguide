@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RelatedProducts from '../components/RelatedProducts.astro';
+import AdUnit from '../components/AdUnit.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+
+const publishedAt = '2026-04-29';
+const modifiedAt = '2026-04-29';
+---
+
+<BaseLayout
+  title="Costco Hot Dog: The Ultimate Guide (2026)"
+  description="The complete guide to Costco's $1.50 hot dog. Nutrition facts, ingredients, history, and everything you need to know."
+  type="article"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Costco Hot Dog: The Ultimate Guide (2026)</h1>
+      <p class="text-lg text-gray-600">Everything you need to know about the most famous hot dog in America.</p>
+      <div class="mt-4 text-sm text-gray-500">
+        Published: <time datetime={publishedAt}>{publishedAt}</time> | Last updated: <time datetime={modifiedAt}>{modifiedAt}</time>
+      </div>
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+      <p class="lead text-xl text-gray-700">
+        The Costco hot dog is more than just a quick meal — it's a cultural icon. Since 1985, Costco has sold its legendary hot dog and soda combo for just $1.50, and the price hasn't changed in over 40 years. This guide covers everything from nutrition facts to the business strategy behind America's cheapest lunch.
+      </p>
+
+      <div class="my-8">
+        <AdUnit slot="in_content_1" type="in-article" format="auto" minHeight="250px" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">What You Get for $1.50</h2>
+      <p>
+        The Costco food court hot dog combo includes a quarter-pound all-beef hot dog and a 20 oz. soda with free refills. The hot dog itself weighs approximately 4 ounces and is served in a soft, steamed bun.
+      </p>
+      <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+        <p class="font-semibold text-yellow-800">Key Facts</p>
+        <ul class="list-disc list-inside text-yellow-800 mt-2">
+          <li>Price: $1.50 (unchanged since 1985)</li>
+          <li>Weight: 1/4 pound (4 oz)</li>
+          <li>Meat: 100% USDA Choice beef</li>
+          <li>Drink: 20 oz soda with free refills</li>
+          <li>Available at: Costco food courts worldwide</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Overview</h2>
+      <p>
+        A Costco hot dog with bun contains approximately 570 calories. Here's the breakdown:
+      </p>
+      <table class="w-full border-collapse border border-gray-300 mt-4">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 px-4 py-2 text-left">Nutrient</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border border-gray-300 px-4 py-2">Calories</td><td class="border border-gray-300 px-4 py-2">570</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Total Fat</td><td class="border border-gray-300 px-4 py-2">33g</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Saturated Fat</td><td class="border border-gray-300 px-4 py-2">12g</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Cholesterol</td><td class="border border-gray-300 px-4 py-2">70mg</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Sodium</td><td class="border border-gray-300 px-4 py-2">1,750mg</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Total Carbs</td><td class="border border-gray-300 px-4 py-2">46g</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Protein</td><td class="border border-gray-300 px-4 py-2">24g</td></tr>
+        </tbody>
+      </table>
+      <p class="mt-4">
+        <a href="/nutrition/" class="text-red-700 font-semibold hover:underline">View detailed nutrition information &rarr;</a>
+      </p>
+
+      <div class="my-8">
+        <AdUnit slot="in_content_2" type="in-article" format="auto" minHeight="250px" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredients</h2>
+      <p>
+        Costco hot dogs are made by Kirkland Signature (Costco's private label) and contain: beef, water, salt, contains 2% or less of corn syrup, dextrose, flavorings, paprika, sodium erythorbate, sodium nitrite.
+      </p>
+      <p class="mt-4">
+        The bun contains: enriched wheat flour, water, sugar, yeast, soybean oil, salt, and preservatives.
+      </p>
+      <p class="mt-4">
+        <a href="/ingredients/" class="text-red-700 font-semibold hover:underline">Full ingredients breakdown &rarr;</a>
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Dietary Restrictions</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+        <a href="/dietary/dairy-free/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">Dairy Free</span>
+          <span class="block text-sm text-gray-600 mt-1">Yes — hot dog and bun contain no dairy</span>
+        </a>
+        <a href="/dietary/gluten-free/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">Gluten Free</span>
+          <span class="block text-sm text-gray-600 mt-1">No — bun contains wheat flour</span>
+        </a>
+        <a href="/dietary/halal/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">Halal</span>
+          <span class="block text-sm text-gray-600 mt-1">Not officially certified</span>
+        </a>
+        <a href="/dietary/kosher/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">Kosher</span>
+          <span class="block text-sm text-gray-600 mt-1">Not officially certified</span>
+        </a>
+      </div>
+
+      <div class="my-8">
+        <AdUnit type="banner" format="medium-rectangle" slot="medium_rectangle_content" minHeight="250px" />
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">The $1.50 Strategy</h2>
+      <p>
+        Costco's hot dog is a loss leader — the company deliberately keeps the price low to drive foot traffic and reinforce its brand image as the ultimate value retailer. Former CEO W. Craig Jelinek once told Costco co-founder Jim Sinegal that he couldn't keep the price at $1.50. Sinegal's response: "If you raise the price of the hot dog, I will kill you. Figure it out."
+      </p>
+      <p class="mt-4">
+        <a href="/business/why-so-cheap/" class="text-red-700 font-semibold hover:underline">Read the full business story &rarr;</a>
+      </p>
+    </div>
+
+    <div class="my-8">
+      <AdUnit slot="in_content_3" type="display" format="auto" minHeight="250px" />
+    </div>
+
+    <NewsletterSignup
+      title="Get the Full Costco Guide"
+      description="Weekly tips on Costco's best deals, hidden gems, and money-saving strategies — delivered to your inbox."
+    />
+
+    <!-- Ad: Leaderboard Banner -->
+    <div class="my-8">
+      <AdUnit type="banner" format="leaderboard" slot="leaderboard_header" minHeight="90px" />
+    </div>
+
+    <!-- Affiliate Products -->
+    <RelatedProducts category="Kitchen" title="Tools for Hot Dog Lovers" />
+
+    <!-- Quick Links -->
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <h3 class="text-xl font-bold text-gray-900 mb-4">Explore More</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="/nutrition/" class="text-red-700 hover:underline font-medium">Nutrition Details</a>
+        <a href="/ingredients/" class="text-red-700 hover:underline font-medium">Ingredients List</a>
+        <a href="/cooking/" class="text-red-700 hover:underline font-medium">Cook at Home</a>
+        <a href="/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

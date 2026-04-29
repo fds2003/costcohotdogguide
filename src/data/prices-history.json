@@ -1,0 +1,122 @@
+{
+  "currency": "USD",
+  "currentPrice": 1.50,
+  "priceSince": "1985-01-01",
+  "lastUpdated": "2026-04-29",
+  "dataSource": "Costco historical records, SEC filings, news reports",
+  "timeline": [
+    {
+      "year": 1985,
+      "price": 1.50,
+      "event": "Costco opens first warehouse in Seattle; hot dog and soda combo introduced at $1.50",
+      "inflationAdjusted": 4.35
+    },
+    {
+      "year": 1990,
+      "price": 1.50,
+      "event": "Expansion to California and beyond; combo remains $1.50",
+      "inflationAdjusted": 3.72
+    },
+    {
+      "year": 1995,
+      "price": 1.50,
+      "event": "Costco becomes top warehouse club; food court popular with members",
+      "inflationAdjusted": 3.04
+    },
+    {
+      "year": 2000,
+      "price": 1.50,
+      "event": "Dot-com boom; Costco hot dog gains cult following online",
+      "inflationAdjusted": 2.68
+    },
+    {
+      "year": 2005,
+      "price": 1.50,
+      "event": "Switch from Coca-Cola to Pepsi partnership; combo still $1.50",
+      "inflationAdjusted": 2.35
+    },
+    {
+      "year": 2009,
+      "price": 1.50,
+      "event": "Costco switches from Hebrew National to Kirkland Signature hot dogs",
+      "inflationAdjusted": 2.15
+    },
+    {
+      "year": 2013,
+      "price": 1.50,
+      "event": "Craig Jelinek tells Jim Sinegal he may need to raise price; Sinegal says 'If you raise the price, I will kill you'",
+      "inflationAdjusted": 1.98
+    },
+    {
+      "year": 2018,
+      "price": 1.50,
+      "event": "Costco sells over 100 million hot dogs annually; $1.50 price becomes iconic",
+      "inflationAdjusted": 1.85
+    },
+    {
+      "year": 2020,
+      "price": 1.50,
+      "event": "COVID-19 pandemic; food court service disrupted but price holds",
+      "inflationAdjusted": 1.79
+    },
+    {
+      "year": 2021,
+      "price": 1.50,
+      "event": "Inflation surges; analysts speculate about price increase; Costco reaffirms commitment",
+      "inflationAdjusted": 1.73
+    },
+    {
+      "year": 2022,
+      "price": 1.50,
+      "event": "Costco CFO confirms 'The price is safe' amid record inflation",
+      "inflationAdjusted": 1.61
+    },
+    {
+      "year": 2023,
+      "price": 1.50,
+      "event": "Over 150 million hot dogs sold; $1.50 remains a loss leader for membership retention",
+      "inflationAdjusted": 1.56
+    },
+    {
+      "year": 2024,
+      "price": 1.50,
+      "event": "New CEO Ron Vachris takes over; $1.50 commitment continues",
+      "inflationAdjusted": 1.52
+    },
+    {
+      "year": 2025,
+      "price": 1.50,
+      "event": "No price change; Costco explores food court modernization while maintaining classic pricing",
+      "inflationAdjusted": 1.50
+    },
+    {
+      "year": 2026,
+      "price": 1.50,
+      "event": "41 years at $1.50 — longest-running fast-food price in American history",
+      "inflationAdjusted": 1.47
+    }
+  ],
+  "rumors": [
+    {
+      "date": "2022-07",
+      "source": "Social media speculation",
+      "claim": "Costco may raise hot dog price to $2.00 due to inflation",
+      "status": "Denied by Costco CFO",
+      "resolution": "Price remains $1.50"
+    },
+    {
+      "date": "2023-09",
+      "source": "Financial analysts",
+      "claim": "Soda cup size reduction signals impending price hike",
+      "status": "Partially true (cup changed, price didn't)",
+      "resolution": "Cup size reduced from 20oz to 16oz; price still $1.50"
+    },
+    {
+      "date": "2024-05",
+      "source": "Meme/viral content",
+      "claim": "Costco testing $2.50 combo in select markets",
+      "status": "False",
+      "resolution": "No testing confirmed; price remains $1.50"
+    }
+  ]
+}

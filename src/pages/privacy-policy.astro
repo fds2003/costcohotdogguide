@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const publishedAt = '2026-04-29';
+const modifiedAt = '2026-04-29';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="Privacy Policy for Costco Hot Dog Guide. Learn how we collect, use, and protect your data."
+  type="article"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
+      <p class="text-lg text-gray-600">Last updated: <time datetime={modifiedAt}>{modifiedAt}</time></p>
+    </header>
+
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p>
+        Costco Hot Dog Guide ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Information We Collect</h2>
+      <p>We may collect the following types of information:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Log Data:</strong> When you visit our site, our servers may automatically log your IP address, browser type, referring/exit pages, and timestamps.</li>
+        <li><strong>Cookies:</strong> We use cookies to enhance your browsing experience and analyze site traffic. You can disable cookies in your browser settings.</li>
+        <li><strong>Analytics:</strong> We use Google Analytics 4 to understand how visitors interact with our website. This data is anonymized and aggregated.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Third-Party Services</h2>
+      <p>We use the following third-party services:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Google AdSense:</strong> Displays relevant advertisements. Google may use cookies to serve ads based on your prior visits.</li>
+        <li><strong>Amazon Associates:</strong> We participate in the Amazon Services LLC Associates Program. Affiliate links may set tracking cookies.</li>
+        <li><strong>Google Analytics 4:</strong> Tracks website usage patterns for improvement purposes.</li>
+        <li><strong>Adsterra:</strong> An advertising network that may use cookies or similar technologies to serve ads.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. How We Use Your Information</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>To provide and maintain our website</li>
+        <li>To analyze traffic and improve user experience</li>
+        <li>To display relevant advertisements</li>
+        <li>To comply with legal obligations</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Your Rights (GDPR/CCPA)</h2>
+      <p>Depending on your location, you may have the following rights:</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction or deletion of your data</li>
+        <li>Opt out of personalized advertising</li>
+        <li>Request a copy of your data in a portable format</li>
+      </ul>
+      <p>To exercise these rights, contact us at the email address below.</p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Cookie Consent</h2>
+      <p>
+        By continuing to use our website, you consent to our use of cookies as described in this policy. You can manage cookie preferences through your browser settings or visit <a href="https://adssettings.google.com" class="text-red-700 hover:underline" target="_blank" rel="noopener">Google Ads Settings</a> to opt out of personalized ads.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Data Retention</h2>
+      <p>
+        We retain analytics data for up to 26 months. Log data is retained for security and troubleshooting purposes for a reasonable period.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">7. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">8. Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please contact us at: <strong>contact@costcohotdogguide.com</strong>
+      </p>
+    </div>
+  </article>
+</BaseLayout>

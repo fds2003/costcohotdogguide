@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqData = [
+  {
+    question: "How big is a Costco hot dog?",
+    answer: "A Costco hot dog is a quarter-pound hot dog, weighing approximately 4 ounces (113 grams)."
+  },
+  {
+    question: "What size bun does Costco use?",
+    answer: "The bun is proportionally sized to fit the quarter-pound hot dog."
+  }
+];
+---
+
+<BaseLayout
+  title="How Big Is a Costco Hot Dog?"
+  description="A Costco hot dog is a quarter-pound (4 oz / 113g) all-beef hot dog served in a proportionally sized bun."
+  type="faq"
+  faqData={faqData}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-8 text-center mb-10">
+      <p class="text-sm text-blue-700 font-medium uppercase tracking-wide">Size</p>
+      <p class="text-5xl font-bold text-blue-800 mt-2">1/4 lb</p>
+      <p class="text-blue-700 mt-2">4 oz / 113 grams</p>
+    </div>
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">How Big Is a Costco Hot Dog?</h1>
+    <p class="text-gray-600 mb-8">Size comparison and what makes the Costco hot dog a meal in itself.</p>
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Quarter-Pound Standard</h2>
+    <p class="text-gray-700 mb-6">Costco hot dogs are quarter-pounders — significantly larger than standard grocery store hot dogs, which typically weigh 1.6 oz (45g). This means one Costco hot dog is equivalent to about 2.5 regular hot dogs in terms of meat content.</p>
+    <h2 class="text-xl font-bold text-gray-900 mb-3">How It Compares</h2>
+    <ul class="list-disc list-inside text-gray-700 mb-6">
+      <li>Standard grocery hot dog: ~1.6 oz</li>
+      <li>Ballpark frank: ~2 oz</li>
+      <li><strong>Costco hot dog: ~4 oz</strong></li>
+      <li>Restaurant "jumbo": ~3 oz</li>
+    </ul>
+  </article>
+</BaseLayout>

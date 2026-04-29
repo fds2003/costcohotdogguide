@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqData = [
+  {
+    question: "Are Costco hot dogs vegan?",
+    answer: "No. Costco hot dogs are made from 100% beef and are not vegan."
+  },
+  {
+    question: "Does Costco have vegan hot dogs?",
+    answer: "Some locations may stock plant-based options in the grocery section, but the food court does not currently serve vegan hot dogs."
+  }
+];
+---
+
+<BaseLayout
+  title="Are Costco Hot Dogs Vegan?"
+  description="No — Costco hot dogs are 100% beef. Learn about vegan status and plant-based alternatives."
+  type="faq"
+  faqData={faqData}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-red-50 border border-red-200 rounded-xl p-8 text-center mb-10">
+      <p class="text-sm text-red-700 font-medium uppercase tracking-wide">Answer</p>
+      <p class="text-4xl font-bold text-red-800 mt-2">No</p>
+      <p class="text-red-700 mt-2">Made from 100% beef</p>
+    </div>
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Are Costco Hot Dogs Vegan?</h1>
+    <p class="text-gray-600 mb-8">Why the iconic Costco hot dog is not suitable for vegans and what alternatives exist.</p>
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Ingredients</h2>
+    <p class="text-gray-700 mb-6">The first ingredient in a Costco hot dog is beef. There are no plant-based or vegan options available at Costco food courts at this time.</p>
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Vegan Options at Costco</h2>
+    <p class="text-gray-700 mb-6">While the food court hot dog is not vegan, Costco stores carry many vegan products including plant-based meats, fresh produce, nuts, and vegan snacks in the grocery section.</p>
+  </article>
+</BaseLayout>

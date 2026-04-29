@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import AdUnit from '../../components/AdUnit.astro';
+
+const categories = [
+  {
+    title: 'Vitamins & Supplements',
+    description: 'The best vitamins and supplements available at Costco and online.',
+    href: '/reviews/vitamins/',
+    icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z',
+    commission: '$2-8/sale'
+  },
+  {
+    title: 'Kitchen Appliances',
+    description: 'Air fryers, blenders, and must-have kitchen gadgets.',
+    href: '/reviews/kitchen-appliances/',
+    icon: 'M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4',
+    commission: '$5-20/sale'
+  },
+  {
+    title: 'Camping & Outdoor',
+    description: 'Tents, coolers, and gear for your next adventure.',
+    href: '/reviews/camping-gear/',
+    icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064',
+    commission: '$5-15/sale'
+  },
+  {
+    title: 'Home & Furniture',
+    description: 'Furniture, storage, and home organization deals.',
+    href: '/reviews/furniture/',
+    icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
+    commission: '$10-30/sale'
+  },
+  {
+    title: 'Bulk Foods',
+    description: 'Pantry staples and snacks worth buying in bulk.',
+    href: '/reviews/bulk-foods/',
+    icon: 'M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z',
+    commission: '$1-5/sale'
+  }
+];
+
+const featuredReviews = [
+  {
+    title: 'Best Air Fryers for Cooking Hot Dogs at Home',
+    excerpt: 'We tested 8 popular air fryers to find the best option for recreating that perfect Costco hot dog snap at home.',
+    href: '/reviews/kitchen-appliances/',
+    rating: 5,
+    date: '2026-04-29'
+  },
+  {
+    title: 'Top 5 Protein Supplements for Hot Dog Lovers',
+    excerpt: 'Balance your diet with high-quality protein supplements that complement your favorite Costco treats.',
+    href: '/reviews/vitamins/',
+    rating: 4,
+    date: '2026-04-28'
+  }
+];
+---
+
+<BaseLayout
+  title="Costco Product Reviews"
+  description="Independent reviews of the best products to buy at Costco and online. Honest recommendations with affiliate links."
+  type="website"
+>
+  <!-- Hero -->
+  <section class="bg-red-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Costco Product Reviews</h1>
+      <p class="text-xl text-red-100 max-w-2xl">Independent, honest reviews of the best products to buy at Costco and online. We only recommend products we'd use ourselves.</p>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Disclosure -->
+    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-10">
+      <p class="text-sm text-yellow-800">
+        <strong>Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases. Our reviews are independent — we research and test products before recommending them.
+      </p>
+    </div>
+
+    <div class="mb-10">
+      <AdUnit slot="in_content_1" type="display" format="auto" minHeight="250px" />
+    </div>
+
+    <!-- Featured Reviews -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Reviews</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      {featuredReviews.map(review => (
+        <a href={review.href} class="block bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg hover:border-red-300 transition">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <svg class={`w-5 h-5 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+              <span class="ml-2 text-sm text-gray-500">{review.date}</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-700 transition">{review.title}</h3>
+            <p class="text-gray-600">{review.excerpt}</p>
+            <span class="inline-block mt-4 text-red-700 font-medium hover:underline">Read review &rarr;</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- Categories -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Browse by Category</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      {categories.map(cat => (
+        <a href={cat.href} class="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-red-300 transition">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={cat.icon} />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 group-hover:text-red-700 transition">{cat.title}</h3>
+          <p class="text-gray-600 mt-2 text-sm">{cat.description}</p>
+          <span class="inline-block mt-3 text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded">Est. commission: {cat.commission}</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="my-10">
+      <AdUnit slot="in_content_2" type="display" format="auto" minHeight="250px" />
+    </div>
+
+    <!-- Affiliate Products -->
+    <RelatedProducts title="Top Picks Right Now" maxItems={4} />
+  </div>
+</BaseLayout>

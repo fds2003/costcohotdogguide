@@ -1,0 +1,126 @@
+---
+const navItems = [
+  { label: 'Hot Dog Guide', href: '/guide/', children: [
+    { label: 'Nutrition', href: '/nutrition/' },
+    { label: 'Calories', href: '/nutrition/calories/' },
+    { label: 'Macros', href: '/nutrition/macros/' },
+    { label: 'WW Points', href: '/nutrition/weight-watchers-points/' },
+    { label: 'Ingredients', href: '/ingredients/' },
+    { label: 'Ingredients List', href: '/ingredients/ingredients-list/' },
+    { label: 'Beef or Pork?', href: '/ingredients/beef-or-pork/' },
+    { label: 'Brand', href: '/ingredients/brand/' },
+    { label: 'Dietary Info', href: '/dietary/' },
+    { label: 'Cooking', href: '/cooking/' },
+    { label: 'At Home', href: '/cooking/at-home/' },
+    { label: 'Recipe', href: '/cooking/recipe/' },
+    { label: 'FAQ', href: '/faq/' },
+    { label: 'Business', href: '/business/' },
+    { label: 'History', href: '/business/history/' },
+    { label: 'Price', href: '/price/' },
+    { label: 'Price Increase', href: '/price/price-increase/' },
+  ]},
+  { label: 'Articles', href: '/articles/', children: [
+    { label: 'Supply Chain', href: '/articles/supply-chain-efficiency/' },
+    { label: 'Pricing Strategy', href: '/articles/pricing-strategy/' },
+    { label: 'Membership Worth It?', href: '/articles/membership-worth-it/' },
+    { label: '$1.50 Miracle', href: '/articles/150-miracle/' },
+    { label: 'Food Court Menu', href: '/articles/food-court-menu/' },
+    { label: 'Employee Retention', href: '/articles/employee-retention/' },
+    { label: 'Is It Healthy?', href: '/articles/is-it-healthy/' },
+  ]},
+  { label: 'Reviews', href: '/reviews/', highlight: true },
+  { label: 'Guides', href: '/guides/' },
+  { label: 'Savings', href: '/savings/' },
+];
+---
+
+<nav class="bg-red-700 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2 font-bold text-xl tracking-tight hover:text-yellow-300 transition">
+        <span class="text-yellow-400">COSTCO</span>
+        <span>GUIDE</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center space-x-1">
+        {navItems.map(item => (
+          <div class="relative group">
+            <a
+              href={item.href}
+              class={`px-3 py-2 rounded-md text-sm font-medium transition inline-flex items-center ${
+                item.highlight
+                  ? 'bg-yellow-500 text-red-900 hover:bg-yellow-400'
+                  : 'hover:bg-red-600 hover:text-yellow-300'
+              }`}
+            >
+              {item.label}
+              {item.children && (
+                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
+            </a>
+            {item.children && (
+              <div class="absolute left-0 top-full w-56 bg-white rounded-md shadow-lg py-1 hidden group-hover:block z-50 border border-gray-200">
+                {item.children.map(child => (
+                  <a
+                    href={child.href}
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-700 transition"
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md hover:bg-red-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden md:hidden bg-red-800">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      {navItems.map(item => (
+        <div>
+          <a
+            href={item.href}
+            class={`block px-3 py-2 rounded-md text-base font-medium ${
+              item.highlight
+                ? 'bg-yellow-500 text-red-900'
+                : 'hover:bg-red-700'
+            }`}
+          >
+            {item.label}
+          </a>
+          {item.children && (
+            <div class="pl-4 mt-1 space-y-1">
+              {item.children.map(child => (
+                <a href={child.href} class="block px-3 py-1 text-sm text-red-200 hover:text-white hover:bg-red-700 rounded">
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import gumroadConfig from '../../data/gumroad.json';
+
+const benefits = [
+  'The exact strategy Costco uses to price its products (and how to spot the real deals)',
+  'A printable monthly shopping checklist organized by department',
+  'The 15 Kirkland products that consistently outperform name brands',
+  'How to calculate your true membership ROI in under 2 minutes',
+  'Seasonal buying calendar: when to buy furniture, electronics, and seasonal items',
+  'Insider tips on markdowns, price endings, and unadvertised sales'
+];
+
+const publishedAt = '2026-04-29';
+const modifiedAt = '2026-04-29';
+---
+
+<BaseLayout
+  title="The Costco Shopping Guide"
+  description="The complete Costco shopping guide PDF. Learn the strategies, hacks, and insider tips to maximize your membership value."
+  type="article"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-10 text-center">
+      <span class="inline-block bg-red-100 text-red-800 text-sm font-bold px-3 py-1 rounded-full mb-4">Digital Download</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">The Costco Shopping Guide</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">The complete playbook for maximizing your Costco membership. Save hundreds per year with strategies most shoppers never learn.</p>
+    </header>
+
+    <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-8 mb-10 text-center">
+      <p class="text-5xl font-bold text-gray-900 mb-2">{gumroadConfig.price}</p>
+      <p class="text-gray-600 mb-6">One-time purchase. Instant PDF download.</p>
+      {gumroadConfig.enabled ? (
+        <a
+          href={gumroadConfig.productUrl}
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-red-700 text-white font-bold px-10 py-4 rounded-lg hover:bg-red-600 transition text-lg"
+        >
+          Buy Now & Download
+        </a>
+      ) : (
+        <div class="inline-block bg-gray-300 text-gray-600 font-bold px-10 py-4 rounded-lg text-lg cursor-not-allowed">
+          Coming Soon
+        </div>
+      )}
+      <p class="text-xs text-gray-500 mt-4">30-day money-back guarantee. No questions asked.</p>
+    </div>
+
+    <div class="prose prose-lg max-w-none text-gray-700 mb-10">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">What You Will Get</h2>
+      <ul class="space-y-3">
+        {benefits.map(b => (
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Who This Is For</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">New Costco Members</span>
+          <span class="block text-sm text-gray-600 mt-1">Learn the ropes and avoid rookie mistakes that cost money.</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Executive Members</span>
+          <span class="block text-sm text-gray-600 mt-1">Maximize your 2% reward with strategic buying patterns.</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Families</span>
+          <span class="block text-sm text-gray-600 mt-1">Bulk buying strategies that actually work for households.</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Frugal Shoppers</span>
+          <span class="block text-sm text-gray-600 mt-1">Cut your grocery bill by 20-30% without sacrificing quality.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100 rounded-xl p-8 text-center">
+      <h3 class="text-xl font-bold text-gray-900 mb-3">Not Ready to Buy?</h3>
+      <p class="text-gray-600 mb-4">Start with our free membership calculator to see if Costco is worth it for you.</p>
+      <a href="/savings/membership-calculator/" class="inline-block bg-white text-red-700 font-semibold px-6 py-3 rounded-lg border border-red-200 hover:bg-red-50 transition">
+        Try Free Calculator
+      </a>
+    </div>
+  </article>
+</BaseLayout>

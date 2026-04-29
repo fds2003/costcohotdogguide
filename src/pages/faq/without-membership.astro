@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqData = [
+  {
+    question: "Can you get Costco hot dog without membership?",
+    answer: "In most US locations, yes. Costco food courts are generally open to the public, though policies vary by location."
+  },
+  {
+    question: "Do you need a Costco card for the food court?",
+    answer: "Not in most US stores. However, some locations (especially outside the US) may require membership."
+  },
+  {
+    question: "Can you shop at Costco without a membership?",
+    answer: "Generally no, except for the food court, pharmacy (where required by law), and alcohol (where required by law)."
+  }
+];
+---
+
+<BaseLayout
+  title="Can You Get Costco Hot Dog Without Membership?"
+  description="Yes — in most US locations you can visit the Costco food court without a membership. Full guide to policies by location."
+  type="faq"
+  faqData={faqData}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-green-50 border border-green-200 rounded-xl p-8 text-center mb-10">
+      <p class="text-sm text-green-700 font-medium uppercase tracking-wide">Answer</p>
+      <p class="text-4xl font-bold text-green-800 mt-2">Yes</p>
+      <p class="text-green-700 mt-2">In most US locations, no membership required</p>
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Can You Get a Costco Hot Dog Without a Membership?</h1>
+    <p class="text-gray-600 mb-8">Everything you need to know about food court access policies.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">United States</h2>
+    <p class="text-gray-700 mb-6">In the vast majority of US Costco locations, the food court is accessible without a membership card. You can simply walk in and order the $1.50 hot dog combo. However, some locations (particularly in busy urban areas) may enforce membership checks at the entrance, making it difficult to reach the food court.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Canada</h2>
+    <p class="text-gray-700 mb-6">Policies vary by province and store. Some Canadian Costco locations require membership for food court access, while others do not.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Other Countries</h2>
+    <p class="text-gray-700 mb-6">Outside North America, policies are more likely to require membership. It's best to check with your local store.</p>
+
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+      <p class="text-yellow-800"><strong>Pro tip:</strong> If your local Costco requires membership at the entrance, try visiting during off-peak hours and explaining that you only want to visit the food court. Some staff may accommodate you.</p>
+    </div>
+  </article>
+</BaseLayout>

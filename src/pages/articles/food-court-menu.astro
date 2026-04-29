@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import AdUnit from '../../components/AdUnit.astro';
+
+const menuItems = [
+  { name: 'Hot Dog & Soda', price: '$1.50', calories: 570, category: 'Classic' },
+  { name: 'Pizza Slice (Cheese)', price: '$1.99', calories: 700, category: 'Pizza' },
+  { name: 'Pizza Slice (Pepperoni)', price: '$1.99', calories: 760, category: 'Pizza' },
+  { name: 'Whole Cheese Pizza', price: '$9.95', calories: 5600, category: 'Pizza' },
+  { name: 'Chicken Bake', price: '$3.99', calories: 770, category: 'Hot' },
+  { name: 'Turkey & Provolone Sandwich', price: '$3.99', calories: 720, category: 'Cold' },
+  { name: 'Chicken Caesar Salad', price: '$3.99', calories: 650, category: 'Salad' },
+  { name: 'Ice Cream Sundae', price: '$2.49', calories: 410, category: 'Dessert' },
+  { name: 'Berry Smoothie', price: '$2.99', calories: 290, category: 'Drink' },
+  { name: 'Mocha Freeze', price: '$2.99', calories: 320, category: 'Drink' },
+  { name: 'Latte Freeze', price: '$2.99', calories: 280, category: 'Drink' },
+  { name: 'Churro', price: '$1.49', calories: 410, category: 'Dessert' },
+  { name: 'Twisted Soft Serve', price: '$1.99', calories: 380, category: 'Dessert' },
+];
+
+const comparisons = [
+  { item: 'Costco Hot Dog', costco: '$1.50', competitor: "$2.50+ (Sam's Club)" },
+  { item: 'Pizza Slice', costco: '$1.99', competitor: '$3.00+ (Pizza Hut)' },
+  { item: 'Chicken Bake', costco: '$3.99', competitor: '$5.00+ (Panera)' },
+  { item: 'Sundae', costco: '$2.49', competitor: '$4.00+ (Dairy Queen)' },
+];
+---
+
+<BaseLayout
+  title="Complete Costco Food Court Menu: Prices & Calories (2026)"
+  description="Full Costco food court menu with prices, calories, and fast-food comparisons. Updated for 2026."
+  type="article"
+  publishedAt="2026-04-29"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">The Complete Costco Food Court Menu</h1>
+    <p class="text-lg text-gray-600 mb-8">Every item, every price, every calorie — plus how Costco stacks up against the competition.</p>
+
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-bold text-red-900 mb-2">Why the Food Court Matters</h2>
+      <p class="text-red-800">
+        The Costco food court isn't just a convenience — it's a strategic weapon. By offering restaurant-quality food at prices lower than fast food, Costco keeps shoppers in the warehouse longer and reinforces its value proposition. The <a href="/price/" class="underline">$1.50 hot dog</a> is just the beginning.
+      </p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Full Menu (2026)</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Item</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Category</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Price</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Calories</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          {menuItems.map(item => (
+            <tr class={item.name.includes('Hot Dog') ? 'bg-red-50' : ''}>
+              <td class="px-6 py-3 font-medium">{item.name}</td>
+              <td class="px-6 py-3"><span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">{item.category}</span></td>
+              <td class="px-6 py-3 text-green-700 font-semibold">{item.price}</td>
+              <td class="px-6 py-3 text-gray-600">{item.calories}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Costco vs. Fast Food: Price Comparison</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Item</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Costco</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Competitor Price</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">You Save</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          {comparisons.map(c => (
+            <tr>
+              <td class="px-6 py-3 font-medium">{c.item}</td>
+              <td class="px-6 py-3 text-green-700 font-bold">{c.costco}</td>
+              <td class="px-6 py-3 text-gray-600">{c.competitor}</td>
+              <td class="px-6 py-3 text-green-600 font-medium">~33-50%</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="my-8">
+      <AdUnit type="banner" format="medium-rectangle" slot="medium_rectangle_content" minHeight="250px" />
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Healthiest Options</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      If you're watching your calories but still want the food court experience, here are your best bets:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+      <li><strong>Chicken Caesar Salad (650 cal)</strong> — Highest protein-to-calorie ratio. Skip the dressing or use half.</li>
+      <li><strong>Berry Smoothie (290 cal)</strong> — The lightest option on the menu. Made with real fruit.</li>
+      <li><strong>Latte Freeze (280 cal)</strong> — Coffee-based with fewer calories than the Mocha version.</li>
+      <li><strong>Hot Dog without bun (370 cal)</strong> — Keto-friendly and surprisingly filling. See our <a href="/nutrition/calories-without-bun/" class="text-red-700 hover:underline">calories without bun guide</a>.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Best Value Picks</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      Looking for the most food per dollar? Here's what the math says:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+      <li><strong>Whole Pizza ($9.95)</strong> — Feeds 4 people at $2.49/slice equivalent. Best for groups.</li>
+      <li><strong>Hot Dog Combo ($1.50)</strong> — The legendary value leader. 570 calories for pocket change.</li>
+      <li><strong>Chicken Bake ($3.99)</strong> — A full meal in one hand. 770 calories of protein and carbs.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Regional Variations</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      Not every Costco food court is identical. International locations offer unique items:
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+      <li><strong>Japan:</strong> Bulgogi bake, shrimp tempura</li>
+      <li><strong>UK:</strong> Jacket potatoes, cottage pie</li>
+      <li><strong>Australia:</strong> Meat pies, sausage rolls</li>
+      <li><strong>Mexico:</strong> Tacos, churros with cajeta</li>
+      <li><strong>Canada:</strong> Poutine (in select locations)</li>
+    </ul>
+
+    <RelatedProducts category="Food" title="Food Court Favorites at Home" />
+  </article>
+</BaseLayout>

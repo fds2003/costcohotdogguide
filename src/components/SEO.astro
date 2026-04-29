@@ -1,0 +1,103 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  type?: 'website' | 'article' | 'faq' | 'howto' | 'review';
+  publishedAt?: string;
+  modifiedAt?: string;
+  image?: string;
+  faqData?: Array<{ question: string; answer: string }>;
+  articleSchema?: {
+    headline?: string;
+    author?: string;
+    datePublished?: string;
+    dateModified?: string;
+  };
+}
+
+const {
+  title,
+  description,
+  canonical,
+  type = 'website',
+  publishedAt,
+  modifiedAt,
+  image = '/og-image.jpg',
+  faqData,
+  articleSchema
+} = Astro.props;
+
+const siteName = 'Costco Hot Dog Guide';
+const siteUrl = 'https://costcohotdogguide.com';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+const fullCanonical = canonical || `${siteUrl}${Astro.url.pathname}`;
+
+let structuredData: Record<string, any> = {
+  '@context': 'https://schema.org',
+  '@type': type === 'article' ? 'Article' : type === 'faq' ? 'FAQPage' : type === 'howto' ? 'HowTo' : type === 'review' ? 'Review' : 'WebSite',
+};
+
+if (type === 'article' || type === 'review') {
+  structuredData = {
+    ...structuredData,
+    headline: articleSchema?.headline || title,
+    description,
+    url: fullCanonical,
+    image: fullImage,
+    datePublished: articleSchema?.datePublished || publishedAt,
+    dateModified: articleSchema?.dateModified || modifiedAt || publishedAt,
+    author: {
+      '@type': 'Organization',
+      name: articleSchema?.author || siteName
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`
+      }
+    }
+  };
+}
+
+if (type === 'faq' && faqData) {
+  structuredData.mainEntity = faqData.map(item => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer
+    }
+  }));
+}
+
+const structuredDataString = JSON.stringify(structuredData);
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href={fullCanonical} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+<meta property="og:url" content={fullCanonical} />
+<meta property="og:image" content={fullImage} />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={fullImage} />
+
+<title>{fullTitle}</title>
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={structuredDataString} />

@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pages = [
+  { title: 'Why So Cheap?', href: '/business/why-so-cheap/', desc: 'The business strategy behind $1.50.' },
+  { title: 'History', href: '/business/history/', desc: '40 years of the same price.' },
+];
+---
+
+<BaseLayout
+  title="Costco Hot Dog Business Story"
+  description="Why is the Costco hot dog only $1.50? The history and business strategy behind America's cheapest lunch."
+  type="website"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Business & History</h1>
+    <p class="text-lg text-gray-600 mb-8">The story behind the most famous loss leader in retail.</p>
+
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-8">
+      <div class="text-center mb-6">
+        <p class="text-6xl font-bold text-red-700">$1.50</p>
+        <p class="text-xl text-gray-600 mt-2">Unchanged since 1985</p>
+      </div>
+      <p class="text-gray-700 leading-relaxed">
+        The Costco hot dog combo is one of the most famous loss leaders in retail history. When Costco co-founder Jim Sinegal introduced the $1.50 hot dog and soda combo in 1985, he made a commitment to keep the price forever. Even as inflation eroded margins, Costco refused to raise the price — because the hot dog isn't about profit. It's about brand identity.
+      </p>
+      <p class="mt-4 text-gray-700 leading-relaxed">
+        Former CEO W. Craig Jelinek once told Sinegal they were losing money on the hot dogs and needed to raise the price. Sinegal famously replied: <strong>"If you raise the price of the hot dog, I will kill you. Figure it out."</strong>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {pages.map(p => (
+        <a href={p.href} class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">{p.title}</span>
+          <span class="block text-sm text-gray-600 mt-1">{p.desc}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

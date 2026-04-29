@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import WWPointsCalculator from '../../components/WWPointsCalculator.astro';
+---
+
+<BaseLayout
+  title="Costco Hot Dog Weight Watchers Points"
+  description="How many Weight Watchers SmartPoints is a Costco hot dog? Interactive calculator with bun, condiments, and modifications."
+  type="article"
+  publishedAt="2026-04-29"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Weight Watchers Points</h1>
+    <p class="text-lg text-gray-600 mb-8">Calculate SmartPoints for your Costco hot dog with our interactive calculator. Adjust for bun, condiments, and toppings.</p>
+
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-bold text-blue-900 mb-2">Quick Answer</h2>
+      <p class="text-blue-800 text-lg">
+        A standard Costco hot dog <strong>with bun</strong> is <strong class="text-2xl">14 SmartPoints</strong> on the Weight Watchers program.
+        Without the bun, it drops to <strong>10 SmartPoints</strong>.
+      </p>
+    </div>
+
+    <WWPointsCalculator />
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Understanding WW SmartPoints</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      Weight Watchers SmartPoints are calculated based on calories, saturated fat, sugar, and protein content. Foods higher in protein get a slight discount, while foods high in sugar and saturated fat cost more points.
+    </p>
+    <p class="text-gray-700 mb-6 leading-relaxed">
+      The Costco hot dog scores relatively high on SmartPoints primarily due to its calorie density and saturated fat content. However, it also delivers a solid 24g of protein, which helps offset the point value slightly.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Points Breakdown by Component</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Component</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">SmartPoints</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="px-6 py-3 font-medium">Hot dog (meat only)</td>
+            <td class="px-6 py-3 font-bold text-blue-700">10</td>
+            <td class="px-6 py-3 text-gray-600">High protein, high fat</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3 font-medium">Bun</td>
+            <td class="px-6 py-3 font-bold text-blue-700">4</td>
+            <td class="px-6 py-3 text-gray-600">Refined carbohydrates</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3 font-medium">Mustard</td>
+            <td class="px-6 py-3 font-bold text-blue-700">0</td>
+            <td class="px-6 py-3 text-gray-600">Negligible calories</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3 font-medium">Ketchup</td>
+            <td class="px-6 py-3 font-bold text-blue-700">0</td>
+            <td class="px-6 py-3 text-gray-600">Small portion size</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3 font-medium">Relish</td>
+            <td class="px-6 py-3 font-bold text-blue-700">1</td>
+            <td class="px-6 py-3 text-gray-600">Added sugars</td>
+          </tr>
+          <tr>
+            <td class="px-6 py-3 font-medium">Onions</td>
+            <td class="px-6 py-3 font-bold text-blue-700">0</td>
+            <td class="px-6 py-3 text-gray-600">Zero-point vegetable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Tips for Lowering Your Points</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+      <li><strong>Skip the bun</strong> — saves 4 points instantly. Ask for the hot dog "naked."</li>
+      <li><strong>Load up on onions</strong> — they're a zero-point food and add flavor and crunch.</li>
+      <li><strong>Avoid relish</strong> — the added sugars cost 1 point. Mustard and ketchup are free.</li>
+      <li><strong>Share the combo</strong> — split the hot dog with a friend and bank the remaining weekly points.</li>
+      <li><strong>Pair with water</strong> — the included soda adds empty calories. Opt for water to stay on track.</li>
+    </ul>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Is It Worth the Points?</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      At 14 SmartPoints, the Costco hot dog combo uses a significant portion of most people's daily budget (typically 23-30 points). However, at just $1.50, it's one of the most affordable high-protein meals available.
+    </p>
+    <p class="text-gray-700 mb-8 leading-relaxed">
+      Many WW members treat the Costco hot dog as an occasional indulgence rather than a regular meal. If you plan ahead and budget your points, you can absolutely enjoy this iconic combo without derailing your progress.
+    </p>
+
+    <RelatedProducts category="Health" title="Weight Management Products" />
+  </article>
+</BaseLayout>

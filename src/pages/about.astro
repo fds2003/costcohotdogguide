@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const publishedAt = '2026-04-29';
+const modifiedAt = '2026-04-29';
+---
+
+<BaseLayout
+  title="About Us"
+  description="Learn about Costco Hot Dog Guide — your independent resource for Costco product reviews, shopping tips, and the legendary $1.50 hot dog."
+  type="article"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Costco Hot Dog Guide</h1>
+      <p class="text-lg text-gray-600">The independent shopper's companion for all things Costco.</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p class="lead text-xl">
+        Costco Hot Dog Guide was created with a simple mission: help Costco members and fans get the most value out of their membership. What started as a deep dive into the legendary $1.50 hot dog has grown into a comprehensive resource covering nutrition, product reviews, shopping strategies, and money-saving tools.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Our Mission</h2>
+      <p>
+        We believe that shopping smart is a skill. Whether you are a first-time Costco visitor or a long-time Executive member, our goal is to provide honest, research-backed information that helps you make better buying decisions.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">What We Cover</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 not-prose">
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Product Reviews</span>
+          <span class="block text-sm text-gray-600 mt-1">Independent reviews of vitamins, kitchen appliances, camping gear, and more.</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Shopping Guides</span>
+          <span class="block text-sm text-gray-600 mt-1">Tips to maximize your membership and find the best deals.</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Nutrition & Health</span>
+          <span class="block text-sm text-gray-600 mt-1">Detailed breakdowns of Costco food court items and dietary information.</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-lg p-4">
+          <span class="font-semibold text-gray-900">Savings Tools</span>
+          <span class="block text-sm text-gray-600 mt-1">Calculators and trackers to help you budget and save.</span>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Our Approach</h2>
+      <p>
+        Every article on this site is researched and written with independence in mind. We are not affiliated with Costco Wholesale Corporation. Our reviews are based on publicly available information, user feedback, and independent analysis. When we recommend products through affiliate links, we only suggest items we would use ourselves.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Get in Touch</h2>
+      <p>
+        Have a question, suggestion, or correction? We would love to hear from you. Reach out at <a href="mailto:contact@costcohotdogguide.com" class="text-red-700 hover:underline">contact@costcohotdogguide.com</a>.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,6 @@
+{
+  "_comment": "Replace embedCode with your real ConvertKit or Mailchimp HTML embed. Set enabled to true after setup.",
+  "enabled": false,
+  "provider": "convertkit",
+  "embedCode": ""
+}

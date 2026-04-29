@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqData = [
+  {
+    question: "Are Costco hot dogs gluten free?",
+    answer: "No. The bun contains wheat flour, which contains gluten. The hot dog itself does not contain gluten ingredients."
+  },
+  {
+    question: "Can celiacs eat Costco hot dogs?",
+    answer: "The hot dog meat itself may be safe, but the bun is not gluten-free. Cross-contamination is also a risk in the food court."
+  }
+];
+---
+
+<BaseLayout
+  title="Are Costco Hot Dogs Gluten Free?"
+  description="No — Costco hot dog buns contain wheat flour. Learn about gluten content and celiac-safe options."
+  type="faq"
+  faqData={faqData}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="bg-red-50 border border-red-200 rounded-xl p-8 text-center mb-10">
+      <p class="text-sm text-red-700 font-medium uppercase tracking-wide">Answer</p>
+      <p class="text-4xl font-bold text-red-800 mt-2">No</p>
+      <p class="text-red-700 mt-2">The bun contains wheat flour</p>
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Are Costco Hot Dogs Gluten Free?</h1>
+    <p class="text-gray-600 mb-8">A detailed look at gluten content for celiac and gluten-sensitive shoppers.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">Hot Dog Meat</h2>
+    <p class="text-gray-700 mb-6">The hot dog itself does not contain any gluten ingredients. It is made from beef, water, salt, corn syrup, dextrose, flavorings, paprika, sodium erythorbate, and sodium nitrite.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">The Bun</h2>
+    <p class="text-gray-700 mb-6">The bun contains enriched wheat flour, which is the primary source of gluten. There is currently no gluten-free bun option available at Costco food courts.</p>
+
+    <h2 class="text-xl font-bold text-gray-900 mb-3">For Celiacs</h2>
+    <p class="text-gray-700 mb-6">If you have celiac disease, you should avoid the bun entirely. Some people bring their own gluten-free bun or eat the hot dog without a bun. Be aware that cross-contamination in the food court is possible.</p>
+  </article>
+</BaseLayout>

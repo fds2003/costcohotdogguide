@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const publishedAt = '2026-04-29';
+const modifiedAt = '2026-04-29';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Contact Costco Hot Dog Guide. Questions, feedback, or partnership inquiries — we would love to hear from you."
+  type="article"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <header class="mb-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
+      <p class="text-lg text-gray-600">Have a question or suggestion? We would love to hear from you.</p>
+    </header>
+
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p>
+        Whether you have a question about Costco products, spotted an error on our site, or want to explore a partnership opportunity, feel free to reach out.
+      </p>
+
+      <div class="bg-red-50 border border-red-200 rounded-lg p-6 my-8 not-prose">
+        <h3 class="text-lg font-bold text-red-900 mb-2">Email</h3>
+        <p class="text-red-800">
+          <a href="mailto:contact@costcohotdogguide.com" class="font-semibold hover:underline">contact@costcohotdogguide.com</a>
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">What We Can Help With</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Product review requests or corrections</li>
+        <li>Questions about Costco policies or nutrition facts</li>
+        <li>Technical issues with the website</li>
+        <li>Advertising and partnership inquiries</li>
+        <li>Guest content contributions</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Response Time</h2>
+      <p>
+        We aim to respond to all inquiries within 2-3 business days. For urgent matters, please include "Urgent" in your subject line.
+      </p>
+
+      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Social Media</h2>
+      <p>
+        Follow us for the latest Costco news, deals, and hot dog updates. Links coming soon.
+      </p>
+    </div>
+  </article>
+</BaseLayout>

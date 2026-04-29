@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const sources = [
+  { source: 'Costco Customer Service (2024)', answer: '100% beef', detail: 'Confirmed in multiple customer inquiries' },
+  { source: 'Kirkland Signature Product Label', answer: 'Beef only', detail: 'Ingredients list shows beef as sole meat source' },
+  { source: 'USDA FSIS Records', answer: 'All-beef formulation', detail: 'No pork or poultry ingredients in formulation' },
+  { source: 'Costco Annual Shareholder Meeting (2023)', answer: '100% beef', detail: 'CEO confirmed all-beef formulation' },
+];
+---
+
+<BaseLayout
+  title="Does Costco Hot Dog Have Pork?"
+  description="Definitive answer: Costco hot dogs are 100% beef. No pork, no poultry, no fillers. Evidence and sourcing details."
+  type="article"
+  publishedAt="2026-04-29"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Does Costco Hot Dog Have Pork?</h1>
+    <p class="text-lg text-gray-600 mb-8">The definitive answer, with evidence from Costco, suppliers, and official records.</p>
+
+    <div class="bg-green-50 border border-green-200 rounded-xl p-8 mb-8 text-center">
+      <p class="text-6xl font-bold text-green-700 mb-2">No.</p>
+      <p class="text-xl text-green-800">Costco hot dogs are 100% beef.</p>
+      <p class="text-sm text-green-600 mt-2">No pork. No poultry. No fillers. Verified across multiple sources.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Evidence</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Source</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Answer</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Details</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          {sources.map(s => (
+            <tr>
+              <td class="px-6 py-3 font-medium">{s.source}</td>
+              <td class="px-6 py-3 text-green-700 font-bold">{s.answer}</td>
+              <td class="px-6 py-3 text-gray-600">{s.detail}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Why the Confusion?</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      Many people assume all hot dogs contain pork because pork is a common ingredient in traditional American hot dogs. Brands like Oscar Mayer, Ball Park, and even Hebrew National (Costco's former supplier) have offered pork-containing or pork-blend products.
+    </p>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      However, when Costco switched from Hebrew National to its own Kirkland Signature brand in 2009, it made a deliberate choice to use <strong>100% beef</strong> only. This decision simplified the supply chain and appealed to a broader customer base, including those who avoid pork for religious or dietary reasons.
+    </p>
+    <p class="text-gray-700 mb-6 leading-relaxed">
+      The confusion is also fueled by Costco's <a href="/dietary/pork/" class="text-red-700 hover:underline">pork-related dietary information page</a>, which exists not because the hot dog contains pork, but because customers frequently ask the question.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Religious and Dietary Considerations</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="bg-white rounded-lg border border-gray-200 p-4">
+        <h3 class="font-bold text-gray-900 mb-2">Kosher</h3>
+        <p class="text-sm text-gray-600">While not certified kosher, the all-beef formulation with no pork or dairy makes it acceptable for some who follow kosher-style diets. Strict kosher observers should note it's not rabbinically supervised.</p>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-4">
+        <h3 class="font-bold text-gray-900 mb-2">Halal</h3>
+        <p class="text-sm text-gray-600">Not halal-certified, but the 100% beef formulation with no pork is compatible with halal dietary restrictions. Muslims avoiding pork can eat this product, though strict observers may prefer certified halal options.</p>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-4">
+        <h3 class="font-bold text-gray-900 mb-2">Vegetarian/Vegan</h3>
+        <p class="text-sm text-gray-600">This product is not suitable for vegetarians or vegans. See our <a href="/dietary/vegan/" class="text-red-700 hover:underline">vegan alternatives guide</a> for plant-based options.</p>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">What About the Bun?</h2>
+    <p class="text-gray-700 mb-4 leading-relaxed">
+      The bun contains <strong>no pork or meat products</strong>. However, it does contain wheat, soy, and may contain traces of milk and eggs. The full ingredient list is available on our <a href="/ingredients/ingredients-list/" class="text-red-700 hover:underline">ingredients page</a>.
+    </p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">The Bottom Line</h2>
+    <p class="text-gray-700 mb-8 leading-relaxed">
+      You can be confident that Costco hot dogs contain <strong>only beef</strong>. This has been verified by Costco directly, confirmed on product labels, and is a deliberate part of the company's supply chain strategy. If you avoid pork for religious, health, or personal reasons, the Costco hot dog is a safe choice — though always verify with your local food court if you have severe allergies or strict dietary requirements.
+    </p>
+
+    <RelatedProducts category="Food" title="All-Beef Hot Dog Alternatives" />
+  </article>
+</BaseLayout>

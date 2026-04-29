@@ -1,0 +1,317 @@
+{
+  "disclaimer": "As an Amazon Associate, we earn from qualifying purchases.",
+  "links": {
+    "vitamins": {
+      "url": "https://www.amazon.com/s?k=vitamins&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Health"
+    },
+    "protein": {
+      "url": "https://www.amazon.com/s?k=protein+powder&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Health"
+    },
+    "kitchen_scale": {
+      "url": "https://www.amazon.com/s?k=kitchen+scale&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "air_fryer": {
+      "url": "https://www.amazon.com/s?k=air+fryer&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "camping_gear": {
+      "url": "https://www.amazon.com/s?k=camping+gear&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Outdoor"
+    },
+    "hot_dog_buns": {
+      "url": "https://www.amazon.com/s?k=hot+dog+buns&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food"
+    },
+    "mustard": {
+      "url": "https://www.amazon.com/s?k=yellow+mustard&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food"
+    },
+    "grill": {
+      "url": "https://www.amazon.com/s?k=gas+grill&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Outdoor"
+    },
+    "cooler": {
+      "url": "https://www.amazon.com/s?k=portable+cooler&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Outdoor"
+    },
+    "blender": {
+      "url": "https://www.amazon.com/s?k=blender&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "food_storage": {
+      "url": "https://www.amazon.com/s?k=food+storage+containers&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "vacuum_sealer": {
+      "url": "https://www.amazon.com/s?k=vacuum+sealer&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "tent": {
+      "url": "https://www.amazon.com/s?k=camping+tent&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Outdoor"
+    },
+    "meat_thermometer": {
+      "url": "https://www.amazon.com/s?k=meat+thermometer&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "gluten_free_buns": {
+      "url": "https://www.amazon.com/s?k=gluten+free+hot+dog+buns&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food"
+    },
+    "omega3": {
+      "url": "https://www.amazon.com/s?k=omega+3+supplement&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Health"
+    },
+    "sleeping_bag": {
+      "url": "https://www.amazon.com/s?k=sleeping+bag&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Outdoor"
+    },
+    "desk": {
+      "url": "https://www.amazon.com/s?k=writing+desk&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "accent_chair": {
+      "url": "https://www.amazon.com/s?k=accent+chair&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen"
+    },
+    "quinoa": {
+      "url": "https://www.amazon.com/s?k=organic+quinoa&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food"
+    },
+    "almond_butter": {
+      "url": "https://www.amazon.com/s?k=almond+butter&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food"
+    },
+    "basmati_rice": {
+      "url": "https://www.amazon.com/s?k=basmati+rice&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food"
+    },
+    "hot_dog_roller": {
+      "url": "https://www.amazon.com/s?k=hot+dog+roller&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen",
+      "scenario": ["home-cooking"]
+    },
+    "pizza_stone": {
+      "url": "https://www.amazon.com/s?k=pizza+stone&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen",
+      "scenario": ["home-cooking"]
+    },
+    "bbq_sauce_set": {
+      "url": "https://www.amazon.com/s?k=bbq+sauce+set&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Food",
+      "scenario": ["home-cooking"]
+    },
+    "food_storage_containers": {
+      "url": "https://www.amazon.com/s?k=food+storage+containers+set&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen",
+      "scenario": ["storage", "bulk-buy"]
+    },
+    "picnic_blanket": {
+      "url": "https://www.amazon.com/s?k=picnic+blanket+waterproof&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Outdoor",
+      "scenario": ["picnic"]
+    },
+    "reusable_utensils": {
+      "url": "https://www.amazon.com/s?k=reusable+utensils+set&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen",
+      "scenario": ["picnic"]
+    },
+    "chest_freezer": {
+      "url": "https://www.amazon.com/s?k=chest+freezer&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen",
+      "scenario": ["storage", "bulk-buy"]
+    },
+    "meal_prep_containers": {
+      "url": "https://www.amazon.com/s?k=meal+prep+containers&ref=nb_sb_noss",
+      "tag": "costcoguide-20",
+      "category": "Kitchen",
+      "scenario": ["meal-prep"]
+    }
+  },
+  "products": [
+    {
+      "id": "vitamins",
+      "title": "Top Rated Vitamins",
+      "description": "High-quality vitamins and supplements available at Costco or online.",
+      "image": "/images/vitamins.jpg",
+      "linkKey": "vitamins",
+      "priceRange": "$15 - $45"
+    },
+    {
+      "id": "air_fryer",
+      "title": "Best Air Fryers",
+      "description": "Perfect for cooking hot dogs and more at home with less oil.",
+      "image": "/images/air-fryer.jpg",
+      "linkKey": "air_fryer",
+      "priceRange": "$60 - $200"
+    },
+    {
+      "id": "kitchen_scale",
+      "title": "Digital Kitchen Scales",
+      "description": "Track your nutrition accurately with a precise kitchen scale.",
+      "image": "/images/kitchen-scale.jpg",
+      "linkKey": "kitchen_scale",
+      "priceRange": "$15 - $40"
+    },
+    {
+      "id": "protein",
+      "title": "Protein Supplements",
+      "description": "Boost your protein intake with trusted brands.",
+      "image": "/images/protein.jpg",
+      "linkKey": "protein",
+      "priceRange": "$25 - $60"
+    },
+    {
+      "id": "cooler",
+      "title": "Portable Coolers",
+      "description": "Keep your Costco bulk purchases fresh on the road or at camp.",
+      "image": "/images/cooler.jpg",
+      "linkKey": "cooler",
+      "priceRange": "$40 - $300"
+    },
+    {
+      "id": "vacuum_sealer",
+      "title": "Vacuum Sealers",
+      "description": "Preserve bulk meats and hot dogs for months with a quality vacuum sealer.",
+      "image": "/images/vacuum-sealer.jpg",
+      "linkKey": "vacuum_sealer",
+      "priceRange": "$50 - $200"
+    },
+    {
+      "id": "meat_thermometer",
+      "title": "Instant-Read Thermometers",
+      "description": "Cook hot dogs and meats to the perfect safe temperature every time.",
+      "image": "/images/meat-thermometer.jpg",
+      "linkKey": "meat_thermometer",
+      "priceRange": "$15 - $100"
+    },
+    {
+      "id": "omega3",
+      "title": "Omega-3 Supplements",
+      "description": "Complement your diet with heart-healthy omega-3 fish oil supplements.",
+      "image": "/images/omega3.jpg",
+      "linkKey": "omega3",
+      "priceRange": "$15 - $40"
+    },
+    {
+      "id": "sleeping_bag",
+      "title": "Camping Sleeping Bags",
+      "description": "Stay warm on your next outdoor adventure with a quality sleeping bag.",
+      "image": "/images/sleeping-bag.jpg",
+      "linkKey": "sleeping_bag",
+      "priceRange": "$30 - $150"
+    },
+    {
+      "id": "desk",
+      "title": "Home Office Desks",
+      "description": "A solid writing desk for your home office with built-in features.",
+      "image": "/images/desk.jpg",
+      "linkKey": "desk",
+      "priceRange": "$150 - $400"
+    },
+    {
+      "id": "quinoa",
+      "title": "Organic Quinoa",
+      "description": "USDA organic quinoa — a protein-packed pantry staple in bulk.",
+      "image": "/images/quinoa.jpg",
+      "linkKey": "quinoa",
+      "priceRange": "$8 - $25"
+    },
+    {
+      "id": "hot_dog_roller",
+      "title": "Hot Dog Rollers",
+      "description": "Cook restaurant-style hot dogs at home with an electric roller grill.",
+      "image": "/images/hot-dog-roller.jpg",
+      "linkKey": "hot_dog_roller",
+      "priceRange": "$40 - $120"
+    },
+    {
+      "id": "pizza_stone",
+      "title": "Pizza Stones",
+      "description": "Get crispy crusts at home — perfect for reheating Costco pizza and hot dogs.",
+      "image": "/images/pizza-stone.jpg",
+      "linkKey": "pizza_stone",
+      "priceRange": "$25 - $80"
+    },
+    {
+      "id": "bbq_sauce_set",
+      "title": "BBQ Sauce & Condiment Sets",
+      "description": "Elevate your hot dog game with premium BBQ sauces, mustards, and relishes.",
+      "image": "/images/bbq-sauce-set.jpg",
+      "linkKey": "bbq_sauce_set",
+      "priceRange": "$15 - $40"
+    },
+    {
+      "id": "food_storage_containers",
+      "title": "Food Storage Container Sets",
+      "description": "Keep bulk Costco purchases fresh with airtight, stackable storage containers.",
+      "image": "/images/food-storage-containers.jpg",
+      "linkKey": "food_storage_containers",
+      "priceRange": "$20 - $60"
+    },
+    {
+      "id": "picnic_blanket",
+      "title": "Waterproof Picnic Blankets",
+      "description": "Durable, waterproof blankets for outdoor Costco hot dog picnics and park days.",
+      "image": "/images/picnic-blanket.jpg",
+      "linkKey": "picnic_blanket",
+      "priceRange": "$15 - $50"
+    },
+    {
+      "id": "reusable_utensils",
+      "title": "Reusable Utensil Sets",
+      "description": "Eco-friendly bamboo or stainless steel utensil sets for on-the-go meals.",
+      "image": "/images/reusable-utensils.jpg",
+      "linkKey": "reusable_utensils",
+      "priceRange": "$10 - $30"
+    },
+    {
+      "id": "chest_freezer",
+      "title": "Chest Freezers",
+      "description": "Maximize your Costco bulk-buy savings with extra frozen storage space.",
+      "image": "/images/chest-freezer.jpg",
+      "linkKey": "chest_freezer",
+      "priceRange": "$200 - $600"
+    },
+    {
+      "id": "meal_prep_containers",
+      "title": "Meal Prep Container Sets",
+      "description": "Portion and pack your meals efficiently with BPA-free divided containers.",
+      "image": "/images/meal-prep-containers.jpg",
+      "linkKey": "meal_prep_containers",
+      "priceRange": "$15 - $45"
+    }
+  ]
+}

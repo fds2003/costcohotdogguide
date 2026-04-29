@@ -1,0 +1,36 @@
+---
+import newsletterConfig from '../data/newsletter.json';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Get Costco Shopping Tips',
+  description = 'Join our newsletter for weekly Costco deals, product recommendations, and money-saving strategies.'
+} = Astro.props;
+---
+
+{newsletterConfig.enabled && newsletterConfig.embedCode && (
+  <section class="bg-red-50 border border-red-200 rounded-xl p-8 my-10">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-red-900 mb-3">{title}</h3>
+      <p class="text-red-700 mb-6">{description}</p>
+      <div class="newsletter-embed" set:html={newsletterConfig.embedCode} />
+    </div>
+  </section>
+)}
+
+{!newsletterConfig.enabled && (
+  <section class="bg-gray-100 border border-gray-200 rounded-xl p-8 my-10">
+    <div class="max-w-xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p class="text-gray-600 mb-6">{description}</p>
+      <div class="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 text-gray-400">
+        <p class="text-sm font-medium">Newsletter signup coming soon</p>
+        <p class="text-xs mt-1">Enable in newsletter.json to activate</p>
+      </div>
+    </div>
+  </section>
+)}

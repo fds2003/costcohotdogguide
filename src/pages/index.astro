@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RelatedProducts from '../components/RelatedProducts.astro';
+import AdUnit from '../components/AdUnit.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
+import gumroadConfig from '../data/gumroad.json';
+
+const sections = [
+  {
+    title: 'Nutrition Facts',
+    description: 'Complete calorie, protein, and macro breakdown.',
+    href: '/nutrition/',
+    icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'
+  },
+  {
+    title: 'Ingredients',
+    description: 'What goes into a Costco hot dog? Full breakdown.',
+    href: '/ingredients/',
+    icon: 'M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
+  },
+  {
+    title: 'Dietary Info',
+    description: 'Halal, kosher, gluten-free, dairy-free, and more.',
+    href: '/dietary/',
+    icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+  },
+  {
+    title: 'Cooking at Home',
+    description: 'Air fryer, oven, and stove-top recipes.',
+    href: '/cooking/',
+    icon: 'M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4'
+  },
+  {
+    title: 'FAQ',
+    description: 'Answers to the most common questions.',
+    href: '/faq/',
+    icon: 'M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+  },
+  {
+    title: 'Price & History',
+    description: 'Why $1.50? The full business story.',
+    href: '/business/',
+    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+  }
+];
+
+const monetizationSections = [
+  {
+    title: 'Product Reviews',
+    description: 'Independent reviews of the best products to buy at Costco and online.',
+    href: '/reviews/',
+    icon: '⭐',
+    cta: 'Browse Reviews'
+  },
+  {
+    title: 'Shopping Guides',
+    description: 'Expert tips to maximize your membership and find the best deals.',
+    href: '/guides/',
+    icon: '📖',
+    cta: 'Read Guides'
+  },
+  {
+    title: 'Savings Tools',
+    description: 'Calculators and tools to track prices and maximize savings.',
+    href: '/savings/',
+    icon: '💰',
+    cta: 'Start Saving'
+  }
+];
+---
+
+<BaseLayout
+  title="Costco Hot Dog Guide"
+  description="The ultimate guide to Costco's legendary $1.50 hot dog. Nutrition facts, ingredients, cooking tips, and everything you need to know."
+  type="website"
+>
+  <!-- Hero Section -->
+  <section class="bg-red-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+          The Ultimate<br />
+          <span class="text-yellow-400">Costco Hot Dog</span> Guide
+        </h1>
+        <p class="text-xl md:text-2xl text-red-100 mb-8 leading-relaxed">
+          Everything you need to know about the legendary $1.50 hot dog — nutrition, ingredients, cooking at home, and more.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/guide/" class="bg-yellow-500 text-red-900 font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition text-lg">
+            Read the Full Guide
+          </a>
+          <a href="/reviews/" class="bg-white text-red-700 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition text-lg">
+            Shop Smart
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad: Homepage Top -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+    <AdUnit slot="homepage_top" type="display" format="auto" minHeight="90px" />
+  </div>
+
+  <!-- Ad: Homepage Leaderboard -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <AdUnit type="banner" format="leaderboard" slot="leaderboard_header" minHeight="90px" />
+  </div>
+
+  <!-- Hot Dog Sections -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl font-bold text-gray-900 text-center mb-4">Explore the Hot Dog</h2>
+    <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      Deep dives into every aspect of the Costco food court hot dog.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sections.map(section => (
+        <a href={section.href} class="group bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-red-300 transition">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={section.icon} />
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 group-hover:text-red-700 transition">{section.title}</h3>
+          <p class="text-gray-600 mt-2 text-sm">{section.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Digital Product Promo -->
+  <section class="bg-yellow-50 border-y border-yellow-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="inline-block bg-red-100 text-red-800 text-xs font-bold px-2 py-1 rounded-full mb-2">New</span>
+          <h2 class="text-2xl font-bold text-gray-900">The Costco Shopping Guide</h2>
+          <p class="text-gray-600 mt-1 max-w-xl">The complete playbook for maximizing your membership. Save hundreds per year with insider strategies.</p>
+        </div>
+        <a href="/guides/costco-shopping-guide/" class="inline-block bg-red-700 text-white font-bold px-8 py-3 rounded-lg hover:bg-red-600 transition whitespace-nowrap">
+          Get It for {gumroadConfig.price}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monetization Sections -->
+  <section class="bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-4">Shop Smarter</h2>
+      <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        Beyond the hot dog — discover the best products and strategies for Costco shoppers.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {monetizationSections.map(item => (
+          <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <div class="text-4xl mb-4">{item.icon}</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+            <p class="text-gray-600 mb-6">{item.description}</p>
+            <a href={item.href} class="inline-block bg-red-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-red-600 transition">
+              {item.cta}
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad: In-Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <AdUnit slot="in_content_1" type="display" format="auto" minHeight="250px" />
+  </div>
+
+  <!-- Affiliate Products -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <RelatedProducts title="Popular Picks for Costco Fans" maxItems={4} />
+  </section>
+
+  <!-- Newsletter -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <NewsletterSignup />
+  </section>
+
+  <!-- FAQ Preview -->
+  <section class="bg-red-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Quick Answers</h2>
+      <div class="space-y-4">
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition">Are Costco hot dogs all beef?</summary>
+          <div class="px-6 pb-4 text-gray-600">
+            Yes, Costco hot dogs are 100% all-beef. Kirkland Signature hot dogs are made with USDA Choice beef and contain no poultry, pork, or fillers.
+          </div>
+        </details>
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition">How many calories in a Costco hot dog?</summary>
+          <div class="px-6 pb-4 text-gray-600">
+            A Costco hot dog with bun contains approximately 570 calories. Without the bun, it's about 370 calories. <a href="/nutrition/calories/" class="text-red-700 hover:underline">See full nutrition breakdown.</a>
+          </div>
+        </details>
+        <details class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition">Can you buy Costco hot dogs without a membership?</summary>
+          <div class="px-6 pb-4 text-gray-600">
+            In most locations, you can visit the Costco food court without a membership. However, policies vary by location and country. <a href="/faq/without-membership/" class="text-red-700 hover:underline">Read our full guide.</a>
+          </div>
+        </details>
+      </div>
+      <div class="text-center mt-8">
+        <a href="/faq/" class="text-red-700 font-semibold hover:underline">View All FAQs &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Sticky Banner -->
+  <div class="fixed bottom-0 left-0 right-0 z-50">
+    <AdUnit type="banner" format="mobile-banner" slot="mobile_banner_sticky" minHeight="50px" />
+  </div>
+</BaseLayout>
