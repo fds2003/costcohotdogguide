@@ -1,0 +1,186 @@
+{
+  "disclaimer": "As an Amazon Associate, we earn from qualifying purchases. Prices and availability are subject to change.",
+  "categories": ["kitchen", "supplements", "outdoor", "home"],
+  "links": {
+    "ninja_air_fryer": {
+      "url": "https://www.amazon.com/Ninja-AF101-Fryer-Black-Grey/dp/B07FDJMC9Q",
+      "tag": "costcohotdogg-20",
+      "category": "kitchen",
+      "price": 99.99
+    },
+    "cosori_air_fryer": {
+      "url": "https://www.amazon.com/COSORI-Air-Fryer-Oven-Combo/dp/B09N6ZRH6W",
+      "tag": "costcohotdogg-20",
+      "category": "kitchen",
+      "price": 119.99
+    },
+    "kitchenaid_stand_mixer": {
+      "url": "https://www.amazon.com/KitchenAid-KSM150PSER-Artisan-Tilt-Head-Stand/dp/B00005UP2P",
+      "tag": "costcohotdogg-20",
+      "category": "kitchen",
+      "price": 349.99
+    },
+    "instant_pot_duo": {
+      "url": "https://www.amazon.com/Instant-Pot-Multi-Use-Pressure-Cooker/dp/B08PQ2KWHS",
+      "tag": "costcohotdogg-20",
+      "category": "kitchen",
+      "price": 89.99
+    },
+    "oxo_kitchen_scale": {
+      "url": "https://www.amazon.com/OXO-Grips-Stainless-Pull-Out-Display/dp/B07PFV7P8F",
+      "tag": "costcohotdogg-20",
+      "category": "kitchen",
+      "price": 55.99
+    },
+    "kirkland_omega3": {
+      "url": "https://www.amazon.com/Kirkland-Signature-Omega-3-Fish-Oil/dp/B002VLZHLS",
+      "tag": "costcohotdogg-20",
+      "category": "supplements",
+      "price": 24.99
+    },
+    "kirkland_multivitamin": {
+      "url": "https://www.amazon.com/Kirkland-Signature-Daily-Multi-Vitamin/dp/B002RL8FX8",
+      "tag": "costcohotdogg-20",
+      "category": "supplements",
+      "price": 19.99
+    },
+    "kirkland_vitamin_d": {
+      "url": "https://www.amazon.com/Kirkland-Signature-Vitamin-2000-Softgels/dp/B003AM6HDM",
+      "tag": "costcohotdogg-20",
+      "category": "supplements",
+      "price": 14.99
+    },
+    "coleman_camping_stove": {
+      "url": "https://www.amazon.com/Coleman-Classic-Propane-Stove/dp/B0009PUQ8M",
+      "tag": "costcohotdogg-20",
+      "category": "outdoor",
+      "price": 69.99
+    },
+    "yeti_cooler": {
+      "url": "https://www.amazon.com/YETI-Tundra-Cooler-White/dp/B003V53G3W",
+      "tag": "costcohotdogg-20",
+      "category": "outdoor",
+      "price": 275.00
+    },
+    "ozark_trail_tent": {
+      "url": "https://www.amazon.com/Ozark-Trail-Instant-Cabin-Tent/dp/B00CJGNB3Q",
+      "tag": "costcohotdogg-20",
+      "category": "outdoor",
+      "price": 149.99
+    },
+    "ninja_blender": {
+      "url": "https://www.amazon.com/Ninja-Professional-Countertop-Technology-BL610/dp/B00NGV4506",
+      "tag": "costcohotdogg-20",
+      "category": "kitchen",
+      "price": 79.99
+    },
+    "kirkland_protein": {
+      "url": "https://www.amazon.com/Kirkland-Signature-Protein-Chocolate-2-36lb/dp/B00EOU6Q7O",
+      "tag": "costcohotdogg-20",
+      "category": "supplements",
+      "price": 49.99
+    },
+    "thermacell_mosquito": {
+      "url": "https://www.amazon.com/Thermacell-Mosquito-Repellent-Scent-Free/dp/B073F1ZW9J",
+      "tag": "costcohotdogg-20",
+      "category": "outdoor",
+      "price": 24.99
+    },
+    "hammock": {
+      "url": "https://www.amazon.com/Eagles-Nest-Outfitters-DoubleNest-Portable/dp/B0062JCG2C",
+      "tag": "costcohotdogg-20",
+      "category": "outdoor",
+      "price": 69.95
+    }
+  },
+  "products": [
+    {
+      "id": "ninja_air_fryer",
+      "title": "Ninja Air Fryer AF101",
+      "description": "4-quart capacity with 4-in-1 functionality. Perfect for reheating Costco hot dogs and pizza at home.",
+      "image": "/images/air-fryer.jpg",
+      "linkKey": "ninja_air_fryer",
+      "priceRange": "$99 - $120",
+      "rating": 4.7,
+      "pros": ["Crispy results without oil", "Easy to clean", "Compact footprint"],
+      "cons": ["4qt may be small for families", "Noisy fan"]
+    },
+    {
+      "id": "cosori_air_fryer",
+      "title": "COSORI Pro II Air Fryer",
+      "description": "5.8-quart smart air fryer with 12 cooking functions. Ideal for large Costco batches.",
+      "image": "/images/air-fryer.jpg",
+      "linkKey": "cosori_air_fryer",
+      "priceRange": "$119 - $140",
+      "rating": 4.6,
+      "pros": ["Large 5.8qt capacity", "12 presets", "WiFi connected"],
+      "cons": ["Takes up counter space", "App can be buggy"]
+    },
+    {
+      "id": "oxo_kitchen_scale",
+      "title": "OXO Precision Kitchen Scale",
+      "description": "Stainless steel scale with pull-out display and 11lb capacity. Essential for accurate portion tracking.",
+      "image": "/images/kitchen-scale.jpg",
+      "linkKey": "oxo_kitchen_scale",
+      "priceRange": "$55 - $65",
+      "rating": 4.8,
+      "pros": ["Pull-out display for large bowls", "0.1oz precision", "Sleek design"],
+      "cons": ["Higher price point", "Requires batteries"]
+    },
+    {
+      "id": "kirkland_omega3",
+      "title": "Kirkland Signature Omega-3 Fish Oil",
+      "description": "1200mg per serving, 180 softgels. One of Costco's best-value supplements for heart health.",
+      "image": "/images/omega3.jpg",
+      "linkKey": "kirkland_omega3",
+      "priceRange": "$24 - $30",
+      "rating": 4.7,
+      "pros": ["Excellent value per capsule", "Enteric coated", "Third-party tested"],
+      "cons": ["Large capsules", "Fishy aftertaste for some"]
+    },
+    {
+      "id": "instant_pot_duo",
+      "title": "Instant Pot Duo 7-in-1",
+      "description": "Pressure cooker, slow cooker, rice cooker, steamer, sauté pan, yogurt maker, and warmer in one.",
+      "image": "/images/instant-pot.jpg",
+      "linkKey": "instant_pot_duo",
+      "priceRange": "$89 - $110",
+      "rating": 4.6,
+      "pros": ["7 appliances in one", "Saves counter space", "Energy efficient"],
+      "cons": ["Learning curve", "Sealing ring retains odors"]
+    },
+    {
+      "id": "ninja_blender",
+      "title": "Ninja Professional Blender",
+      "description": "1000-watt motor with Total Crushing Technology. Perfect for smoothies using Costco frozen fruit.",
+      "image": "/images/blender.jpg",
+      "linkKey": "ninja_blender",
+      "priceRange": "$79 - $99",
+      "rating": 4.5,
+      "pros": ["Crushes ice instantly", "Large 72oz pitcher", "Dishwasher safe"],
+      "cons": ["Loud at high speed", "Bulky for small kitchens"]
+    },
+    {
+      "id": "yeti_cooler",
+      "title": "YETI Tundra 45 Cooler",
+      "description": "Rotomolded construction keeps ice for days. The gold standard for keeping bulk Costco purchases cold.",
+      "image": "/images/cooler.jpg",
+      "linkKey": "yeti_cooler",
+      "priceRange": "$275 - $325",
+      "rating": 4.8,
+      "pros": ["Ice retention for 3-5 days", "Bear-resistant", "Built to last decades"],
+      "cons": ["Premium price", "Heavy when loaded"]
+    },
+    {
+      "id": "coleman_camping_stove",
+      "title": "Coleman Classic Propane Stove",
+      "description": "2-burner stove with 20,000 BTUs. Cook hot dogs anywhere — camping, tailgating, or backyard.",
+      "image": "/images/camping-gear.jpg",
+      "linkKey": "coleman_camping_stove",
+      "priceRange": "$69 - $85",
+      "rating": 4.5,
+      "pros": ["Reliable ignition", "Wind-blocking panels", "Easy to transport"],
+      "cons": ["Propane tanks not included", "Bulky for backpacking"]
+    }
+  ]
+}

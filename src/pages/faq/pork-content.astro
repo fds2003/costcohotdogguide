@@ -1,0 +1,72 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Does Costco hot dog have pork?";
+const answer = "No, Costco hot dogs do not contain pork. They are made with 100% beef, specifically USDA Choice or better grade beef. Costco switched from using Hebrew National (which was a beef and pork blend) to an all-beef formulation in the early 2000s.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="does costco hot dog have pork"
+  relatedQuestions={[
+    "Are Costco hot dogs all beef?",
+    "What meat is in Costco hot dogs?",
+    "Did Costco hot dogs used to have pork?"
+  ]}
+  learnMoreLinks={[
+    { title: "Beef or Pork?", href: "/ingredients/beef-or-pork/", description: "The complete history of Costco's hot dog meat sourcing." },
+    { title: "Costco Hot Dog Brand", href: "/ingredients/brand/", description: "Who makes Costco's famous hot dogs today?" }
+  ]}
+>
+  <p>
+    No, Costco hot dogs do not contain pork. They are made with 100% beef, specifically USDA Choice or better grade beef. Costco switched from using Hebrew National (which was a beef and pork blend) to an all-beef formulation in the early 2000s.
+  </p>
+
+  <h2>The History: From Mixed Meat to All Beef</h2>
+  <p>
+    When Costco first started selling hot dogs in the 1980s, they used Hebrew National brand hot dogs. At that time, Hebrew National's formulation included a blend of beef and pork. However, in the early 2000s, Costco made a strategic decision to create their own private-label hot dogs.
+  </p>
+  <p>
+    This change had multiple benefits:
+  </p>
+  <ul>
+    <li><strong>Cost control:</strong> By producing their own hot dogs, Costco could maintain the $1.50 price point even as beef prices fluctuated.</li>
+    <li><strong>Quality consistency:</strong> Controlling the entire supply chain ensured uniform quality across all warehouses.</li>
+    <li><strong>Simplified sourcing:</strong> An all-beef formulation was easier to source and manage at scale.</li>
+  </ul>
+
+  <h2>What Exactly Is in a Costco Hot Dog?</h2>
+  <p>
+    The ingredient list for Costco's quarter-pound hot dog is refreshingly simple:
+  </p>
+  <ul>
+    <li>Beef</li>
+    <li>Water</li>
+    <li>Salt</li>
+    <li>Spices</li>
+    <li>Garlic powder</li>
+    <li>Sugar</li>
+    <li>Natural casing (from beef)</li>
+  </ul>
+  <p>
+    There are no fillers, no mechanically separated meat, and no pork products of any kind. The beef used is USDA Choice or better, which represents the top 40% of beef graded by the USDA.
+  </p>
+
+  <h2>Why Did People Think They Contained Pork?</h2>
+  <p>
+    The confusion likely stems from a few sources:
+  </p>
+  <ul>
+    <li><strong>Historical formulation:</strong> The original Hebrew National hot dogs sold at Costco did contain pork.</li>
+    <li><strong>General skepticism:</strong> At $1.50 for a hot dog and drink combo, many people assume the quality must be compromised somehow.</li>
+    <li><strong>Misinformation:</strong> Some social media posts and forums have incorrectly stated that Costco hot dogs contain pork or other fillers.</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    If you avoid pork for religious, dietary, or personal reasons, you can safely eat Costco's food court hot dogs. They are 100% beef with no pork content. However, they are not certified halal or kosher, so those with specific religious dietary requirements should take that into account.
+  </p>
+</FAQLayout>

@@ -1,0 +1,125 @@
+---
+import ReviewLayout from '../../../layouts/ReviewLayout.astro';
+
+const productName = "Best Air Fryer for Costco Hot Dogs";
+const amazonUrl = "https://www.amazon.com/s?k=air+fryer&ref=nb_sb_noss&tag=costcohotdogg-20";
+
+const pros = [
+  "Crispy results without added oil",
+  "Faster than oven preheating",
+  "Easy cleanup with dishwasher-safe baskets",
+  "Versatile for other Costco foods (pizza, chicken bakes)",
+  "Energy efficient compared to full oven"
+];
+
+const cons = [
+  "Counter space required",
+  "Can be noisy during operation",
+  "Learning curve for optimal timing",
+  "Some models have non-stick coating concerns"
+];
+
+const relatedGuides = [
+  { title: "Air Fryer Hot Dog Tutorial", href: "/tutorials/air-fryer/", description: "Step-by-step guide to cooking Costco hot dogs in an air fryer." },
+  { title: "Costco Food Court Calories", href: "/tutorials/food-court-calories/", description: "Nutritional breakdown of all food court items." }
+];
+---
+
+<ReviewLayout
+  title={productName}
+  description="Our top picks for air fryers that perfectly reheat and cook Costco hot dogs, pizza, and chicken bakes at home."
+  productName={productName}
+  rating={4.6}
+  priceRange="$60 - $200"
+  pros={pros}
+  cons={cons}
+  verdict="For most Costco shoppers, the Ninja Air Fryer AF101 offers the best balance of price, performance, and reliability. If you cook for a family or meal prep regularly, upgrade to the COSORI Pro II for its larger capacity and smart features."
+  amazonUrl={amazonUrl}
+  relatedGuides={relatedGuides}
+>
+  <h2>Why Air Fryers Are Perfect for Costco Foods</h2>
+  <p>
+    Costco's food court items — hot dogs, pizza slices, and chicken bakes — are designed to be enjoyed fresh and hot. When you bring them home (or buy the frozen versions), reheating them properly makes all the difference. Air fryers excel at this because they use rapid hot air circulation to restore that crispy exterior while keeping the inside moist.
+  </p>
+  <p>
+    Unlike microwaves (which make things soggy) or conventional ovens (which take forever to preheat), air fryers deliver food court-quality results in under 10 minutes.
+  </p>
+
+  <h2>Top Picks</h2>
+
+  <h3>1. Ninja Air Fryer AF101 — Best Overall</h3>
+  <p>
+    The Ninja AF101 is our top pick for Costco shoppers. Its 4-quart capacity is perfect for 2-3 hot dogs or a single slice of pizza. The ceramic-coated basket is easy to clean, and the temperature range (105°F–400°F) covers everything from reheating to crisping.
+  </p>
+  <ul>
+    <li><strong>Price:</strong> $89–$99</li>
+    <li><strong>Capacity:</strong> 4 quarts</li>
+    <li><strong>Best for:</strong> Singles and couples</li>
+    <li><strong>Why we love it:</strong> Reliable, consistent results with minimal fuss</li>
+  </ul>
+
+  <h3>2. COSORI Pro II — Best for Families</h3>
+  <p>
+    If you're feeding a family or regularly meal prepping with Costco's bulk items, the COSORI Pro II's 5.8-quart basket is a game-changer. It can handle a whole pizza, multiple hot dogs, or a batch of chicken bakes at once.
+  </p>
+  <ul>
+    <li><strong>Price:</strong> $119–$139</li>
+    <li><strong>Capacity:</strong> 5.8 quarts</li>
+    <li><strong>Best for:</strong> Families and meal preppers</li>
+    <li><strong>Why we love it:</strong> WiFi connectivity, 12 presets, and large capacity</li>
+  </ul>
+
+  <h3>3. Instant Vortex Plus — Best Budget Option</h3>
+  <p>
+    The Instant Vortex Plus delivers solid performance at a lower price point. It lacks some of the premium features of the Ninja and COSORI, but it gets the job done for basic reheating and cooking.
+  </p>
+  <ul>
+    <li><strong>Price:</strong> $69–$89</li>
+    <li><strong>Capacity:</strong> 4 quarts</li>
+    <li><strong>Best for:</strong> Budget-conscious shoppers</li>
+    <li><strong>Trade-off:</strong> Slightly less even heating, shorter warranty</li>
+  </ul>
+
+  <h2>Costco vs. Amazon Price Comparison</h2>
+  <table class="w-full text-left border-collapse mt-4 mb-6">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="p-3 border">Model</th>
+        <th class="p-3 border">Costco Price</th>
+        <th class="p-3 border">Amazon Price</th>
+        <th class="p-3 border">Winner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-3 border">Ninja AF101</td>
+        <td class="p-3 border">$89.99</td>
+        <td class="p-3 border">$99.99</td>
+        <td class="p-3 border font-semibold text-green-700">Costco</td>
+      </tr>
+      <tr class="bg-gray-50">
+        <td class="p-3 border">COSORI Pro II</td>
+        <td class="p-3 border">Not stocked</td>
+        <td class="p-3 border">$129.99</td>
+        <td class="p-3 border font-semibold text-orange-700">Amazon</td>
+      </tr>
+      <tr>
+        <td class="p-3 border">Instant Vortex</td>
+        <td class="p-3 border">$79.99</td>
+        <td class="p-3 border">$79.99</td>
+        <td class="p-3 border font-semibold text-gray-700">Tie</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>What to Look For</h2>
+  <p>
+    When choosing an air fryer for Costco foods, prioritize:
+  </p>
+  <ul>
+    <li><strong>Capacity:</strong> At least 4 quarts for singles/couples, 5.5+ quarts for families</li>
+    <li><strong>Temperature range:</strong> Up to 400°F for proper crisping</li>
+    <li><strong>Basket material:</strong> Ceramic or stainless steel preferred over Teflon</li>
+    <li><strong>Warranty:</strong> Look for at least 1 year of coverage</li>
+  </ul>
+</ReviewLayout>

@@ -1,0 +1,197 @@
+---
+import TutorialLayout from '../../layouts/TutorialLayout.astro';
+
+const recommendedGear = [
+  { title: "Best Kitchen Scale", href: "/reviews/kitchen/best-kitchen-scale/", description: "Track portions accurately with a digital scale." },
+  { title: "Nutrition Calculator", href: "/tools/nutrition-calculator/", description: "Build custom meals and calculate totals." }
+];
+---
+
+<TutorialLayout
+  title="Costco Food Court Calories — Complete Guide"
+  description="Complete nutritional breakdown of every item on the Costco food court menu. Calories, protein, fat, carbs, and sodium for hot dogs, pizza, chicken bakes, and more."
+  recommendedGear={recommendedGear}
+>
+  <p>
+    Costco's food court is famous for its value, but the nutrition facts aren't always easy to find. This guide provides a complete breakdown of every item on the menu, helping you make informed choices whether you're counting calories, tracking macros, or just curious about what you're eating.
+  </p>
+
+  <h2>Complete Nutrition Table</h2>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left border-collapse mt-4 mb-6 text-sm">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="p-3 border">Item</th>
+          <th class="p-3 border">Calories</th>
+          <th class="p-3 border">Protein</th>
+          <th class="p-3 border">Fat</th>
+          <th class="p-3 border">Carbs</th>
+          <th class="p-3 border">Sodium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-red-50">
+          <td class="p-3 border font-semibold">Hot Dog + Bun + Drink</td>
+          <td class="p-3 border">570</td>
+          <td class="p-3 border">24g</td>
+          <td class="p-3 border">33g</td>
+          <td class="p-3 border">46g</td>
+          <td class="p-3 border">1,050mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Hot Dog (meat only)</td>
+          <td class="p-3 border">370</td>
+          <td class="p-3 border">24g</td>
+          <td class="p-3 border">33g</td>
+          <td class="p-3 border">3g</td>
+          <td class="p-3 border">1,050mg</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="p-3 border">Hot Dog Bun</td>
+          <td class="p-3 border">200</td>
+          <td class="p-3 border">0g</td>
+          <td class="p-3 border">0g</td>
+          <td class="p-3 border">43g</td>
+          <td class="p-3 border">300mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Pizza Slice (Cheese)</td>
+          <td class="p-3 border">700</td>
+          <td class="p-3 border">28g</td>
+          <td class="p-3 border">28g</td>
+          <td class="p-3 border">72g</td>
+          <td class="p-3 border">1,370mg</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="p-3 border">Pizza Slice (Pepperoni)</td>
+          <td class="p-3 border">620</td>
+          <td class="p-3 border">26g</td>
+          <td class="p-3 border">24g</td>
+          <td class="p-3 border">68g</td>
+          <td class="p-3 border">1,290mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Whole Pizza (Cheese)</td>
+          <td class="p-3 border">4,540</td>
+          <td class="p-3 border">182g</td>
+          <td class="p-3 border">182g</td>
+          <td class="p-3 border">468g</td>
+          <td class="p-3 border">8,890mg</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="p-3 border">Chicken Bake</td>
+          <td class="p-3 border">770</td>
+          <td class="p-3 border">48g</td>
+          <td class="p-3 border">25g</td>
+          <td class="p-3 border">80g</td>
+          <td class="p-3 border">1,900mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Turkey & Provolone Sandwich</td>
+          <td class="p-3 border">720</td>
+          <td class="p-3 border">36g</td>
+          <td class="p-3 border">28g</td>
+          <td class="p-3 border">72g</td>
+          <td class="p-3 border">1,780mg</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="p-3 border">Chicken Caesar Salad</td>
+          <td class="p-3 border">650</td>
+          <td class="p-3 border">40g</td>
+          <td class="p-3 border">42g</td>
+          <td class="p-3 border">22g</td>
+          <td class="p-3 border">1,380mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Acai Bowl</td>
+          <td class="p-3 border">330</td>
+          <td class="p-3 border">6g</td>
+          <td class="p-3 border">9g</td>
+          <td class="p-3 border">58g</td>
+          <td class="p-3 border">40mg</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="p-3 border">Ice Cream Cup</td>
+          <td class="p-3 border">390</td>
+          <td class="p-3 border">6g</td>
+          <td class="p-3 border">21g</td>
+          <td class="p-3 border">44g</td>
+          <td class="p-3 border">140mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Churro</td>
+          <td class="p-3 border">410</td>
+          <td class="p-3 border">5g</td>
+          <td class="p-3 border">18g</td>
+          <td class="p-3 border">56g</td>
+          <td class="p-3 border">310mg</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="p-3 border">Berry Sundae</td>
+          <td class="p-3 border">410</td>
+          <td class="p-3 border">7g</td>
+          <td class="p-3 border">16g</td>
+          <td class="p-3 border">56g</td>
+          <td class="p-3 border">140mg</td>
+        </tr>
+        <tr>
+          <td class="p-3 border">Latte/Mocha Freeze</td>
+          <td class="p-3 border">320</td>
+          <td class="p-3 border">7g</td>
+          <td class="p-3 border">5g</td>
+          <td class="p-3 border">58g</td>
+          <td class="p-3 border">100mg</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="text-sm text-gray-500">Values are approximate and may vary by location and recipe changes.</p>
+
+  <h2>Best Choices by Diet Goal</h2>
+
+  <h3>For Muscle Building (High Protein)</h3>
+  <ol>
+    <li><strong>Chicken Bake:</strong> 48g protein — the protein champion of the food court</li>
+    <li><strong>Chicken Caesar Salad:</strong> 40g protein with fewer carbs than the chicken bake</li>
+    <li><strong>Turkey & Provolone:</strong> 36g protein in a convenient handheld format</li>
+  </ol>
+
+  <h3>For Weight Loss (Low Calorie)</h3>
+  <ol>
+    <li><strong>Acai Bowl:</strong> 330 calories — the lightest option on the menu</li>
+    <li><strong>Latte/Mocha Freeze:</strong> 320 calories (but mostly sugar)</li>
+    <li><strong>Hot Dog (no bun):</strong> 370 calories, very low carb</li>
+  </ol>
+
+  <h3>For Keto / Low Carb</h3>
+  <ol>
+    <li><strong>Hot Dog (no bun):</strong> Only 3g carbs, 24g protein, 33g fat</li>
+    <li><strong>Chicken Caesar Salad (no croutons):</strong> Under 10g carbs with 40g protein</li>
+    <li><strong>Rotisserie Chicken (warehouse, not food court):</strong> 0g carbs, 38g protein</li>
+  </ol>
+
+  <h3>For Sodium-Conscious</h3>
+  <p>
+    Unfortunately, most Costco food court items are high in sodium. The acai bowl is the only truly low-sodium option at 40mg. If you're watching sodium, consider:
+  </p>
+  <ul>
+    <li>Sharing a pizza slice instead of eating a whole one</li>
+    <li>Skipping the hot dog and choosing fresh options from the warehouse</li>
+    <li>Drinking plenty of water to help flush excess sodium</li>
+  </ul>
+
+  <h2>How These Compare to Fast Food</h2>
+  <p>
+    Compared to typical fast food, Costco's food court is surprisingly competitive:
+  </p>
+  <ul>
+    <li><strong>Hot dog combo ($1.50):</strong> 570 cal — comparable to a McDonald's Quarter Pounder (520 cal) but with more protein and at half the price</li>
+    <li><strong>Pizza slice:</strong> 700 cal — similar to a large slice of Pizza Hut pan pizza (680 cal)</li>
+    <li><strong>Chicken bake:</strong> 770 cal — comparable to a Chipotle burrito (1,000+ cal) with more protein</li>
+  </ul>
+
+  <h2>Bottom Line</h2>
+  <p>
+    The Costco food court isn't health food, but it offers solid value and surprisingly good protein content. For the health-conscious, the hot dog without the bun is a keto-friendly protein bomb, while the acai bowl offers a lighter option. The key is knowing what you're eating — and now you do.
+  </p>
+</TutorialLayout>

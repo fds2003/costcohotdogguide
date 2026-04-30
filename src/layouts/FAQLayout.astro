@@ -1,0 +1,131 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import RelatedProducts from '../components/RelatedProducts.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  question: string;
+  answer: string;
+  targetKeyword?: string;
+  relatedQuestions?: string[];
+  learnMoreLinks?: Array<{ title: string; href: string; description: string }>;
+  publishedAt?: string;
+  modifiedAt?: string;
+}
+
+const {
+  title,
+  description,
+  question,
+  answer,
+  targetKeyword,
+  relatedQuestions = [],
+  learnMoreLinks = [],
+  publishedAt = new Date().toISOString().split('T')[0],
+  modifiedAt = new Date().toISOString().split('T')[0],
+} = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": answer
+      }
+    },
+    ...relatedQuestions.map(q => ({
+      "@type": "Question",
+      "name": q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": `Learn more about ${q} in our comprehensive guide.`
+      }
+    }))
+  ]
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="faq"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+  faqData={[{ question, answer }]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Blue breadcrumb indicator -->
+    <nav class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li><a href="/" class="text-gray-500 hover:text-red-700">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/faq/" class="text-gray-500 hover:text-red-700">FAQ</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-blue-600 font-medium">{question}</li>
+      </ol>
+      <div class="mt-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+        <span class="w-2 h-2 bg-blue-500 rounded-full mr-1.5"></span>
+        Trust & Awareness Layer
+      </div>
+    </nav>
+
+    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">{question}</h1>
+
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+          <slot />
+        </div>
+
+        {relatedQuestions.length > 0 && (
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Related Questions</h3>
+            <ul class="space-y-2">
+              {relatedQuestions.map(q => (
+                <li class="flex items-start">
+                  <span class="text-blue-500 mr-2 mt-1">&#8226;</span>
+                  <span class="text-gray-700">{q}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </article>
+
+    <!-- Learn More next-step section -->
+    {learnMoreLinks.length > 0 && (
+      <section class="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <h3 class="text-lg font-bold text-blue-900 mb-4 flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+          Learn More
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {learnMoreLinks.map(link => (
+            <a
+              href={link.href}
+              class="block bg-white rounded-lg p-4 border border-blue-200 hover:border-blue-400 hover:shadow-md transition group"
+              onclick="if(typeof gtag!=='undefined')gtag('event','funnel_progression',{from_stage:'A',to_stage:'B',link_text:'Learn More'});"
+            >
+              <h4 class="font-semibold text-blue-800 group-hover:text-blue-600">{link.title}</h4>
+              <p class="text-sm text-gray-600 mt-1">{link.description}</p>
+              <span class="text-xs text-blue-600 font-medium mt-2 inline-block group-hover:underline">Read guide &rarr;</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Stage A: Only low-ticket trust products -->
+    <RelatedProducts funnelStage="A" title="Helpful Resources" maxItems={2} />
+  </div>
+</BaseLayout>

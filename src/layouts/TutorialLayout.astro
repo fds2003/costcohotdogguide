@@ -1,0 +1,142 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import RelatedProducts from '../components/RelatedProducts.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  steps?: Array<{ name: string; text: string; image?: string }>;
+  tools?: Array<{ name: string; url: string; description: string }>;
+  recommendedGear?: Array<{ title: string; href: string; description: string; image?: string }>;
+  publishedAt?: string;
+  modifiedAt?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description,
+  steps = [],
+  tools = [],
+  recommendedGear = [],
+  publishedAt = new Date().toISOString().split('T')[0],
+  modifiedAt = new Date().toISOString().split('T')[0],
+  image,
+} = Astro.props;
+
+const howToSchema = steps.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": title,
+  "description": description,
+  "image": image,
+  "totalTime": "PT30M",
+  "step": steps.map((step, i) => ({
+    "@type": "HowToStep",
+    "position": i + 1,
+    "name": step.name,
+    "text": step.text,
+    "image": step.image
+  }))
+} : null;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  type="howto"
+  publishedAt={publishedAt}
+  modifiedAt={modifiedAt}
+  image={image}
+>
+  {howToSchema && <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />}
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <!-- Green breadcrumb indicator -->
+    <nav class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li><a href="/" class="text-gray-500 hover:text-red-700">Home</a></li>
+        <li class="text-gray-400">/</li>
+        <li><a href="/tutorials/" class="text-gray-500 hover:text-red-700">Tutorials</a></li>
+        <li class="text-gray-400">/</li>
+        <li class="text-green-700 font-medium">{title}</li>
+      </ol>
+      <div class="mt-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+        <span class="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span>
+        Kitchen & Tools Layer
+      </div>
+    </nav>
+
+    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div class="p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-4">{title}</h1>
+        <p class="text-lg text-gray-600 mb-8">{description}</p>
+
+        <!-- HowTo steps -->
+        {steps.length > 0 && (
+          <div class="space-y-8 mb-8">
+            {steps.map((step, i) => (
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-lg">
+                  {i + 1}
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-gray-900 mb-2">{step.name}</h3>
+                  <p class="text-gray-700 leading-relaxed">{step.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <!-- Main content slot -->
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+          <slot />
+        </div>
+
+        <!-- Tools section -->
+        {tools.length > 0 && (
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Tools You'll Need</h3>
+            <ul class="space-y-2">
+              {tools.map(tool => (
+                <li class="flex items-center justify-between bg-gray-50 rounded-lg p-3">
+                  <span class="text-gray-700">{tool.name}</span>
+                  <span class="text-sm text-gray-500">{tool.description}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </article>
+
+    <!-- Recommended Gear next-step section -->
+    {recommendedGear.length > 0 && (
+      <section class="mt-8 bg-green-50 border border-green-200 rounded-xl p-6">
+        <h3 class="text-lg font-bold text-green-900 mb-4 flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+          Recommended Gear
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {recommendedGear.map(gear => (
+            <a
+              href={gear.href}
+              class="block bg-white rounded-lg p-4 border border-green-200 hover:border-green-400 hover:shadow-md transition group"
+              onclick="if(typeof gtag!=='undefined')gtag('event','funnel_progression',{from_stage:'B',to_stage:'C',link_text:'Recommended Gear'});"
+            >
+              <h4 class="font-semibold text-green-800 group-hover:text-green-600">{gear.title}</h4>
+              <p class="text-sm text-gray-600 mt-1">{gear.description}</p>
+              <span class="text-xs text-green-600 font-medium mt-2 inline-block group-hover:underline">See review &rarr;</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Stage B: Kitchen tools -->
+    <RelatedProducts funnelStage="B" title="Kitchen Tools We Recommend" maxItems={3} />
+  </div>
+</BaseLayout>

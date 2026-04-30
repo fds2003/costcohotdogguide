@@ -1,0 +1,66 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Are Costco hot dogs vegan?";
+const answer = "No, Costco food court hot dogs are not vegan. They are made with 100% beef and served with a wheat-based bun. Neither the hot dog nor the bun is suitable for a vegan diet. Costco does not currently offer vegan hot dogs at their food court.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="are costco hot dogs vegan"
+  relatedQuestions={[
+    "Does Costco have vegan hot dogs?",
+    "Are Costco hot dog buns vegan?",
+    "What can vegans eat at Costco food court?"
+  ]}
+  learnMoreLinks={[
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full ingredient breakdown for hot dogs and buns." },
+    { title: "Dietary Information", href: "/dietary/", description: "Complete guide to dietary options at Costco." }
+  ]}
+>
+  <p>
+    No, Costco food court hot dogs are not vegan. They are made with 100% beef and served with a wheat-based bun. Neither the hot dog nor the bun is suitable for a vegan diet. Costco does not currently offer vegan hot dogs at their food court.
+  </p>
+
+  <h2>Why Costco Hot Dogs Aren't Vegan</h2>
+  <p>
+    There are two main reasons why the famous $1.50 hot dog combo isn't vegan:
+  </p>
+  <ul>
+    <li><strong>The hot dog:</strong> Made with 100% beef, water, salt, spices, garlic powder, and sugar. No plant-based alternative is offered.</li>
+    <li><strong>The bun:</strong> While the ingredients are primarily plant-based (wheat flour, water, sugar, yeast), some formulations may include eggs or dairy derivatives as dough conditioners. Even without these, the bun is still prepared in facilities that process animal products.</li>
+  </ul>
+
+  <h2>Vegan Options at Costco Food Court</h2>
+  <p>
+    While the hot dogs aren't vegan, Costco's food court does offer some plant-based options:
+  </p>
+  <ul>
+    <li><strong>Acai bowl:</strong> Available at select locations, typically made with acai, granola, and fresh fruit</li>
+    <li><strong>Soft drinks:</strong> All fountain beverages are vegan</li>
+    <li><strong>Ice cream:</strong> The vanilla soft serve is dairy-based, not vegan</li>
+  </ul>
+  <p>
+    Unfortunately, vegan pizza and plant-based protein options are not currently available at most Costco food courts in the United States.
+  </p>
+
+  <h2>Vegan Options in the Warehouse</h2>
+  <p>
+    Costco's warehouse stores are much more vegan-friendly than their food courts:
+  </p>
+  <ul>
+    <li>Plant-based meat alternatives (Beyond Meat, Impossible Foods)</li>
+    <li>Vegan cheese and dairy alternatives</li>
+    <li>Large selection of fruits, vegetables, grains, and legumes</li>
+    <li>Vegan snacks and prepared foods</li>
+    <li>Plant-based protein powders</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    Vegans will need to skip the food court hot dog and explore the warehouse aisles instead. While Costco hasn't added vegan hot dogs to their food court menu yet, their warehouse stores offer an extensive selection of plant-based products. For a quick vegan meal at Costco, consider building your own from the fresh produce, nuts, and prepared food sections.
+  </p>
+</FAQLayout>

@@ -1,0 +1,70 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Are Costco hot dogs halal?";
+const answer = "No, Costco's food court hot dogs are not certified halal. While they are made with 100% beef and contain no pork, they do not have halal certification from a recognized Islamic authority. The method of slaughter and processing does not meet halal requirements.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="are costco hot dogs halal"
+  relatedQuestions={[
+    "Does Costco sell halal meat?",
+    "Are Costco hot dogs kosher?",
+    "What meat is in Costco hot dogs?"
+  ]}
+  learnMoreLinks={[
+    { title: "Beef or Pork?", href: "/ingredients/beef-or-pork/", description: "Learn about the meat sourcing for Costco hot dogs." },
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full ingredient breakdown." }
+  ]}
+>
+  <p>
+    No, Costco's food court hot dogs are not certified halal. While they are made with 100% beef and contain no pork, they do not have halal certification from a recognized Islamic authority. The method of slaughter and processing does not meet halal requirements.
+  </p>
+
+  <h2>What Makes Meat Halal?</h2>
+  <p>
+    For meat to be considered halal, several requirements must be met:
+  </p>
+  <ul>
+    <li><strong>Slaughter method:</strong> The animal must be slaughtered by a Muslim who invokes the name of Allah (Bismillah, Allahu Akbar) before cutting the throat with a sharp knife.</li>
+    <li><strong>Blood drainage:</strong> The blood must be fully drained from the animal.</li>
+    <li><strong>No prohibited ingredients:</strong> No pork, alcohol, or other haram substances can be present.</li>
+    <li><strong>Supervision:</strong> The entire process must be supervised by a qualified Islamic authority.</li>
+    <li><strong>Equipment:</strong> Processing equipment must not be contaminated with non-halal products.</li>
+  </ul>
+
+  <h2>Why Aren't Costco Hot Dogs Halal?</h2>
+  <p>
+    The primary reason is the slaughter method. Costco's beef is processed through conventional commercial slaughterhouses that do not follow halal slaughter practices. The animals are stunned before slaughter (which some halal authorities allow, but others don't), and the Islamic prayer (tasmiya) is not recited.
+  </p>
+  <p>
+    Additionally:
+  </p>
+  <ul>
+    <li>There's no halal supervision during processing</li>
+    <li>Equipment may be shared with non-halal products</li>
+    <li>The natural casing source isn't verified as halal</li>
+  </ul>
+
+  <h2>Does Costco Sell Halal Products?</h2>
+  <p>
+    Yes, many Costco warehouse locations carry halal-certified products in their meat and grocery sections. These typically include:
+  </p>
+  <ul>
+    <li>Halal-certified chicken</li>
+    <li>Halal-certified beef and lamb (in select locations)</li>
+    <li>Various halal packaged foods and snacks</li>
+  </ul>
+  <p>
+    Availability varies significantly by location, with more options typically found in areas with larger Muslim populations.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    Muslims who strictly follow halal dietary laws should not consume Costco's food court hot dogs. The lack of halal certification means there's no guarantee that the slaughter and processing met Islamic requirements. For halal options, check the packaged meat section of your local warehouse, or visit a Costco location in an area with a significant Muslim community where halal products are more likely to be stocked.
+  </p>
+</FAQLayout>

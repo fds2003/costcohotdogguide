@@ -1,0 +1,119 @@
+---
+import TutorialLayout from '../../layouts/TutorialLayout.astro';
+
+const steps = [
+  {
+    name: "Preheat your air fryer",
+    text: "Set your air fryer to 375°F (190°C) and let it preheat for 3-5 minutes. Preheating ensures even cooking and helps the hot dog develop a nice snap on the outside."
+  },
+  {
+    name: "Prepare the hot dog",
+    text: "Take your Costco hot dog out of the refrigerator. You can cook it straight from cold — no need to bring it to room temperature. If you want extra crispiness, score the hot dog lightly with a knife in a spiral pattern."
+  },
+  {
+    name: "Place in the air fryer basket",
+    text: "Arrange the hot dogs in a single layer in the air fryer basket. Make sure they're not touching each other to allow hot air to circulate. For best results, leave a little space between each hot dog."
+  },
+  {
+    name: "Cook for 6-8 minutes",
+    text: "Air fry at 375°F for 6-8 minutes, turning halfway through. The exact time depends on your air fryer model and how crispy you like your hot dog. For a Costco quarter-pound hot dog, 7 minutes is usually perfect."
+  },
+  {
+    name: "Toast the bun (optional)",
+    text: "For the last 1-2 minutes, you can add the bun to the air fryer (either on top of the hot dog or in the basket beside it). This gives you a warm, slightly crispy bun that holds up better than a steamed bun."
+  },
+  {
+    name: "Serve immediately",
+    text: "Remove from the air fryer and add your favorite toppings. Classic Costco style is yellow mustard, ketchup, and sweet relish. For a gourmet twist, try caramelized onions, sauerkraut, or spicy mustard."
+  }
+];
+
+const tools = [
+  { name: "Air fryer", url: "#", description: "Any model with 4+ quart capacity" },
+  { name: "Tongs", url: "#", description: "For turning hot dogs safely" },
+  { name: "Sharp knife", url: "#", description: "Optional, for spiral scoring" }
+];
+
+const recommendedGear = [
+  { title: "Best Air Fryer for Costco Hot Dogs", href: "/reviews/kitchen/best-air-fryer/", description: "Our top picks for reheating and cooking hot dogs at home." },
+  { title: "Best Kitchen Scale", href: "/reviews/kitchen/best-kitchen-scale/", description: "Track your portions accurately with these precision scales." },
+  { title: "Meat Thermometer", href: "/reviews/kitchen/best-meat-thermometer/", description: "Ensure perfect internal temperature every time." }
+];
+---
+
+<TutorialLayout
+  title="How to Cook Costco Hot Dog in Air Fryer"
+  description="The ultimate guide to cooking Costco's famous $1.50 hot dog in an air fryer. Crispy outside, juicy inside — just like at the food court."
+  steps={steps}
+  tools={tools}
+  recommendedGear={recommendedGear}
+>
+  <p>
+    The air fryer is the best way to recreate the Costco food court hot dog experience at home. It gives you that satisfying snap on the outside while keeping the inside juicy and flavorful. Unlike boiling (which can make hot dogs rubbery) or microwaving (which makes them tough), air frying delivers restaurant-quality results in under 10 minutes.
+  </p>
+
+  <h2>Why Air Fry Costco Hot Dogs?</h2>
+  <p>
+    Costco's quarter-pound hot dogs are substantial — much thicker than standard grocery store hot dogs. This makes them perfect for air frying because:
+  </p>
+  <ul>
+    <li>The thick size means they won't dry out during cooking</li>
+    <li>The natural casing gets beautifully crispy in the circulating hot air</li>
+    <li>You can cook from frozen if you stock up during warehouse visits</li>
+    <li>Cleanup is minimal compared to grilling or pan-frying</li>
+  </ul>
+
+  <h2>Temperature and Timing Guide</h2>
+  <table class="w-full text-left border-collapse mt-4 mb-6">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="p-3 border">Preference</th>
+        <th class="p-3 border">Temperature</th>
+        <th class="p-3 border">Time</th>
+        <th class="p-3 border">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-3 border">Lightly warmed</td>
+        <td class="p-3 border">350°F</td>
+        <td class="p-3 border">5 minutes</td>
+        <td class="p-3 border">Warm through, minimal browning</td>
+      </tr>
+      <tr class="bg-green-50">
+        <td class="p-3 border font-semibold">Perfect (Recommended)</td>
+        <td class="p-3 border font-semibold">375°F</td>
+        <td class="p-3 border font-semibold">7 minutes</td>
+        <td class="p-3 border font-semibold">Golden brown, good snap</td>
+      </tr>
+      <tr>
+        <td class="p-3 border">Extra crispy</td>
+        <td class="p-3 border">400°F</td>
+        <td class="p-3 border">6 minutes</td>
+        <td class="p-3 border">Dark brown, very crispy</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Pro Tips</h2>
+  <ul>
+    <li><strong>Don't overcrowd:</strong> Cook in batches if needed. Crowding leads to uneven cooking.</li>
+    <li><strong>Score for extra crisp:</strong> A light spiral cut allows the hot dog to open up slightly, creating more crispy surface area.</li>
+    <li><strong>Wrap in bacon:</strong> For an indulgent twist, wrap the hot dog in bacon before air frying. Add 3-4 minutes to the cooking time.</li>
+    <li><strong>Check internal temp:</strong> Use a meat thermometer to ensure the hot dog reaches 160°F (71°C) internal temperature.</li>
+  </ul>
+
+  <h2>Nutrition Comparison</h2>
+  <p>
+    Air frying adds no additional fat compared to the original food court hot dog (which is already fully cooked). The nutrition facts remain the same:
+  </p>
+  <ul>
+    <li><strong>Calories:</strong> 570 (with bun) / 370 (hot dog only)</li>
+    <li><strong>Protein:</strong> 24g</li>
+    <li><strong>Fat:</strong> 33g</li>
+    <li><strong>Carbs:</strong> 46g (with bun)</li>
+  </ul>
+  <p>
+    If you skip the bun and wrap the hot dog in lettuce instead, you save approximately 200 calories and 46g of carbohydrates.
+  </p>
+</TutorialLayout>

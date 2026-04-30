@@ -1,0 +1,56 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Is Costco hot dog kosher?";
+const answer = "No, Costco's food court hot dogs are not certified kosher. While they are made with 100% beef and contain no pork, they do not carry kosher certification from a recognized kosher authority.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="is costco hot dog kosher"
+  relatedQuestions={[
+    "Does Costco sell kosher hot dogs?",
+    "Are Costco hot dogs halal?",
+    "What brand are Costco hot dogs?"
+  ]}
+  learnMoreLinks={[
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full breakdown of what's in a Costco hot dog." },
+    { title: "Beef or Pork?", href: "/ingredients/beef-or-pork/", description: "Learn what meat goes into Costco's famous hot dogs." }
+  ]}
+>
+  <p>
+    No, Costco's food court hot dogs are not certified kosher. While they are made with 100% beef and contain no pork, they do not carry kosher certification from a recognized kosher authority.
+  </p>
+
+  <h2>Why Aren't Costco Hot Dogs Kosher?</h2>
+  <p>
+    For a product to be considered kosher, it must meet several specific requirements beyond just the absence of pork:
+  </p>
+  <ul>
+    <li><strong>Meat sourcing:</strong> The beef must come from animals slaughtered according to shechita (kosher slaughter) standards.</li>
+    <li><strong>Supervision:</strong> The entire production process must be supervised by a mashgiach (kosher supervisor).</li>
+    <li><strong>Equipment:</strong> All processing equipment must be kosher-certified and not used for non-kosher products without proper cleaning.</li>
+    <li><strong>Ingredients:</strong> All additives, casings, and processing aids must be kosher-certified.</li>
+  </ul>
+  <p>
+    Costco's hot dogs are produced by large-scale commercial manufacturers (previously Hebrew National, now an in-house brand) without kosher supervision during the manufacturing process.
+  </p>
+
+  <h2>Are They 100% Beef?</h2>
+  <p>
+    Yes, Costco hot dogs are made with 100% beef. This is one reason why many people mistakenly assume they might be kosher. The ingredients include beef, water, salt, spices, garlic powder, and sugar. However, being 100% beef is only one requirement for kosher certification — the method of slaughter and processing supervision are equally important.
+  </p>
+
+  <h2>Does Costco Sell Kosher Hot Dogs Anywhere?</h2>
+  <p>
+    While the food court hot dogs are not kosher, some Costco warehouse locations do carry kosher-certified products in their refrigerated and freezer sections. These include brands like Hebrew National (which is kosher-certified) and other kosher meat products. However, availability varies significantly by location, particularly in areas with larger Jewish communities.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    If you follow kosher dietary laws, Costco's food court hot dogs should not be consumed. The lack of kosher certification means there's no guarantee that the meat was processed according to Jewish dietary law. For kosher options, check the packaged meat section of your local warehouse or visit a Costco in an area with a significant kosher-observant population.
+  </p>
+</FAQLayout>

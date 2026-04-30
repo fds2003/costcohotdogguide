@@ -1,5 +1,10 @@
 {
   "disclaimer": "As an Amazon Associate, we earn from qualifying purchases.",
+  "funnelStageMap": {
+    "A": ["hot_dog_buns", "mustard", "gluten_free_buns", "quinoa", "almond_butter", "basmati_rice"],
+    "B": ["air_fryer", "kitchen_scale", "hot_dog_roller", "pizza_stone", "bbq_sauce_set", "food_storage_containers", "reusable_utensils", "meal_prep_containers", "meat_thermometer"],
+    "C": ["vitamins", "protein", "omega3", "cooler", "vacuum_sealer", "chest_freezer", "sleeping_bag", "desk", "accent_chair", "camping_gear", "grill", "tent", "blender"]
+  },
   "links": {
     "vitamins": {
       "url": "https://www.amazon.com/s?k=vitamins&ref=nb_sb_noss",

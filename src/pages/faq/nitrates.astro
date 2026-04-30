@@ -1,0 +1,67 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Do Costco hot dogs have nitrates?";
+const answer = "Costco hot dogs do contain naturally occurring nitrates from celery powder, which is used as a natural preservative. However, they do not contain synthetic sodium nitrite or sodium nitrate that is commonly found in conventional hot dogs.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="do costco hot dogs have nitrates"
+  relatedQuestions={[
+    "Are Costco hot dogs nitrate free?",
+    "Do Costco hot dogs have preservatives?",
+    "Are Costco hot dogs healthy?"
+  ]}
+  learnMoreLinks={[
+    { title: "Is Costco Hot Dog Healthy?", href: "/articles/is-it-healthy/", description: "A nutritionist's take on the health impact of Costco hot dogs." },
+    { title: "Costco Hot Dog Nutrition Facts", href: "/nutrition/", description: "Complete calorie, protein, and macro breakdown." }
+  ]}
+>
+  <p>
+    Costco hot dogs do contain naturally occurring nitrates from celery powder, which is used as a natural preservative. However, they do not contain synthetic sodium nitrite or sodium nitrate that is commonly found in conventional hot dogs.
+  </p>
+
+  <h2>Natural vs. Synthetic Nitrates</h2>
+  <p>
+    Understanding the difference between natural and synthetic nitrates is important:
+  </p>
+  <ul>
+    <li><strong>Synthetic nitrates (sodium nitrite/nitrate):</strong> Laboratory-created preservatives commonly added to cured meats to prevent bacterial growth and maintain color. These have been linked to potential health concerns when consumed in large quantities.</li>
+    <li><strong>Natural nitrates (from celery powder):</strong> Derived from concentrated celery juice or powder. While chemically similar to synthetic nitrates, they come from a natural source and are generally perceived as a healthier alternative.</li>
+  </ul>
+
+  <h2>Why Are Nitrates Used in Hot Dogs?</h2>
+  <p>
+    Nitrates serve several important functions in processed meats:
+  </p>
+  <ul>
+    <li><strong>Prevents botulism:</strong> Nitrates inhibit the growth of Clostridium botulinum, a dangerous bacteria.</li>
+    <li><strong>Maintains color:</strong> They help hot dogs retain their characteristic pink/red color instead of turning gray.</li>
+    <li><strong>Enhances flavor:</strong> Nitrates contribute to the distinctive cured meat taste.</li>
+    <li><strong>Extends shelf life:</strong> They act as a preservative, allowing products to stay fresh longer.</li>
+  </ul>
+
+  <h2>Are Natural Nitrates Healthier?</h2>
+  <p>
+    This is a topic of ongoing debate in the nutrition community:
+  </p>
+  <ul>
+    <li>Natural nitrates from celery powder are chemically identical to synthetic nitrates once in the body.</li>
+    <li>However, celery powder may contain additional antioxidants like vitamin C that can inhibit nitrosamine formation (compounds linked to cancer risk).</li>
+    <li>The overall processing method and quality of meat may be more important than the nitrate source.</li>
+  </ul>
+
+  <h2>Costco's Approach</h2>
+  <p>
+    Costco's decision to use celery powder instead of synthetic nitrates aligns with consumer preferences for "cleaner label" products. The ingredient list is notably short compared to many conventional hot dogs, which often include multiple synthetic preservatives, fillers, and artificial flavors.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    While Costco hot dogs are not completely nitrate-free, they use natural nitrates from celery powder rather than synthetic preservatives. For most consumers, this represents a better option than conventional hot dogs with added sodium nitrite. However, as with all processed meats, moderation is recommended — the World Health Organization classifies processed meats as Group 1 carcinogens regardless of the nitrate source.
+  </p>
+</FAQLayout>

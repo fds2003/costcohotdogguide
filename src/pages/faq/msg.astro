@@ -1,0 +1,64 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Do Costco hot dogs have MSG?";
+const answer = "No, Costco hot dogs do not contain added MSG (monosodium glutamate). The ingredient list includes only beef, water, salt, spices, garlic powder, and sugar. While some natural ingredients contain free glutamates, there is no MSG added as a separate ingredient.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="do costco hot dogs have msg"
+  relatedQuestions={[
+    "What spices are in Costco hot dogs?",
+    "Are Costco hot dogs all natural?",
+    "Do Costco hot dogs have artificial ingredients?"
+  ]}
+  learnMoreLinks={[
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full breakdown of all ingredients in Costco hot dogs." },
+    { title: "Is Costco Hot Dog Healthy?", href: "/articles/is-it-healthy/", description: "Nutritional analysis of the famous $1.50 hot dog." }
+  ]}
+>
+  <p>
+    No, Costco hot dogs do not contain added MSG (monosodium glutamate). The ingredient list includes only beef, water, salt, spices, garlic powder, and sugar. While some natural ingredients contain free glutamates, there is no MSG added as a separate ingredient.
+  </p>
+
+  <h2>Understanding MSG in Processed Foods</h2>
+  <p>
+    MSG is a flavor enhancer commonly used in processed foods, particularly in Asian cuisine and snack foods. It's derived from glutamic acid, an amino acid found naturally in many foods including tomatoes, cheese, and mushrooms. In the United States, the FDA classifies MSG as "generally recognized as safe" (GRAS), though some people report sensitivity to it.
+  </p>
+
+  <h2>What's in Costco Hot Dogs Instead?</h2>
+  <p>
+    Rather than relying on MSG for flavor enhancement, Costco hot dogs use a simple blend of:
+  </p>
+  <ul>
+    <li><strong>Salt:</strong> The primary flavor enhancer</li>
+    <li><strong>Spices:</strong> A proprietary blend that likely includes paprika, coriander, and other traditional hot dog seasonings</li>
+    <li><strong>Garlic powder:</strong> Adds depth of flavor without artificial enhancers</li>
+    <li><strong>Sugar:</strong> Balances the savory flavors</li>
+  </ul>
+  <p>
+    This simple ingredient approach is part of what makes Costco hot dogs appealing to health-conscious consumers.
+  </p>
+
+  <h2>Natural Glutamates vs. Added MSG</h2>
+  <p>
+    It's worth noting that while Costco hot dogs don't contain added MSG, they do contain natural glutamates:
+  </p>
+  <ul>
+    <li>Beef naturally contains glutamic acid</li>
+    <li>The curing and cooking process can release free glutamates</li>
+    <li>Garlic and other spices contribute small amounts of natural glutamates</li>
+  </ul>
+  <p>
+    These natural glutamates are not the same as added MSG and generally don't cause the same reactions in MSG-sensitive individuals.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    If you're avoiding MSG due to sensitivity or personal preference, Costco hot dogs are a safe choice. Their simple, short ingredient list is one of the reasons they've remained popular among health-conscious shoppers. However, if you have severe food sensitivities, always check with your local Costco for the most current ingredient information, as formulations can change.
+  </p>
+</FAQLayout>

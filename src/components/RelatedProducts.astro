@@ -1,17 +1,39 @@
 ---
 import affiliateData from '../data/affiliate.json';
+import highTicketData from '../data/affiliate-high-ticket.json';
 
 export interface Props {
   category?: 'Health' | 'Kitchen' | 'Outdoor' | 'Food';
   scenario?: 'home-cooking' | 'picnic' | 'storage' | 'bulk-buy' | 'meal-prep';
+  funnelStage?: 'A' | 'B' | 'C';
   title?: string;
   maxItems?: number;
 }
 
-const { category, scenario, title = 'Recommended Products', maxItems = 3 } = Astro.props;
+const { category, scenario, funnelStage, title = 'Recommended Products', maxItems = 3 } = Astro.props;
 
-const products = affiliateData.products.filter(p => {
-  const link = affiliateData.links[p.linkKey as keyof typeof affiliateData.links];
+let sourceData = affiliateData;
+let products = affiliateData.products;
+
+// If funnelStage is specified, select appropriate catalog
+if (funnelStage) {
+  const stageKeys = affiliateData.funnelStageMap[funnelStage] || [];
+  if (funnelStage === 'C') {
+    // Merge high-ticket products for stage C
+    const htProducts = highTicketData.products.map(p => ({
+      ...p,
+      _highTicket: true
+    }));
+    products = [...htProducts, ...affiliateData.products.filter(p => stageKeys.includes(p.linkKey))];
+  } else {
+    products = affiliateData.products.filter(p => stageKeys.includes(p.linkKey));
+  }
+}
+
+// Apply category/scenario filters on top
+products = products.filter(p => {
+  const data = (p as any)._highTicket ? highTicketData : affiliateData;
+  const link = data.links[p.linkKey as keyof typeof data.links];
   if (!link) return false;
   const l = link as any;
   if (category && l.category !== category) return false;
@@ -25,7 +47,8 @@ const products = affiliateData.products.filter(p => {
 const displayProducts = products.slice(0, maxItems);
 
 function buildAffiliateUrl(linkKey: string): string {
-  const link = affiliateData.links[linkKey as keyof typeof affiliateData.links];
+  const link = affiliateData.links[linkKey as keyof typeof affiliateData.links]
+    || highTicketData.links[linkKey as keyof typeof highTicketData.links];
   if (!link) return '#';
   const l = link as any;
   return `${l.url}&tag=${l.tag}`;
@@ -42,7 +65,9 @@ function buildAffiliateUrl(linkKey: string): string {
     </h3>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {displayProducts.map(product => {
-        const link = affiliateData.links[product.linkKey as keyof typeof affiliateData.links] as any;
+        const isHighTicket = (product as any)._highTicket;
+        const data = isHighTicket ? highTicketData : affiliateData;
+        const link = data.links[product.linkKey as keyof typeof data.links] as any;
         const category = link?.category || 'General';
         return (
           <a

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const tools = [
+  {
+    title: "Nutrition Calculator",
+    description: "Build your Costco food court meal and calculate total calories, protein, fat, and carbs in real time.",
+    href: "/tools/nutrition-calculator/",
+    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+  },
+  {
+    title: "Price History",
+    description: "Track how Costco has kept iconic products like the $1.50 hot dog at the same price for over 40 years.",
+    href: "/tools/price-history/",
+    icon: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+  },
+];
+---
+
+<BaseLayout
+  title="Tools — Costco Hot Dog Guide"
+  description="Interactive tools for Costco shoppers: nutrition calculator, price history tracker, and more."
+  type="article"
+>
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Interactive Tools</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Practical calculators and trackers to help you make smarter Costco food court choices.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {tools.map(tool => (
+        <a href={tool.href} class="block bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md hover:border-green-300 transition group">
+          <div class="p-8">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition">
+              <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={tool.icon} />
+              </svg>
+            </div>
+            <h2 class="text-xl font-bold text-gray-900 group-hover:text-green-700 transition mb-2">{tool.title}</h2>
+            <p class="text-gray-600">{tool.description}</p>
+            <span class="inline-flex items-center text-sm text-green-600 font-medium mt-4 group-hover:underline">
+              Try it now
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

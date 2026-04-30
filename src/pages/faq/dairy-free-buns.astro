@@ -1,0 +1,64 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Are Costco hot dog buns dairy free?";
+const answer = "Yes, Costco hot dog buns are generally dairy free. According to the ingredient list provided by Costco's bakery supplier, the standard hot dog buns contain wheat flour, water, sugar, yeast, salt, and vegetable oil — with no milk, butter, or dairy-derived ingredients listed.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="are costco hot dog buns dairy free"
+  relatedQuestions={[
+    "Are Costco hot dogs dairy free?",
+    "Do Costco hot dog buns contain eggs?",
+    "What are Costco hot dog buns made of?"
+  ]}
+  learnMoreLinks={[
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full breakdown of what's in a Costco hot dog and bun." },
+    { title: "Costco Hot Dog Nutrition Facts", href: "/nutrition/", description: "Complete calorie, protein, and macro breakdown." }
+  ]}
+>
+  <p>
+    Yes, Costco hot dog buns are generally dairy free. According to the ingredient list provided by Costco's bakery supplier, the standard hot dog buns contain wheat flour, water, sugar, yeast, salt, and vegetable oil — with no milk, butter, or dairy-derived ingredients listed.
+  </p>
+
+  <h2>What's in Costco Hot Dog Buns?</h2>
+  <p>
+    The ingredient list for Costco's standard hot dog buns includes:
+  </p>
+  <ul>
+    <li>Enriched wheat flour</li>
+    <li>Water</li>
+    <li>Sugar</li>
+    <li>Yeast</li>
+    <li>Salt</li>
+    <li>Vegetable oil (soybean and/or canola)</li>
+    <li>Dough conditioners</li>
+  </ul>
+  <p>
+    Notably absent from this list are common dairy ingredients like milk, whey, butter, or casein. This makes the buns suitable for most people following a dairy-free diet.
+  </p>
+
+  <h2>Important Considerations</h2>
+  <p>
+    While the ingredients themselves don't contain dairy, there are a few things to keep in mind:
+  </p>
+  <ul>
+    <li><strong>Cross-contamination:</strong> Costco's bakery items are produced in facilities that may also process dairy products. If you have a severe dairy allergy, this could be a concern.</li>
+    <li><strong>Regional variations:</strong> Ingredient formulations can vary by region or supplier. Always check the ingredient label on the packaging if you have dietary restrictions.</li>
+    <li><strong>Gluten-free options:</strong> While the standard buns are dairy-free, they are not gluten-free. Costco does not currently offer gluten-free hot dog buns at their food court.</li>
+  </ul>
+
+  <h2>What About the Hot Dog Itself?</h2>
+  <p>
+    The hot dog itself is also dairy-free. Costco's famous quarter-pound all-beef hot dogs contain beef, water, salt, spices, garlic powder, and sugar — with no dairy ingredients. This means the entire Costco hot dog combo (hot dog + bun + toppings like mustard, ketchup, and relish) is dairy-free.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    For most people avoiding dairy for dietary preferences or mild intolerances, Costco hot dog buns are a safe choice. However, those with severe dairy allergies should be aware of potential cross-contamination risks and may want to contact Costco directly for the most current allergen information.
+  </p>
+</FAQLayout>

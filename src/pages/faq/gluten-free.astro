@@ -1,0 +1,69 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Are Costco hot dogs gluten free?";
+const answer = "No, Costco's food court hot dogs are not gluten free. While the hot dog itself (the meat) contains no gluten ingredients, it is served in a wheat-based bun, and cross-contamination is highly likely in the food court preparation area.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="are costco hot dogs gluten free"
+  relatedQuestions={[
+    "Do Costco hot dogs have wheat?",
+    "Are Costco hot dog buns gluten free?",
+    "What allergens are in Costco hot dogs?"
+  ]}
+  learnMoreLinks={[
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full breakdown of all ingredients in Costco hot dogs and buns." },
+    { title: "Dietary Information", href: "/dietary/", description: "Complete guide to allergens and dietary considerations." }
+  ]}
+>
+  <p>
+    No, Costco's food court hot dogs are not gluten free. While the hot dog itself (the meat) contains no gluten ingredients, it is served in a wheat-based bun, and cross-contamination is highly likely in the food court preparation area.
+  </p>
+
+  <h2>The Hot Dog vs. The Bun</h2>
+  <p>
+    It's important to distinguish between the hot dog (the meat) and the complete hot dog combo:
+  </p>
+  <ul>
+    <li><strong>Hot dog (meat only):</strong> Contains beef, water, salt, spices, garlic powder, and sugar. No gluten-containing ingredients.</li>
+    <li><strong>Hot dog bun:</strong> Made with enriched wheat flour, which contains gluten.</li>
+    <li><strong>Complete combo:</strong> Not gluten-free due to the bun and preparation environment.</li>
+  </ul>
+
+  <h2>Cross-Contamination Risk</h2>
+  <p>
+    Even if you were to eat just the hot dog without the bun, there's a significant risk of cross-contamination:
+  </p>
+  <ul>
+    <li>Hot dogs are warmed in shared rollers or steamers.</li>
+    <li>Buns are toasted on shared equipment.</li>
+    <li>Food court staff handle both gluten and non-gluten items with the same gloves.</li>
+    <li>Condiment dispensers are shared among all customers.</li>
+  </ul>
+  <p>
+    For people with celiac disease or severe gluten intolerance, this level of cross-contamination makes the food court hot dog unsafe.
+  </p>
+
+  <h2>Gluten-Free Options at Costco</h2>
+  <p>
+    While the food court doesn't offer gluten-free hot dogs, Costco's warehouse stores do carry several gluten-free products:
+  </p>
+  <ul>
+    <li>Gluten-free bread and buns (in the bakery/refrigerated section)</li>
+    <li>Gluten-free hot dogs (packaged, from various brands)</li>
+    <li>Numerous gluten-free snacks and pantry items</li>
+  </ul>
+  <p>
+    If you want a gluten-free "Costco hot dog experience," you could purchase the packaged hot dogs and gluten-free buns from the warehouse and prepare them at home.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    Costco food court hot dogs are not safe for people with celiac disease or gluten intolerance. The wheat-based buns and high risk of cross-contamination in the food court environment make it impossible to guarantee a gluten-free product. For a gluten-free alternative, purchase Costco's packaged hot dogs and pair them with a gluten-free bun from the store.
+  </p>
+</FAQLayout>

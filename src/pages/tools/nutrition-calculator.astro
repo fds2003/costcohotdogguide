@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const menuItems = [
+  { name: "Hot Dog + Bun", calories: 570, protein: 24, fat: 33, carbs: 46 },
+  { name: "Hot Dog (no bun)", calories: 370, protein: 24, fat: 33, carbs: 3 },
+  { name: "Pizza Slice ( Cheese)", calories: 700, protein: 28, fat: 28, carbs: 72 },
+  { name: "Pizza Slice (Pepperoni)", calories: 620, protein: 26, fat: 24, carbs: 68 },
+  { name: "Chicken Bake", calories: 770, protein: 48, fat: 25, carbs: 80 },
+  { name: "Rotisserie Chicken (1 cup)", calories: 220, protein: 38, fat: 7, carbs: 0 },
+  { name: "Chicken Caesar Salad", calories: 650, protein: 40, fat: 42, carbs: 22 },
+  { name: "Acai Bowl", calories: 330, protein: 6, fat: 9, carbs: 58 },
+  { name: "Ice Cream Cup", calories: 390, protein: 6, fat: 21, carbs: 44 },
+  { name: "Churro", calories: 410, protein: 5, fat: 18, carbs: 56 },
+  { name: "Berry Sundae", calories: 410, protein: 7, fat: 16, carbs: 56 },
+  { name: "Latte/Mocha Freeze", calories: 320, protein: 7, fat: 5, carbs: 58 },
+];
+---
+
+<BaseLayout
+  title="Costco Food Court Nutrition Calculator"
+  description="Interactive nutrition calculator for Costco Food Court items. Calculate calories, protein, fat, and carbs for any combination of menu items."
+  type="article"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Food Court Nutrition Calculator</h1>
+      <p class="text-lg text-gray-600">Build your meal and see the nutrition totals in real time.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Item Selector -->
+      <div class="lg:col-span-2">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Select Items</h2>
+        <div class="space-y-3" id="item-list">
+          {menuItems.map((item, i) => (
+            <div class="flex items-center justify-between bg-white border border-gray-200 rounded-lg p-4 hover:border-green-300 transition item-row" data-index={i} data-calories={item.calories} data-protein={item.protein} data-fat={item.fat} data-carbs={item.carbs}>
+              <div class="flex items-center">
+                <input type="checkbox" class="item-check w-5 h-5 text-green-600 rounded border-gray-300 focus:ring-green-500 mr-3" data-index={i} />
+                <div>
+                  <p class="font-medium text-gray-900">{item.name}</p>
+                  <p class="text-sm text-gray-500">{item.calories} cal | P:{item.protein}g F:{item.fat}g C:{item.carbs}g</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <label class="sr-only">Quantity</label>
+                <input type="number" min="1" max="10" value="1" class="qty-input w-16 px-2 py-1 border border-gray-300 rounded text-center text-sm" data-index={i} disabled />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Totals Panel -->
+      <div class="lg:col-span-1">
+        <div class="sticky top-4 bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h2 class="text-xl font-bold text-gray-900 mb-4">Your Meal</h2>
+
+          <div class="space-y-4">
+            <div class="text-center p-4 bg-green-50 rounded-lg">
+              <span class="text-4xl font-bold text-green-700" id="total-calories">0</span>
+              <p class="text-sm text-green-600">calories</p>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="bg-blue-50 rounded-lg p-3">
+                <span class="block text-lg font-bold text-blue-700" id="total-protein">0g</span>
+                <span class="text-xs text-blue-600">Protein</span>
+              </div>
+              <div class="bg-yellow-50 rounded-lg p-3">
+                <span class="block text-lg font-bold text-yellow-700" id="total-fat">0g</span>
+                <span class="text-xs text-yellow-600">Fat</span>
+              </div>
+              <div class="bg-purple-50 rounded-lg p-3">
+                <span class="block text-lg font-bold text-purple-700" id="total-carbs">0g</span>
+                <span class="text-xs text-purple-600">Carbs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-gray-100">
+            <h3 class="text-sm font-semibold text-gray-700 mb-2">Macro Split</h3>
+            <div class="h-4 rounded-full overflow-hidden flex" id="macro-bar">
+              <div class="bg-blue-500 h-full" style="width: 0%" id="bar-protein"></div>
+              <div class="bg-yellow-500 h-full" style="width: 0%" id="bar-fat"></div>
+              <div class="bg-purple-500 h-full" style="width: 0%" id="bar-carbs"></div>
+            </div>
+            <div class="flex justify-between text-xs text-gray-500 mt-1">
+              <span id="pct-protein">Protein 0%</span>
+              <span id="pct-fat">Fat 0%</span>
+              <span id="pct-carbs">Carbs 0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO Content -->
+    <div class="mt-16 prose prose-lg max-w-none text-gray-700">
+      <h2>How to Use This Calculator</h2>
+      <p>
+        Simply check the items you're planning to eat at the Costco food court, and adjust quantities as needed. The calculator updates in real time, showing you total calories, protein, fat, and carbohydrates for your entire meal.
+      </p>
+      <p>
+        This tool is perfect for:
+      </p>
+      <ul>
+        <li>Keto and low-carb dieters tracking macros</li>
+        <li>Weight Watchers members calculating points</li>
+        <li>Athletes monitoring protein intake</li>
+        <li>Anyone curious about the nutritional impact of their Costco food court choices</li>
+      </ul>
+
+      <h2>Understanding Costco Food Court Nutrition</h2>
+      <p>
+        Costco's food court is famous for its value, but the nutrition facts aren't always front and center. A single hot dog combo delivers 570 calories and 24g of protein — making it a surprisingly protein-rich meal. However, at 1,050mg of sodium, it accounts for nearly half your daily recommended sodium intake.
+      </p>
+      <p>
+        The chicken bake, while delicious, packs 770 calories and 80g of carbohydrates. For those watching their carb intake, the rotisserie chicken (0g carbs, 38g protein per cup) is a much better choice.
+      </p>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function() {
+      const checks = document.querySelectorAll('.item-check');
+      const qtys = document.querySelectorAll('.qty-input');
+      const rows = document.querySelectorAll('.item-row');
+
+      function updateTotals() {
+        let cals = 0, protein = 0, fat = 0, carbs = 0;
+        checks.forEach((check, i) => {
+          if (check.checked) {
+            const qty = parseInt(qtys[i].value) || 1;
+            const row = rows[i];
+            cals += parseInt(row.dataset.calories) * qty;
+            protein += parseInt(row.dataset.protein) * qty;
+            fat += parseInt(row.dataset.fat) * qty;
+            carbs += parseInt(row.dataset.carbs) * qty;
+          }
+        });
+
+        document.getElementById('total-calories').textContent = cals;
+        document.getElementById('total-protein').textContent = protein + 'g';
+        document.getElementById('total-fat').textContent = fat + 'g';
+        document.getElementById('total-carbs').textContent = carbs + 'g';
+
+        const total = protein + fat + carbs;
+        if (total > 0) {
+          const pPct = Math.round((protein / total) * 100);
+          const fPct = Math.round((fat / total) * 100);
+          const cPct = 100 - pPct - fPct;
+          document.getElementById('bar-protein').style.width = pPct + '%';
+          document.getElementById('bar-fat').style.width = fPct + '%';
+          document.getElementById('bar-carbs').style.width = cPct + '%';
+          document.getElementById('pct-protein').textContent = 'Protein ' + pPct + '%';
+          document.getElementById('pct-fat').textContent = 'Fat ' + fPct + '%';
+          document.getElementById('pct-carbs').textContent = 'Carbs ' + cPct + '%';
+        } else {
+          document.getElementById('bar-protein').style.width = '0%';
+          document.getElementById('bar-fat').style.width = '0%';
+          document.getElementById('bar-carbs').style.width = '0%';
+          document.getElementById('pct-protein').textContent = 'Protein 0%';
+          document.getElementById('pct-fat').textContent = 'Fat 0%';
+          document.getElementById('pct-carbs').textContent = 'Carbs 0%';
+        }
+      }
+
+      checks.forEach((check, i) => {
+        check.addEventListener('change', () => {
+          qtys[i].disabled = !check.checked;
+          updateTotals();
+        });
+      });
+
+      qtys.forEach(qty => {
+        qty.addEventListener('input', updateTotals);
+      });
+    })();
+  </script>
+</BaseLayout>

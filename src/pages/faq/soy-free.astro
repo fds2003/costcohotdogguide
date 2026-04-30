@@ -1,0 +1,87 @@
+---
+import FAQLayout from '../../layouts/FAQLayout.astro';
+
+const question = "Are Costco hot dogs soy free?";
+const answer = "Costco hot dogs themselves (the meat) do not contain soy ingredients. However, the hot dog buns may contain soybean oil, and cross-contamination with soy products is possible in the food court environment. The hot dog is soy-free, but the complete combo may not be.";
+---
+
+<FAQLayout
+  title={question}
+  description={answer}
+  question={question}
+  answer={answer}
+  targetKeyword="are costco hot dogs soy free"
+  relatedQuestions={[
+    "Do Costco hot dogs contain soy?",
+    "What oil is used in Costco hot dog buns?",
+    "Are Costco hot dogs allergen free?"
+  ]}
+  learnMoreLinks={[
+    { title: "Costco Hot Dog Ingredients", href: "/ingredients/ingredients-list/", description: "Full ingredient breakdown for hot dogs and buns." },
+    { title: "Dietary Information", href: "/dietary/", description: "Complete guide to allergens and dietary considerations." }
+  ]}
+>
+  <p>
+    Costco hot dogs themselves (the meat) do not contain soy ingredients. However, the hot dog buns may contain soybean oil, and cross-contamination with soy products is possible in the food court environment. The hot dog is soy-free, but the complete combo may not be.
+  </p>
+
+  <h2>The Hot Dog (Meat Only)</h2>
+  <p>
+    The ingredient list for Costco's quarter-pound hot dog contains:
+  </p>
+  <ul>
+    <li>Beef</li>
+    <li>Water</li>
+    <li>Salt</li>
+    <li>Spices</li>
+    <li>Garlic powder</li>
+    <li>Sugar</li>
+  </ul>
+  <p>
+    There are no soy-derived ingredients, soy protein, or soy lecithin in the hot dog itself. This makes the meat portion safe for people with soy allergies or sensitivities.
+  </p>
+
+  <h2>The Bun</h2>
+  <p>
+    The hot dog bun ingredients typically include:
+  </p>
+  <ul>
+    <li>Enriched wheat flour</li>
+    <li>Water</li>
+    <li>Sugar</li>
+    <li>Yeast</li>
+    <li>Salt</li>
+    <li>Vegetable oil (soybean and/or canola)</li>
+  </ul>
+  <p>
+    The vegetable oil used in the buns may include soybean oil. If you have a soy allergy, this is an important consideration. The exact oil blend can vary by supplier and region.
+  </p>
+
+  <h2>Cross-Contamination Risks</h2>
+  <p>
+    Even if you eat just the hot dog without the bun, there are cross-contamination risks in the food court:
+  </p>
+  <ul>
+    <li>Shared preparation surfaces</li>
+    <li>Shared cooking equipment (rollers, steamers)</li>
+    <li>Handling by staff who also prepare soy-containing items</li>
+  </ul>
+  <p>
+    For people with severe soy allergies, this level of cross-contamination could be problematic.
+  </p>
+
+  <h2>Soy-Free Alternatives at Costco</h2>
+  <p>
+    If you need to avoid soy, consider these options:
+  </p>
+  <ul>
+    <li><strong>Packaged hot dogs:</strong> Check the warehouse for soy-free options in the refrigerated meat section</li>
+    <li><strong>Fresh food:</strong> The produce, meat, and seafood sections offer many naturally soy-free options</li>
+    <li><strong>Read labels carefully:</strong> Many packaged foods contain hidden soy ingredients like soy lecithin or soybean oil</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>
+    The Costco hot dog meat itself is soy-free, but the complete food court experience may not be due to the buns and cross-contamination risks. If you have a mild soy sensitivity, you might tolerate the hot dog without the bun. Those with severe soy allergies should exercise caution and consider speaking with Costco staff about allergen protocols at your local warehouse.
+  </p>
+</FAQLayout>

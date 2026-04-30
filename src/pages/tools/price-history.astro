@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const products = [
+  { name: "Hot Dog Combo", current: 1.50, history: [{ year: 1985, price: 1.50 }, { year: 1990, price: 1.50 }, { year: 1995, price: 1.50 }, { year: 2000, price: 1.50 }, { year: 2005, price: 1.50 }, { year: 2010, price: 1.50 }, { year: 2015, price: 1.50 }, { year: 2020, price: 1.50 }, { year: 2025, price: 1.50 }] },
+  { name: "Rotisserie Chicken", current: 4.99, history: [{ year: 2010, price: 4.99 }, { year: 2015, price: 4.99 }, { year: 2020, price: 4.99 }, { year: 2022, price: 4.99 }, { year: 2025, price: 4.99 }] },
+  { name: "Gasoline (gal)", current: 3.29, history: [{ year: 2020, price: 2.15 }, { year: 2021, price: 3.50 }, { year: 2022, price: 4.80 }, { year: 2023, price: 3.65 }, { year: 2024, price: 3.40 }, { year: 2025, price: 3.29 }] },
+  { name: "Hot Dog (standalone)", current: 1.50, history: [{ year: 1985, price: 1.50 }, { year: 1995, price: 1.50 }, { year: 2005, price: 1.50 }, { year: 2015, price: 1.50 }, { year: 2025, price: 1.50 }] },
+  { name: "Pizza Slice", current: 1.99, history: [{ year: 2000, price: 1.99 }, { year: 2010, price: 1.99 }, { year: 2015, price: 1.99 }, { year: 2020, price: 1.99 }, { year: 2025, price: 1.99 }] },
+];
+---
+
+<BaseLayout
+  title="Costco Price History Tracker"
+  description="Track historical prices of iconic Costco products including the famous $1.50 hot dog combo, rotisserie chicken, and gasoline."
+  type="article"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Price History</h1>
+      <p class="text-lg text-gray-600">How Costco has kept prices steady while everything else goes up.</p>
+    </div>
+
+    {products.map(product => {
+      const maxPrice = Math.max(...product.history.map(h => h.price));
+      const minPrice = Math.min(...product.history.map(h => h.price));
+      const range = maxPrice - minPrice || 1;
+      return (
+        <div class="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-bold text-gray-900">{product.name}</h2>
+            <span class="text-2xl font-bold text-green-700">${product.current.toFixed(2)}</span>
+          </div>
+
+          <!-- Simple bar chart -->
+          <div class="flex items-end space-x-2 h-40 mb-4">
+            {product.history.map(point => {
+              const height = range > 0 ? ((point.price - minPrice) / range) * 80 + 20 : 50;
+              return (
+                <div class="flex-1 flex flex-col items-center justify-end">
+                  <div class="text-xs text-gray-600 mb-1">${point.price.toFixed(2)}</div>
+                  <div
+                    class="w-full bg-red-500 rounded-t hover:bg-red-600 transition"
+                    style={`height: ${height}%; min-height: 20px;`}
+                  ></div>
+                  <div class="text-xs text-gray-500 mt-1">{point.year}</div>
+                </div>
+              );
+            })}
+          </div>
+
+          <!-- Events -->
+          {product.name === "Hot Dog Combo" && (
+            <div class="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
+              <strong>Notable:</strong> The $1.50 hot dog combo price has remained unchanged since 1985 — over 40 years. Costco's co-founder Jim Sinegal once reportedly said, "If you raise the [price of the] hot dog, I will kill you."
+            </div>
+          )}
+          {product.name === "Rotisserie Chicken" && (
+            <div class="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
+              <strong>Notable:</strong> Costco deliberately keeps rotisserie chickens at $4.99 as a "loss leader" to drive warehouse traffic. They even built their own poultry processing plant to maintain this price point.
+            </div>
+          )}
+        </div>
+      );
+    })}
+
+    <div class="mt-12 prose prose-lg max-w-none text-gray-700">
+      <h2>The $1.50 Hot Dog: A Pricing Miracle</h2>
+      <p>
+        Perhaps no product better exemplifies Costco's commitment to value than the $1.50 hot dog and soda combo. Introduced in 1985, this meal has defied four decades of inflation. If the price had kept pace with inflation, it would cost approximately $4.25 today.
+      </p>
+      <p>
+        Costco has achieved this through vertical integration — they operate their own hot dog manufacturing facilities and have massive purchasing power for ingredients. When Coca-Cola tried to raise syrup prices in the early 2000s, Costco simply switched to Pepsi rather than pass the cost to customers.
+      </p>
+
+      <h2>Why Does Costco Keep Prices So Low?</h2>
+      <p>
+        Costco's business model relies on membership fees rather than product margins. The low food court prices serve as a powerful marketing tool — they reinforce the perception of value that justifies the $60–$120 annual membership fee.
+      </p>
+      <p>
+        The food court also keeps shoppers in the warehouse longer. A family that stops for a cheap meal after shopping is likely to make additional impulse purchases.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
