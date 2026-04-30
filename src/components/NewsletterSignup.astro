@@ -20,6 +20,54 @@ const {
       <div class="newsletter-embed" set:html={newsletterConfig.embedCode} />
     </div>
   </section>
+  <script is:inline>
+    (function() {
+      function trackNewsletterSubscribe() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'newsletter_subscribe', {
+            event_category: 'engagement',
+            event_label: 'ConvertKit Newsletter'
+          });
+        }
+      }
+      // Listen for ConvertKit form submissions via mutation observer
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'childList') {
+            const added = mutation.addedNodes;
+            for (let i = 0; i < added.length; i++) {
+              const node = added[i];
+              if (node.nodeType === 1) {
+                // Check for success message text in various languages
+                const text = node.textContent || '';
+                if (text.toLowerCase().includes('success') || 
+                    text.toLowerCase().includes('check your email') ||
+                    text.toLowerCase().includes('thank you') ||
+                    text.includes('请检查您的邮箱')) {
+                  trackNewsletterSubscribe();
+                  observer.disconnect();
+                }
+              }
+            }
+          }
+        });
+      });
+      // Observe the newsletter embed container
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.newsletter-embed');
+        if (container) {
+          observer.observe(container, { childList: true, subtree: true });
+        }
+        // Also listen for form submit as fallback
+        document.addEventListener('submit', function(e) {
+          const form = e.target;
+          if (form && form.closest && form.closest('.newsletter-embed')) {
+            trackNewsletterSubscribe();
+          }
+        }, true);
+      });
+    })();
+  </script>
 )}
 
 {!newsletterConfig.enabled && (
