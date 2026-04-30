@@ -1,7 +1,7 @@
 {
   "_comment": "AdSense clientId is configured. SLOT IDs below are PLACEHOLDERS — replace with real Ad Unit IDs after AdSense approves your site. Go to AdSense → Ads → By ad unit → Create ad unit to get real slot IDs.",
   "enabled": true,
-  "network": "adsense",
+  "network": "adsterra",
   "adsense": {
     "clientId": "ca-pub-5503798858372383",
     "slots": {
