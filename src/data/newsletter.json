@@ -1,6 +1,6 @@
 {
-  "_comment": "Replace embedCode with your real ConvertKit or Mailchimp HTML embed. Set enabled to true after setup.",
-  "enabled": false,
+  "_comment": "ConvertKit newsletter form enabled.",
+  "enabled": true,
   "provider": "convertkit",
-  "embedCode": ""
+  "embedCode": "<script async data-uid=\"3effef1e09\" src=\"https://costco-hot-dog-guide.kit.com/3effef1e09/index.js\"></script>"
 }
