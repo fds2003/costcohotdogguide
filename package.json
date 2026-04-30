@@ -9,12 +9,16 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate-content": "node scripts/validate-content.js",
+    "build-content-index": "node scripts/build-content-index.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.1.10",
+    "csv-parser": "^3.2.0",
+    "gray-matter": "^4.0.3",
     "tailwindcss": "^4.2.4"
   }
 }

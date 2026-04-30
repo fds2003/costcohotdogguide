@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import NutritionChart from '../../components/NutritionChart.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import { loadNutritionData } from '../../lib/csv-loader.js';
+
+const nutritionItems = await loadNutritionData();
+
+// JSON-LD for comparison page (uses ItemList schema)
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Costco Food Court Nutrition Comparison",
+  "description": "Interactive nutrition comparison of all Costco Food Court menu items.",
+  "itemListElement": nutritionItems.map((item, idx) => ({
+    "@type": "ListItem",
+    "position": idx + 1,
+    "name": item.name,
+    "url": `https://costcohotdogguide.com/menu/${item.slug}/`
+  }))
+};
+---
+
+<BaseLayout
+  title="Costco Food Court Nutrition Comparison"
+  description="Compare calories, protein, fat, sodium, and carbs across all Costco Food Court menu items. Interactive charts and detailed breakdowns."
+  type="website"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center space-x-2">
+        <li><a href="/" class="hover:text-red-700">Home</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li><a href="/data/" class="hover:text-red-700">Data</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li class="text-gray-900 font-medium">Nutrition Comparison</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Nutrition Comparison</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Compare the nutritional content of every Costco Food Court item. Toggle between nutrients to see how they stack up.
+      </p>
+    </div>
+
+    <!-- Interactive Chart -->
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-10">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Interactive Comparison</h2>
+      <NutritionChart items={nutritionItems} />
+    </section>
+
+    <!-- Detailed Table -->
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Detailed Nutrition Table</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold text-gray-700">Item</th>
+              <th class="text-left px-4 py-3 font-semibold text-gray-700">Serving</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Calories</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Fat</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Sat. Fat</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Chol.</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Sodium</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Carbs</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Fiber</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Sugars</th>
+              <th class="text-right px-4 py-3 font-semibold text-gray-700">Protein</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {nutritionItems.map(item => (
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium">
+                  <a href={`/menu/${item.slug}/`} class="text-red-700 hover:underline">{item.name}</a>
+                </td>
+                <td class="px-4 py-3 text-gray-600">{item.serving_size}</td>
+                <td class="px-4 py-3 text-right">{item.calories}</td>
+                <td class="px-4 py-3 text-right">{item.total_fat}g</td>
+                <td class="px-4 py-3 text-right">{item.saturated_fat}g</td>
+                <td class="px-4 py-3 text-right">{item.cholesterol}mg</td>
+                <td class="px-4 py-3 text-right">{item.sodium}mg</td>
+                <td class="px-4 py-3 text-right">{item.total_carbs}g</td>
+                <td class="px-4 py-3 text-right">{item.dietary_fiber}g</td>
+                <td class="px-4 py-3 text-right">{item.sugars}g</td>
+                <td class="px-4 py-3 text-right font-medium">{item.protein}g</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <RelatedProducts scenario="meal-prep" title="Meal Prep Essentials" maxItems={3} />
+
+    <!-- Daily Value Guide -->
+    <section class="mt-10 bg-yellow-50 rounded-xl p-6 border border-yellow-100">
+      <h2 class="text-lg font-bold text-yellow-900 mb-3">Daily Value Reference</h2>
+      <p class="text-yellow-800 text-sm mb-3">Based on a 2,000 calorie diet:</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+        <div class="bg-white rounded p-3 text-center">
+          <div class="font-bold text-gray-900">2,000</div>
+          <div class="text-gray-600">Calories</div>
+        </div>
+        <div class="bg-white rounded p-3 text-center">
+          <div class="font-bold text-gray-900">78g</div>
+          <div class="text-gray-600">Total Fat</div>
+        </div>
+        <div class="bg-white rounded p-3 text-center">
+          <div class="font-bold text-gray-900">2,300mg</div>
+          <div class="text-gray-600">Sodium</div>
+        </div>
+        <div class="bg-white rounded p-3 text-center">
+          <div class="font-bold text-gray-900">50g</div>
+          <div class="text-gray-600">Protein</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { loadMenuItems } from '../../lib/csv-loader.js';
+
+const menuItems = await loadMenuItems();
+const newItems = menuItems.filter(i => i.category === 'New');
+const discontinuedItems = [
+  { name: 'Polish Dog', discontinuedDate: '2018-07', reason: 'Replaced with all-beef hot dog', replacement: 'Hot Dog' },
+  { name: 'Chocolate Frozen Yogurt', discontinuedDate: '2020-03', reason: 'Menu simplification', replacement: 'Ice Cream' },
+  { name: 'Berry Sundae', discontinuedDate: '2020-03', reason: 'Menu simplification', replacement: 'Ice Cream' },
+  { name: 'Turkey & Provolone Sandwich', discontinuedDate: '2020-03', reason: 'Menu simplification', replacement: 'Chicken Bake' },
+  { name: 'BBQ Beef Brisket Sandwich', discontinuedDate: '2023-09', reason: 'Regional availability only', replacement: null },
+  { name: 'Combo Pizza', discontinuedDate: '2020-03', reason: 'Menu simplification', replacement: 'Cheese or Pepperoni Pizza' },
+];
+---
+
+<BaseLayout
+  title="New & Discontinued Costco Food Court Items"
+  description="Track the latest additions and removals from the Costco Food Court menu. See what's new and what items have been discontinued over the years."
+  type="website"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Menu Changes</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Stay up to date with the latest additions and farewells on the Costco Food Court menu.
+      </p>
+    </div>
+
+    <!-- New Items -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <span class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">NEW</span>
+        Recently Added
+      </h2>
+      {newItems.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {newItems.map(item => (
+            <a href={`/menu/${item.slug}/`} class="block bg-white rounded-xl shadow-sm border border-green-200 hover:shadow-lg transition group">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900 group-hover:text-green-700 transition">{item.name}</h3>
+                  <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">NEW</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">{item.description}</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-lg font-bold text-green-700">${item.price.toFixed(2)}</span>
+                  <span class="text-sm text-gray-500">{item.calories} cal</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="bg-gray-50 rounded-xl p-8 text-center border border-gray-200">
+          <p class="text-gray-600">No new items currently tracked. Check back for updates!</p>
+        </div>
+      )}
+    </section>
+
+    <!-- Discontinued Items -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <span class="w-8 h-8 bg-gray-500 text-white rounded-full flex items-center justify-center text-sm mr-3">✕</span>
+        Discontinued Items
+      </h2>
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="text-left px-6 py-4 font-semibold text-gray-700">Item</th>
+                <th class="text-left px-6 py-4 font-semibold text-gray-700">Discontinued</th>
+                <th class="text-left px-6 py-4 font-semibold text-gray-700">Reason</th>
+                <th class="text-left px-6 py-4 font-semibold text-gray-700">Replacement</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {discontinuedItems.map(item => (
+                <tr class="hover:bg-gray-50">
+                  <td class="px-6 py-4 font-medium text-gray-900">{item.name}</td>
+                  <td class="px-6 py-4 text-gray-600">{item.discontinuedDate}</td>
+                  <td class="px-6 py-4 text-gray-600">{item.reason}</td>
+                  <td class="px-6 py-4">
+                    {item.replacement ? (
+                      <span class="text-green-700">{item.replacement}</span>
+                    ) : (
+                      <span class="text-gray-400">—</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Menu -->
+    <div class="mt-12 text-center">
+      <a href="/menu/" class="inline-flex items-center px-6 py-3 bg-red-700 text-white rounded-lg font-medium hover:bg-red-800 transition">
+        ← Back to Full Menu
+      </a>
+    </div>
+  </div>
+</BaseLayout>

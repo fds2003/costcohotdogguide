@@ -1,0 +1,226 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Load crowd prediction data
+const crowdData: any[] = JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), 'src', 'content', 'data', 'crowd-prediction.json'), 'utf-8')
+);
+
+const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const hours = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+function getLevelColor(level: number) {
+  if (level <= 2) return 'bg-green-300 text-green-900';
+  if (level <= 4) return 'bg-yellow-300 text-yellow-900';
+  if (level <= 6) return 'bg-orange-300 text-orange-900';
+  return 'bg-red-400 text-red-900';
+}
+
+function getLevelLabel(level: number) {
+  if (level <= 2) return 'Quiet';
+  if (level <= 4) return 'Moderate';
+  if (level <= 6) return 'Busy';
+  return 'Very Busy';
+}
+
+// FAQPage schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best time to visit the Costco Food Court?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best times to visit the Costco Food Court are weekday mornings (10-11 AM) and weekday evenings after 7 PM. Avoid weekends between 12-2 PM when wait times can exceed 15 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is the typical wait at the Costco Food Court?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wait times vary from 3 minutes during quiet periods to 30+ minutes on busy weekend afternoons. Weekday lunch rushes (12-1 PM) typically have 8-12 minute waits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the Costco Food Court busier on weekends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, weekends are significantly busier than weekdays. Saturday and Sunday between 12-2 PM are the peak hours with the longest lines."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Costco Food Court Crowd Prediction | Best Times to Visit"
+  description="Plan your Costco Food Court visit with our crowd prediction heatmap. See the busiest and quietest times by day of week."
+  type="website"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center space-x-2">
+        <li><a href="/" class="hover:text-red-700">Home</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li><a href="/data/" class="hover:text-red-700">Data</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li class="text-gray-900 font-medium">Crowd Prediction</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">When to Visit the Food Court</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Avoid the lines. Our crowd prediction heatmap shows the best and worst times to grab your Costco favorites.
+      </p>
+    </div>
+
+    <!-- Heatmap -->
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-10">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Weekly Crowd Heatmap</h2>
+      <div class="overflow-x-auto">
+        <div class="min-w-[600px]">
+          {/* Hour headers */}
+          <div class="grid grid-cols-[100px_repeat(11,1fr)] gap-1 mb-1">
+            <div class="text-xs font-semibold text-gray-500"></div>
+            {hours.map(h => (
+              <div class="text-xs font-semibold text-gray-500 text-center">{h}:00</div>
+            ))}
+          </div>
+          {/* Day rows */}
+          {days.map(day => {
+            const dayData = crowdData.find(d => d.day === day);
+            return (
+              <div class="grid grid-cols-[100px_repeat(11,1fr)] gap-1 mb-1">
+                <div class="text-sm font-medium text-gray-700 flex items-center">{day}</div>
+                {hours.map(h => {
+                  const hourData = dayData?.hours.find((hh: any) => hh.hour === h);
+                  const level = hourData?.level || 0;
+                  const wait = hourData?.waitMinutes || 0;
+                  return (
+                    <div
+                      class={`rounded p-2 text-center text-xs font-medium cursor-default transition hover:opacity-80 ${getLevelColor(level)}`}
+                      title={`${day} ${h}:00 — ${getLevelLabel(level)} (${wait} min wait)`}
+                    >
+                      <div>{level}</div>
+                      <div class="text-[10px] opacity-75">{wait}m</div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Legend */}
+      <div class="flex flex-wrap items-center gap-4 mt-6 text-sm">
+        <span class="text-gray-600 font-medium">Crowd Level:</span>
+        <div class="flex items-center gap-2">
+          <span class="w-4 h-4 rounded bg-green-300"></span>
+          <span>Quiet (1-2)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-4 h-4 rounded bg-yellow-300"></span>
+          <span>Moderate (3-4)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-4 h-4 rounded bg-orange-300"></span>
+          <span>Busy (5-6)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-4 h-4 rounded bg-red-400"></span>
+          <span>Very Busy (7-8)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best/Worst Times -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+      <section class="bg-green-50 rounded-xl p-6 border border-green-100">
+        <h2 class="text-lg font-bold text-green-900 mb-4 flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Best Times to Visit
+        </h2>
+        <ul class="space-y-2 text-green-800">
+          <li class="flex items-start gap-2">
+            <span class="font-bold">✓</span>
+            <span><strong>Weekday mornings (10-11 AM)</strong> — Quietest period, often no wait</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="font-bold">✓</span>
+            <span><strong>Weekday evenings (after 7 PM)</strong> — Dinner rush ends, lines thin out</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="font-bold">✓</span>
+            <span><strong>Tuesday & Thursday afternoons</strong> — Consistently moderate crowds</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="bg-red-50 rounded-xl p-6 border border-red-100">
+        <h2 class="text-lg font-bold text-red-900 mb-4 flex items-center">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Times to Avoid
+        </h2>
+        <ul class="space-y-2 text-red-800">
+          <li class="flex items-start gap-2">
+            <span class="font-bold">✕</span>
+            <span><strong>Saturday & Sunday 12-2 PM</strong> — Peak weekend lunch rush, 25-30 min waits</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="font-bold">✕</span>
+            <span><strong>Friday 12-1 PM</strong> — Pre-weekend shopping surge</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="font-bold">✕</span>
+            <span><strong>Holiday weekends</strong> — Consistently packed all day</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Related Products -->
+    <RelatedProducts scenario="picnic" title="Gear for Your Costco Run" maxItems={3} />
+
+    <!-- FAQ -->
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mt-10">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="border border-gray-200 rounded-lg overflow-hidden">
+          <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition">What is the best time to visit the Costco Food Court?</summary>
+          <div class="px-6 pb-4 text-gray-600">
+            The best times are weekday mornings (10-11 AM) and weekday evenings after 7 PM. These periods consistently have the shortest lines and fastest service.
+          </div>
+        </details>
+        <details class="border border-gray-200 rounded-lg overflow-hidden">
+          <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition">How long is the typical wait?</summary>
+          <div class="px-6 pb-4 text-gray-600">
+            Wait times range from 3 minutes during quiet periods to 30+ minutes on busy weekend afternoons. The average weekday lunch wait is 8-12 minutes.
+          </div>
+        </details>
+        <details class="border border-gray-200 rounded-lg overflow-hidden">
+          <summary class="px-6 py-4 font-semibold text-gray-900 cursor-pointer hover:bg-gray-50 transition">Can I order ahead or use the app?</summary>
+          <div class="px-6 pb-4 text-gray-600">
+            Unfortunately, Costco does not offer online ordering or app-based ordering for the food court. All orders are placed in person at the counter.
+          </div>
+        </details>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

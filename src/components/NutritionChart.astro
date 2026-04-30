@@ -1,0 +1,133 @@
+---
+export interface Props {
+  items: Array<{
+    slug: string;
+    name: string;
+    serving_size: string;
+    calories: number;
+    total_fat: number;
+    saturated_fat: number;
+    trans_fat: number;
+    cholesterol: number;
+    sodium: number;
+    total_carbs: number;
+    dietary_fiber: number;
+    sugars: number;
+    protein: number;
+  }>;
+}
+
+const { items } = Astro.props;
+
+const nutrients = [
+  { key: 'calories', label: 'Calories', unit: '', max: 800 },
+  { key: 'protein', label: 'Protein', unit: 'g', max: 40 },
+  { key: 'total_fat', label: 'Total Fat', unit: 'g', max: 40 },
+  { key: 'sodium', label: 'Sodium', unit: 'mg', max: 2000 },
+  { key: 'total_carbs', label: 'Carbs', unit: 'g', max: 100 },
+  { key: 'sugars', label: 'Sugars', unit: 'g', max: 40 },
+];
+
+const colors = [
+  'bg-red-500',
+  'bg-blue-500',
+  'bg-green-500',
+  'bg-yellow-500',
+  'bg-purple-500',
+  'bg-pink-500',
+  'bg-orange-500',
+];
+---
+
+<div class="nutrition-chart" data-items={JSON.stringify(items)} data-nutrients={JSON.stringify(nutrients)}>
+  {/* Nutrient selector */}
+  <div class="flex flex-wrap gap-2 mb-6">
+    {nutrients.map((n, idx) => (
+      <button
+        class="nutrient-btn px-4 py-2 rounded-lg text-sm font-medium border transition"
+        data-nutrient={n.key}
+        class:list={[
+          idx === 0 ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'
+        ]}
+      >
+        {n.label}
+      </button>
+    ))}
+  </div>
+
+  {/* Chart area */}
+  <div class="chart-container space-y-3">
+    {items.map((item, idx) => {
+      const nutrient = nutrients[0];
+      const value = item[nutrient.key as keyof typeof item] as number;
+      const pct = Math.min((value / nutrient.max) * 100, 100);
+      return (
+        <div class="chart-row flex items-center gap-4" data-slug={item.slug}>
+          <div class="w-32 text-sm font-medium text-gray-900 text-right truncate">{item.name}</div>
+          <div class="flex-1 h-8 bg-gray-100 rounded-full overflow-hidden relative">
+            <div
+              class={`h-full rounded-full transition-all duration-500 ${colors[idx % colors.length]}`}
+              style={`width: ${pct}%`}
+            ></div>
+          </div>
+          <div class="w-20 text-sm text-gray-600">
+            {value}{nutrient.unit}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  {/* Daily value note */}
+  <p class="text-xs text-gray-500 mt-4">
+    Bars show relative comparison. Hover over bars to see exact values.
+  </p>
+</div>
+
+<script>
+  const charts = document.querySelectorAll('.nutrition-chart');
+  charts.forEach(chart => {
+    const items = JSON.parse(chart.getAttribute('data-items') || '[]');
+    const nutrients = JSON.parse(chart.getAttribute('data-nutrients') || '[]');
+    const container = chart.querySelector('.chart-container');
+    const buttons = chart.querySelectorAll('.nutrient-btn');
+
+    const colors = [
+      'bg-red-500', 'bg-blue-500', 'bg-green-500', 'bg-yellow-500',
+      'bg-purple-500', 'bg-pink-500', 'bg-orange-500'
+    ];
+
+    function renderChart(nutrientKey: string) {
+      const nutrient = nutrients.find((n: any) => n.key === nutrientKey);
+      if (!nutrient || !container) return;
+
+      container.innerHTML = '';
+      items.forEach((item: any, idx: number) => {
+        const value = item[nutrientKey];
+        const pct = Math.min((value / nutrient.max) * 100, 100);
+        const row = document.createElement('div');
+        row.className = 'chart-row flex items-center gap-4';
+        row.innerHTML = `
+          <div class="w-32 text-sm font-medium text-gray-900 text-right truncate">${item.name}</div>
+          <div class="flex-1 h-8 bg-gray-100 rounded-full overflow-hidden relative">
+            <div class="h-full rounded-full transition-all duration-500 ${colors[idx % colors.length]}" style="width: ${pct}%"></div>
+          </div>
+          <div class="w-20 text-sm text-gray-600">${value}${nutrient.unit}</div>
+        `;
+        container.appendChild(row);
+      });
+    }
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => {
+          b.classList.remove('bg-red-700', 'text-white', 'border-red-700');
+          b.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+        });
+        btn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+        btn.classList.add('bg-red-700', 'text-white', 'border-red-700');
+        renderChart(btn.getAttribute('data-nutrient') || 'calories');
+      });
+    });
+  });
+</script>

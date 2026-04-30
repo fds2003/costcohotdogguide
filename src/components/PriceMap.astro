@@ -1,0 +1,61 @@
+---
+export interface Props {
+  prices: Array<{
+    region: string;
+    state: string;
+    price: number;
+    currency: string;
+    notes?: string;
+  }>;
+}
+
+const { prices } = Astro.props;
+
+// Group by region
+const regionMap: Record<string, typeof prices> = {};
+prices.forEach(p => {
+  if (!regionMap[p.region]) regionMap[p.region] = [];
+  regionMap[p.region].push(p);
+});
+
+const regions = Object.keys(regionMap);
+
+function getPriceColor(price: number, currency: string) {
+  if (currency !== 'USD') return 'bg-blue-200';
+  if (price <= 1.50) return 'bg-green-300';
+  if (price <= 1.99) return 'bg-yellow-300';
+  return 'bg-red-300';
+}
+---
+
+<div class="space-y-8">
+  {regions.map(region => (
+    <div>
+      <h3 class="text-lg font-bold text-gray-900 mb-3">{region}</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+        {regionMap[region].map(p => (
+          <div
+            class={`relative group rounded-lg p-3 border border-gray-200 hover:shadow-md transition cursor-default ${getPriceColor(p.price, p.currency)}`}
+            data-state={p.state}
+            data-price={`${p.currency === 'USD' ? '$' : p.currency + ' '}${p.price.toFixed(p.price % 1 === 0 ? 0 : 2)}`}
+            data-notes={p.notes || ''}
+          >
+            <div class="font-semibold text-gray-900 text-sm">{p.state}</div>
+            <div class="text-gray-700 text-xs mt-1">
+              {p.currency === 'USD' ? '$' : p.currency + ' '}{p.price.toFixed(p.price % 1 === 0 ? 0 : 2)}
+            </div>
+            {/* Tooltip */}
+            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block z-10 w-48">
+              <div class="bg-gray-900 text-white text-xs rounded-lg py-2 px-3 shadow-lg">
+                <div class="font-bold">{p.state}</div>
+                <div>Price: {p.currency === 'USD' ? '$' : p.currency + ' '}{p.price.toFixed(p.price % 1 === 0 ? 0 : 2)}</div>
+                {p.notes && <div class="text-gray-300 mt-1">{p.notes}</div>}
+                <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-gray-900"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

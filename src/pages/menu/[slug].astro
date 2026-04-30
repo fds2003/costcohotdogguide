@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import { loadMenuItems } from '../../lib/csv-loader.js';
+
+export async function getStaticPaths() {
+  const items = await loadMenuItems();
+  return items.map(item => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+
+// Map items to relevant affiliate scenarios
+const scenarioMap = {
+  'hot-dog': 'home-cooking',
+  'pizza': 'home-cooking',
+  'rotisserie-chicken': 'meal-prep',
+  'ice-cream': 'picnic',
+  'churro': 'picnic',
+  'chicken-bake': 'home-cooking',
+  'acai-bowl': 'meal-prep',
+};
+
+const scenario = scenarioMap[item.slug] || undefined;
+
+const competitors = item.competitorData || {};
+const competitorEntries = Object.entries(competitors);
+
+function formatNumber(n) {
+  return typeof n === 'number' ? n.toLocaleString() : n;
+}
+---
+
+<BaseLayout
+  title={`${item.name} | Costco Food Court`}
+  description={item.description}
+  type="article"
+  publishedAt="2026-04-29"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center space-x-2">
+        <li><a href="/" class="hover:text-red-700">Home</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li><a href="/menu/" class="hover:text-red-700">Menu</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li class="text-gray-900 font-medium">{item.name}</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="mb-10">
+      <div class="flex items-center gap-3 mb-3">
+        <h1 class="text-4xl font-bold text-gray-900">{item.name}</h1>
+        {item.category === 'New' && (
+          <span class="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full uppercase">New</span>
+        )}
+      </div>
+      <p class="text-xl text-gray-600 max-w-3xl">{item.description}</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main Content -->
+      <div class="lg:col-span-2 space-y-8">
+        <!-- Price & Quick Facts -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">Price & Facts</h2>
+            <span class="text-3xl font-bold text-green-700">${item.price.toFixed(2)}</span>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="text-center p-4 bg-red-50 rounded-lg">
+              <div class="text-2xl font-bold text-red-700">{item.calories}</div>
+              <div class="text-sm text-red-800 mt-1">Calories</div>
+            </div>
+            <div class="text-center p-4 bg-blue-50 rounded-lg">
+              <div class="text-2xl font-bold text-blue-700">{item.protein}g</div>
+              <div class="text-sm text-blue-800 mt-1">Protein</div>
+            </div>
+            <div class="text-center p-4 bg-yellow-50 rounded-lg">
+              <div class="text-2xl font-bold text-yellow-700">{item.fat}g</div>
+              <div class="text-sm text-yellow-800 mt-1">Fat</div>
+            </div>
+            <div class="text-center p-4 bg-purple-50 rounded-lg">
+              <div class="text-2xl font-bold text-purple-700">{item.carbs}g</div>
+              <div class="text-sm text-purple-800 mt-1">Carbs</div>
+            </div>
+          </div>
+          <div class="mt-4 p-3 bg-gray-50 rounded-lg flex items-center justify-between">
+            <span class="text-gray-600">Sodium</span>
+            <span class="font-bold text-gray-900">{item.sodium}mg</span>
+          </div>
+        </section>
+
+        <!-- Nutrition Deep Dive -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Nutrition Facts</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="text-left px-4 py-3 font-semibold text-gray-700">Nutrient</th>
+                  <th class="text-right px-4 py-3 font-semibold text-gray-700">Amount</th>
+                  <th class="text-right px-4 py-3 font-semibold text-gray-700">% Daily Value*</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                <tr>
+                  <td class="px-4 py-3">Calories</td>
+                  <td class="px-4 py-3 text-right font-medium">{item.calories}</td>
+                  <td class="px-4 py-3 text-right text-gray-500">{Math.round((item.calories / 2000) * 100)}%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">Total Fat</td>
+                  <td class="px-4 py-3 text-right font-medium">{item.fat}g</td>
+                  <td class="px-4 py-3 text-right text-gray-500">{Math.round((item.fat / 78) * 100)}%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3 pl-8">Saturated Fat</td>
+                  <td class="px-4 py-3 text-right">—</td>
+                  <td class="px-4 py-3 text-right text-gray-500">—</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">Sodium</td>
+                  <td class="px-4 py-3 text-right font-medium">{item.sodium}mg</td>
+                  <td class="px-4 py-3 text-right text-gray-500">{Math.round((item.sodium / 2300) * 100)}%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">Total Carbohydrates</td>
+                  <td class="px-4 py-3 text-right font-medium">{item.carbs}g</td>
+                  <td class="px-4 py-3 text-right text-gray-500">{Math.round((item.carbs / 275) * 100)}%</td>
+                </tr>
+                <tr>
+                  <td class="px-4 py-3">Protein</td>
+                  <td class="px-4 py-3 text-right font-medium">{item.protein}g</td>
+                  <td class="px-4 py-3 text-right text-gray-500">{Math.round((item.protein / 50) * 100)}%</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="text-xs text-gray-500 mt-3">*Percent Daily Values are based on a 2,000 calorie diet.</p>
+          </div>
+        </section>
+
+        <!-- Competitor Comparison -->
+        {competitorEntries.length > 0 && (
+          <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">How It Compares</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="text-left px-4 py-3 font-semibold text-gray-700">Competitor</th>
+                    <th class="text-left px-4 py-3 font-semibold text-gray-700">Item</th>
+                    <th class="text-right px-4 py-3 font-semibold text-gray-700">Price</th>
+                    <th class="text-right px-4 py-3 font-semibold text-gray-700">Calories</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr class="bg-red-50">
+                    <td class="px-4 py-3 font-bold text-red-700">Costco</td>
+                    <td class="px-4 py-3 font-medium">{item.name}</td>
+                    <td class="px-4 py-3 text-right font-bold text-green-700">${item.price.toFixed(2)}</td>
+                    <td class="px-4 py-3 text-right">{item.calories}</td>
+                  </tr>
+                  {competitorEntries.map(([key, comp]) => (
+                    <tr>
+                      <td class="px-4 py-3 capitalize">{key}</td>
+                      <td class="px-4 py-3">{comp.item}</td>
+                      <td class="px-4 py-3 text-right">${comp.price}</td>
+                      <td class="px-4 py-3 text-right">{comp.calories}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+
+        <!-- Related Menu Items -->
+        <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 class="text-xl font-bold text-gray-900 mb-4">Explore More Menu Items</h2>
+          <div class="flex flex-wrap gap-3">
+            <a href="/menu/hot-dog/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'hot-dog' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Hot Dog</a>
+            <a href="/menu/pizza/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'pizza' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Pizza</a>
+            <a href="/menu/rotisserie-chicken/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'rotisserie-chicken' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Rotisserie Chicken</a>
+            <a href="/menu/ice-cream/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'ice-cream' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Ice Cream</a>
+            <a href="/menu/churro/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'churro' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Churro</a>
+            <a href="/menu/chicken-bake/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'chicken-bake' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Chicken Bake</a>
+            <a href="/menu/acai-bowl/" class={`px-4 py-2 rounded-lg text-sm font-medium border transition ${item.slug === 'acai-bowl' ? 'bg-red-700 text-white border-red-700' : 'bg-white text-gray-700 border-gray-200 hover:border-red-300'}`}>Acai Bowl</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <!-- Quick Links -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h3 class="font-bold text-gray-900 mb-4">Explore Menu</h3>
+          <div class="space-y-2">
+            <a href="/menu/" class="block text-red-700 hover:underline">← All Menu Items</a>
+            <a href="/menu/new/" class="block text-red-700 hover:underline">New & Seasonal</a>
+            <a href="/data/nutrition-comparison/" class="block text-red-700 hover:underline">Nutrition Comparison</a>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        {scenario && (
+          <RelatedProducts
+            scenario={scenario}
+            title={`Gear for ${item.name}`}
+            maxItems={3}
+          />
+        )}
+      </div>
+    </div>
+  </div>
+</BaseLayout>

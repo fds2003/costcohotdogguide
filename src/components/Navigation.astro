@@ -1,5 +1,15 @@
 ---
+import { loadMenuItems } from '../lib/csv-loader.js';
+
+const menuItems = await loadMenuItems();
+const menuChildren = menuItems.map(item => ({
+  label: item.name,
+  href: `/menu/${item.slug}/`,
+}));
+menuChildren.push({ label: 'New & Discontinued', href: '/menu/new/' });
+
 const navItems = [
+  { label: 'Menu', href: '/menu/', children: menuChildren },
   { label: 'Hot Dog Guide', href: '/guide/', children: [
     { label: 'Nutrition', href: '/nutrition/' },
     { label: 'Calories', href: '/nutrition/calories/' },

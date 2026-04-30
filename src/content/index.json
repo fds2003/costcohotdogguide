@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-04-30T11:19:45.441Z",
+  "stats": {
+    "menuItems": 7,
+    "articles": 1,
+    "datasets": 3
+  },
+  "menuItems": [
+    {
+      "slug": "hot-dog",
+      "name": "Hot Dog",
+      "category": "Classic",
+      "price": 1.5,
+      "calories": 550,
+      "url": "/menu/hot-dog/"
+    },
+    {
+      "slug": "pizza",
+      "name": "Pizza",
+      "category": "Classic",
+      "price": 1.99,
+      "calories": 700,
+      "url": "/menu/pizza/"
+    },
+    {
+      "slug": "rotisserie-chicken",
+      "name": "Rotisserie Chicken",
+      "category": "Classic",
+      "price": 4.99,
+      "calories": 140,
+      "url": "/menu/rotisserie-chicken/"
+    },
+    {
+      "slug": "ice-cream",
+      "name": "Ice Cream",
+      "category": "Classic",
+      "price": 2.49,
+      "calories": 410,
+      "url": "/menu/ice-cream/"
+    },
+    {
+      "slug": "churro",
+      "name": "Churro",
+      "category": "Classic",
+      "price": 1.49,
+      "calories": 410,
+      "url": "/menu/churro/"
+    },
+    {
+      "slug": "chicken-bake",
+      "name": "Chicken Bake",
+      "category": "Classic",
+      "price": 3.99,
+      "calories": 770,
+      "url": "/menu/chicken-bake/"
+    },
+    {
+      "slug": "acai-bowl",
+      "name": "Acai Bowl",
+      "category": "New",
+      "price": 4.99,
+      "calories": 330,
+      "url": "/menu/acai-bowl/"
+    }
+  ],
+  "articles": [
+    {
+      "slug": "best-costco-food-court-deals",
+      "title": "Best Costco Food Court Deals in 2026",
+      "description": "Discover the best deals at the Costco Food Court, from the iconic $1.50 hot dog combo to the massive $9.95 pizza. We compare prices and value across the entire menu.",
+      "date": "2026-04-29",
+      "category": "costco-guide",
+      "tags": [
+        "costco",
+        "food-court",
+        "deals",
+        "hot-dog",
+        "pizza"
+      ],
+      "url": "/articles/best-costco-food-court-deals/"
+    }
+  ],
+  "datasets": [
+    {
+      "slug": "price-map",
+      "name": "Hot Dog Price Map",
+      "description": "Prices across US states and international locations",
+      "url": "/data/price-map/"
+    },
+    {
+      "slug": "nutrition-comparison",
+      "name": "Nutrition Comparison",
+      "description": "Nutritional content across all menu items",
+      "url": "/data/nutrition-comparison/"
+    },
+    {
+      "slug": "crowd-prediction",
+      "name": "Crowd Prediction",
+      "description": "Predicted busy hours by day of week",
+      "url": "/data/crowd-prediction/"
+    }
+  ]
+}

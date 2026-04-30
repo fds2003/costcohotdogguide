@@ -1,0 +1,66 @@
+region,state,price,currency,notes
+Northeast,Maine,1.50,USD,
+Northeast,New Hampshire,1.50,USD,
+Northeast,Vermont,1.50,USD,
+Northeast,Massachusetts,1.50,USD,
+Northeast,Rhode Island,1.50,USD,
+Northeast,Connecticut,1.50,USD,
+Northeast,New York,1.50,USD,
+Northeast,New Jersey,1.50,USD,
+Northeast,Pennsylvania,1.50,USD,
+Midwest,Ohio,1.50,USD,
+Midwest,Michigan,1.50,USD,
+Midwest,Indiana,1.50,USD,
+Midwest,Illinois,1.50,USD,
+Midwest,Wisconsin,1.50,USD,
+Midwest,Minnesota,1.50,USD,
+Midwest,Iowa,1.50,USD,
+Midwest,Missouri,1.50,USD,
+Midwest,North Dakota,1.50,USD,
+Midwest,South Dakota,1.50,USD,
+Midwest,Nebraska,1.50,USD,
+Midwest,Kansas,1.50,USD,
+South,Delaware,1.50,USD,
+South,Maryland,1.50,USD,
+South,Virginia,1.50,USD,
+South,West Virginia,1.50,USD,
+South,North Carolina,1.50,USD,
+South,South Carolina,1.50,USD,
+South,Georgia,1.50,USD,
+South,Florida,1.50,USD,
+South,Kentucky,1.50,USD,
+South,Tennessee,1.50,USD,
+South,Alabama,1.50,USD,
+South,Mississippi,1.50,USD,
+South,Arkansas,1.50,USD,
+South,Louisiana,1.50,USD,
+South,Oklahoma,1.50,USD,
+South,Texas,1.50,USD,
+West,Montana,1.50,USD,
+West,Idaho,1.50,USD,
+West,Wyoming,1.50,USD,
+West,Colorado,1.50,USD,
+West,New Mexico,1.50,USD,
+West,Arizona,1.50,USD,
+West,Utah,1.50,USD,
+West,Nevada,1.50,USD,
+West,Washington,1.50,USD,
+West,Oregon,1.50,USD,
+West,California,1.50,USD,
+West,Alaska,1.50,USD,
+West,Hawaii,1.50,USD,
+Canada,Ontario,1.99,CAD,Includes tax
+Canada,Quebec,1.99,CAD,Includes tax
+Canada,British Columbia,1.99,CAD,Includes tax
+Canada,Alberta,1.99,CAD,Includes tax
+Canada,Manitoba,1.99,CAD,Includes tax
+Canada,Saskatchewan,1.99,CAD,Includes tax
+Canada,Nova Scotia,1.99,CAD,Includes tax
+Canada,New Brunswick,1.99,CAD,Includes tax
+Canada,Newfoundland,1.99,CAD,Includes tax
+Canada,Prince Edward Island,1.99,CAD,Includes tax
+International,Mexico,25.00,MXN,
+International,UK,1.50,GBP,Limited locations
+International,Japan,180,JPY,
+International,South Korea,2000,KRW,
+International,Australia,2.50,AUD,Limited locations

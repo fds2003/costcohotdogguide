@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PriceMap from '../../components/PriceMap.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+import { loadMenuItems } from '../../lib/csv-loader.js';
+import fs from 'node:fs';
+import path from 'node:path';
+import csv from 'csv-parser';
+
+// Load price data
+const prices: any[] = await new Promise((resolve, reject) => {
+  const results: any[] = [];
+  const filePath = path.join(process.cwd(), 'src', 'content', 'data', 'hotdog-prices.csv');
+  fs.createReadStream(filePath)
+    .pipe(csv())
+    .on('data', (row) => {
+      row.price = parseFloat(row.price) || 0;
+      results.push(row);
+    })
+    .on('end', () => resolve(results))
+    .on('error', reject);
+});
+
+const usPrices = prices.filter(p => p.currency === 'USD');
+const caPrices = prices.filter(p => p.currency === 'CAD');
+const intlPrices = prices.filter(p => !['USD', 'CAD'].includes(p.currency));
+
+// JSON-LD Dataset schema
+const datasetSchema = {
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Costco Hot Dog Prices Across the United States",
+  "description": "A comprehensive dataset of Costco hot dog combo prices across all US states, Canada, and international locations.",
+  "creator": {
+    "@type": "Organization",
+    "name": "Costco Hot Dog Guide"
+  },
+  "datePublished": "2026-04-29",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentUrl": "/data/hotdog-prices.csv",
+    "encodingFormat": "text/csv"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "United States"
+  }
+};
+---
+
+<BaseLayout
+  title="Costco Hot Dog Price Map | US, Canada & International"
+  description="See how Costco's iconic $1.50 hot dog combo price varies (or doesn't) across all 50 US states, Canada, and international locations."
+  type="website"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(datasetSchema)} />
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
+      <ol class="flex items-center space-x-2">
+        <li><a href="/" class="hover:text-red-700">Home</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li><a href="/data/" class="hover:text-red-700">Data</a></li>
+        <li><span class="text-gray-400">/</span></li>
+        <li class="text-gray-900 font-medium">Price Map</li>
+      </ol>
+    </nav>
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Price Map</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Does the famous $1.50 hot dog combo cost the same everywhere? We checked every US state and beyond.
+      </p>
+    </div>
+
+    <!-- Key Finding -->
+    <div class="bg-red-50 border border-red-100 rounded-xl p-6 mb-10">
+      <h2 class="text-lg font-bold text-red-900 mb-2">Key Finding</h2>
+      <p class="text-red-800">
+        The $1.50 hot dog combo price is <strong>identical across all 50 US states</strong>. 
+        In Canada, the combo costs CA$1.99 (approximately US$1.45). International prices vary by market.
+      </p>
+    </div>
+
+    <!-- US Price Map -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">United States</h2>
+      <PriceMap prices={usPrices} />
+    </section>
+
+    <!-- Canada -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">Canada</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        {caPrices.map(p => (
+          <div class="bg-blue-100 rounded-lg p-3 border border-blue-200">
+            <div class="font-semibold text-gray-900 text-sm">{p.state}</div>
+            <div class="text-gray-700 text-xs mt-1">CA${p.price.toFixed(2)}</div>
+            {p.notes && <div class="text-xs text-gray-500 mt-1">{p.notes}</div>}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- International -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6">International</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold text-gray-700">Country</th>
+              <th class="text-left px-4 py-3 font-semibold text-gray-700">Local Price</th>
+              <th class="text-left px-4 py-3 font-semibold text-gray-700">Approx. USD</th>
+              <th class="text-left px-4 py-3 font-semibold text-gray-700">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            {intlPrices.map(p => (
+              <tr>
+                <td class="px-4 py-3 font-medium">{p.state}</td>
+                <td class="px-4 py-3">{p.price.toFixed(0)} {p.currency}</td>
+                <td class="px-4 py-3 text-gray-600">—</td>
+                <td class="px-4 py-3 text-gray-500">{p.notes || '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <RelatedProducts scenario="bulk-buy" title="Save More with Bulk Storage" maxItems={3} />
+
+    <!-- Historical Context -->
+    <section class="bg-gray-50 rounded-xl p-8 border border-gray-200 mt-10">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Historical Price Trend</h2>
+      <div class="space-y-3">
+        <div class="flex items-center gap-4">
+          <div class="w-20 text-sm font-medium text-gray-500">1985</div>
+          <div class="flex-1 h-4 bg-green-200 rounded-full relative">
+            <div class="absolute inset-y-0 left-0 bg-green-500 rounded-full" style="width: 30%"></div>
+          </div>
+          <div class="w-20 text-sm font-bold text-green-700">$1.50</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-20 text-sm font-medium text-gray-500">2000</div>
+          <div class="flex-1 h-4 bg-green-200 rounded-full relative">
+            <div class="absolute inset-y-0 left-0 bg-green-500 rounded-full" style="width: 30%"></div>
+          </div>
+          <div class="w-20 text-sm font-bold text-green-700">$1.50</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-20 text-sm font-medium text-gray-500">2010</div>
+          <div class="flex-1 h-4 bg-green-200 rounded-full relative">
+            <div class="absolute inset-y-0 left-0 bg-green-500 rounded-full" style="width: 30%"></div>
+          </div>
+          <div class="w-20 text-sm font-bold text-green-700">$1.50</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-20 text-sm font-medium text-gray-500">2020</div>
+          <div class="flex-1 h-4 bg-green-200 rounded-full relative">
+            <div class="absolute inset-y-0 left-0 bg-green-500 rounded-full" style="width: 30%"></div>
+          </div>
+          <div class="w-20 text-sm font-bold text-green-700">$1.50</div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-20 text-sm font-medium text-gray-500">2026</div>
+          <div class="flex-1 h-4 bg-green-200 rounded-full relative">
+            <div class="absolute inset-y-0 left-0 bg-green-500 rounded-full" style="width: 30%"></div>
+          </div>
+          <div class="w-20 text-sm font-bold text-green-700">$1.50</div>
+        </div>
+      </div>
+      <p class="text-sm text-gray-600 mt-4">
+        Adjusted for inflation, the $1.50 combo from 1985 would cost approximately <strong>$4.35</strong> in 2026 dollars.
+        Costco has absorbed over 190% inflation to keep this price unchanged.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

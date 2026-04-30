@@ -1,0 +1,114 @@
+[
+  {
+    "day": "Monday",
+    "hours": [
+      { "hour": 10, "level": 2, "waitMinutes": 3 },
+      { "hour": 11, "level": 3, "waitMinutes": 5 },
+      { "hour": 12, "level": 4, "waitMinutes": 8 },
+      { "hour": 13, "level": 5, "waitMinutes": 12 },
+      { "hour": 14, "level": 4, "waitMinutes": 8 },
+      { "hour": 15, "level": 3, "waitMinutes": 5 },
+      { "hour": 16, "level": 3, "waitMinutes": 5 },
+      { "hour": 17, "level": 4, "waitMinutes": 8 },
+      { "hour": 18, "level": 4, "waitMinutes": 8 },
+      { "hour": 19, "level": 3, "waitMinutes": 5 },
+      { "hour": 20, "level": 2, "waitMinutes": 3 }
+    ]
+  },
+  {
+    "day": "Tuesday",
+    "hours": [
+      { "hour": 10, "level": 2, "waitMinutes": 3 },
+      { "hour": 11, "level": 3, "waitMinutes": 5 },
+      { "hour": 12, "level": 4, "waitMinutes": 8 },
+      { "hour": 13, "level": 4, "waitMinutes": 8 },
+      { "hour": 14, "level": 3, "waitMinutes": 5 },
+      { "hour": 15, "level": 3, "waitMinutes": 5 },
+      { "hour": 16, "level": 3, "waitMinutes": 5 },
+      { "hour": 17, "level": 4, "waitMinutes": 8 },
+      { "hour": 18, "level": 4, "waitMinutes": 8 },
+      { "hour": 19, "level": 3, "waitMinutes": 5 },
+      { "hour": 20, "level": 2, "waitMinutes": 3 }
+    ]
+  },
+  {
+    "day": "Wednesday",
+    "hours": [
+      { "hour": 10, "level": 2, "waitMinutes": 3 },
+      { "hour": 11, "level": 3, "waitMinutes": 5 },
+      { "hour": 12, "level": 4, "waitMinutes": 8 },
+      { "hour": 13, "level": 5, "waitMinutes": 12 },
+      { "hour": 14, "level": 4, "waitMinutes": 8 },
+      { "hour": 15, "level": 3, "waitMinutes": 5 },
+      { "hour": 16, "level": 3, "waitMinutes": 5 },
+      { "hour": 17, "level": 4, "waitMinutes": 8 },
+      { "hour": 18, "level": 5, "waitMinutes": 12 },
+      { "hour": 19, "level": 4, "waitMinutes": 8 },
+      { "hour": 20, "level": 2, "waitMinutes": 3 }
+    ]
+  },
+  {
+    "day": "Thursday",
+    "hours": [
+      { "hour": 10, "level": 2, "waitMinutes": 3 },
+      { "hour": 11, "level": 3, "waitMinutes": 5 },
+      { "hour": 12, "level": 4, "waitMinutes": 8 },
+      { "hour": 13, "level": 4, "waitMinutes": 8 },
+      { "hour": 14, "level": 3, "waitMinutes": 5 },
+      { "hour": 15, "level": 3, "waitMinutes": 5 },
+      { "hour": 16, "level": 3, "waitMinutes": 5 },
+      { "hour": 17, "level": 4, "waitMinutes": 8 },
+      { "hour": 18, "level": 4, "waitMinutes": 8 },
+      { "hour": 19, "level": 3, "waitMinutes": 5 },
+      { "hour": 20, "level": 2, "waitMinutes": 3 }
+    ]
+  },
+  {
+    "day": "Friday",
+    "hours": [
+      { "hour": 10, "level": 3, "waitMinutes": 5 },
+      { "hour": 11, "level": 4, "waitMinutes": 8 },
+      { "hour": 12, "level": 5, "waitMinutes": 12 },
+      { "hour": 13, "level": 6, "waitMinutes": 18 },
+      { "hour": 14, "level": 5, "waitMinutes": 12 },
+      { "hour": 15, "level": 4, "waitMinutes": 8 },
+      { "hour": 16, "level": 4, "waitMinutes": 8 },
+      { "hour": 17, "level": 5, "waitMinutes": 12 },
+      { "hour": 18, "level": 6, "waitMinutes": 18 },
+      { "hour": 19, "level": 5, "waitMinutes": 12 },
+      { "hour": 20, "level": 3, "waitMinutes": 5 }
+    ]
+  },
+  {
+    "day": "Saturday",
+    "hours": [
+      { "hour": 10, "level": 4, "waitMinutes": 8 },
+      { "hour": 11, "level": 5, "waitMinutes": 12 },
+      { "hour": 12, "level": 7, "waitMinutes": 25 },
+      { "hour": 13, "level": 8, "waitMinutes": 30 },
+      { "hour": 14, "level": 7, "waitMinutes": 25 },
+      { "hour": 15, "level": 6, "waitMinutes": 18 },
+      { "hour": 16, "level": 6, "waitMinutes": 18 },
+      { "hour": 17, "level": 7, "waitMinutes": 25 },
+      { "hour": 18, "level": 7, "waitMinutes": 25 },
+      { "hour": 19, "level": 5, "waitMinutes": 12 },
+      { "hour": 20, "level": 4, "waitMinutes": 8 }
+    ]
+  },
+  {
+    "day": "Sunday",
+    "hours": [
+      { "hour": 10, "level": 5, "waitMinutes": 12 },
+      { "hour": 11, "level": 6, "waitMinutes": 18 },
+      { "hour": 12, "level": 7, "waitMinutes": 25 },
+      { "hour": 13, "level": 8, "waitMinutes": 30 },
+      { "hour": 14, "level": 7, "waitMinutes": 25 },
+      { "hour": 15, "level": 6, "waitMinutes": 18 },
+      { "hour": 16, "level": 6, "waitMinutes": 18 },
+      { "hour": 17, "level": 5, "waitMinutes": 12 },
+      { "hour": 18, "level": 5, "waitMinutes": 12 },
+      { "hour": 19, "level": 4, "waitMinutes": 8 },
+      { "hour": 20, "level": 3, "waitMinutes": 5 }
+    ]
+  }
+]

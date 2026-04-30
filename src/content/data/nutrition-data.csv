@@ -1,0 +1,8 @@
+slug,name,serving_size,calories,total_fat,saturated_fat,trans_fat,cholesterol,sodium,total_carbs,dietary_fiber,sugars,protein
+hot-dog,Hot Dog (with bun),1 combo,550,34,12.5,0.5,60,1330,37,1,6,24
+pizza,Pizza (slice),1 slice,700,28,12,0.5,55,1600,80,3,8,28
+rotisserie-chicken,Rotisserie Chicken,3 oz,140,7,2,0,70,460,0,0,0,19
+ice-cream,Ice Cream,1 serving,410,24,15,0.5,75,140,44,0,38,6
+churro,Churro,1 piece,410,18,3,0,0,350,58,2,18,4
+chicken-bake,Chicken Bake,1 piece,770,33,14,0.5,85,1920,78,3,6,34
+acai-bowl,Acai Bowl,1 bowl,330,9,2,0,0,40,62,8,35,6

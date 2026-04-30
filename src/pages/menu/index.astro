@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { loadMenuItems } from '../../lib/csv-loader.js';
+
+const menuItems = await loadMenuItems();
+
+const classicItems = menuItems.filter(i => i.category === 'Classic');
+const newItems = menuItems.filter(i => i.category === 'New');
+---
+
+<BaseLayout
+  title="Costco Food Court Menu | Complete Guide & Prices"
+  description="Explore the complete Costco Food Court menu with prices, nutrition facts, and competitor comparisons. Hot dogs, pizza, rotisserie chicken, and more."
+  type="website"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Food Court Menu</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Complete guide to every item on the Costco Food Court menu. Compare prices, nutrition facts, and find the best deals.
+      </p>
+    </div>
+
+    <!-- Classic Menu Items -->
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+        <span class="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center text-sm mr-3">★</span>
+        Classic Menu Items
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {classicItems.map(item => (
+          <a href={`/menu/${item.slug}/`} class="block bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-red-300 transition group">
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="text-xl font-bold text-gray-900 group-hover:text-red-700 transition">{item.name}</h3>
+                <span class="text-lg font-bold text-green-700">${item.price.toFixed(2)}</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4 line-clamp-2">{item.description}</p>
+              <div class="grid grid-cols-4 gap-2 text-center text-xs">
+                <div class="bg-gray-50 rounded p-2">
+                  <div class="font-bold text-gray-900">{item.calories}</div>
+                  <div class="text-gray-500">Cal</div>
+                </div>
+                <div class="bg-gray-50 rounded p-2">
+                  <div class="font-bold text-gray-900">{item.protein}g</div>
+                  <div class="text-gray-500">Protein</div>
+                </div>
+                <div class="bg-gray-50 rounded p-2">
+                  <div class="font-bold text-gray-900">{item.fat}g</div>
+                  <div class="text-gray-500">Fat</div>
+                </div>
+                <div class="bg-gray-50 rounded p-2">
+                  <div class="font-bold text-gray-900">{item.carbs}g</div>
+                  <div class="text-gray-500">Carbs</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- New Items -->
+    {newItems.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <span class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm mr-3">NEW</span>
+          New & Seasonal Items
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {newItems.map(item => (
+            <a href={`/menu/${item.slug}/`} class="block bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-green-300 transition group">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-3">
+                  <h3 class="text-xl font-bold text-gray-900 group-hover:text-green-700 transition">{item.name}</h3>
+                  <span class="text-lg font-bold text-green-700">${item.price.toFixed(2)}</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">{item.description}</p>
+                <div class="grid grid-cols-4 gap-2 text-center text-xs">
+                  <div class="bg-gray-50 rounded p-2">
+                    <div class="font-bold text-gray-900">{item.calories}</div>
+                    <div class="text-gray-500">Cal</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-2">
+                    <div class="font-bold text-gray-900">{item.protein}g</div>
+                    <div class="text-gray-500">Protein</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-2">
+                    <div class="font-bold text-gray-900">{item.fat}g</div>
+                    <div class="text-gray-500">Fat</div>
+                  </div>
+                  <div class="bg-gray-50 rounded p-2">
+                    <div class="font-bold text-gray-900">{item.carbs}g</div>
+                    <div class="text-gray-500">Carbs</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Quick Stats -->
+    <section class="bg-red-50 rounded-xl p-8 border border-red-100">
+      <h2 class="text-xl font-bold text-red-900 mb-4">Did You Know?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-700">$1.50</div>
+          <div class="text-red-800 text-sm mt-1">Hot dog combo price since 1985</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-700">100%</div>
+          <div class="text-red-800 text-sm mt-1">All-beef frankfurter</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-red-700">18"</div>
+          <div class="text-red-800 text-sm mt-1">Pizza diameter</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
