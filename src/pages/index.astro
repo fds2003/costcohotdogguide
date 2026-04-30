@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import RelatedProducts from '../components/RelatedProducts.astro';
-import AdUnit from '../components/AdUnit.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import gumroadConfig from '../data/gumroad.json';
 
@@ -97,16 +96,6 @@ const monetizationSections = [
     </div>
   </section>
 
-  <!-- Ad: Homepage Top -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-    <AdUnit slot="homepage_top" type="display" format="auto" minHeight="90px" />
-  </div>
-
-  <!-- Ad: Homepage Leaderboard -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-    <AdUnit type="banner" format="leaderboard" slot="leaderboard_header" minHeight="90px" />
-  </div>
-
   <!-- Hot Dog Sections -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <h2 class="text-3xl font-bold text-gray-900 text-center mb-4">Explore the Hot Dog</h2>
@@ -166,11 +155,6 @@ const monetizationSections = [
     </div>
   </section>
 
-  <!-- Ad: In-Content -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <AdUnit slot="in_content_1" type="display" format="auto" minHeight="250px" />
-  </div>
-
   <!-- Affiliate Products -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <RelatedProducts title="Popular Picks for Costco Fans" maxItems={4} />
@@ -211,8 +195,5 @@ const monetizationSections = [
     </div>
   </section>
 
-  <!-- Mobile Sticky Banner -->
-  <div class="fixed bottom-0 left-0 right-0 z-50">
-    <AdUnit type="banner" format="mobile-banner" slot="mobile_banner_sticky" minHeight="50px" />
-  </div>
+  <!-- Mobile Sticky Banner (disabled) -->
 </BaseLayout>
