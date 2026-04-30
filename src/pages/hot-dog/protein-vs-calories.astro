@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog protein vs calories";
+const keywordVariants = ["How much protein per calorie does a Costco hot dog have?", "Is it good for high-protein diets?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Protein vs Calories in Costco Hot Dog | Ratio Analysis"
+  description="How much protein per calorie does a Costco hot dog have? Macro analysis, fitness tips, and comparison with high-protein foods."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"How much protein per calorie does a Costco hot dog have?","answer":"A Costco hot dog provides approximately 0.042 grams of protein per calorie (24g protein / 570 calories). Without the bun, this improves to 0.067g protein per calorie."},{"question":"Is it good for high-protein diets?","answer":"Yes, with 24g of protein it is an excellent protein source. Fitness enthusiasts often eat Costco hot dogs (without the bun) as a convenient high-protein meal."}]}
+>
+  <!-- CONFLICT WARNING: This page overlaps with existing content at /nutrition/macros/ -->
+  <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
+  <link rel="canonical" href="https://costcohotdogguide.com/nutrition/macros/" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much protein per calorie does a Costco hot dog have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Costco hot dog provides approximately 0.042 grams of protein per calorie (24g protein / 570 calories). Without the bun, this improves to 0.067g protein per calorie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it good for high-protein diets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with 24g of protein it is an excellent protein source. Fitness enthusiasts often eat Costco hot dogs (without the bun) as a convenient high-protein meal."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Protein vs Calories in Costco Hot Dog</h1>
+    <p class="text-lg text-gray-600 mb-8">How much protein per calorie does a Costco hot dog have? Macro analysis, fitness tips, and comparison with high-protein foods.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Macro Analysis</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Macro Analysis goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Comparison with Other Foods</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Comparison with Other Foods goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Fitness Tips</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Fitness Tips goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/protein/" class="text-blue-600 hover:text-blue-800 underline">protein analysis</a>
+    <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calorie breakdown</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">How much protein per calorie does a Costco hot dog have?</h3>
+        <p class="text-gray-700">A Costco hot dog provides approximately 0.042 grams of protein per calorie (24g protein / 570 calories). Without the bun, this improves to 0.067g protein per calorie.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Is it good for high-protein diets?</h3>
+        <p class="text-gray-700">Yes, with 24g of protein it is an excellent protein source. Fitness enthusiasts often eat Costco hot dogs (without the bun) as a convenient high-protein meal.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

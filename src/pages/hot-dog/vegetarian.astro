@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog vegetarian";
+const keywordVariants = ["Are there vegetarian Costco hot dogs?", "How do they compare nutritionally to regular hot dogs?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Vegetarian Costco Hot Dog Options | Meatless Guide"
+  description="Are there vegetarian Costco hot dogs? Meatless alternatives, nutrition comparison, and where to find veggie options at Costco."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"Are there vegetarian Costco hot dogs?","answer":"Costco food courts do not currently serve vegetarian hot dogs. However, Costco warehouses sell various veggie dogs and plant-based sausages that you can prepare at home."},{"question":"How do they compare nutritionally to regular hot dogs?","answer":"Vegetarian hot dogs typically have less saturated fat and no cholesterol, but may have similar or higher sodium levels. Protein content varies by brand."}]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are there vegetarian Costco hot dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costco food courts do not currently serve vegetarian hot dogs. However, Costco warehouses sell various veggie dogs and plant-based sausages that you can prepare at home."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do they compare nutritionally to regular hot dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vegetarian hot dogs typically have less saturated fat and no cholesterol, but may have similar or higher sodium levels. Protein content varies by brand."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Vegetarian Options for Costco Hot Dogs</h1>
+    <p class="text-lg text-gray-600 mb-8">Are there vegetarian Costco hot dogs? Meatless alternatives, nutrition comparison, and where to find veggie options at Costco.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Meatless Alternatives</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Meatless Alternatives goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Comparison</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Nutrition Comparison goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Where to Buy & Availability</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Where to Buy & Availability goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/healthy/" class="text-blue-600 hover:text-blue-800 underline">healthier options</a>
+    <a href="/hot-dog/vegan/" class="text-blue-600 hover:text-blue-800 underline">vegan alternatives</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Are there vegetarian Costco hot dogs?</h3>
+        <p class="text-gray-700">Costco food courts do not currently serve vegetarian hot dogs. However, Costco warehouses sell various veggie dogs and plant-based sausages that you can prepare at home.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">How do they compare nutritionally to regular hot dogs?</h3>
+        <p class="text-gray-700">Vegetarian hot dogs typically have less saturated fat and no cholesterol, but may have similar or higher sodium levels. Protein content varies by brand.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

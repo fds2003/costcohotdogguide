@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog healthy";
+const keywordVariants = ["Can I eat a Costco hot dog on a diet?", "What are healthy modifications?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Is Costco Hot Dog Healthy? | Dietitian Analysis"
+  description="Is Costco hot dog healthy? Nutrition analysis, health rating, diet-friendly modifications, and healthy alternatives reviewed."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"Can I eat a Costco hot dog on a diet?","answer":"Yes, with modifications. Skip the bun to cut 210 calories and 46g carbs. Pair with a side salad instead of soda to keep the meal under 500 calories."},{"question":"What are healthy modifications?","answer":"Remove the bun, add extra mustard (low calorie), skip sugary drinks, and eat half the hot dog with a large side of vegetables."}]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I eat a Costco hot dog on a diet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with modifications. Skip the bun to cut 210 calories and 46g carbs. Pair with a side salad instead of soda to keep the meal under 500 calories."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are healthy modifications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Remove the bun, add extra mustard (low calorie), skip sugary drinks, and eat half the hot dog with a large side of vegetables."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Is Costco Hot Dog Healthy?</h1>
+    <p class="text-lg text-gray-600 mb-8">Is Costco hot dog healthy? Nutrition analysis, health rating, diet-friendly modifications, and healthy alternatives reviewed.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Analysis</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Calories, Fat, Sodium</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Calories, Fat, Sodium goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Healthier Options</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Bun Alternatives</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Bun Alternatives goes here. Expand with details, data, and insights.]</p>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Portion Control</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Portion Control goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Diet-Friendly Tips</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Pairing with Vegetables</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Pairing with Vegetables goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/nutrition/" class="text-blue-600 hover:text-blue-800 underline">full nutrition guide</a>
+    <a href="/hot-dog/diet-tips/" class="text-blue-600 hover:text-blue-800 underline">diet-friendly modifications</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I eat a Costco hot dog on a diet?</h3>
+        <p class="text-gray-700">Yes, with modifications. Skip the bun to cut 210 calories and 46g carbs. Pair with a side salad instead of soda to keep the meal under 500 calories.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">What are healthy modifications?</h3>
+        <p class="text-gray-700">Remove the bun, add extra mustard (low calorie), skip sugary drinks, and eat half the hot dog with a large side of vegetables.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

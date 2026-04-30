@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog air fryer";
+const keywordVariants = ["How long do I cook a Costco hot dog in an air fryer?", "Can I cook frozen hot dogs?"];
+const topicCluster = "hot-dog";
+const funnelStage = "B";
+---
+
+<BaseLayout
+  title="Costco Hot Dog Air Fryer | Perfect Cooking Guide"
+  description="How to cook Costco hot dogs in an air fryer. Step-by-step instructions, time, temperature, and tips for crispy results."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"How long do I cook a Costco hot dog in an air fryer?","answer":"Cook at 375°F (190°C) for 6-8 minutes, turning halfway through. For extra crispiness, cook for 8-9 minutes."},{"question":"Can I cook frozen hot dogs?","answer":"Yes, add 2-3 extra minutes to the cooking time. For best results, thaw first, but air fryers handle frozen hot dogs well."}]}
+>
+  <!-- CONFLICT WARNING: This page overlaps with existing content at /tutorials/air-fryer/ -->
+  <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
+  <link rel="canonical" href="https://costcohotdogguide.com/tutorials/air-fryer/" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long do I cook a Costco hot dog in an air fryer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cook at 375°F (190°C) for 6-8 minutes, turning halfway through. For extra crispiness, cook for 8-9 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I cook frozen hot dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, add 2-3 extra minutes to the cooking time. For best results, thaw first, but air fryers handle frozen hot dogs well."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Cooking Costco Hot Dog in Air Fryer</h1>
+    <p class="text-lg text-gray-600 mb-8">How to cook Costco hot dogs in an air fryer. Step-by-step instructions, time, temperature, and tips for crispy results.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Step-by-Step Instructions</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Preheat Temperature</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Preheat Temperature goes here. Expand with details, data, and insights.]</p>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Cooking Time</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Cooking Time goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Tips for Crispy Hot Dogs</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Avoiding Dryness</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Avoiding Dryness goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Safety and Cleanup</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Safety and Cleanup goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/cooking-at-home/" class="text-blue-600 hover:text-blue-800 underline">other cooking methods</a>
+    <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calorie information</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">How long do I cook a Costco hot dog in an air fryer?</h3>
+        <p class="text-gray-700">Cook at 375°F (190°C) for 6-8 minutes, turning halfway through. For extra crispiness, cook for 8-9 minutes.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I cook frozen hot dogs?</h3>
+        <p class="text-gray-700">Yes, add 2-3 extra minutes to the cooking time. For best results, thaw first, but air fryers handle frozen hot dogs well.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="B" />
+    </div>
+  </article>
+</BaseLayout>

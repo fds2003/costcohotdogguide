@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "how to cook costco hot dog at home";
+const keywordVariants = ["Can you cook Costco hot dogs at home?", "What's the best method for reheating?"];
+const topicCluster = "hot-dog";
+const funnelStage = "B";
+---
+
+<BaseLayout
+  title="How to Cook Costco Hot Dog at Home | 4 Methods"
+  description="Complete guide to cooking Costco hot dogs at home. Oven, stove-top, grilling, and reheating methods with time and temperature."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"Can you cook Costco hot dogs at home?","answer":"Yes, Costco hot dogs can be cooked at home using oven, stove-top, air fryer, or grill methods. They are pre-cooked, so you are mainly heating them through."},{"question":"What's the best method for reheating?","answer":"The air fryer produces the best texture (crispy outside, juicy inside). Oven baking at 375°F for 10-12 minutes is a close second."}]}
+>
+  <!-- CONFLICT WARNING: This page overlaps with existing content at /cooking/at-home/ -->
+  <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
+  <link rel="canonical" href="https://costcohotdogguide.com/cooking/at-home/" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you cook Costco hot dogs at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Costco hot dogs can be cooked at home using oven, stove-top, air fryer, or grill methods. They are pre-cooked, so you are mainly heating them through."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the best method for reheating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The air fryer produces the best texture (crispy outside, juicy inside). Oven baking at 375°F for 10-12 minutes is a close second."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">How to Cook Costco Hot Dog at Home</h1>
+    <p class="text-lg text-gray-600 mb-8">Complete guide to cooking Costco hot dogs at home. Oven, stove-top, grilling, and reheating methods with time and temperature.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Oven Method</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Preheat and Bake Time</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Preheat and Bake Time goes here. Expand with details, data, and insights.]</p>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Tips for Crispy Hot Dogs</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Tips for Crispy Hot Dogs goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Stove-Top Method</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Boiling and Pan-Frying Instructions</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Boiling and Pan-Frying Instructions goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Reheating Tips</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Reheating Tips goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/air-fryer/" class="text-blue-600 hover:text-blue-800 underline">air fryer method</a>
+    <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calorie info</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can you cook Costco hot dogs at home?</h3>
+        <p class="text-gray-700">Yes, Costco hot dogs can be cooked at home using oven, stove-top, air fryer, or grill methods. They are pre-cooked, so you are mainly heating them through.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">What's the best method for reheating?</h3>
+        <p class="text-gray-700">The air fryer produces the best texture (crispy outside, juicy inside). Oven baking at 375°F for 10-12 minutes is a close second.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="B" />
+    </div>
+  </article>
+</BaseLayout>

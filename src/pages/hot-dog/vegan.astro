@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog vegan";
+const keywordVariants = ["Can vegans eat Costco hot dogs?", "Are vegan options widely available at Costco?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Vegan Costco Hot Dog Options | Plant-Based Guide"
+  description="Can vegans eat Costco hot dogs? Ingredients check, alternative brands, and tips for maintaining a vegan diet at Costco."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"Can vegans eat Costco hot dogs?","answer":"No, Costco food court hot dogs contain beef and are not vegan. However, Costco sells plant-based sausages from brands like Beyond Meat and Field Roast in their refrigerated sections."},{"question":"Are vegan options widely available at Costco?","answer":"Yes, Costco carries an increasing selection of plant-based products including vegan burgers, sausages, and hot dog alternatives, though availability varies by location."}]}
+>
+  <!-- CONFLICT WARNING: This page overlaps with existing content at /faq/vegan/ -->
+  <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
+  <link rel="canonical" href="https://costcohotdogguide.com/faq/vegan/" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can vegans eat Costco hot dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, Costco food court hot dogs contain beef and are not vegan. However, Costco sells plant-based sausages from brands like Beyond Meat and Field Roast in their refrigerated sections."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are vegan options widely available at Costco?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Costco carries an increasing selection of plant-based products including vegan burgers, sausages, and hot dog alternatives, though availability varies by location."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Vegan Options for Costco Hot Dogs</h1>
+    <p class="text-lg text-gray-600 mb-8">Can vegans eat Costco hot dogs? Ingredients check, alternative brands, and tips for maintaining a vegan diet at Costco.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredients Check</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Ingredients Check goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Alternative Brands</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Alternative Brands goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Tips for Vegan Diet</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Tips for Vegan Diet goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/vegetarian/" class="text-blue-600 hover:text-blue-800 underline">vegetarian guide</a>
+    <a href="/hot-dog/healthy/" class="text-blue-600 hover:text-blue-800 underline">healthier choices</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can vegans eat Costco hot dogs?</h3>
+        <p class="text-gray-700">No, Costco food court hot dogs contain beef and are not vegan. However, Costco sells plant-based sausages from brands like Beyond Meat and Field Roast in their refrigerated sections.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Are vegan options widely available at Costco?</h3>
+        <p class="text-gray-700">Yes, Costco carries an increasing selection of plant-based products including vegan burgers, sausages, and hot dog alternatives, though availability varies by location.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

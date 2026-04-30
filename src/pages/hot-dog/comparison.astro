@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog vs other hotdogs";
+const keywordVariants = ["How does Costco hot dog compare to McDonald's?", "Is it healthier than other fast food hot dogs?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Costco Hot Dog vs Other Hot Dogs | Comparison"
+  description="How does Costco hot dog compare to McDonald's, Wienerschnitzel, and other fast food hot dogs? Calorie, nutrition, and price comparison."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"How does Costco hot dog compare to McDonald's?","answer":"Costco hot dogs are significantly larger (quarter-pound vs standard size) and have more calories (570 vs 300-350). However, they offer better value at $1.50 with a drink included."},{"question":"Is it healthier than other fast food hot dogs?","answer":"Costco hot dogs have more protein (24g) than most competitors. However, they are also higher in sodium. The value proposition is unmatched in the fast food industry."}]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does Costco hot dog compare to McDonald's?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costco hot dogs are significantly larger (quarter-pound vs standard size) and have more calories (570 vs 300-350). However, they offer better value at $1.50 with a drink included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it healthier than other fast food hot dogs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costco hot dogs have more protein (24g) than most competitors. However, they are also higher in sodium. The value proposition is unmatched in the fast food industry."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog vs Other Hot Dogs</h1>
+    <p class="text-lg text-gray-600 mb-8">How does Costco hot dog compare to McDonald's, Wienerschnitzel, and other fast food hot dogs? Calorie, nutrition, and price comparison.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Calorie Comparison</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Calorie Comparison goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Comparison</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Nutrition Comparison goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Price Comparison</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Price Comparison goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calorie breakdown</a>
+    <a href="/hot-dog/nutrition/" class="text-blue-600 hover:text-blue-800 underline">nutrition facts</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">How does Costco hot dog compare to McDonald's?</h3>
+        <p class="text-gray-700">Costco hot dogs are significantly larger (quarter-pound vs standard size) and have more calories (570 vs 300-350). However, they offer better value at $1.50 with a drink included.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Is it healthier than other fast food hot dogs?</h3>
+        <p class="text-gray-700">Costco hot dogs have more protein (24g) than most competitors. However, they are also higher in sodium. The value proposition is unmatched in the fast food industry.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

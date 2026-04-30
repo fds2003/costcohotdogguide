@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "why is costco hot dog so cheap";
+const keywordVariants = ["How can Costco sell hot dogs so cheaply?", "Is the quality compromised?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Why Is Costco Hot Dog So Cheap? | Business Strategy"
+  description="The real reason Costco hot dogs cost only $1.50. Business model, ingredient costs, and food court revenue strategy explained."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"How can Costco sell hot dogs so cheaply?","answer":"Costco uses the hot dog as a loss leader. The company owns its own hot dog manufacturing facility, cutting out middlemen. The low price drives warehouse visits where customers spend far more."},{"question":"Is the quality compromised?","answer":"No, Costco actually improved quality over time by switching from Hebrew National to its own Kirkland Signature brand, giving them full control over ingredients and production."}]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can Costco sell hot dogs so cheaply?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costco uses the hot dog as a loss leader. The company owns its own hot dog manufacturing facility, cutting out middlemen. The low price drives warehouse visits where customers spend far more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the quality compromised?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, Costco actually improved quality over time by switching from Hebrew National to its own Kirkland Signature brand, giving them full control over ingredients and production."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Why is Costco Hot Dog So Cheap?</h1>
+    <p class="text-lg text-gray-600 mb-8">The real reason Costco hot dogs cost only $1.50. Business model, ingredient costs, and food court revenue strategy explained.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Costco Pricing Strategy</h2>
+    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Business Model Explanation</h3>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Business Model Explanation goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredient Cost vs Selling Price</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Ingredient Cost vs Selling Price goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Food Court Revenue Impact</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Food Court Revenue Impact goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/price/" class="text-blue-600 hover:text-blue-800 underline">$1.50 price history</a>
+    <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calorie breakdown</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">How can Costco sell hot dogs so cheaply?</h3>
+        <p class="text-gray-700">Costco uses the hot dog as a loss leader. The company owns its own hot dog manufacturing facility, cutting out middlemen. The low price drives warehouse visits where customers spend far more.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Is the quality compromised?</h3>
+        <p class="text-gray-700">No, Costco actually improved quality over time by switching from Hebrew National to its own Kirkland Signature brand, giving them full control over ingredients and production.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

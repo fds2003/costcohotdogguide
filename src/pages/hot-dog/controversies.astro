@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog controversial claims";
+const keywordVariants = ["Are there controversies surrounding Costco hot dog?", "What myths do people believe about it?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Costco Hot Dog Controversies | Myths & Media"
+  description="Controversial claims about Costco hot dogs. Nutrition myths, price myths, and media coverage debunked and explained."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"Are there controversies surrounding Costco hot dog?","answer":"Main controversies include concerns about sodium content, processed meat health risks, and skepticism about how Costco maintains the $1.50 price point without compromising quality."},{"question":"What myths do people believe about it?","answer":"Common myths include: \"They use low-quality meat\" (false, they use 100% beef), \"The price will go up soon\" (false, Costco has committed to $1.50), and \"It is unhealthy\" (moderation matters)."}]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are there controversies surrounding Costco hot dog?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Main controversies include concerns about sodium content, processed meat health risks, and skepticism about how Costco maintains the $1.50 price point without compromising quality."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What myths do people believe about it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common myths include: \"They use low-quality meat\" (false, they use 100% beef), \"The price will go up soon\" (false, Costco has committed to $1.50), and \"It is unhealthy\" (moderation matters)."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Controversial Claims About Costco Hot Dog</h1>
+    <p class="text-lg text-gray-600 mb-8">Controversial claims about Costco hot dogs. Nutrition myths, price myths, and media coverage debunked and explained.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Myths</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Nutrition Myths goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Price Myths</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Price Myths goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Media Coverage</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Media Coverage goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/fun-facts/" class="text-blue-600 hover:text-blue-800 underline">trivia</a>
+    <a href="/hot-dog/why-so-cheap/" class="text-blue-600 hover:text-blue-800 underline">pricing strategy</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Are there controversies surrounding Costco hot dog?</h3>
+        <p class="text-gray-700">Main controversies include concerns about sodium content, processed meat health risks, and skepticism about how Costco maintains the $1.50 price point without compromising quality.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">What myths do people believe about it?</h3>
+        <p class="text-gray-700">Common myths include: "They use low-quality meat" (false, they use 100% beef), "The price will go up soon" (false, Costco has committed to $1.50), and "It is unhealthy" (moderation matters).</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedProducts from '../../components/RelatedProducts.astro';
+
+const keywordCore = "costco hot dog fun facts";
+const keywordVariants = ["How did Costco hot dog become famous?", "Are there interesting trivia about it?"];
+const topicCluster = "hot-dog";
+const funnelStage = "A";
+---
+
+<BaseLayout
+  title="Costco Hot Dog Fun Facts | Trivia & Records"
+  description="Fun facts about Costco hot dogs. History, trivia, records, and popular myths about the famous $1.50 food court item."
+  type="article"
+  publishedAt="2026-04-29"
+  faqData={[{"question":"How did Costco hot dog become famous?","answer":"The Costco hot dog became famous for its unbeatable value — a quarter-pound hot dog and 20 oz drink for $1.50 since 1985. It is consistently one of the most popular food court items."},{"question":"Are there interesting trivia about it?","answer":"Costco sells over 100 million hot dogs annually. That is more than all Major League Baseball stadiums combined. The price has not changed in nearly 40 years."}]}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How did Costco hot dog become famous?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Costco hot dog became famous for its unbeatable value — a quarter-pound hot dog and 20 oz drink for $1.50 since 1985. It is consistently one of the most popular food court items."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there interesting trivia about it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costco sells over 100 million hot dogs annually. That is more than all Major League Baseball stadiums combined. The price has not changed in nearly 40 years."
+        }
+      }
+    ]
+  })} />
+
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Fun Facts About Costco Hot Dog</h1>
+    <p class="text-lg text-gray-600 mb-8">Fun facts about Costco hot dogs. History, trivia, records, and popular myths about the famous $1.50 food court item.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Historical Facts</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Historical Facts goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Trivia & Records</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Trivia & Records goes here. Expand with details, data, and insights.]</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Popular Myths</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">[Content about Popular Myths goes here. Expand with details, data, and insights.]</p>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <p class="text-gray-700 mb-3">Explore more about Costco hot dogs:</p>
+      <div class="flex flex-wrap gap-3">
+    <a href="/hot-dog/history/" class="text-blue-600 hover:text-blue-800 underline">full history</a>
+    <a href="/hot-dog/why-so-cheap/" class="text-blue-600 hover:text-blue-800 underline">pricing secrets</a>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-6">
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">How did Costco hot dog become famous?</h3>
+        <p class="text-gray-700">The Costco hot dog became famous for its unbeatable value — a quarter-pound hot dog and 20 oz drink for $1.50 since 1985. It is consistently one of the most popular food court items.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Are there interesting trivia about it?</h3>
+        <p class="text-gray-700">Costco sells over 100 million hot dogs annually. That is more than all Major League Baseball stadiums combined. The price has not changed in nearly 40 years.</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <RelatedProducts funnelStage="A" />
+    </div>
+  </article>
+</BaseLayout>
