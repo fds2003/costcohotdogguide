@@ -1,9 +1,9 @@
 {
   "_comment": "Set enabled to true and fill in your real ad IDs after approval",
-  "enabled": false,
+  "enabled": true,
   "network": "adsense",
   "adsense": {
-    "clientId": "ca-pub-XXXXXXXXXXXXXXXX",
+    "clientId": "ca-pub-5503798858372383",
     "slots": {
       "homepage_top": "1234567890",
       "in_content_1": "1234567891",

@@ -1,5 +1,5 @@
 {
   "_comment": "Replace with your real GA4 Measurement ID (G-XXXXXXXXXX). Set enabled to true after creating GA4 property.",
-  "enabled": false,
-  "measurementId": "G-XXXXXXXXXX"
+  "enabled": true,
+  "measurementId": "G-7CHM3CKB81"
 }
