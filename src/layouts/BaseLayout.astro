@@ -41,6 +41,19 @@ const props = Astro.props;
     {adsConfig.enabled && adsConfig.network === 'adsterra' && (
       <script is:inline async="async" data-cfasync="false" src={`https://pl29292920.profitablecpmratenetwork.com/${(adsConfig.adsterra as any)?.slots?.['homepage_top'] || '22a26d6ed1b2ad5c819ad3d70b369826'}/invoke.js`}></script>
     )}
+    {/* HilltopAds Direct Link */}
+    <script is:inline>
+      (function(ijjz){
+        var d = document,
+            s = d.createElement('script'),
+            l = d.scripts[d.scripts.length - 1];
+        s.settings = ijjz || {};
+        s.src = "\/\/untimely-hello.com\/b.XQVnsudDGflf0CYaW\/cr\/MeTmS9EuBZGUSlrkmPLTfc\/wfMZD\/IOzuMzTQMXt_NkzXAmwcMpjZMAxbNMwQ";
+        s.async = true;
+        s.referrerPolicy = 'no-referrer-when-downgrade';
+        l.parentNode.insertBefore(s, l);
+      })({})
+    </script>
     {gaConfig.enabled && gaConfig.measurementId && gaConfig.measurementId !== 'G-XXXXXXXXXX' && (
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaConfig.measurementId}`}></script>
       <script is:inline define:vars={{ measurementId: gaConfig.measurementId }}>
