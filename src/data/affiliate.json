@@ -3,159 +3,159 @@
   "links": {
     "vitamins": {
       "url": "https://www.amazon.com/s?k=vitamins&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Health"
     },
     "protein": {
       "url": "https://www.amazon.com/s?k=protein+powder&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Health"
     },
     "kitchen_scale": {
       "url": "https://www.amazon.com/s?k=kitchen+scale&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "air_fryer": {
       "url": "https://www.amazon.com/s?k=air+fryer&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "camping_gear": {
       "url": "https://www.amazon.com/s?k=camping+gear&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Outdoor"
     },
     "hot_dog_buns": {
       "url": "https://www.amazon.com/s?k=hot+dog+buns&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food"
     },
     "mustard": {
       "url": "https://www.amazon.com/s?k=yellow+mustard&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food"
     },
     "grill": {
       "url": "https://www.amazon.com/s?k=gas+grill&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Outdoor"
     },
     "cooler": {
       "url": "https://www.amazon.com/s?k=portable+cooler&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Outdoor"
     },
     "blender": {
       "url": "https://www.amazon.com/s?k=blender&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "food_storage": {
       "url": "https://www.amazon.com/s?k=food+storage+containers&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "vacuum_sealer": {
       "url": "https://www.amazon.com/s?k=vacuum+sealer&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "tent": {
       "url": "https://www.amazon.com/s?k=camping+tent&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Outdoor"
     },
     "meat_thermometer": {
       "url": "https://www.amazon.com/s?k=meat+thermometer&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "gluten_free_buns": {
       "url": "https://www.amazon.com/s?k=gluten+free+hot+dog+buns&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food"
     },
     "omega3": {
       "url": "https://www.amazon.com/s?k=omega+3+supplement&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Health"
     },
     "sleeping_bag": {
       "url": "https://www.amazon.com/s?k=sleeping+bag&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Outdoor"
     },
     "desk": {
       "url": "https://www.amazon.com/s?k=writing+desk&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "accent_chair": {
       "url": "https://www.amazon.com/s?k=accent+chair&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen"
     },
     "quinoa": {
       "url": "https://www.amazon.com/s?k=organic+quinoa&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food"
     },
     "almond_butter": {
       "url": "https://www.amazon.com/s?k=almond+butter&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food"
     },
     "basmati_rice": {
       "url": "https://www.amazon.com/s?k=basmati+rice&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food"
     },
     "hot_dog_roller": {
       "url": "https://www.amazon.com/s?k=hot+dog+roller&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen",
       "scenario": ["home-cooking"]
     },
     "pizza_stone": {
       "url": "https://www.amazon.com/s?k=pizza+stone&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen",
       "scenario": ["home-cooking"]
     },
     "bbq_sauce_set": {
       "url": "https://www.amazon.com/s?k=bbq+sauce+set&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Food",
       "scenario": ["home-cooking"]
     },
     "food_storage_containers": {
       "url": "https://www.amazon.com/s?k=food+storage+containers+set&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen",
       "scenario": ["storage", "bulk-buy"]
     },
     "picnic_blanket": {
       "url": "https://www.amazon.com/s?k=picnic+blanket+waterproof&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Outdoor",
       "scenario": ["picnic"]
     },
     "reusable_utensils": {
       "url": "https://www.amazon.com/s?k=reusable+utensils+set&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen",
       "scenario": ["picnic"]
     },
     "chest_freezer": {
       "url": "https://www.amazon.com/s?k=chest+freezer&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen",
       "scenario": ["storage", "bulk-buy"]
     },
     "meal_prep_containers": {
       "url": "https://www.amazon.com/s?k=meal+prep+containers&ref=nb_sb_noss",
-      "tag": "costcoguide-20",
+      "tag": "costcohotdogg-20",
       "category": "Kitchen",
       "scenario": ["meal-prep"]
     }
