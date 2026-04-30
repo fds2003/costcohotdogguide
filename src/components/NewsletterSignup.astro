@@ -23,11 +23,19 @@ const {
   <script is:inline>
     (function() {
       function trackNewsletterSubscribe() {
-        if (typeof gtag !== 'undefined') {
+        // Send to GA4 via gtag or dataLayer fallback
+        var eventData = {
+          event: 'newsletter_subscribe',
+          event_category: 'engagement',
+          event_label: 'ConvertKit Newsletter'
+        };
+        if (typeof gtag !== 'undefined' && typeof gtag === 'function') {
           gtag('event', 'newsletter_subscribe', {
             event_category: 'engagement',
             event_label: 'ConvertKit Newsletter'
           });
+        } else if (window.dataLayer) {
+          window.dataLayer.push(eventData);
         }
       }
       // Listen for ConvertKit form submissions via mutation observer
