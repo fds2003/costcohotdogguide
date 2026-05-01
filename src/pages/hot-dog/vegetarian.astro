@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog vegetarian";
@@ -71,6 +72,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Vegetarian hot dogs typically have less saturated fat and no cholesterol, but may have similar or higher sodium levels. Protein content varies by brand.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/vegetarian/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

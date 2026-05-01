@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog controversial claims";
@@ -73,6 +74,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Common myths include: "They use low-quality meat" (false, they use 100% beef), "The price will go up soon" (false, Costco has committed to $1.50), and "It is unhealthy" (moderation matters).</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/controversies/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

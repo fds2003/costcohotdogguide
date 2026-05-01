@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog vs other hotdogs";
@@ -73,6 +74,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Costco hot dogs have more protein (24g) than most competitors. However, they are also higher in sodium. The value proposition is unmatched in the fast food industry.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/comparison/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

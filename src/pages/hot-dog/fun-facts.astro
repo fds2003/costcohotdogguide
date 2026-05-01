@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog fun facts";
@@ -71,6 +72,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Costco sells over 100 million hot dogs annually. That is more than all Major League Baseball stadiums combined. The price has not changed in nearly 40 years.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/fun-facts/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog price";
@@ -79,6 +80,8 @@ const funnelStage = "A";
         <p class="text-gray-700">The price has remained $1.50 since 1985. Despite inflation, Costco has refused to raise the price, making it one of the best food deals in America.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/price/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog air fryer";
@@ -76,6 +77,8 @@ const funnelStage = "B";
         <p class="text-gray-700">Yes, add 2-3 extra minutes to the cooking time. For best results, thaw first, but air fryers handle frozen hot dogs well.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/air-fryer/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="B" />

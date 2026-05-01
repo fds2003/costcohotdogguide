@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog fat content";
@@ -76,6 +77,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Daily consumption is not recommended due to the high saturated fat and sodium content. Limit to occasional treats as part of a balanced diet.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/fat/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

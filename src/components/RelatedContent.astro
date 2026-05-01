@@ -1,0 +1,73 @@
+---
+import relatedData from '../data/related-content.json';
+
+export interface Props {
+  currentPage: string;
+  title?: string;
+}
+
+const { currentPage, title = 'Continue Reading' } = Astro.props;
+
+const pageData = (relatedData.pages as any)[currentPage];
+if (!pageData) return;
+
+const steps = pageData.nextSteps || [];
+
+// Group by funnel stage
+const stageA = steps.filter((s: any) => s.stage === 'A');
+const stageB = steps.filter((s: any) => s.stage === 'B');
+const stageC = steps.filter((s: any) => s.stage === 'C');
+
+const stageLabels: Record<string, { label: string; color: string; bg: string }> = {
+  A: { label: 'Learn', color: 'text-blue-700', bg: 'bg-blue-50 border-blue-200' },
+  B: { label: 'Tools', color: 'text-green-700', bg: 'bg-green-50 border-green-200' },
+  C: { label: 'Shop', color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200' },
+};
+
+const allGroups = [
+  { items: stageA, ...stageLabels.A },
+  { items: stageB, ...stageLabels.B },
+  { items: stageC, ...stageLabels.C },
+].filter(g => g.items.length > 0);
+---
+
+{allGroups.length > 0 && (
+  <section class="mt-12 pt-8 border-t border-gray-200">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
+
+    {allGroups.map(group => (
+      <div class="mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <span class={`inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border ${group.bg} ${group.color}`}>
+            {group.label}
+          </span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {group.items.map((item: any) => (
+            <a
+              href={item.url}
+              class="block p-4 rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md transition-all group"
+              data-funnel-stage={item.stage}
+              data-funnel-target={item.url}
+              onclick={`
+                if (typeof gtag !== 'undefined') {
+                  gtag('event', 'funnel_progression', {
+                    from_stage: '${group.label === 'Learn' ? 'A' : group.label === 'Tools' ? 'B' : 'C'}',
+                    to_stage: '${item.stage}',
+                    target_url: this.dataset.funnelTarget,
+                    source_url: '${currentPage}'
+                  });
+                }
+              `}
+            >
+              <h4 class="font-semibold text-gray-900 group-hover:text-red-700 transition text-sm">
+                {item.title}
+              </h4>
+              <p class="text-xs text-gray-500 mt-1 line-clamp-2">{item.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+)}

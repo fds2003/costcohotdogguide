@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "best costco hot dog toppings";
@@ -71,6 +72,8 @@ const funnelStage = "B";
         <p class="text-gray-700">Absolutely. Try kimchi, pickled radish, or mango salsa for unique flavor combinations. The mild flavor of the hot dog pairs well with bold toppings.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/toppings/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="B" />

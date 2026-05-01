@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "how to cook costco hot dog at home";
@@ -76,6 +77,8 @@ const funnelStage = "B";
         <p class="text-gray-700">The air fryer produces the best texture (crispy outside, juicy inside). Oven baking at 375°F for 10-12 minutes is a close second.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/cooking-at-home/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="B" />

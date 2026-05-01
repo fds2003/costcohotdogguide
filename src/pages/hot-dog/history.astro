@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog history";
@@ -72,6 +73,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Yes, Costco switched from Hebrew National hot dogs to their own Kirkland Signature brand in 2009. This gave them full quality control and helped maintain the low price.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/history/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog air fryer guide";
@@ -73,6 +74,8 @@ const funnelStage = "B";
         <p class="text-gray-700">Yes, cook frozen hot dogs at 375°F for 9-11 minutes, turning halfway. No need to thaw, though cooking time will be slightly longer.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/air-fryer-guide/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="B" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog sauce";
@@ -71,6 +72,8 @@ const funnelStage = "B";
         <p class="text-gray-700">Popular combos include: mustard + relish, ketchup + onions, and the "Chicago style" with tomato, pickle, sport peppers, and celery salt.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/sauce/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="B" />

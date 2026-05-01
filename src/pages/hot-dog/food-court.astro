@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog food court facts";
@@ -71,6 +72,8 @@ const funnelStage = "A";
         <p class="text-gray-700">The classic combo is the hot dog with a fountain drink. Other popular pairings include the hot dog with a slice of pizza, or the chicken bake with a drink.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/food-court/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

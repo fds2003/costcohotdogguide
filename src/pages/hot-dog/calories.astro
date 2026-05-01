@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog calories";
@@ -94,6 +95,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Costco hot dogs are larger and have more calories than typical fast food hot dogs. A McDonald's hot dog (where available) typically has around 300-350 calories compared to Costco's 570.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/calories/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

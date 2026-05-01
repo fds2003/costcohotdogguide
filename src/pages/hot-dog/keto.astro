@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog keto";
@@ -74,6 +75,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Remove the bun entirely, replace with lettuce wrap or eat plain. Avoid ketchup (high sugar) and use mustard or mayo instead.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/keto/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

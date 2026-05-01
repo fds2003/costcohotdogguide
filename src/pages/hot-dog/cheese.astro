@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog cheese";
@@ -71,6 +72,8 @@ const funnelStage = "B";
         <p class="text-gray-700">Yes, a simple cheese sauce with melted cheddar, milk, and a touch of mustard makes an excellent homemade topping for Costco hot dogs.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/cheese/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="B" />

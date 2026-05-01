@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog gluten free";
@@ -78,6 +79,8 @@ const funnelStage = "A";
         <p class="text-gray-700">No, the standard Costco hot dog bun contains wheat flour. People with celiac disease should avoid it unless they bring their own gluten-free bun.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/gluten-free/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

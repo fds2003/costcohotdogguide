@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog nutrition";
@@ -84,6 +85,8 @@ const funnelStage = "A";
         <p class="text-gray-700">The main nutrients are protein (24g), carbohydrates (46g from the bun), fat (33g), and sodium (1,700mg). It also contains iron, calcium, and B vitamins.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/nutrition/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

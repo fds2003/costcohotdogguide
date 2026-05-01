@@ -1,0 +1,236 @@
+{
+  "pages": {
+    "/hot-dog/nutrition/": {
+      "nextSteps": [
+        { "url": "/hot-dog/calories/", "title": "Calorie Breakdown", "desc": "Full calorie count with and without bun, plus comparisons", "stage": "A" },
+        { "url": "/hot-dog/protein/", "title": "Protein Content", "desc": "How 24g protein stacks up against other sources", "stage": "A" },
+        { "url": "/hot-dog/sodium/", "title": "Sodium Guide", "desc": "1,700mg explained — is it too much?", "stage": "A" },
+        { "url": "/tools/nutrition-calculator/", "title": "Nutrition Calculator", "desc": "Customize your hot dog and see the exact macros", "stage": "B" },
+        { "url": "/reviews/kitchen/best-kitchen-scale/", "title": "Best Kitchen Scales", "desc": "Track your portions accurately", "stage": "C" }
+      ]
+    },
+    "/hot-dog/calories/": {
+      "nextSteps": [
+        { "url": "/hot-dog/nutrition/", "title": "Full Nutrition Facts", "desc": "Complete macro and micronutrient breakdown", "stage": "A" },
+        { "url": "/hot-dog/diet-tips/", "title": "Diet Tips", "desc": "How to enjoy a hot dog while watching calories", "stage": "A" },
+        { "url": "/hot-dog/protein-vs-calories/", "title": "Protein vs Calories", "desc": "Is the hot dog a good protein-per-calorie deal?", "stage": "A" },
+        { "url": "/tools/nutrition-calculator/", "title": "Calorie Calculator", "desc": "Build your hot dog and see the total", "stage": "B" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Cook with less oil, fewer calories", "stage": "C" }
+      ]
+    },
+    "/hot-dog/price/": {
+      "nextSteps": [
+        { "url": "/hot-dog/why-so-cheap/", "title": "Why So Cheap?", "desc": "The business strategy behind the $1.50 price", "stage": "A" },
+        { "url": "/hot-dog/price-history/", "title": "Price History", "desc": "40 years of the $1.50 price point", "stage": "A" },
+        { "url": "/hot-dog/comparison/", "title": "Hot Dog Comparison", "desc": "How Costco stacks up against Nathan's and McDonald's", "stage": "A" },
+        { "url": "/tools/price-history/", "title": "Price Tracker", "desc": "Interactive price history chart", "stage": "B" },
+        { "url": "/savings/membership-calculator/", "title": "Membership Calculator", "desc": "Calculate if Costco membership saves you money", "stage": "C" }
+      ]
+    },
+    "/hot-dog/air-fryer/": {
+      "nextSteps": [
+        { "url": "/hot-dog/air-fryer-guide/", "title": "Complete Air Fryer Guide", "desc": "Detailed step-by-step instructions and timing", "stage": "A" },
+        { "url": "/hot-dog/cooking-at-home/", "title": "Cooking at Home", "desc": "All cooking methods compared: oven, pan, boil", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Expert tips for perfect results every time", "stage": "B" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Top-rated models for Costco hot dogs", "stage": "C" }
+      ]
+    },
+    "/hot-dog/air-fryer-guide/": {
+      "nextSteps": [
+        { "url": "/hot-dog/air-fryer/", "title": "Quick Air Fryer Guide", "desc": "Essential temperature and timing at a glance", "stage": "A" },
+        { "url": "/hot-dog/cooking-at-home/", "title": "All Cooking Methods", "desc": "Oven, pan, boil, and air fryer compared", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Advanced techniques and troubleshooting", "stage": "B" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Our top picks for cooking hot dogs", "stage": "C" }
+      ]
+    },
+    "/hot-dog/cooking-at-home/": {
+      "nextSteps": [
+        { "url": "/hot-dog/air-fryer/", "title": "Air Fryer Method", "desc": "The most popular way to cook hot dogs at home", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calorie Count", "desc": "How cooking method affects calories", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Master the best at-home cooking method", "stage": "B" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Top-rated models for your kitchen", "stage": "C" },
+        { "url": "/reviews/kitchen/best-kitchen-scale/", "title": "Best Kitchen Scales", "desc": "Perfect for portion control", "stage": "C" }
+      ]
+    },
+    "/hot-dog/ingredients/": {
+      "nextSteps": [
+        { "url": "/hot-dog/allergens/", "title": "Allergen Info", "desc": "Wheat, soy, dairy cross-contamination details", "stage": "A" },
+        { "url": "/hot-dog/gluten-free/", "title": "Gluten-Free Options", "desc": "The meat is GF but the bun is not", "stage": "A" },
+        { "url": "/hot-dog/nutrition/", "title": "Nutrition Facts", "desc": "What those ingredients add up to nutritionally", "stage": "A" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Cook hot dogs perfectly at home", "stage": "C" }
+      ]
+    },
+    "/hot-dog/healthy/": {
+      "nextSteps": [
+        { "url": "/hot-dog/nutrition/", "title": "Full Nutrition Facts", "desc": "Complete macro and micronutrient data", "stage": "A" },
+        { "url": "/hot-dog/diet-tips/", "title": "Diet Tips", "desc": "How to enjoy hot dogs while eating healthy", "stage": "A" },
+        { "url": "/hot-dog/sodium/", "title": "Sodium Guide", "desc": "The biggest health concern explained", "stage": "A" },
+        { "url": "/tools/nutrition-calculator/", "title": "Nutrition Calculator", "desc": "Customize and calculate your exact intake", "stage": "B" },
+        { "url": "/reviews/vitamins/", "title": "Vitamins & Supplements", "desc": "Balance your diet with quality supplements", "stage": "C" }
+      ]
+    },
+    "/hot-dog/sodium/": {
+      "nextSteps": [
+        { "url": "/hot-dog/nutrition/", "title": "Full Nutrition Facts", "desc": "Complete macro and micronutrient data", "stage": "A" },
+        { "url": "/hot-dog/healthy/", "title": "Is It Healthy?", "desc": "Overall health assessment of the Costco hot dog", "stage": "A" },
+        { "url": "/hot-dog/diet-tips/", "title": "Diet Tips", "desc": "Reduce sodium while enjoying your hot dog", "stage": "A" }
+      ]
+    },
+    "/hot-dog/protein/": {
+      "nextSteps": [
+        { "url": "/hot-dog/protein-vs-calories/", "title": "Protein vs Calories", "desc": "Is it a good protein-per-calorie deal?", "stage": "A" },
+        { "url": "/hot-dog/nutrition/", "title": "Full Nutrition Facts", "desc": "All macros and micros at a glance", "stage": "A" },
+        { "url": "/reviews/vitamins/", "title": "Protein Supplements", "desc": "Boost your protein intake beyond the hot dog", "stage": "C" }
+      ]
+    },
+    "/hot-dog/protein-vs-calories/": {
+      "nextSteps": [
+        { "url": "/hot-dog/protein/", "title": "Protein Content", "desc": "Detailed protein analysis and comparisons", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calorie Breakdown", "desc": "Full calorie count with and without bun", "stage": "A" },
+        { "url": "/tools/nutrition-calculator/", "title": "Nutrition Calculator", "desc": "Calculate your exact macro ratio", "stage": "B" },
+        { "url": "/reviews/vitamins/", "title": "Protein Supplements", "desc": "High-quality protein options at Costco", "stage": "C" }
+      ]
+    },
+    "/hot-dog/fat/": {
+      "nextSteps": [
+        { "url": "/hot-dog/nutrition/", "title": "Full Nutrition Facts", "desc": "Complete macro breakdown", "stage": "A" },
+        { "url": "/hot-dog/keto/", "title": "Keto Guide", "desc": "How the fat content fits a keto diet", "stage": "A" },
+        { "url": "/hot-dog/diet-tips/", "title": "Diet Tips", "desc": "Tips for reducing fat while enjoying hot dogs", "stage": "A" }
+      ]
+    },
+    "/hot-dog/carbs/": {
+      "nextSteps": [
+        { "url": "/hot-dog/keto/", "title": "Keto Guide", "desc": "How to make the hot dog keto-friendly", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calorie Breakdown", "desc": "Carbs vs total calories analysis", "stage": "A" },
+        { "url": "/hot-dog/gluten-free/", "title": "Gluten-Free Options", "desc": "Low-carb and GF alternatives", "stage": "A" }
+      ]
+    },
+    "/hot-dog/keto/": {
+      "nextSteps": [
+        { "url": "/hot-dog/carbs/", "title": "Carb Content", "desc": "Full carbohydrate breakdown", "stage": "A" },
+        { "url": "/hot-dog/fat/", "title": "Fat Content", "desc": "How the fat profile fits keto macros", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calories Without Bun", "desc": "360 calories without the bun — keto friendly", "stage": "A" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Cook hot dogs without added oil", "stage": "C" }
+      ]
+    },
+    "/hot-dog/diet-tips/": {
+      "nextSteps": [
+        { "url": "/hot-dog/healthy/", "title": "Is It Healthy?", "desc": "Overall health assessment", "stage": "A" },
+        { "url": "/hot-dog/sodium/", "title": "Sodium Guide", "desc": "How to reduce your sodium intake", "stage": "A" },
+        { "url": "/tools/nutrition-calculator/", "title": "Nutrition Calculator", "desc": "Plan your meal around the hot dog", "stage": "B" },
+        { "url": "/reviews/vitamins/", "title": "Vitamins & Supplements", "desc": "Balance your diet with supplements", "stage": "C" }
+      ]
+    },
+    "/hot-dog/allergens/": {
+      "nextSteps": [
+        { "url": "/hot-dog/gluten-free/", "title": "Gluten-Free Options", "desc": "Safe alternatives for gluten sensitivity", "stage": "A" },
+        { "url": "/hot-dog/ingredients/", "title": "Full Ingredients", "desc": "Everything that goes into the hot dog", "stage": "A" },
+        { "url": "/hot-dog/vegan/", "title": "Vegan Options", "desc": "Plant-based alternatives at Costco", "stage": "A" }
+      ]
+    },
+    "/hot-dog/gluten-free/": {
+      "nextSteps": [
+        { "url": "/hot-dog/allergens/", "title": "Allergen Info", "desc": "Complete allergen and cross-contamination guide", "stage": "A" },
+        { "url": "/hot-dog/ingredients/", "title": "Full Ingredients", "desc": "What's in the hot dog and bun", "stage": "A" },
+        { "url": "/hot-dog/carbs/", "title": "Carb Content", "desc": "Low-carb options without the bun", "stage": "A" }
+      ]
+    },
+    "/hot-dog/vegan/": {
+      "nextSteps": [
+        { "url": "/hot-dog/vegetarian/", "title": "Vegetarian Options", "desc": "Plant-based hot dog alternatives at Costco", "stage": "A" },
+        { "url": "/hot-dog/ingredients/", "title": "Full Ingredients", "desc": "What's actually in the food court hot dog", "stage": "A" },
+        { "url": "/hot-dog/allergens/", "title": "Allergen Guide", "desc": "Cross-contamination risks for vegans", "stage": "A" }
+      ]
+    },
+    "/hot-dog/vegetarian/": {
+      "nextSteps": [
+        { "url": "/hot-dog/vegan/", "title": "Vegan Options", "desc": "Strict plant-based alternatives", "stage": "A" },
+        { "url": "/hot-dog/ingredients/", "title": "Full Ingredients", "desc": "Complete ingredient list and sourcing", "stage": "A" },
+        { "url": "/hot-dog/nutrition/", "title": "Nutrition Facts", "desc": "How plant-based compares to the original", "stage": "A" }
+      ]
+    },
+    "/hot-dog/history/": {
+      "nextSteps": [
+        { "url": "/hot-dog/why-so-cheap/", "title": "Why So Cheap?", "desc": "The business strategy behind the famous price", "stage": "A" },
+        { "url": "/hot-dog/price-history/", "title": "Price History", "desc": "40 years of price stability", "stage": "A" },
+        { "url": "/hot-dog/food-court/", "title": "Food Court Facts", "desc": "The food court's role in Costco's business", "stage": "A" }
+      ]
+    },
+    "/hot-dog/why-so-cheap/": {
+      "nextSteps": [
+        { "url": "/hot-dog/price/", "title": "Current Price", "desc": "The $1.50 deal and what you get", "stage": "A" },
+        { "url": "/hot-dog/price-history/", "title": "Price History", "desc": "Inflation-adjusted analysis over 40 years", "stage": "A" },
+        { "url": "/hot-dog/history/", "title": "Full History", "desc": "From 1985 to today — the origin story", "stage": "A" },
+        { "url": "/tools/price-history/", "title": "Price Tracker", "desc": "Interactive price history visualization", "stage": "B" }
+      ]
+    },
+    "/hot-dog/price-history/": {
+      "nextSteps": [
+        { "url": "/hot-dog/price/", "title": "Current Price", "desc": "What the $1.50 gets you today", "stage": "A" },
+        { "url": "/hot-dog/why-so-cheap/", "title": "Why So Cheap?", "desc": "The business logic behind the price", "stage": "A" },
+        { "url": "/tools/price-history/", "title": "Price Tracker", "desc": "Interactive chart and data visualization", "stage": "B" },
+        { "url": "/savings/membership-calculator/", "title": "Membership Calculator", "desc": "Calculate your Costco savings", "stage": "C" }
+      ]
+    },
+    "/hot-dog/food-court/": {
+      "nextSteps": [
+        { "url": "/hot-dog/price/", "title": "Hot Dog Price", "desc": "The famous $1.50 combo deal", "stage": "A" },
+        { "url": "/hot-dog/history/", "title": "Full History", "desc": "How the food court came to be", "stage": "A" },
+        { "url": "/menu/", "title": "Full Menu", "desc": "Explore the entire Costco food court", "stage": "B" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Recreate food court quality at home", "stage": "C" }
+      ]
+    },
+    "/hot-dog/comparison/": {
+      "nextSteps": [
+        { "url": "/hot-dog/calories/", "title": "Calorie Count", "desc": "How Costco compares calorie-by-calorie", "stage": "A" },
+        { "url": "/hot-dog/price/", "title": "Price Comparison", "desc": "The best value in fast food", "stage": "A" },
+        { "url": "/hot-dog/nutrition/", "title": "Full Nutrition", "desc": "Detailed nutritional comparison", "stage": "A" }
+      ]
+    },
+    "/hot-dog/controversies/": {
+      "nextSteps": [
+        { "url": "/hot-dog/healthy/", "title": "Is It Healthy?", "desc": "What the science actually says", "stage": "A" },
+        { "url": "/hot-dog/ingredients/", "title": "Full Ingredients", "desc": "See exactly what's in the hot dog", "stage": "A" },
+        { "url": "/hot-dog/nutrition/", "title": "Nutrition Facts", "desc": "Let the numbers speak for themselves", "stage": "A" }
+      ]
+    },
+    "/hot-dog/faq/": {
+      "nextSteps": [
+        { "url": "/hot-dog/nutrition/", "title": "Nutrition Facts", "desc": "The most common FAQ topic", "stage": "A" },
+        { "url": "/hot-dog/price/", "title": "Price & Value", "desc": "Why the $1.50 deal persists", "stage": "A" },
+        { "url": "/hot-dog/ingredients/", "title": "Ingredients", "desc": "What's actually in the hot dog", "stage": "A" },
+        { "url": "/hot-dog/air-fryer/", "title": "Air Fryer Guide", "desc": "Cook it perfectly at home", "stage": "B" }
+      ]
+    },
+    "/hot-dog/fun-facts/": {
+      "nextSteps": [
+        { "url": "/hot-dog/history/", "title": "Full History", "desc": "The story behind the fun facts", "stage": "A" },
+        { "url": "/hot-dog/food-court/", "title": "Food Court Facts", "desc": "More food court trivia", "stage": "A" },
+        { "url": "/hot-dog/why-so-cheap/", "title": "Why So Cheap?", "desc": "The most surprising fact of all", "stage": "A" }
+      ]
+    },
+    "/hot-dog/cheese/": {
+      "nextSteps": [
+        { "url": "/hot-dog/toppings/", "title": "Best Toppings", "desc": "Complete topping guide including cheese", "stage": "A" },
+        { "url": "/hot-dog/sauce/", "title": "Best Sauces", "desc": "Mustard, ketchup, and gourmet options", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calorie Count", "desc": "How adding cheese affects the total", "stage": "A" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Melt cheese perfectly on your hot dog", "stage": "C" }
+      ]
+    },
+    "/hot-dog/sauce/": {
+      "nextSteps": [
+        { "url": "/hot-dog/toppings/", "title": "Best Toppings", "desc": "Classic and specialty toppings", "stage": "A" },
+        { "url": "/hot-dog/cheese/", "title": "Best Cheese", "desc": "Cheese pairing and melting guide", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calorie Count", "desc": "How sauces affect your calorie total", "stage": "A" }
+      ]
+    },
+    "/hot-dog/toppings/": {
+      "nextSteps": [
+        { "url": "/hot-dog/sauce/", "title": "Best Sauces", "desc": "From classic mustard to gourmet options", "stage": "A" },
+        { "url": "/hot-dog/cheese/", "title": "Best Cheese", "desc": "Perfect cheese pairings", "stage": "A" },
+        { "url": "/hot-dog/calories/", "title": "Calorie Count", "desc": "How toppings add up", "stage": "A" },
+        { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Cook hot dogs and toast toppings perfectly", "stage": "C" }
+      ]
+    }
+  }
+}

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog diet tips";
@@ -73,6 +74,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Yes. Eat half the bun, load up on zero-calorie mustard, skip cheese and sugary sauces, and drink water. This can reduce the meal to under 400 calories.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/diet-tips/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog allergen";
@@ -74,6 +75,8 @@ const funnelStage = "A";
         <p class="text-gray-700">People with wheat allergies or celiac disease should avoid the bun. Those with soy allergies should exercise caution. Always ask staff about preparation practices.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/allergens/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

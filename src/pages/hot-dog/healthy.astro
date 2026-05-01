@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog healthy";
@@ -79,6 +80,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Remove the bun, add extra mustard (low calorie), skip sugary drinks, and eat half the hot dog with a large side of vegetables.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/healthy/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog protein vs calories";
@@ -76,6 +77,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Yes, with 24g of protein it is an excellent protein source. Fitness enthusiasts often eat Costco hot dogs (without the bun) as a convenient high-protein meal.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/protein-vs-calories/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

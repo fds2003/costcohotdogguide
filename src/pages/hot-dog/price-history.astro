@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog price history";
@@ -73,6 +74,8 @@ const funnelStage = "A";
         <p class="text-gray-700">No, the $1.50 price is remarkably consistent across all Costco locations in the United States. International prices vary slightly due to currency and local costs.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/price-history/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

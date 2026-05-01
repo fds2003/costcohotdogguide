@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog sodium";
@@ -75,6 +76,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Eating a Costco hot dog daily would provide nearly three-quarters of your daily sodium in one meal. For people with hypertension, this is excessive.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/sodium/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog carbs";
@@ -71,6 +72,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Yes, if you remove the bun. The hot dog meat alone is very low in carbs, making it suitable for keto and low-carb diets.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/carbs/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "costco hot dog ingredients";
@@ -82,6 +83,8 @@ const funnelStage = "A";
         <p class="text-gray-700">Yes, the bun contains wheat (gluten). The hot dog itself may contain traces of soy. Cross-contamination with dairy is possible in the food court.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/ingredients/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />

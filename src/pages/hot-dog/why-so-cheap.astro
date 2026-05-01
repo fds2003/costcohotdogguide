@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
 
 const keywordCore = "why is costco hot dog so cheap";
@@ -77,6 +78,8 @@ const funnelStage = "A";
         <p class="text-gray-700">No, Costco actually improved quality over time by switching from Hebrew National to its own Kirkland Signature brand, giving them full control over ingredients and production.</p>
       </div>
     </div>
+    <RelatedContent currentPage="/hot-dog/why-so-cheap/" />
+
 
     <div class="mt-12">
       <RelatedProducts funnelStage="A" />
