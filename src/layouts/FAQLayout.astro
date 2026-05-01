@@ -12,6 +12,7 @@ export interface Props {
   learnMoreLinks?: Array<{ title: string; href: string; description: string }>;
   publishedAt?: string;
   modifiedAt?: string;
+  canonical?: string;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   learnMoreLinks = [],
   publishedAt = new Date().toISOString().split('T')[0],
   modifiedAt = new Date().toISOString().split('T')[0],
+  canonical,
 } = Astro.props;
 
 const faqSchema = {
@@ -57,6 +59,7 @@ const faqSchema = {
   publishedAt={publishedAt}
   modifiedAt={modifiedAt}
   faqData={[{ question, answer }]}
+  canonical={canonical}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 

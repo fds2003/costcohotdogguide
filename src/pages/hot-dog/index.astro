@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const pages = [
+  {
+    category: 'Essential Guide',
+    items: [
+      { title: 'Complete Nutrition Facts', desc: '570 calories, 24g protein, full macro breakdown', href: '/hot-dog/nutrition/', tag: 'Core' },
+      { title: 'Calorie Breakdown', desc: 'With bun, without bun, vs other fast food', href: '/hot-dog/calories/', tag: 'Core' },
+      { title: 'Ingredients List', desc: '100% beef, bun components, additives explained', href: '/hot-dog/ingredients/', tag: 'Core' },
+      { title: 'Price: Why $1.50?', desc: '40-year price history, inflation analysis', href: '/hot-dog/price/', tag: 'Core' },
+    ]
+  },
+  {
+    category: 'Diet & Health',
+    items: [
+      { title: 'Is It Healthy?', desc: 'Nutrition analysis, healthier alternatives', href: '/hot-dog/healthy/', tag: 'Diet' },
+      { title: 'Sodium Content', desc: '1,700mg per serving — 74% of daily limit', href: '/hot-dog/sodium/', tag: 'Diet' },
+      { title: 'Keto-Friendly?', desc: 'Bun-less: only 2-3g net carbs', href: '/hot-dog/keto/', tag: 'Diet' },
+      { title: 'Carb Count', desc: '46g total, almost entirely from the bun', href: '/hot-dog/carbs/', tag: 'Diet' },
+      { title: 'Fat Content', desc: '33g total fat, saturated vs unsaturated breakdown', href: '/hot-dog/fat/', tag: 'Diet' },
+      { title: 'Protein Analysis', desc: '24g protein — best per-dollar in fast food', href: '/hot-dog/protein/', tag: 'Diet' },
+      { title: 'Protein vs Calories', desc: '6.7g protein per 100cal without bun', href: '/hot-dog/protein-vs-calories/', tag: 'Diet' },
+      { title: 'Diet Tips', desc: 'Low-cal modifications, macro-friendly choices', href: '/hot-dog/diet-tips/', tag: 'Diet' },
+    ]
+  },
+  {
+    category: 'Dietary Restrictions',
+    items: [
+      { title: 'Allergen Guide', desc: 'Wheat, soy, dairy cross-contamination info', href: '/hot-dog/allergens/', tag: 'Restriction' },
+      { title: 'Gluten-Free?', desc: 'Meat is GF, bun is not. Safe alternatives', href: '/hot-dog/gluten-free/', tag: 'Restriction' },
+      { title: 'Vegetarian Options', desc: 'Field Roast, Yves, MorningStar alternatives', href: '/hot-dog/vegetarian/', tag: 'Restriction' },
+      { title: 'Vegan Guide', desc: 'Ingredients check, plant-based alternatives', href: '/hot-dog/vegan/', tag: 'Restriction' },
+    ]
+  },
+  {
+    category: 'Toppings & Customization',
+    items: [
+      { title: 'Best Toppings', desc: 'Classic, specialty, and DIY topping ideas', href: '/hot-dog/toppings/', tag: 'Custom' },
+      { title: 'Sauce Guide', desc: 'Mustard, ketchup, relish, homemade recipes', href: '/hot-dog/sauce/', tag: 'Custom' },
+      { title: 'Cheese Pairings', desc: 'Cheddar, pepper jack, Swiss, homemade sauce', href: '/hot-dog/cheese/', tag: 'Custom' },
+    ]
+  },
+  {
+    category: 'Cooking & Preparation',
+    items: [
+      { title: 'Cooking at Home', desc: 'Oven, stovetop, grilling, reheating methods', href: '/hot-dog/cooking-at-home/', tag: 'Cook' },
+      { title: 'Air Fryer Guide', desc: '375°F, 6-8 min for crispy perfection', href: '/hot-dog/air-fryer-guide/', tag: 'Cook' },
+      { title: 'Air Fryer Quick Guide', desc: 'Time, temperature, and safety tips', href: '/hot-dog/air-fryer/', tag: 'Cook' },
+    ]
+  },
+  {
+    category: 'History & Culture',
+    items: [
+      { title: 'Hot Dog History', desc: 'From 1985 Price Club to cultural icon', href: '/hot-dog/history/', tag: 'Story' },
+      { title: 'Why So Cheap?', desc: 'Loss leader strategy, vertical integration', href: '/hot-dog/why-so-cheap/', tag: 'Story' },
+      { title: 'Price History Timeline', desc: '$1.50 since 1985 — never raised', href: '/hot-dog/price-history/', tag: 'Story' },
+      { title: 'Fun Facts & Trivia', desc: '100M+ sold yearly, more than all MLB stadiums', href: '/hot-dog/fun-facts/', tag: 'Story' },
+      { title: 'Food Court Guide', desc: 'Combo deals, popularity stats, favorites', href: '/hot-dog/food-court/', tag: 'Story' },
+    ]
+  },
+  {
+    category: 'Comparisons & Controversies',
+    items: [
+      { title: 'Hot Dog Comparison', desc: 'Vs Nathan\'s, McDonald\'s — calorie, price, nutrition', href: '/hot-dog/comparison/', tag: 'Compare' },
+      { title: 'Controversies Debunked', desc: 'Nutrition myths, price rumors, media coverage', href: '/hot-dog/controversies/', tag: 'Compare' },
+      { title: 'FAQ Hub', desc: 'Most common questions answered in one place', href: '/hot-dog/faq/', tag: 'Compare' },
+    ]
+  },
+];
+
+const tagColors: Record<string, string> = {
+  Core: 'bg-red-100 text-red-800',
+  Diet: 'bg-green-100 text-green-800',
+  Restriction: 'bg-purple-100 text-purple-800',
+  Custom: 'bg-yellow-100 text-yellow-800',
+  Cook: 'bg-blue-100 text-blue-800',
+  Story: 'bg-orange-100 text-orange-800',
+  Compare: 'bg-gray-100 text-gray-800',
+};
+---
+
+<BaseLayout
+  title="Costco Hot Dog Guide | Complete Directory"
+  description="Your complete guide to Costco hot dogs: nutrition facts, calories, price history, diet info, cooking tips, and more. 30+ in-depth articles on the famous $1.50 combo."
+  type="website"
+>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Guide</h1>
+    <p class="text-lg text-gray-600 mb-8">Everything you need to know about the famous $1.50 Costco hot dog combo. Nutrition, diet, cooking, history, and more — 30+ in-depth guides.</p>
+
+    {pages.map(section => (
+      <div class="mb-10">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">{section.category}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {section.items.map(item => (
+            <a href={item.href} class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow-md transition-all group">
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="text-lg font-semibold text-gray-900 group-hover:text-red-600 transition-colors">{item.title}</h3>
+                <span class={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium whitespace-nowrap ${tagColors[item.tag] || 'bg-gray-100 text-gray-800'}`}>{item.tag}</span>
+              </div>
+              <p class="text-sm text-gray-600 mt-1">{item.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mt-8">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">Quick Facts</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div>
+          <div class="text-2xl font-bold text-red-600">$1.50</div>
+          <div class="text-sm text-gray-600">Price since 1985</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-red-600">570</div>
+          <div class="text-sm text-gray-600">Calories with bun</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-red-600">24g</div>
+          <div class="text-sm text-gray-600">Protein per serving</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-red-600">100M+</div>
+          <div class="text-sm text-gray-600">Sold yearly</div>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

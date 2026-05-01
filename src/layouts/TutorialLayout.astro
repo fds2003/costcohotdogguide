@@ -11,6 +11,7 @@ export interface Props {
   publishedAt?: string;
   modifiedAt?: string;
   image?: string;
+  canonical?: string;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   publishedAt = new Date().toISOString().split('T')[0],
   modifiedAt = new Date().toISOString().split('T')[0],
   image,
+  canonical,
 } = Astro.props;
 
 const howToSchema = steps.length > 0 ? {
@@ -48,6 +50,7 @@ const howToSchema = steps.length > 0 ? {
   publishedAt={publishedAt}
   modifiedAt={modifiedAt}
   image={image}
+  canonical={canonical}
 >
   {howToSchema && <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />}
 
