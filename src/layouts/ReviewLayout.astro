@@ -224,6 +224,7 @@ const productSchema = {
             <a
               href={guide.href}
               class="block bg-white rounded-lg p-4 border border-orange-200 hover:border-orange-400 hover:shadow-md transition group"
+              onclick="if(typeof gtag!=='undefined')gtag('event','funnel_progression',{from_stage:'C',to_stage:guide.href.includes('/tutorials/')?'B':'A',target_url:guide.href,source_url:window.location.pathname});"
             >
               <h4 class="font-semibold text-orange-800 group-hover:text-orange-600">{guide.title}</h4>
               <p class="text-sm text-gray-600 mt-1">{guide.description}</p>

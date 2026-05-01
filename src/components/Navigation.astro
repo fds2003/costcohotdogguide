@@ -38,9 +38,24 @@ const navItems = [
     { label: 'Employee Retention', href: '/articles/employee-retention/' },
     { label: 'Is It Healthy?', href: '/articles/is-it-healthy/' },
   ]},
-  { label: 'Tutorials', href: '/tutorials/' },
-  { label: 'Tools', href: '/tools/' },
-  { label: 'Reviews', href: '/reviews/', highlight: true },
+  { label: 'Tutorials', href: '/tutorials/', children: [
+    { label: 'Air Fryer Tutorial', href: '/tutorials/air-fryer/' },
+    { label: 'Calories Without Bun', href: '/tutorials/calories-without-bun/' },
+    { label: 'Food Court Calories', href: '/tutorials/food-court-calories/' },
+  ]},
+  { label: 'Tools', href: '/tools/', children: [
+    { label: 'Nutrition Calculator', href: '/tools/nutrition-calculator/' },
+    { label: 'Price History', href: '/tools/price-history/' },
+  ]},
+  { label: 'Reviews', href: '/reviews/', highlight: true, children: [
+    { label: 'Kitchen Appliances', href: '/reviews/kitchen-appliances/' },
+    { label: 'Best Air Fryer', href: '/reviews/kitchen/best-air-fryer/' },
+    { label: 'Best Kitchen Scale', href: '/reviews/kitchen/best-kitchen-scale/' },
+    { label: 'Vitamins & Supplements', href: '/reviews/vitamins/' },
+    { label: 'Bulk Foods', href: '/reviews/bulk-foods/' },
+    { label: 'Camping Gear', href: '/reviews/camping-gear/' },
+    { label: 'Furniture', href: '/reviews/furniture/' },
+  ]},
   { label: 'Guides', href: '/guides/' },
   { label: 'Savings', href: '/savings/' },
 ];

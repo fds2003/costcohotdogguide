@@ -1,0 +1,2974 @@
+{
+  "pages": {
+    "/about/": [
+      {
+        "url": "/contact/",
+        "title": "Contact Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guide/",
+        "title": "Costco Hot Dog: The Ultimate Guide (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/index/",
+        "title": "Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/privacy-policy/",
+        "title": "Privacy Policy",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/150-miracle/": [
+      {
+        "url": "/articles/employee-retention/",
+        "title": "Why Costco Employees Stay for Decades",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/food-court-menu/",
+        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/is-it-healthy/",
+        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/membership-worth-it/",
+        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/pricing-strategy/",
+        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/employee-retention/": [
+      {
+        "url": "/articles/150-miracle/",
+        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/food-court-menu/",
+        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/is-it-healthy/",
+        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/membership-worth-it/",
+        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/pricing-strategy/",
+        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/food-court-menu/": [
+      {
+        "url": "/articles/150-miracle/",
+        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/employee-retention/",
+        "title": "Why Costco Employees Stay for Decades",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/is-it-healthy/",
+        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/membership-worth-it/",
+        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/pricing-strategy/",
+        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/is-it-healthy/": [
+      {
+        "url": "/articles/150-miracle/",
+        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/employee-retention/",
+        "title": "Why Costco Employees Stay for Decades",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/food-court-menu/",
+        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/membership-worth-it/",
+        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/pricing-strategy/",
+        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/membership-worth-it/": [
+      {
+        "url": "/articles/150-miracle/",
+        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/employee-retention/",
+        "title": "Why Costco Employees Stay for Decades",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/food-court-menu/",
+        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/is-it-healthy/",
+        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/pricing-strategy/",
+        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/pricing-strategy/": [
+      {
+        "url": "/articles/150-miracle/",
+        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/employee-retention/",
+        "title": "Why Costco Employees Stay for Decades",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/food-court-menu/",
+        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/is-it-healthy/",
+        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/membership-worth-it/",
+        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/articles/supply-chain-efficiency/": [
+      {
+        "url": "/articles/150-miracle/",
+        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/employee-retention/",
+        "title": "Why Costco Employees Stay for Decades",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/food-court-menu/",
+        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/is-it-healthy/",
+        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/articles/membership-worth-it/",
+        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/business/history/": [
+      {
+        "url": "/business/",
+        "title": "Costco Hot Dog Business Story",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/business/why-so-cheap/",
+        "title": "Why Is the Costco Hot Dog So Cheap?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/business/": [
+      {
+        "url": "/business/history/",
+        "title": "Costco Hot Dog History: 40 Years of $1.50",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/business/why-so-cheap/",
+        "title": "Why Is the Costco Hot Dog So Cheap?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/business/why-so-cheap/": [
+      {
+        "url": "/business/history/",
+        "title": "Costco Hot Dog History: 40 Years of $1.50",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/business/",
+        "title": "Costco Hot Dog Business Story",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/contact/": [
+      {
+        "url": "/about/",
+        "title": "About Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guide/",
+        "title": "Costco Hot Dog: The Ultimate Guide (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/index/",
+        "title": "Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/privacy-policy/",
+        "title": "Privacy Policy",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/cooking/air-fryer/": [
+      {
+        "url": "/cooking/at-home/",
+        "title": "How to Make Costco Hot Dogs at Home",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/",
+        "title": "How to Cook Costco Hot Dogs at Home",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/recipe/",
+        "title": "Costco Hot Dog Recipe: Make It at Home",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/cooking/at-home/": [
+      {
+        "url": "/cooking/air-fryer/",
+        "title": "Costco Hot Dog in Air Fryer",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/",
+        "title": "How to Cook Costco Hot Dogs at Home",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/recipe/",
+        "title": "Costco Hot Dog Recipe: Make It at Home",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/cooking/": [
+      {
+        "url": "/cooking/air-fryer/",
+        "title": "Costco Hot Dog in Air Fryer",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/at-home/",
+        "title": "How to Make Costco Hot Dogs at Home",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/recipe/",
+        "title": "Costco Hot Dog Recipe: Make It at Home",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/cooking/recipe/": [
+      {
+        "url": "/cooking/air-fryer/",
+        "title": "Costco Hot Dog in Air Fryer",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/at-home/",
+        "title": "How to Make Costco Hot Dogs at Home",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/cooking/",
+        "title": "How to Cook Costco Hot Dogs at Home",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/data/crowd-prediction/": [
+      {
+        "url": "/data/",
+        "title": "Costco Data & Insights | Price Maps, Nutrition, Crowd Predictions",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/nutrition-comparison/",
+        "title": "Costco Food Court Nutrition Comparison",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/price-map/",
+        "title": "Costco Hot Dog Price Map | US, Canada & International",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/data/": [
+      {
+        "url": "/data/crowd-prediction/",
+        "title": "Costco Food Court Crowd Prediction | Best Times to Visit",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/nutrition-comparison/",
+        "title": "Costco Food Court Nutrition Comparison",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/price-map/",
+        "title": "Costco Hot Dog Price Map | US, Canada & International",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/data/nutrition-comparison/": [
+      {
+        "url": "/data/crowd-prediction/",
+        "title": "Costco Food Court Crowd Prediction | Best Times to Visit",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/",
+        "title": "Costco Data & Insights | Price Maps, Nutrition, Crowd Predictions",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/price-map/",
+        "title": "Costco Hot Dog Price Map | US, Canada & International",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/data/price-map/": [
+      {
+        "url": "/data/crowd-prediction/",
+        "title": "Costco Food Court Crowd Prediction | Best Times to Visit",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/",
+        "title": "Costco Data & Insights | Price Maps, Nutrition, Crowd Predictions",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/data/nutrition-comparison/",
+        "title": "Costco Food Court Nutrition Comparison",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/dairy-free/": [
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/nitrates/",
+        "title": "Does Costco Hot Dog Have Nitrates?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/gluten-free/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/nitrates/",
+        "title": "Does Costco Hot Dog Have Nitrates?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/halal/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/nitrates/",
+        "title": "Does Costco Hot Dog Have Nitrates?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/nitrates/",
+        "title": "Does Costco Hot Dog Have Nitrates?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/kosher/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/nitrates/",
+        "title": "Does Costco Hot Dog Have Nitrates?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/nitrates/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/pork/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/dietary/vegan/": [
+      {
+        "url": "/dietary/dairy-free/",
+        "title": "Are Costco Hot Dogs Dairy Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/gluten-free/",
+        "title": "Are Costco Hot Dogs Gluten Free?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/halal/",
+        "title": "Is Costco Hot Dog Halal?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/",
+        "title": "Costco Hot Dog Dietary Information",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/dietary/kosher/",
+        "title": "Is Costco Hot Dog Kosher?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/all-beef/": [
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/how-big/",
+        "title": "How Big Is a Costco Hot Dog?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/beef/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/how-big/",
+        "title": "How Big Is a Costco Hot Dog?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/dairy-free-buns/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/how-big/",
+        "title": "How Big Is a Costco Hot Dog?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/gluten-free/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/how-big/",
+        "title": "How Big Is a Costco Hot Dog?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/halal/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/how-big/",
+        "title": "How Big Is a Costco Hot Dog?",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/how-big/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/kosher/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/msg/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/nitrates/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/pork-content/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/soy-free/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/vegan/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/with-drink/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/faq/without-membership/": [
+      {
+        "url": "/faq/all-beef/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/beef/",
+        "title": "Are Costco Hot Dogs All Beef?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/dairy-free-buns/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/gluten-free/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/faq/halal/",
+        "title": "question",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/guide/": [
+      {
+        "url": "/about/",
+        "title": "About Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/contact/",
+        "title": "Contact Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/index/",
+        "title": "Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/privacy-policy/",
+        "title": "Privacy Policy",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/guides/costco-shopping-guide/": [
+      {
+        "url": "/guides/",
+        "title": "Costco Shopping Guides",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guides/maximize-membership/",
+        "title": "How to Maximize Your Costco Membership",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/guides/": [
+      {
+        "url": "/guides/costco-shopping-guide/",
+        "title": "The Costco Shopping Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guides/maximize-membership/",
+        "title": "How to Maximize Your Costco Membership",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/guides/maximize-membership/": [
+      {
+        "url": "/guides/costco-shopping-guide/",
+        "title": "The Costco Shopping Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guides/",
+        "title": "Costco Shopping Guides",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/hot-dog/air-fryer-guide/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.85
+      },
+      {
+        "url": "/hot-dog/faq/",
+        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/allergens/",
+        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
+        "funnelStage": "A",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/calories/",
+        "title": "Costco Hot Dog Calories | Complete Breakdown",
+        "funnelStage": "A",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/carbs/",
+        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
+        "funnelStage": "A",
+        "score": 0.65
+      }
+    ],
+    "/hot-dog/air-fryer/": [
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.85
+      },
+      {
+        "url": "/hot-dog/faq/",
+        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
+        "funnelStage": "A",
+        "score": 0.79
+      },
+      {
+        "url": "/hot-dog/allergens/",
+        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/calories/",
+        "title": "Costco Hot Dog Calories | Complete Breakdown",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/carbs/",
+        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
+        "funnelStage": "A",
+        "score": 0.7
+      }
+    ],
+    "/hot-dog/allergens/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/calories/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/carbs/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/cheese/": [
+      {
+        "url": "/hot-dog/faq/",
+        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
+        "funnelStage": "A",
+        "score": 0.79
+      },
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/allergens/",
+        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/calories/",
+        "title": "Costco Hot Dog Calories | Complete Breakdown",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/carbs/",
+        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
+        "funnelStage": "A",
+        "score": 0.7
+      }
+    ],
+    "/hot-dog/comparison/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/controversies/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/cooking-at-home/": [
+      {
+        "url": "/hot-dog/faq/",
+        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/allergens/",
+        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
+        "funnelStage": "A",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/calories/",
+        "title": "Costco Hot Dog Calories | Complete Breakdown",
+        "funnelStage": "A",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/carbs/",
+        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
+        "funnelStage": "A",
+        "score": 0.65
+      }
+    ],
+    "/hot-dog/diet-tips/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/faq/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.89
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.89
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.89
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.8
+      }
+    ],
+    "/hot-dog/fat/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/food-court/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.68
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.68
+      }
+    ],
+    "/hot-dog/fun-facts/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/gluten-free/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/healthy/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/history/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/ingredients/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/keto/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/nutrition/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/price-history/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/price/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/protein-vs-calories/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/protein/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.71
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.71
+      }
+    ],
+    "/hot-dog/sauce/": [
+      {
+        "url": "/hot-dog/faq/",
+        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
+        "funnelStage": "A",
+        "score": 0.79
+      },
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/allergens/",
+        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/calories/",
+        "title": "Costco Hot Dog Calories | Complete Breakdown",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/carbs/",
+        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
+        "funnelStage": "A",
+        "score": 0.7
+      }
+    ],
+    "/hot-dog/sodium/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/toppings/": [
+      {
+        "url": "/hot-dog/faq/",
+        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
+        "funnelStage": "A",
+        "score": 0.7
+      },
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/allergens/",
+        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
+        "funnelStage": "A",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/calories/",
+        "title": "Costco Hot Dog Calories | Complete Breakdown",
+        "funnelStage": "A",
+        "score": 0.65
+      },
+      {
+        "url": "/hot-dog/carbs/",
+        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
+        "funnelStage": "A",
+        "score": 0.65
+      }
+    ],
+    "/hot-dog/vegan/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/vegetarian/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/hot-dog/why-so-cheap/": [
+      {
+        "url": "/hot-dog/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/hot-dog/air-fryer-guide/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
+      }
+    ],
+    "/index/": [
+      {
+        "url": "/about/",
+        "title": "About Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/contact/",
+        "title": "Contact Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guide/",
+        "title": "Costco Hot Dog: The Ultimate Guide (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/privacy-policy/",
+        "title": "Privacy Policy",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/ingredients/beef-or-pork/": [
+      {
+        "url": "/ingredients/brand/",
+        "title": "Who Makes Costco Hot Dogs? Brand & Supplier Revealed",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/",
+        "title": "Costco Hot Dog Ingredients",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/ingredients-list/",
+        "title": "Costco Hot Dog Ingredients List",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/ingredients/brand/": [
+      {
+        "url": "/ingredients/beef-or-pork/",
+        "title": "Does Costco Hot Dog Have Pork?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/",
+        "title": "Costco Hot Dog Ingredients",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/ingredients-list/",
+        "title": "Costco Hot Dog Ingredients List",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/ingredients/": [
+      {
+        "url": "/ingredients/beef-or-pork/",
+        "title": "Does Costco Hot Dog Have Pork?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/brand/",
+        "title": "Who Makes Costco Hot Dogs? Brand & Supplier Revealed",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/ingredients-list/",
+        "title": "Costco Hot Dog Ingredients List",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/ingredients/ingredients-list/": [
+      {
+        "url": "/ingredients/beef-or-pork/",
+        "title": "Does Costco Hot Dog Have Pork?",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/brand/",
+        "title": "Who Makes Costco Hot Dogs? Brand & Supplier Revealed",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/ingredients/",
+        "title": "Costco Hot Dog Ingredients",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/menu/[slug]/": [
+      {
+        "url": "/menu/",
+        "title": "Costco Food Court Menu | Complete Guide & Prices",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/menu/new/",
+        "title": "New & Discontinued Costco Food Court Items",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/menu/": [
+      {
+        "url": "/menu/[slug]/",
+        "title": "`$item.name",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/menu/new/",
+        "title": "New & Discontinued Costco Food Court Items",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/menu/new/": [
+      {
+        "url": "/menu/[slug]/",
+        "title": "`$item.name",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/menu/",
+        "title": "Costco Food Court Menu | Complete Guide & Prices",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/nutrition/calories-without-bun/": [
+      {
+        "url": "/nutrition/calories/",
+        "title": "Costco Hot Dog Calories",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/",
+        "title": "Costco Hot Dog Nutrition Facts",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/macros/",
+        "title": "Costco Hot Dog Macros: Fat, Carbs & Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/protein/",
+        "title": "Costco Hot Dog Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/weight-watchers-points/",
+        "title": "Costco Hot Dog Weight Watchers Points",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/nutrition/calories/": [
+      {
+        "url": "/nutrition/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/",
+        "title": "Costco Hot Dog Nutrition Facts",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/macros/",
+        "title": "Costco Hot Dog Macros: Fat, Carbs & Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/protein/",
+        "title": "Costco Hot Dog Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/weight-watchers-points/",
+        "title": "Costco Hot Dog Weight Watchers Points",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/nutrition/": [
+      {
+        "url": "/nutrition/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/calories/",
+        "title": "Costco Hot Dog Calories",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/macros/",
+        "title": "Costco Hot Dog Macros: Fat, Carbs & Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/protein/",
+        "title": "Costco Hot Dog Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/weight-watchers-points/",
+        "title": "Costco Hot Dog Weight Watchers Points",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/nutrition/macros/": [
+      {
+        "url": "/nutrition/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/calories/",
+        "title": "Costco Hot Dog Calories",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/",
+        "title": "Costco Hot Dog Nutrition Facts",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/protein/",
+        "title": "Costco Hot Dog Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/weight-watchers-points/",
+        "title": "Costco Hot Dog Weight Watchers Points",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/nutrition/protein/": [
+      {
+        "url": "/nutrition/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/calories/",
+        "title": "Costco Hot Dog Calories",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/",
+        "title": "Costco Hot Dog Nutrition Facts",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/macros/",
+        "title": "Costco Hot Dog Macros: Fat, Carbs & Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/weight-watchers-points/",
+        "title": "Costco Hot Dog Weight Watchers Points",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/nutrition/weight-watchers-points/": [
+      {
+        "url": "/nutrition/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/calories/",
+        "title": "Costco Hot Dog Calories",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/",
+        "title": "Costco Hot Dog Nutrition Facts",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/macros/",
+        "title": "Costco Hot Dog Macros: Fat, Carbs & Protein",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/nutrition/protein/",
+        "title": "Costco Hot Dog Protein",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/price/": [
+      {
+        "url": "/price/price-increase/",
+        "title": "Will Costco Hot Dog Price Increase? Tracking & Rumors",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/price/price-increase/": [
+      {
+        "url": "/price/",
+        "title": "Costco Hot Dog Price",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/privacy-policy/": [
+      {
+        "url": "/about/",
+        "title": "About Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/contact/",
+        "title": "Contact Us",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/guide/",
+        "title": "Costco Hot Dog: The Ultimate Guide (2026)",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/index/",
+        "title": "Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/bulk-foods/": [
+      {
+        "url": "/reviews/camping-gear/",
+        "title": "Best Camping Gear at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/furniture/",
+        "title": "Best Furniture Deals at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/",
+        "title": "Costco Product Reviews",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/kitchen-appliances/",
+        "title": "Best Kitchen Appliances at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/vitamins/",
+        "title": "Best Vitamins to Buy at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/camping-gear/": [
+      {
+        "url": "/reviews/bulk-foods/",
+        "title": "Best Bulk Foods at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/furniture/",
+        "title": "Best Furniture Deals at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/",
+        "title": "Costco Product Reviews",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/kitchen-appliances/",
+        "title": "Best Kitchen Appliances at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/vitamins/",
+        "title": "Best Vitamins to Buy at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/furniture/": [
+      {
+        "url": "/reviews/bulk-foods/",
+        "title": "Best Bulk Foods at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/camping-gear/",
+        "title": "Best Camping Gear at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/",
+        "title": "Costco Product Reviews",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/kitchen-appliances/",
+        "title": "Best Kitchen Appliances at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/vitamins/",
+        "title": "Best Vitamins to Buy at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/": [
+      {
+        "url": "/reviews/bulk-foods/",
+        "title": "Best Bulk Foods at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/camping-gear/",
+        "title": "Best Camping Gear at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/furniture/",
+        "title": "Best Furniture Deals at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/kitchen-appliances/",
+        "title": "Best Kitchen Appliances at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/vitamins/",
+        "title": "Best Vitamins to Buy at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/kitchen/best-air-fryer/": [
+      {
+        "url": "/reviews/kitchen/best-kitchen-scale/",
+        "title": "productName",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/kitchen/best-kitchen-scale/": [
+      {
+        "url": "/reviews/kitchen/best-air-fryer/",
+        "title": "productName",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/kitchen-appliances/": [
+      {
+        "url": "/reviews/bulk-foods/",
+        "title": "Best Bulk Foods at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/camping-gear/",
+        "title": "Best Camping Gear at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/furniture/",
+        "title": "Best Furniture Deals at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/",
+        "title": "Costco Product Reviews",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/vitamins/",
+        "title": "Best Vitamins to Buy at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/reviews/vitamins/": [
+      {
+        "url": "/reviews/bulk-foods/",
+        "title": "Best Bulk Foods at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/camping-gear/",
+        "title": "Best Camping Gear at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/furniture/",
+        "title": "Best Furniture Deals at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/",
+        "title": "Costco Product Reviews",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/reviews/kitchen-appliances/",
+        "title": "Best Kitchen Appliances at Costco",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/savings/": [
+      {
+        "url": "/savings/membership-calculator/",
+        "title": "Costco Membership Calculator",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/savings/membership-calculator/": [
+      {
+        "url": "/savings/",
+        "title": "Costco Savings Tools",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tools/": [
+      {
+        "url": "/tools/nutrition-calculator/",
+        "title": "Costco Food Court Nutrition Calculator",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tools/price-history/",
+        "title": "Costco Price History Tracker",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tools/nutrition-calculator/": [
+      {
+        "url": "/tools/",
+        "title": "Tools — Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tools/price-history/",
+        "title": "Costco Price History Tracker",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tools/price-history/": [
+      {
+        "url": "/tools/",
+        "title": "Tools — Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tools/nutrition-calculator/",
+        "title": "Costco Food Court Nutrition Calculator",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tutorials/air-fryer/": [
+      {
+        "url": "/tutorials/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun — Complete Breakdown",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/food-court-calories/",
+        "title": "Costco Food Court Calories — Complete Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/",
+        "title": "Tutorials & Guides — Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tutorials/calories-without-bun/": [
+      {
+        "url": "/tutorials/air-fryer/",
+        "title": "How to Cook Costco Hot Dog in Air Fryer",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/food-court-calories/",
+        "title": "Costco Food Court Calories — Complete Guide",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/",
+        "title": "Tutorials & Guides — Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tutorials/food-court-calories/": [
+      {
+        "url": "/tutorials/air-fryer/",
+        "title": "How to Cook Costco Hot Dog in Air Fryer",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun — Complete Breakdown",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/",
+        "title": "Tutorials & Guides — Costco Hot Dog Guide",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ],
+    "/tutorials/": [
+      {
+        "url": "/tutorials/air-fryer/",
+        "title": "How to Cook Costco Hot Dog in Air Fryer",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun — Complete Breakdown",
+        "funnelStage": "",
+        "score": 0.7
+      },
+      {
+        "url": "/tutorials/food-court-calories/",
+        "title": "Costco Food Court Calories — Complete Guide",
+        "funnelStage": "",
+        "score": 0.7
+      }
+    ]
+  }
+}

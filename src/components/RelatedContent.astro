@@ -8,6 +8,14 @@ export interface Props {
 
 const { currentPage, title = 'Continue Reading' } = Astro.props;
 
+// Determine current page's funnel stage from URL
+function inferFunnelStage(url: string): string {
+  if (url.includes('/reviews/') || url.includes('/savings/')) return 'C';
+  if (url.includes('/tutorials/') || url.includes('/tools/')) return 'B';
+  return 'A'; // /hot-dog/, /faq/, /guide/ etc.
+}
+const fromStage = inferFunnelStage(currentPage);
+
 const pageData = (relatedData.pages as any)[currentPage];
 if (!pageData) return;
 
@@ -52,7 +60,7 @@ const allGroups = [
               onclick={`
                 if (typeof gtag !== 'undefined') {
                   gtag('event', 'funnel_progression', {
-                    from_stage: '${group.label === 'Learn' ? 'A' : group.label === 'Tools' ? 'B' : 'C'}',
+                    from_stage: '${fromStage}',
                     to_stage: '${item.stage}',
                     target_url: this.dataset.funnelTarget,
                     source_url: '${currentPage}'
