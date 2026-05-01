@@ -8,8 +8,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   type="website"
 >
   <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <h1 class="text-4xl font-bold text-gray-900 mb-4">Membership Calculator</h1>
-    <p class="text-lg text-gray-600 mb-8">See how much you need to spend at Costco to break even on your membership.</p>
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Membership Calculator</h1>
+    <p class="text-lg text-gray-600 mb-8">See how much you need to spend at Costco to break even on your membership fee — and whether upgrading to Executive is worth it.</p>
 
     <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
       <div class="space-y-4">
@@ -49,9 +49,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <p class="text-sm text-gray-600">Annual reward check</p>
       </div>
     </div>
-  </div>
 
-  <script>
+    <div class="mt-12 prose prose-lg max-w-none text-gray-700">
+      <h2>How the Membership Calculator Works</h2>
+      <p>
+        This calculator helps you determine whether a Costco membership pays for itself based on your shopping habits. Enter your average monthly spending at Costco and select your membership tier to see your break-even point and potential savings.
+      </p>
+      <p>
+        For Gold Star members ($60/year), you break even when your annual savings from Costco's lower prices exceed the $60 fee. For Executive members ($120/year), you need to spend at least $3,000 per year to earn back the $60 upgrade cost through the 2% reward program.
+      </p>
+
+      <h2>Gold Star vs Executive: Which Should You Choose?</h2>
+      <p>
+        Most households spending over $250/month at Costco will benefit from the Executive membership. The 2% annual reward on qualified purchases can exceed the $60 upgrade cost, making the Executive tier effectively free or even profitable. However, if you visit Costco less than once a month, the Gold Star membership is the safer choice.
+      </p>
+      <p>
+        Don't forget to factor in <a href="/price/" class="text-red-700 hover:underline">food court savings</a> — the famous $1.50 hot dog combo alone can save you $200+ per year compared to similar fast food meals.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+<script>
     const btn = document.getElementById('calculateBtn');
     const membershipSelect = document.getElementById('membershipType') as HTMLSelectElement;
     const monthlyInput = document.getElementById('monthlySpend') as HTMLInputElement;
@@ -86,4 +104,3 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     btn?.addEventListener('click', calculate);
     calculate();
   </script>
-</BaseLayout>
