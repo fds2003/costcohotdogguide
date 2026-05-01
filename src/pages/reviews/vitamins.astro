@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const vitamins = [
   { name: 'Kirkland Signature Daily Multi', price: '$14.99', rating: 4.5, pros: ['Great value', 'Comprehensive formula'], cons: ['Large tablets'] },
@@ -63,5 +64,6 @@ const vitamins = [
     <p class="text-gray-700 mb-8">Kirkland Signature vitamins consistently offer excellent value compared to name-brand alternatives. The quality is comparable to brands like Nature Made and Centrum, often at 30-50% lower prices.</p>
 
     <RelatedProducts category="Health" title="Top Vitamin Picks on Amazon" />
+    <RelatedContent currentPage="/reviews/vitamins/" />
   </article>
 </BaseLayout>

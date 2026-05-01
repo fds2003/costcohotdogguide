@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const products = [
   { name: 'Thomasville Modular Sectional', price: '$1,299', rating: 4.5, pros: ['Modular design', 'High-quality fabric', 'Easy assembly'], cons: ['Long lead time', 'Large footprint'] },
@@ -68,5 +69,6 @@ const modifiedAt = '2026-04-29';
     <p class="text-gray-700 mb-8">Costco furniture is ideal for shoppers who want solid quality without the boutique markup. The modular sectional is particularly impressive for the price point. If you are furnishing a home office, the Bayside desk is a standout value with its integrated charging features.</p>
 
     <RelatedProducts category="Kitchen" title="Home Organization Picks" />
+    <RelatedContent currentPage="/reviews/furniture/" />
   </article>
 </BaseLayout>

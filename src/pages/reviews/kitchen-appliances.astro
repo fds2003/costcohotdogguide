@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const appliances = [
   { name: 'Ninja Air Fryer Pro XL', price: '$89', rating: 4.6, bestFor: 'Hot dogs, fries, quick meals', why: 'Even heating, easy cleanup' },
@@ -43,5 +44,6 @@ const appliances = [
     </div>
 
     <RelatedProducts category="Kitchen" title="Top Kitchen Deals on Amazon" />
+    <RelatedContent currentPage="/reviews/kitchen-appliances/" />
   </article>
 </BaseLayout>

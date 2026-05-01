@@ -255,6 +255,46 @@
       "priceRange": "$8 - $25"
     },
     {
+      "id": "hot_dog_buns",
+      "title": "Hot Dog Buns",
+      "description": "Soft, bakery-style hot dog buns — perfect for your Costco hot dogs at home.",
+      "image": "/images/hot-dog-buns.jpg",
+      "linkKey": "hot_dog_buns",
+      "priceRange": "$4 - $8"
+    },
+    {
+      "id": "mustard",
+      "title": "Yellow Mustard",
+      "description": "Classic yellow mustard — the essential Costco hot dog topping.",
+      "image": "/images/mustard.jpg",
+      "linkKey": "mustard",
+      "priceRange": "$3 - $8"
+    },
+    {
+      "id": "gluten_free_buns",
+      "title": "Gluten-Free Hot Dog Buns",
+      "description": "Soft gluten-free buns so everyone can enjoy the Costco hot dog experience.",
+      "image": "/images/gluten-free-buns.jpg",
+      "linkKey": "gluten_free_buns",
+      "priceRange": "$6 - $12"
+    },
+    {
+      "id": "almond_butter",
+      "title": "Almond Butter",
+      "description": "Creamy, protein-rich almond butter — a healthy Costco pantry staple.",
+      "image": "/images/almond-butter.jpg",
+      "linkKey": "almond_butter",
+      "priceRange": "$8 - $18"
+    },
+    {
+      "id": "basmati_rice",
+      "title": "Basmati Rice",
+      "description": "Premium long-grain basmati rice in bulk — a versatile Costco kitchen essential.",
+      "image": "/images/basmati-rice.jpg",
+      "linkKey": "basmati_rice",
+      "priceRange": "$10 - $25"
+    },
+    {
       "id": "hot_dog_roller",
       "title": "Hot Dog Rollers",
       "description": "Cook restaurant-style hot dogs at home with an electric roller grill.",
