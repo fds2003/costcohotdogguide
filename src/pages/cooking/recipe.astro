@@ -43,14 +43,44 @@ const steps = [
     image: null
   }
 ];
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Costco Hot Dog Recipe: Make It at Home",
+  "description": "Step-by-step recipe for making Costco-style hot dogs at home. Ingredients, measurements, cooking times, and serving suggestions.",
+  "totalTime": "PT20M",
+  "prepTime": "PT5M",
+  "cookTime": "PT15M",
+  "recipeYield": "4 servings",
+  "supply": ingredients.map(ing => ({
+    "@type": "HowToSupply",
+    "name": ing.item,
+    "requiredAmount": ing.amount
+  })),
+  "tool": [
+    { "@type": "HowToTool", "name": "Large pot or deep skillet" },
+    { "@type": "HowToTool", "name": "Tongs" },
+    { "@type": "HowToTool", "name": "Steamer basket" },
+    { "@type": "HowToTool", "name": "Cutting board and sharp knife" },
+    { "@type": "HowToTool", "name": "Meat thermometer" }
+  ],
+  "step": steps.map((step, i) => ({
+    "@type": "HowToStep",
+    "position": i + 1,
+    "name": step.title,
+    "text": step.text
+  }))
+};
 ---
 
 <BaseLayout
   title="Costco Hot Dog Recipe: Make It at Home"
   description="Step-by-step recipe for making Costco-style hot dogs at home. Ingredients, measurements, cooking times, and serving suggestions."
-  type="howto"
+  type="article"
   publishedAt="2026-04-29"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Recipe</h1>
     <p class="text-lg text-gray-600 mb-8">The closest you can get to the food court experience without a membership card. Serves 4.</p>
@@ -143,16 +173,16 @@ const steps = [
 
     <h2 class="text-2xl font-bold text-gray-900 mb-4">Explore More</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-      <a href="/cooking/at-home/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">
+      <a href="/hot-dog/cooking-at-home/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">
         <h3 class="font-semibold text-red-700">Cooking at Home Guide</h3>
         <p class="text-sm text-gray-600 mt-1">Equipment, sourcing, and step-by-step methods</p>
       </a>
-      <a href="/ingredients/ingredients-list/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">
+      <a href="/hot-dog/ingredients/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">
         <h3 class="font-semibold text-red-700">Complete Ingredients</h3>
         <p class="text-sm text-gray-600 mt-1">What's in the official Costco hot dog</p>
       </a>
-      <a href="/nutrition/calories/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">
-        <h3 class="font-semibold text-red-700">Calorie Calculator</h3>
+      <a href="/hot-dog/calories/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">
+        <h3 class="font-semibold text-red-700">Calorie Breakdown</h3>
         <p class="text-sm text-gray-600 mt-1">Interactive nutrition with condiment toggles</p>
       </a>
       <a href="/articles/food-court-menu/" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-sm transition">

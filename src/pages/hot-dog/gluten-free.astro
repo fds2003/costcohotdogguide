@@ -17,29 +17,6 @@ const funnelStage = "A";
   faqData={[{"question":"Are Costco hot dogs gluten free?","answer":"The hot dog meat itself does not contain gluten ingredients, but it is served in a wheat bun. Cross-contamination in the food court is likely."},{"question":"Is the bun safe for celiac patients?","answer":"No, the standard Costco hot dog bun contains wheat flour. People with celiac disease should avoid it unless they bring their own gluten-free bun."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Are Costco hot dogs gluten free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The hot dog meat itself does not contain gluten ingredients, but it is served in a wheat bun. Cross-contamination in the food court is likely."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is the bun safe for celiac patients?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, the standard Costco hot dog bun contains wheat flour. People with celiac disease should avoid it unless they bring their own gluten-free bun."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Gluten-Free Options</h1>

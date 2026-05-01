@@ -17,29 +17,6 @@ const funnelStage = "A";
   faqData={[{"question":"Is a Costco hot dog healthy?","answer":"Costco hot dogs provide 24g of protein per serving, which is substantial. However, they are high in sodium (1,700mg) and saturated fat. Moderation is key for a balanced diet."},{"question":"What are the main nutrients in a Costco hot dog?","answer":"The main nutrients are protein (24g), carbohydrates (46g from the bun), fat (33g), and sodium (1,700mg). It also contains iron, calcium, and B vitamins."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is a Costco hot dog healthy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Costco hot dogs provide 24g of protein per serving, which is substantial. However, they are high in sodium (1,700mg) and saturated fat. Moderation is key for a balanced diet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the main nutrients in a Costco hot dog?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The main nutrients are protein (24g), carbohydrates (46g from the bun), fat (33g), and sodium (1,700mg). It also contains iron, calcium, and B vitamins."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Nutrition</h1>

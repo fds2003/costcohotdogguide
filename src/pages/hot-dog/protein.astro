@@ -17,29 +17,6 @@ const funnelStage = "A";
   faqData={[{"question":"How much protein is in a Costco hot dog?","answer":"A Costco hot dog contains 24 grams of protein per serving. This is one of the highest protein contents among fast food hot dogs."},{"question":"Can it be part of a high-protein diet?","answer":"Yes, with 24g of protein, it is an excellent protein source. Pair with a protein shake or Greek yogurt for a complete high-protein meal."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How much protein is in a Costco hot dog?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Costco hot dog contains 24 grams of protein per serving. This is one of the highest protein contents among fast food hot dogs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can it be part of a high-protein diet?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, with 24g of protein, it is an excellent protein source. Pair with a protein shake or Greek yogurt for a complete high-protein meal."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Protein Content</h1>

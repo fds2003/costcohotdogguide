@@ -17,29 +17,6 @@ const funnelStage = "A";
   faqData={[{"question":"What are common questions about Costco hot dog?","answer":"The most common questions are about calories (570 per serving), ingredients (beef hot dog with wheat bun), price ($1.50 combo), and whether they are healthy (moderation is key)."},{"question":"Is it safe for everyone to eat?","answer":"Most people can safely enjoy Costco hot dogs. However, those with wheat allergies, celiac disease, or sodium restrictions should exercise caution or modify their order."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What are common questions about Costco hot dog?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The most common questions are about calories (570 per serving), ingredients (beef hot dog with wheat bun), price ($1.50 combo), and whether they are healthy (moderation is key)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it safe for everyone to eat?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most people can safely enjoy Costco hot dogs. However, those with wheat allergies, celiac disease, or sodium restrictions should exercise caution or modify their order."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog FAQ</h1>

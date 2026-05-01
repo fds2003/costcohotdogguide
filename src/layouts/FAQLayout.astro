@@ -28,28 +28,6 @@ const {
   canonical,
 } = Astro.props;
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": answer
-      }
-    },
-    ...relatedQuestions.map(q => ({
-      "@type": "Question",
-      "name": q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": `Learn more about ${q} in our comprehensive guide.`
-      }
-    }))
-  ]
-};
 ---
 
 <BaseLayout
@@ -61,7 +39,6 @@ const faqSchema = {
   faqData={[{ question, answer }]}
   canonical={canonical}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
   <div class="max-w-4xl mx-auto px-4 py-12">
     <!-- Blue breadcrumb indicator -->

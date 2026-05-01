@@ -17,39 +17,69 @@ const funnelStage = "A";
   faqData={[{"question":"What is in a Costco hot dog?","answer":"Costco hot dogs contain beef, water, corn syrup, salt, spices, garlic powder, and sodium nitrite. The bun contains enriched wheat flour, water, sugar, yeast, and vegetable oil."},{"question":"Are there allergens in Costco hot dogs?","answer":"Yes, the bun contains wheat (gluten). The hot dog itself may contain traces of soy. Cross-contamination with dairy is possible in the food court."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is in a Costco hot dog?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Costco hot dogs contain beef, water, corn syrup, salt, spices, garlic powder, and sodium nitrite. The bun contains enriched wheat flour, water, sugar, yeast, and vegetable oil."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are there allergens in Costco hot dogs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, the bun contains wheat (gluten). The hot dog itself may contain traces of soy. Cross-contamination with dairy is possible in the food court."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Ingredients</h1>
     <p class="text-lg text-gray-600 mb-8">Full list of Costco hot dog ingredients including meat type, bun components, additives, preservatives, and allergen information.</p>
 
+    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-8">
+      <p class="text-yellow-800 text-sm">
+        <strong>Allergen Warning:</strong> Contains <strong>wheat, soy, and sulfites</strong>. May contain traces of milk and eggs. The bun contains gluten. Always check with your local Costco food court for the most current ingredient information.
+      </p>
+    </div>
+
   <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Hot Dog Ingredients</h2>
-    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Hot Dog Meat Type</h3>
-    <p class="text-gray-700 leading-relaxed mb-4">The Kirkland Signature food court hot dog is made from 100% beef — no pork, chicken, or turkey. It contains no fillers, no by-products, no artificial colors, and no corn syrup. The full ingredient list is: beef, water, salt, sodium erythorbate (a curing accelerator that maintains color), sodium nitrite (a preservative that prevents botulism), and natural flavorings. The beef used is USDA-inspected, and Costco processes it in their own facilities in Tracy, California and Manteno, Illinois. This vertical integration ensures quality control from raw material to finished product.</p>
-    <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Bun Ingredients</h3>
-    <p class="text-gray-700 leading-relaxed mb-4">The enriched wheat bun contains: enriched wheat flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), water, sugar, yeast, soy lecithin (emulsifier), and may contain traces of dairy and sesame. The bun is not gluten-free and is produced in a facility that processes multiple allergens. If you have wheat, soy, or dairy allergies, the <a href="/hot-dog/allergens/" class="text-blue-600 hover:text-blue-800 underline">allergen information page</a> provides detailed guidance.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">The Kirkland Signature food court hot dog is made from 100% beef — no pork, chicken, or turkey. It contains no fillers, no by-products, and no artificial colors. The beef used is USDA-inspected, and Costco processes it in their own facilities in Tracy, California and Manteno, Illinois.</p>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Ingredient</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Purpose</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Notes</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-6 py-3 font-medium">Beef</td><td class="px-6 py-3 text-gray-600">Primary protein source</td><td class="px-6 py-3 text-gray-600">100% beef, no pork or poultry fillers</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Water</td><td class="px-6 py-3 text-gray-600">Moisture, texture</td><td class="px-6 py-3 text-gray-600">Standard food-grade water</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Salt</td><td class="px-6 py-3 text-gray-600">Flavor, preservation</td><td class="px-6 py-3 text-gray-600">Contributes to high sodium content</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Corn Syrup</td><td class="px-6 py-3 text-gray-600">Sweetness, browning</td><td class="px-6 py-3 text-gray-600">Small amount for flavor balance</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Dextrose</td><td class="px-6 py-3 text-gray-600">Fermentation aid</td><td class="px-6 py-3 text-gray-600">Natural sugar for curing process</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Sodium Lactate</td><td class="px-6 py-3 text-gray-600">Preservative, pH control</td><td class="px-6 py-3 text-gray-600">Extends shelf life naturally</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Sodium Phosphates</td><td class="px-6 py-3 text-gray-600">Moisture retention</td><td class="px-6 py-3 text-gray-600">Keeps hot dog juicy during cooking</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Flavorings</td><td class="px-6 py-3 text-gray-600">Taste profile</td><td class="px-6 py-3 text-gray-600">Natural and artificial spice blend</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Paprika</td><td class="px-6 py-3 text-gray-600">Color, mild flavor</td><td class="px-6 py-3 text-gray-600">Natural red coloring</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Sodium Erythorbate</td><td class="px-6 py-3 text-gray-600">Antioxidant</td><td class="px-6 py-3 text-gray-600">Vitamin C derivative, stabilizes color</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Sodium Nitrite</td><td class="px-6 py-3 text-gray-600">Preservative, color fixative</td><td class="px-6 py-3 text-gray-600">Prevents botulism, maintains pink color</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Bun Ingredients</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">The enriched wheat bun is not gluten-free and is produced in a facility that processes multiple allergens. If you have wheat, soy, or dairy allergies, see our <a href="/hot-dog/allergens/" class="text-blue-600 hover:text-blue-800 underline">allergen information page</a>.</p>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Ingredient</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Purpose</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Allergen</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-6 py-3 font-medium">Enriched Wheat Flour</td><td class="px-6 py-3 text-gray-600">Structure, bulk</td><td class="px-6 py-3 text-red-600 font-medium">Gluten, Wheat</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Water</td><td class="px-6 py-3 text-gray-600">Hydration</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">High Fructose Corn Syrup</td><td class="px-6 py-3 text-gray-600">Sweetness, browning</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Yeast</td><td class="px-6 py-3 text-gray-600">Leavening</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Soybean Oil</td><td class="px-6 py-3 text-gray-600">Softness, moisture</td><td class="px-6 py-3 text-red-600 font-medium">Soy</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Salt</td><td class="px-6 py-3 text-gray-600">Flavor</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Wheat Gluten</td><td class="px-6 py-3 text-gray-600">Chewiness, structure</td><td class="px-6 py-3 text-red-600 font-medium">Gluten, Wheat</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Mono- and Diglycerides</td><td class="px-6 py-3 text-gray-600">Emulsifier, texture</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Calcium Propionate</td><td class="px-6 py-3 text-gray-600">Mold inhibitor</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Sorbic Acid</td><td class="px-6 py-3 text-gray-600">Preservative</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+        </tbody>
+      </table>
+    </div>
 
   <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Additives & Allergens</h2>
     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Common Additives Explained</h3>

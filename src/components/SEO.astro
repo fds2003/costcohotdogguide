@@ -14,6 +14,7 @@ export interface Props {
     datePublished?: string;
     dateModified?: string;
   };
+  breadcrumbs?: Array<{ name: string; href: string }>;
 }
 
 const {
@@ -25,7 +26,8 @@ const {
   modifiedAt,
   image = '/og-image.jpg',
   faqData,
-  articleSchema
+  articleSchema,
+  breadcrumbs: customBreadcrumbs
 } = Astro.props;
 
 const siteName = 'Costco Hot Dog Guide';
@@ -33,6 +35,52 @@ const siteUrl = 'https://costcohotdogguide.com';
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
 const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
 const fullCanonical = canonical || `${siteUrl}${Astro.url.pathname}`;
+
+// Auto-generate breadcrumbs from URL path
+const segmentLabels: Record<string, string> = {
+  'hot-dog': 'Hot Dog',
+  'faq': 'FAQ',
+  'tutorials': 'Tutorials',
+  'ingredients': 'Ingredients',
+  'nutrition': 'Nutrition',
+  'cooking': 'Cooking',
+  'articles': 'Articles',
+  'reviews': 'Reviews',
+  'menu': 'Menu',
+  'data': 'Data',
+  'business': 'Business',
+  'guides': 'Guides',
+  'savings': 'Savings',
+  'tools': 'Tools',
+};
+
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+const segments = pathname.split('/').filter(Boolean);
+
+const autoBreadcrumbs = segments.length === 0 ? [] : [
+  { name: 'Home', href: '/' },
+  ...segments.map((seg, i) => {
+    const isLast = i === segments.length - 1;
+    const name = isLast ? title : (segmentLabels[seg] || seg.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()));
+    const href = '/' + segments.slice(0, i + 1).join('/') + '/';
+    return { name, href };
+  })
+];
+
+const breadcrumbs = customBreadcrumbs || autoBreadcrumbs;
+
+const breadcrumbSchema = breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    ...breadcrumbs.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": item.name,
+      "item": `${siteUrl}${item.href}`
+    }))
+  ]
+} : null;
 
 let structuredData: Record<string, any> = {
   '@context': 'https://schema.org',
@@ -63,6 +111,19 @@ if (type === 'article' || type === 'review') {
   };
 }
 
+// Enhance WebSite type with name, url, and SearchAction on homepage
+if (type === 'website') {
+  structuredData.name = siteName;
+  structuredData.url = siteUrl;
+  if (pathname === '') {
+    structuredData.potentialAction = {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/?q={search_term_string}`,
+      'query-input': 'required name=search_term_string'
+    };
+  }
+}
+
 if (type === 'faq' && faqData) {
   structuredData.mainEntity = faqData.map(item => ({
     '@type': 'Question',
@@ -73,6 +134,22 @@ if (type === 'faq' && faqData) {
     }
   }));
 }
+
+// Generate separate FAQPage schema when article pages also have FAQ data
+const faqSchemaString = (type === 'article' && faqData && faqData.length > 0)
+  ? JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqData.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer
+        }
+      }))
+    })
+  : null;
 
 const structuredDataString = JSON.stringify(structuredData);
 ---
@@ -99,5 +176,7 @@ const structuredDataString = JSON.stringify(structuredData);
 
 <title>{fullTitle}</title>
 
-<!-- Structured Data -->
+<!-- Structured Data: Page Type -->
 <script type="application/ld+json" set:html={structuredDataString} />
+{breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+{faqSchemaString && <script type="application/ld+json" set:html={faqSchemaString} />}

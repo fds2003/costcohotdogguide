@@ -17,33 +17,91 @@ const funnelStage = "B";
   faqData={[{"question":"Can you cook Costco hot dogs at home?","answer":"Yes, Costco hot dogs can be cooked at home using oven, stove-top, air fryer, or grill methods. They are pre-cooked, so you are mainly heating them through."},{"question":"What's the best method for reheating?","answer":"The air fryer produces the best texture (crispy outside, juicy inside). Oven baking at 375°F for 10-12 minutes is a close second."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Can you cook Costco hot dogs at home?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Costco hot dogs can be cooked at home using oven, stove-top, air fryer, or grill methods. They are pre-cooked, so you are mainly heating them through."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's the best method for reheating?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The air fryer produces the best texture (crispy outside, juicy inside). Oven baking at 375°F for 10-12 minutes is a close second."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">How to Cook Costco Hot Dog at Home</h1>
-    <p class="text-lg text-gray-600 mb-8">Complete guide to cooking Costco hot dogs at home. Oven, stove-top, grilling, and reheating methods with time and temperature.</p>
+    <p class="text-lg text-gray-600 mb-8">Complete guide to cooking Costco hot dogs at home. Equipment, ingredients, step-by-step instructions, and four cooking methods with time and temperature.</p>
+
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-bold text-red-900 mb-2">The Challenge</h2>
+      <p class="text-red-800">While you can't perfectly replicate the Costco food court experience, you can get surprisingly close with the right ingredients and technique.</p>
+    </div>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Equipment You'll Need</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="bg-white rounded-lg border border-gray-200 p-4">
+        <h3 class="font-bold text-gray-900 mb-2">Essential</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+          <li>Large pot or deep skillet</li>
+          <li>Tongs</li>
+          <li>Meat thermometer (recommended)</li>
+          <li>Cutting board and knife</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-4">
+        <h3 class="font-bold text-gray-900 mb-2">For the Full Experience</h3>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+          <li>Hot dog roller grill</li>
+          <li>Steamer for buns</li>
+          <li>Condiment squeeze bottles</li>
+          <li>Red plastic basket and checkered paper</li>
+        </ul>
+      </div>
+    </div>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredients</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Item</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Recommendation</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Costco Alternative</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-6 py-3 font-medium">Hot Dogs</td><td class="px-6 py-3 text-gray-600">Kirkland Signature Beef Franks</td><td class="px-6 py-3 text-green-700 font-medium">Available in-store</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Buns</td><td class="px-6 py-3 text-gray-600">Ball Park or Wonder buns</td><td class="px-6 py-3 text-green-700 font-medium">Kirkland buns (bakery)</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Mustard</td><td class="px-6 py-3 text-gray-600">French's Classic Yellow</td><td class="px-6 py-3 text-green-700 font-medium">Kirkland organic mustard</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Ketchup</td><td class="px-6 py-3 text-gray-600">Heinz</td><td class="px-6 py-3 text-green-700 font-medium">Kirkland organic ketchup</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Relish</td><td class="px-6 py-3 text-gray-600">Heinz Sweet Relish</td><td class="px-6 py-3 text-gray-600">—</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Onions</td><td class="px-6 py-3 text-gray-600">White onion, finely diced</td><td class="px-6 py-3 text-green-700 font-medium">Bulk onions (produce)</td></tr>
+          <tr><td class="px-6 py-3 font-medium">Soda</td><td class="px-6 py-3 text-gray-600">Pepsi products</td><td class="px-6 py-3 text-green-700 font-medium">Kirkland sparkling water</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Step-by-Step Instructions</h2>
+    <div class="space-y-6 mb-10">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+        <div>
+          <h3 class="font-bold text-gray-900">Bring Water to a Simmer</h3>
+          <p class="text-gray-700">Fill a large pot with water and bring it to a gentle simmer (not a rolling boil). Costco food courts use a hot water bath or steam to cook their hot dogs, which keeps them juicy. Boiling aggressively can split the casing.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+        <div>
+          <h3 class="font-bold text-gray-900">Cook the Hot Dogs</h3>
+          <p class="text-gray-700">Add the hot dogs to the simmering water. Cook for 5-7 minutes until heated through (internal temperature of 160°F / 71°C). For a more authentic experience, finish on a hot grill or pan for 1 minute per side to get light char marks.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+        <div>
+          <h3 class="font-bold text-gray-900">Steam the Buns</h3>
+          <p class="text-gray-700">Place buns in a steamer basket over the hot dog water for 30-60 seconds. Alternatively, wrap them in a damp paper towel and microwave for 15 seconds. The bun should be soft and warm, never crispy or toasted.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+        <div>
+          <h3 class="font-bold text-gray-900">Assemble Your Hot Dog</h3>
+          <p class="text-gray-700">Place the hot dog in the steamed bun. Add mustard in a zigzag pattern, a line of ketchup if desired, a spoonful of relish, and a generous sprinkle of diced white onions. Serve immediately with a 20 oz soda.</p>
+        </div>
+      </div>
+    </div>
 
   <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Oven Baking</h2>
     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Preheat and Bake Time</h3>
@@ -56,6 +114,34 @@ const funnelStage = "B";
     <p class="text-gray-700 leading-relaxed mb-4">Boiling is the quickest method: bring a pot of water to a boil, reduce to a simmer, and cook the hot dogs for 5-6 minutes. This method produces a plump, juicy hot dog but without the crispy skin. Pan-frying delivers the best stovetop results — heat a tablespoon of oil in a skillet over medium heat, add the hot dogs, and cook for 6-8 minutes, turning frequently to brown evenly. The rendered beef fat creates a delicious crust that closely mimics the griddle-seared flavor of the food court.</p>
     <h3 class="text-xl font-semibold text-gray-800 mt-6 mb-3">Reheating Tips</h3>
     <p class="text-gray-700 leading-relaxed mb-4">To reheat a previously cooked Costco hot dog, the microwave is fastest (30-45 seconds) but produces a rubbery texture. For better results, reheat in a 350°F oven for 5-7 minutes or pan-fry over medium heat for 3-4 minutes. The <a href="/hot-dog/air-fryer-guide/" class="text-blue-600 hover:text-blue-800 underline">air fryer reheats hot dogs</a> beautifully at 350°F for 3-4 minutes. Always reheat to an internal temperature of 160°F. Never reheat a hot dog more than once — leftover hot dogs should be consumed or discarded after initial reheating.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Pro Tips for Authenticity</h2>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8">
+      <li><strong>Don't toast the bun</strong> — Costco buns are soft and steamed, never toasted.</li>
+      <li><strong>Use yellow mustard only</strong> — Dijon or spicy mustard changes the flavor profile entirely.</li>
+      <li><strong>Dice onions finely</strong> — Large onion chunks are not authentic to the Costco experience.</li>
+      <li><strong>Serve in a red basket</strong> — The presentation is half the nostalgia.</li>
+    </ul>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Cost Breakdown: Home vs. Food Court</h2>
+    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-8">
+      <table class="w-full">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Item</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Home Cost</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Food Court Cost</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr><td class="px-6 py-3">Hot dog + bun</td><td class="px-6 py-3">~$0.80 (bulk pack)</td><td class="px-6 py-3 font-bold text-green-700">$1.50</td></tr>
+          <tr><td class="px-6 py-3">Condiments</td><td class="px-6 py-3">~$0.10</td><td class="px-6 py-3">Included</td></tr>
+          <tr><td class="px-6 py-3">Soda</td><td class="px-6 py-3">~$0.30</td><td class="px-6 py-3">Included</td></tr>
+          <tr class="bg-gray-50"><td class="px-6 py-3 font-bold">Total per serving</td><td class="px-6 py-3 font-bold">~$1.20</td><td class="px-6 py-3 font-bold text-green-700">$1.50</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-gray-600 text-sm mb-8">Surprisingly, making it at home barely saves money — and you miss out on the experience. That's why the food court combo is such an incredible deal.</p>
 
     <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
     <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">

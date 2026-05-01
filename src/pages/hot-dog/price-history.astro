@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
 import RelatedProducts from '../../components/RelatedProducts.astro';
+import PriceHistoryChart from '../../components/PriceHistoryChart.astro';
 
 const keywordCore = "costco hot dog price history";
 const keywordVariants = ["Why has Costco hot dog stayed $1.50 for decades?", "Have prices varied regionally?"];
@@ -14,36 +15,21 @@ const funnelStage = "A";
   description="Costco hot dog price history: $1.50 since 1985, never raised. Inflation-adjusted cost analysis, business strategy, and why it's the most stable price in retail."
   type="article"
   publishedAt="2026-04-29"
-  faqData={[{"question":"Why has Costco hot dog stayed $1.50 for decades?","answer":"Costco views the hot dog as a sacred membership perk. Former CEO W. Craig Jelinek once said, \"If you raise the price of the hot dog, I will kill you.\" The company absorbs rising costs."},{"question":"Have prices varied regionally?","answer":"No, the $1.50 price is remarkably consistent across all Costco locations in the United States. International prices vary slightly due to currency and local costs."}]}
+  faqData={[{"question":"Why has Costco hot dog stayed $1.50 for decades?","answer":"Costco views the hot dog as a sacred membership perk. Former CEO W. Craig Jelinek once said, 'If you raise the price of the hot dog, I will kill you.' The company absorbs rising costs."},{"question":"Have prices varied regionally?","answer":"No, the $1.50 price is remarkably consistent across all Costco locations in the United States. International prices vary slightly due to currency and local costs."},{"question":"Will the Costco hot dog price increase?","answer":"As of 2026, there are no plans to increase the price. Costco leadership has consistently reaffirmed their commitment to the $1.50 price point."}]}
 >
   <!-- Consider merging content or using 301 redirect to avoid cannibalization -->
-  
-  <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Why has Costco hot dog stayed $1.50 for decades?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Costco views the hot dog as a sacred membership perk. Former CEO W. Craig Jelinek once said, \"If you raise the price of the hot dog, I will kill you.\" The company absorbs rising costs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Have prices varied regionally?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, the $1.50 price is remarkably consistent across all Costco locations in the United States. International prices vary slightly due to currency and local costs."
-        }
-      }
-    ]
-  })} />
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Price History</h1>
     <p class="text-lg text-gray-600 mb-8">Why has Costco hot dog stayed $1.50? Price milestones, inflation-adjusted cost, and the business strategy behind the iconic price point.</p>
+
+    <div class="bg-green-50 border border-green-200 rounded-xl p-8 mb-8 text-center">
+      <p class="text-5xl font-bold text-green-700 mb-2">$1.50</p>
+      <p class="text-xl text-green-800">Still the price. Still the deal.</p>
+      <p class="text-sm text-green-600 mt-2">No official price increase has ever occurred since 1985.</p>
+    </div>
+
+    <PriceHistoryChart />
 
   <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Price Milestones</h2>
     <p class="text-gray-700 leading-relaxed mb-4">The Costco hot dog combo has been priced at $1.50 since its introduction in 1985. This means the price has remained frozen for over 40 years while virtually every other consumer product has seen dramatic increases. In 1985, the average gallon of gas cost $1.20, a movie ticket was $3.55, and the median home price was $89,000. Today those figures are $3.50+, $12+, and $420,000+ respectively. The <a href="/hot-dog/price/" class="text-blue-600 hover:text-blue-800 underline">price history</a> of the Costco hot dog stands alone as a rare instance of absolute price stability in the American economy.</p>
@@ -53,6 +39,56 @@ const funnelStage = "A";
 
   <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Business Strategy Behind Price</h2>
     <p class="text-gray-700 leading-relaxed mb-4">The $1.50 price point is not a mistake or oversight — it is a deliberate, board-level strategic decision. Costco leadership views the hot dog as a membership retention tool, not a profit center. With a 90%+ membership renewal rate, the strategy clearly works. Each hot dog sold reinforces the perception that Costco delivers extraordinary value, which keeps members paying $65-130 per year for the privilege of shopping there. The <a href="/hot-dog/why-so-cheap/" class="text-blue-600 hover:text-blue-800 underline">business model behind the cheap hot dog</a> is a masterclass in long-term customer loyalty over short-term profit.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Timeline of Price Increase Rumors</h2>
+    <div class="space-y-4 mb-8">
+      <div class="bg-white rounded-lg border border-gray-200 p-4 border-l-4 border-red-400">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-bold text-gray-900">July 2022 — "Inflation Forces Price Hike"</h3>
+            <p class="text-gray-600 text-sm">Source: Social media speculation</p>
+          </div>
+          <span class="bg-green-100 text-green-700 text-xs font-medium px-2 py-1 rounded">FALSE</span>
+        </div>
+        <p class="text-gray-700 mt-2">Rumors circulated that Costco would raise the price to $2.00 due to record inflation. CFO Richard Galanti publicly denied this.</p>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-4 border-l-4 border-yellow-400">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-bold text-gray-900">September 2023 — "Cup Size Reduced = Price Hike Coming"</h3>
+            <p class="text-gray-600 text-sm">Source: Financial analysts</p>
+          </div>
+          <span class="bg-yellow-100 text-yellow-700 text-xs font-medium px-2 py-1 rounded">MISLEADING</span>
+        </div>
+        <p class="text-gray-700 mt-2">Costco reduced the soda cup size from 20 oz to 16 oz in some locations. The price stayed at $1.50 — the cup change was a cost-cutting measure, not a price signal.</p>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-4 border-l-4 border-green-400">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="font-bold text-gray-900">March 2025 — New CEO Reaffirms Commitment</h3>
+            <p class="text-gray-600 text-sm">Source: Costco shareholder meeting</p>
+          </div>
+          <span class="bg-green-100 text-green-700 text-xs font-medium px-2 py-1 rounded">CONFIRMED HOLD</span>
+        </div>
+        <p class="text-gray-700 mt-2">CEO Ron Vachris directly addressed the hot dog price, calling it "sacred" and confirming there were no plans to change it.</p>
+      </div>
+    </div>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">The Math: Why They Can Keep It at $1.50</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">Each hot dog combo costs Costco approximately:</p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700 mb-4">
+      <li>Hot dog: ~$0.45 (bulk beef, in-house production)</li>
+      <li>Bun: ~$0.10 (bulk bakery contract)</li>
+      <li>Soda: ~$0.05 (fountain syrup is incredibly cheap)</li>
+      <li>Labor & overhead: ~$0.40 (food court staff, equipment)</li>
+      <li><strong>Total cost: ~$1.00 per combo</strong></li>
+    </ul>
+    <p class="text-gray-700 leading-relaxed mb-4">At $1.50 per sale, Costco makes about $0.50 gross profit per combo. But the real value isn't in the $0.50 — it's in the member who buys a $60-$120 membership because they trust Costco to always deliver value.</p>
+
+  <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Our Prediction</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+      <p class="text-blue-800">We believe the $1.50 price will remain unchanged through at least 2030. The cultural and strategic value of the price point far exceeds any marginal profit that could be gained from a modest increase.</p>
+    </div>
 
     <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
     <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
@@ -72,6 +108,10 @@ const funnelStage = "A";
       <div class="bg-gray-50 rounded-lg p-5">
         <h3 class="text-lg font-semibold text-gray-900 mb-2">Have prices varied regionally?</h3>
         <p class="text-gray-700">No, the $1.50 price is remarkably consistent across all Costco locations in the United States. International prices vary slightly due to currency and local costs.</p>
+      </div>
+      <div class="bg-gray-50 rounded-lg p-5">
+        <h3 class="text-lg font-semibold text-gray-900 mb-2">Will the Costco hot dog price increase?</h3>
+        <p class="text-gray-700">As of 2026, there are no plans to increase the price. Costco leadership has consistently reaffirmed their commitment to the $1.50 price point.</p>
       </div>
     </div>
     <RelatedContent currentPage="/hot-dog/price-history/" />
