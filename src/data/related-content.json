@@ -29,13 +29,13 @@
     },
     "/tutorials/air-fryer/": {
       "nextSteps": [
-        { "url": "/hot-dog/air-fryer-guide/", "title": "Complete Air Fryer Guide", "desc": "Detailed step-by-step instructions and timing", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Complete Air Fryer Guide", "desc": "Detailed step-by-step instructions and timing", "stage": "A" },
         { "url": "/hot-dog/cooking-at-home/", "title": "Cooking at Home", "desc": "All cooking methods compared: oven, pan, boil", "stage": "A" },
         { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Expert tips for perfect results every time", "stage": "B" },
         { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Top-rated models for Costco hot dogs", "stage": "C" }
       ]
     },
-    "/hot-dog/air-fryer-guide/": {
+    "/tutorials/air-fryer/": {
       "nextSteps": [
         { "url": "/tutorials/air-fryer/", "title": "Quick Air Fryer Guide", "desc": "Essential temperature and timing at a glance", "stage": "A" },
         { "url": "/hot-dog/cooking-at-home/", "title": "All Cooking Methods", "desc": "Oven, pan, boil, and air fryer compared", "stage": "A" },

@@ -41,5 +41,6 @@ export default defineConfig({
     '/nutrition/calories-without-bun/': '/tutorials/calories-without-bun/',
     '/business/history/': '/hot-dog/history/',
     '/business/': '/hot-dog/history/',
+    '/hot-dog/air-fryer-guide/': '/tutorials/air-fryer/',
   }
 });
