@@ -25,3 +25,9 @@
 /cooking/at-home/ /hot-dog/cooking-at-home/ 301
 /cooking/ /hot-dog/cooking-at-home/ 301
 /ingredients/ingredients-list/ /hot-dog/ingredients/ 301
+
+# Round 2: additional duplicate content dedup
+/hot-dog/air-fryer/ /tutorials/air-fryer/ 301
+/nutrition/calories-without-bun/ /tutorials/calories-without-bun/ 301
+/business/history/ /hot-dog/history/ 301
+/business/ /hot-dog/history/ 301

@@ -36,5 +36,10 @@ export default defineConfig({
     '/cooking/': '/hot-dog/cooking-at-home/',
     '/ingredients/ingredients-list/': '/hot-dog/ingredients/',
     '/faq/beef/': '/ingredients/beef-or-pork/',
+    // Round 2: additional duplicate content dedup
+    '/hot-dog/air-fryer/': '/tutorials/air-fryer/',
+    '/nutrition/calories-without-bun/': '/tutorials/calories-without-bun/',
+    '/business/history/': '/hot-dog/history/',
+    '/business/': '/hot-dog/history/',
   }
 });

@@ -27,7 +27,7 @@
         { "url": "/savings/membership-calculator/", "title": "Membership Calculator", "desc": "Calculate if Costco membership saves you money", "stage": "C" }
       ]
     },
-    "/hot-dog/air-fryer/": {
+    "/tutorials/air-fryer/": {
       "nextSteps": [
         { "url": "/hot-dog/air-fryer-guide/", "title": "Complete Air Fryer Guide", "desc": "Detailed step-by-step instructions and timing", "stage": "A" },
         { "url": "/hot-dog/cooking-at-home/", "title": "Cooking at Home", "desc": "All cooking methods compared: oven, pan, boil", "stage": "A" },
@@ -37,7 +37,7 @@
     },
     "/hot-dog/air-fryer-guide/": {
       "nextSteps": [
-        { "url": "/hot-dog/air-fryer/", "title": "Quick Air Fryer Guide", "desc": "Essential temperature and timing at a glance", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Quick Air Fryer Guide", "desc": "Essential temperature and timing at a glance", "stage": "A" },
         { "url": "/hot-dog/cooking-at-home/", "title": "All Cooking Methods", "desc": "Oven, pan, boil, and air fryer compared", "stage": "A" },
         { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Advanced techniques and troubleshooting", "stage": "B" },
         { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Our top picks for cooking hot dogs", "stage": "C" }
@@ -45,7 +45,7 @@
     },
     "/hot-dog/cooking-at-home/": {
       "nextSteps": [
-        { "url": "/hot-dog/air-fryer/", "title": "Air Fryer Method", "desc": "The most popular way to cook hot dogs at home", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Method", "desc": "The most popular way to cook hot dogs at home", "stage": "A" },
         { "url": "/hot-dog/calories/", "title": "Calorie Count", "desc": "How cooking method affects calories", "stage": "A" },
         { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Master the best at-home cooking method", "stage": "B" },
         { "url": "/reviews/kitchen/best-air-fryer/", "title": "Best Air Fryers", "desc": "Top-rated models for your kitchen", "stage": "C" },
@@ -199,7 +199,7 @@
         { "url": "/hot-dog/nutrition/", "title": "Nutrition Facts", "desc": "The most common FAQ topic", "stage": "A" },
         { "url": "/hot-dog/price/", "title": "Price & Value", "desc": "Why the $1.50 deal persists", "stage": "A" },
         { "url": "/hot-dog/ingredients/", "title": "Ingredients", "desc": "What's actually in the hot dog", "stage": "A" },
-        { "url": "/hot-dog/air-fryer/", "title": "Air Fryer Guide", "desc": "Cook it perfectly at home", "stage": "B" }
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Guide", "desc": "Cook it perfectly at home", "stage": "B" }
       ]
     },
     "/hot-dog/fun-facts/": {
@@ -234,7 +234,7 @@
     },
     "/reviews/kitchen/best-air-fryer/": {
       "nextSteps": [
-        { "url": "/hot-dog/air-fryer/", "title": "Air Fryer Quick Guide", "desc": "Essential temperature and timing at a glance", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Quick Guide", "desc": "Essential temperature and timing at a glance", "stage": "A" },
         { "url": "/hot-dog/nutrition/", "title": "Hot Dog Nutrition", "desc": "Full nutrition facts for the food court combo", "stage": "A" },
         { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Step-by-step cooking instructions", "stage": "B" }
       ]
@@ -275,7 +275,7 @@
     },
     "/reviews/kitchen-appliances/": {
       "nextSteps": [
-        { "url": "/hot-dog/air-fryer/", "title": "Air Fryer Guide", "desc": "Cook hot dogs perfectly at home", "stage": "A" },
+        { "url": "/tutorials/air-fryer/", "title": "Air Fryer Guide", "desc": "Cook hot dogs perfectly at home", "stage": "A" },
         { "url": "/hot-dog/cooking-at-home/", "title": "Cooking at Home", "desc": "All cooking methods compared", "stage": "A" },
         { "url": "/tutorials/air-fryer/", "title": "Air Fryer Tutorial", "desc": "Advanced techniques and tips", "stage": "B" }
       ]

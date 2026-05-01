@@ -250,7 +250,7 @@
         "score": 0.7
       }
     ],
-    "/business/history/": [
+    "/hot-dog/history/": [
       {
         "url": "/business/",
         "title": "Costco Hot Dog Business Story",
@@ -266,7 +266,7 @@
     ],
     "/business/": [
       {
-        "url": "/business/history/",
+        "url": "/hot-dog/history/",
         "title": "Costco Hot Dog History: 40 Years of $1.50",
         "funnelStage": "",
         "score": 0.7
@@ -280,7 +280,7 @@
     ],
     "/business/why-so-cheap/": [
       {
-        "url": "/business/history/",
+        "url": "/hot-dog/history/",
         "title": "Costco Hot Dog History: 40 Years of $1.50",
         "funnelStage": "",
         "score": 0.7
@@ -1284,7 +1284,7 @@
     ],
     "/hot-dog/air-fryer-guide/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.85
@@ -1314,7 +1314,7 @@
         "score": 0.65
       }
     ],
-    "/hot-dog/air-fryer/": [
+    "/tutorials/air-fryer/": [
       {
         "url": "/hot-dog/air-fryer-guide/",
         "title": "Air Fryer Costco Hot Dog | Complete Guide",
@@ -1348,7 +1348,7 @@
     ],
     "/hot-dog/allergens/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1380,7 +1380,7 @@
     ],
     "/hot-dog/calories/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1412,7 +1412,7 @@
     ],
     "/hot-dog/carbs/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1450,7 +1450,7 @@
         "score": 0.79
       },
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.7
@@ -1476,7 +1476,7 @@
     ],
     "/hot-dog/comparison/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -1508,7 +1508,7 @@
     ],
     "/hot-dog/controversies/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -1546,7 +1546,7 @@
         "score": 0.7
       },
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.65
@@ -1572,7 +1572,7 @@
     ],
     "/hot-dog/diet-tips/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -1604,7 +1604,7 @@
     ],
     "/hot-dog/faq/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.89
@@ -1636,7 +1636,7 @@
     ],
     "/hot-dog/fat/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1668,7 +1668,7 @@
     ],
     "/hot-dog/food-court/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.71
@@ -1700,7 +1700,7 @@
     ],
     "/hot-dog/fun-facts/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1732,7 +1732,7 @@
     ],
     "/hot-dog/gluten-free/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -1764,7 +1764,7 @@
     ],
     "/hot-dog/healthy/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1796,7 +1796,7 @@
     ],
     "/hot-dog/history/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1828,7 +1828,7 @@
     ],
     "/hot-dog/ingredients/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1860,7 +1860,7 @@
     ],
     "/hot-dog/keto/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1892,7 +1892,7 @@
     ],
     "/hot-dog/nutrition/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1924,7 +1924,7 @@
     ],
     "/hot-dog/price-history/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -1956,7 +1956,7 @@
     ],
     "/hot-dog/price/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -1988,7 +1988,7 @@
     ],
     "/hot-dog/protein-vs-calories/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -2020,7 +2020,7 @@
     ],
     "/hot-dog/protein/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.75
@@ -2058,7 +2058,7 @@
         "score": 0.79
       },
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.7
@@ -2084,7 +2084,7 @@
     ],
     "/hot-dog/sodium/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -2122,7 +2122,7 @@
         "score": 0.7
       },
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.65
@@ -2148,7 +2148,7 @@
     ],
     "/hot-dog/vegan/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -2180,7 +2180,7 @@
     ],
     "/hot-dog/vegetarian/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -2212,7 +2212,7 @@
     ],
     "/hot-dog/why-so-cheap/": [
       {
-        "url": "/hot-dog/air-fryer/",
+        "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
         "funnelStage": "B",
         "score": 0.8
@@ -2390,7 +2390,7 @@
         "score": 0.7
       }
     ],
-    "/nutrition/calories-without-bun/": [
+    "/tutorials/calories-without-bun/": [
       {
         "url": "/nutrition/calories/",
         "title": "Costco Hot Dog Calories",
@@ -2424,7 +2424,7 @@
     ],
     "/nutrition/calories/": [
       {
-        "url": "/nutrition/calories-without-bun/",
+        "url": "/tutorials/calories-without-bun/",
         "title": "Costco Hot Dog Calories Without Bun",
         "funnelStage": "",
         "score": 0.7
@@ -2456,7 +2456,7 @@
     ],
     "/nutrition/": [
       {
-        "url": "/nutrition/calories-without-bun/",
+        "url": "/tutorials/calories-without-bun/",
         "title": "Costco Hot Dog Calories Without Bun",
         "funnelStage": "",
         "score": 0.7
@@ -2488,7 +2488,7 @@
     ],
     "/nutrition/macros/": [
       {
-        "url": "/nutrition/calories-without-bun/",
+        "url": "/tutorials/calories-without-bun/",
         "title": "Costco Hot Dog Calories Without Bun",
         "funnelStage": "",
         "score": 0.7
@@ -2520,7 +2520,7 @@
     ],
     "/nutrition/protein/": [
       {
-        "url": "/nutrition/calories-without-bun/",
+        "url": "/tutorials/calories-without-bun/",
         "title": "Costco Hot Dog Calories Without Bun",
         "funnelStage": "",
         "score": 0.7
@@ -2552,7 +2552,7 @@
     ],
     "/nutrition/weight-watchers-points/": [
       {
-        "url": "/nutrition/calories-without-bun/",
+        "url": "/tutorials/calories-without-bun/",
         "title": "Costco Hot Dog Calories Without Bun",
         "funnelStage": "",
         "score": 0.7
