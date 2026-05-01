@@ -1,1 +1,27 @@
 /sitemap.xml /sitemap-index.xml 301
+
+# SEO dedup: redirect old duplicate URLs to canonical pages
+/dietary/gluten-free/ /hot-dog/gluten-free/ 301
+/dietary/vegan/ /hot-dog/vegan/ 301
+/dietary/halal/ /faq/halal/ 301
+/dietary/kosher/ /faq/kosher/ 301
+/dietary/nitrates/ /hot-dog/sodium/ 301
+/dietary/dairy-free/ /faq/dairy-free-buns/ 301
+/dietary/pork/ /ingredients/beef-or-pork/ 301
+/dietary/ /hot-dog/healthy/ 301
+/faq/gluten-free/ /hot-dog/gluten-free/ 301
+/faq/vegan/ /hot-dog/vegan/ 301
+/faq/all-beef/ /ingredients/brand/ 301
+/faq/pork-content/ /ingredients/beef-or-pork/ 301
+/faq/beef/ /ingredients/beef-or-pork/ 301
+/nutrition/calories/ /hot-dog/calories/ 301
+/nutrition/protein/ /hot-dog/protein/ 301
+/nutrition/macros/ /hot-dog/protein-vs-calories/ 301
+/nutrition/ /hot-dog/nutrition/ 301
+/price/ /hot-dog/price/ 301
+/price/price-increase/ /hot-dog/price-history/ 301
+/business/why-so-cheap/ /hot-dog/why-so-cheap/ 301
+/cooking/air-fryer/ /tutorials/air-fryer/ 301
+/cooking/at-home/ /hot-dog/cooking-at-home/ 301
+/cooking/ /hot-dog/cooking-at-home/ 301
+/ingredients/ingredients-list/ /hot-dog/ingredients/ 301
