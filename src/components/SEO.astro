@@ -82,9 +82,11 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
   ]
 } : null;
 
+// Note: Do not emit top-level @type Review without itemReviewed — it triggers GSC "Review snippets" errors.
+// Review pages use Article here; product Review markup lives in ReviewLayout (Product + review).
 let structuredData: Record<string, any> = {
   '@context': 'https://schema.org',
-  '@type': type === 'article' ? 'Article' : type === 'faq' ? 'FAQPage' : type === 'howto' ? 'HowTo' : type === 'review' ? 'Review' : 'WebSite',
+  '@type': type === 'article' || type === 'review' ? 'Article' : type === 'faq' ? 'FAQPage' : type === 'howto' ? 'HowTo' : 'WebSite',
 };
 
 if (type === 'article' || type === 'review') {
@@ -163,7 +165,7 @@ const structuredDataString = JSON.stringify(structuredData);
 <!-- Open Graph -->
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+<meta property="og:type" content={type === 'article' || type === 'review' ? 'article' : 'website'} />
 <meta property="og:url" content={fullCanonical} />
 <meta property="og:image" content={fullImage} />
 <meta property="og:site_name" content={siteName} />

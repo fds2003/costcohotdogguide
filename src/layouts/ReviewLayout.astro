@@ -36,15 +36,20 @@ const {
   image,
 } = Astro.props;
 
+const siteOrigin = Astro.site?.origin ?? 'https://costcohotdogguide.com';
+const productId = `${siteOrigin}${Astro.url.pathname.replace(/\/$/, '')}/#product`;
+
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
+  "@id": productId,
   "name": productName,
   "brand": brand ? { "@type": "Brand", "name": brand } : undefined,
   "image": image,
   "description": description,
   "review": {
     "@type": "Review",
+    "itemReviewed": { "@id": productId },
     "reviewRating": {
       "@type": "Rating",
       "ratingValue": rating,
