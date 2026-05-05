@@ -5,12 +5,12 @@ import AdUnit from '../components/AdUnit.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 
 const publishedAt = '2026-04-29';
-const modifiedAt = '2026-04-29';
+const modifiedAt = '2026-05-05';
 ---
 
 <BaseLayout
-  title="Costco Hot Dog: The Ultimate Guide (2026)"
-  description="The complete guide to Costco's $1.50 hot dog. Nutrition facts, ingredients, history, and everything you need to know."
+  title="Costco Hot Dog Guide 2026 — Calories, Price History, Ingredients & $1.50 Combo"
+  description="570-calorie breakdown, 41-year $1.50 price history, full ingredients, food-court combo facts, and links to our interactive price chart. Updated May 2026."
   type="article"
   publishedAt={publishedAt}
   modifiedAt={modifiedAt}
@@ -23,6 +23,21 @@ const modifiedAt = '2026-04-29';
         Published: <time datetime={publishedAt}>{publishedAt}</time> | Last updated: <time datetime={modifiedAt}>{modifiedAt}</time>
       </div>
     </header>
+
+    <nav class="mb-10 not-prose rounded-xl border border-gray-200 bg-gray-50 p-4 md:p-6" aria-label="Guide sections">
+      <p class="text-sm font-semibold text-gray-900 mb-3">Jump to deep dives</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
+        <a href="/hot-dog/calories/" class="text-red-700 hover:underline font-medium">Calories (with / without bun)</a>
+        <a href="/hot-dog/nutrition/" class="text-red-700 hover:underline font-medium">Full nutrition facts</a>
+        <a href="/hot-dog/sodium/" class="text-red-700 hover:underline font-medium">Sodium content</a>
+        <a href="/ingredients/" class="text-red-700 hover:underline font-medium">Ingredients</a>
+        <a href="/hot-dog/price/" class="text-red-700 hover:underline font-medium">Price &amp; regions</a>
+        <a href="/tools/price-history/" class="text-red-700 hover:underline font-medium">Interactive price history</a>
+        <a href="/hot-dog/price-history/" class="text-red-700 hover:underline font-medium">Price story &amp; timeline</a>
+        <a href="/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
+        <a href="/menu/new/" class="text-red-700 hover:underline font-medium">Menu changes</a>
+      </div>
+    </nav>
 
     <div class="prose prose-lg max-w-none">
       <p class="lead text-xl text-gray-700">
@@ -64,13 +79,13 @@ const modifiedAt = '2026-04-29';
           <tr><td class="border border-gray-300 px-4 py-2">Total Fat</td><td class="border border-gray-300 px-4 py-2">33g</td></tr>
           <tr><td class="border border-gray-300 px-4 py-2">Saturated Fat</td><td class="border border-gray-300 px-4 py-2">12g</td></tr>
           <tr><td class="border border-gray-300 px-4 py-2">Cholesterol</td><td class="border border-gray-300 px-4 py-2">70mg</td></tr>
-          <tr><td class="border border-gray-300 px-4 py-2">Sodium</td><td class="border border-gray-300 px-4 py-2">1,750mg</td></tr>
+          <tr><td class="border border-gray-300 px-4 py-2">Sodium</td><td class="border border-gray-300 px-4 py-2">~1,700mg</td></tr>
           <tr><td class="border border-gray-300 px-4 py-2">Total Carbs</td><td class="border border-gray-300 px-4 py-2">46g</td></tr>
           <tr><td class="border border-gray-300 px-4 py-2">Protein</td><td class="border border-gray-300 px-4 py-2">24g</td></tr>
         </tbody>
       </table>
       <p class="mt-4">
-        <a href="/nutrition/" class="text-red-700 font-semibold hover:underline">View detailed nutrition information &rarr;</a>
+        <a href="/hot-dog/nutrition/" class="text-red-700 font-semibold hover:underline">View detailed nutrition information &rarr;</a>
       </p>
 
       <div class="my-8">
@@ -142,9 +157,9 @@ const modifiedAt = '2026-04-29';
     <div class="mt-12 pt-8 border-t border-gray-200">
       <h3 class="text-xl font-bold text-gray-900 mb-4">Explore More</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <a href="/nutrition/" class="text-red-700 hover:underline font-medium">Nutrition Details</a>
+        <a href="/hot-dog/nutrition/" class="text-red-700 hover:underline font-medium">Nutrition Details</a>
         <a href="/ingredients/" class="text-red-700 hover:underline font-medium">Ingredients List</a>
-        <a href="/cooking/" class="text-red-700 hover:underline font-medium">Cook at Home</a>
+        <a href="/hot-dog/cooking-at-home/" class="text-red-700 hover:underline font-medium">Cook at Home</a>
         <a href="/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
       </div>
     </div>

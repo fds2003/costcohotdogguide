@@ -11,14 +11,14 @@ const products = [
 ---
 
 <BaseLayout
-  title="Costco Price History Tracker"
-  description="Track historical prices of iconic Costco products including the famous $1.50 hot dog combo, rotisserie chicken, and gasoline."
+  title="Costco Hot Dog Price History (1985–2026) — Interactive Chart | Still $1.50?"
+  description="Free interactive charts: $1.50 hot dog combo, rotisserie chicken, gas, and more. Inflation context and why headline prices stayed flat. Updated 2026."
   type="article"
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
     <div class="text-center mb-10">
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Price History</h1>
-      <p class="text-lg text-gray-600">How Costco has kept prices steady while everything else goes up.</p>
+      <p class="text-lg text-gray-600">Interactive bar charts for iconic Costco prices — including the $1.50 hot dog combo.</p>
     </div>
 
     {products.map(product => {
@@ -51,8 +51,9 @@ const products = [
 
           <!-- Events -->
           {product.name === "Hot Dog Combo" && (
-            <div class="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
-              <strong>Notable:</strong> The $1.50 hot dog combo price has remained unchanged since 1985 — over 40 years. Costco's co-founder Jim Sinegal once reportedly said, "If you raise the [price of the] hot dog, I will kill you."
+            <div class="text-sm text-gray-600 bg-gray-50 rounded-lg p-3 space-y-2">
+              <p><strong>Notable:</strong> The $1.50 hot dog combo price has remained unchanged since 1985 — over 40 years. Costco leadership has treated it as a signature value anchor.</p>
+              <p><strong>2026 update:</strong> This chart tracks <em>dollar price</em>, not calories. Some locations now offer different beverage choices with the same <strong>$1.50</strong> combo (e.g. water vs fountain soda)—availability varies. See <a href="/menu/new/" class="text-red-700 underline font-medium">menu changes</a> and <a href="/hot-dog/calories/" class="text-red-700 underline font-medium">calorie breakdown</a> if drink choice affects your totals.</p>
             </div>
           )}
           {product.name === "Rotisserie Chicken" && (
