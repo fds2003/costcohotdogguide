@@ -1,3 +1,6 @@
+# Canonical host: www → apex (must match Astro `site` + GSC primary property)
+https://www.costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
+
 /sitemap.xml /sitemap-index.xml 301
 
 # SEO dedup: redirect old duplicate URLs to canonical pages
