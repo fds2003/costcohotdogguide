@@ -24,6 +24,20 @@ const modifiedAt = '2026-05-08';
       </div>
     </header>
 
+    <section class="not-prose mb-10 rounded-xl border border-gray-200 bg-white p-5 md:p-6" aria-label="Table of contents">
+      <h2 class="text-xl font-bold text-gray-900 mb-3">On this page</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <a href="#what-you-get" class="text-red-700 hover:underline font-medium">What you get for $1.50</a>
+        <a href="#nutrition-overview" class="text-red-700 hover:underline font-medium">Nutrition overview</a>
+        <a href="#fast-food-comparison" class="text-red-700 hover:underline font-medium">How it compares to other chains</a>
+        <a href="#ingredients" class="text-red-700 hover:underline font-medium">Ingredients and bun details</a>
+        <a href="#dietary-restrictions" class="text-red-700 hover:underline font-medium">Dietary restrictions</a>
+        <a href="#pricing-strategy" class="text-red-700 hover:underline font-medium">Why Costco keeps it at $1.50</a>
+        <a href="#extended-faq" class="text-red-700 hover:underline font-medium">Extended FAQ (10 questions)</a>
+        <a href="#sources-methodology" class="text-red-700 hover:underline font-medium">Sources and methodology</a>
+      </div>
+    </section>
+
     <nav class="mb-10 not-prose rounded-xl border border-gray-200 bg-gray-50 p-4 md:p-6" aria-label="Guide sections">
       <p class="text-sm font-semibold text-gray-900 mb-3">Jump to deep dives</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm">
@@ -120,9 +134,9 @@ const modifiedAt = '2026-05-08';
         <AdUnit slot="in_content_1" type="in-article" format="auto" minHeight="250px" />
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">What You Get for $1.50</h2>
+      <h2 id="what-you-get" class="text-2xl font-bold text-gray-900 mt-10 mb-4">What You Get for $1.50</h2>
       <p>
-        The Costco food court hot dog combo includes a quarter-pound all-beef hot dog and a 20 oz. soda with free refills. The hot dog itself weighs approximately 4 ounces and is served in a soft, steamed bun.
+        The Costco food court hot dog combo includes a quarter-pound all-beef hot dog and a fountain drink option in most US warehouses. The hot dog itself weighs approximately 4 ounces and is served in a soft, steamed bun.
       </p>
       <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
         <p class="font-semibold text-yellow-800">Key Facts</p>
@@ -135,7 +149,7 @@ const modifiedAt = '2026-05-08';
         </ul>
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Overview</h2>
+      <h2 id="nutrition-overview" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition Overview</h2>
       <p>
         A Costco hot dog with bun contains approximately 570 calories. Here's the breakdown:
       </p>
@@ -160,11 +174,55 @@ const modifiedAt = '2026-05-08';
         <a href="/hot-dog/nutrition/" class="text-red-700 font-semibold hover:underline">View detailed nutrition information &rarr;</a>
       </p>
 
+      <h2 id="fast-food-comparison" class="text-2xl font-bold text-gray-900 mt-10 mb-4">How Costco Compares to Other Fast Food Hot Dogs</h2>
+      <p>
+        The Costco combo feels high-calorie at first glance, but context matters: portion size and price-per-calorie are very different from convenience-store or stadium hot dogs. Use this quick benchmark before deciding whether Costco is “worse” or just “bigger.”
+      </p>
+      <table class="w-full border-collapse border border-gray-300 mt-4">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="border border-gray-300 px-4 py-2 text-left">Brand / Item</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Calories</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Typical Price (US)</th>
+            <th class="border border-gray-300 px-4 py-2 text-left">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">Costco hot dog + bun</td>
+            <td class="border border-gray-300 px-4 py-2">~570</td>
+            <td class="border border-gray-300 px-4 py-2">$1.50 combo</td>
+            <td class="border border-gray-300 px-4 py-2">Largest portion among major value options</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">Nathan's (typical bun hot dog)</td>
+            <td class="border border-gray-300 px-4 py-2">~300-330</td>
+            <td class="border border-gray-300 px-4 py-2">$4-7</td>
+            <td class="border border-gray-300 px-4 py-2">Smaller serving, often sold without drink bundle</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">7-Eleven Big Bite (varies)</td>
+            <td class="border border-gray-300 px-4 py-2">~320-400</td>
+            <td class="border border-gray-300 px-4 py-2">$2-4</td>
+            <td class="border border-gray-300 px-4 py-2">Calories vary by sausage type and toppings</td>
+          </tr>
+          <tr>
+            <td class="border border-gray-300 px-4 py-2">Ballpark/stadium hot dog</td>
+            <td class="border border-gray-300 px-4 py-2">~280-500</td>
+            <td class="border border-gray-300 px-4 py-2">$6-10+</td>
+            <td class="border border-gray-300 px-4 py-2">Price premium driven by venue, not nutrition value</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="mt-4">
+        For a focused calorie view (with vs without bun), check <a href="/hot-dog/calories/" class="text-red-700 font-semibold hover:underline">our 2026 calories page</a>.
+      </p>
+
       <div class="my-8">
         <AdUnit slot="in_content_2" type="in-article" format="auto" minHeight="250px" />
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredients</h2>
+      <h2 id="ingredients" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredients</h2>
       <p>
         Costco hot dogs are made by Kirkland Signature (Costco's private label) and contain: beef, water, salt, contains 2% or less of corn syrup, dextrose, flavorings, paprika, sodium erythorbate, sodium nitrite.
       </p>
@@ -175,7 +233,7 @@ const modifiedAt = '2026-05-08';
         <a href="/ingredients/" class="text-red-700 font-semibold hover:underline">Full ingredients breakdown &rarr;</a>
       </p>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Dietary Restrictions</h2>
+      <h2 id="dietary-restrictions" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Dietary Restrictions</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
         <a href="/faq/dairy-free-buns/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
           <span class="font-semibold text-gray-900">Dairy Free</span>
@@ -199,12 +257,68 @@ const modifiedAt = '2026-05-08';
         <AdUnit type="banner" format="medium-rectangle" slot="medium_rectangle_content" minHeight="250px" />
       </div>
 
-      <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">The $1.50 Strategy</h2>
+      <h2 id="pricing-strategy" class="text-2xl font-bold text-gray-900 mt-10 mb-4">The $1.50 Strategy</h2>
       <p>
         Costco's hot dog is a loss leader — the company deliberately keeps the price low to drive foot traffic and reinforce its brand image as the ultimate value retailer. Former CEO W. Craig Jelinek once told Costco co-founder Jim Sinegal that he couldn't keep the price at $1.50. Sinegal's response: "If you raise the price of the hot dog, I will kill you. Figure it out."
       </p>
       <p class="mt-4">
         <a href="/hot-dog/why-so-cheap/" class="text-red-700 font-semibold hover:underline">Read the full business story &rarr;</a>
+      </p>
+
+      <h2 id="extended-faq" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Extended FAQ (10 Quick Answers)</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">1) How many calories are in a Costco hot dog with bun?</h3>
+          <p>About 570 calories for hot dog plus bun; without the bun it is roughly 360 calories.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">2) How much sodium does it have?</h3>
+          <p>Roughly 1,700mg with bun, which is high for a single meal. See details on <a href="/hot-dog/sodium/" class="text-red-700 font-semibold hover:underline">sodium breakdown</a>.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">3) Is Costco hot dog kosher?</h3>
+          <p>No official kosher certification at the food-court level.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">4) Is it gluten-free?</h3>
+          <p>The bun is not gluten-free; the frank itself may be gluten-free depending on sourcing and handling.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">5) Why has the price stayed at $1.50?</h3>
+          <p>Costco treats it as a value anchor and customer-retention strategy rather than a high-margin item.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">6) Does every country have the same price?</h3>
+          <p>No, local currency prices vary, but Costco aims for similar value positioning by market.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">7) Does the combo always include soda?</h3>
+          <p>Typical US combo includes fountain drink options; availability can vary by warehouse and policy updates.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">8) Is it healthy for regular consumption?</h3>
+          <p>It is protein-rich but sodium-heavy; better as an occasional meal than a frequent staple.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">9) What is the bun made from?</h3>
+          <p>Usually enriched wheat flour with yeast, sugar, oil, and preservatives depending on supplier.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">10) Where can I track historical price changes?</h3>
+          <p>Use the <a href="/tools/price-history/" class="text-red-700 font-semibold hover:underline">interactive price history tool</a> for timeline comparisons.</p>
+        </div>
+      </div>
+
+      <h2 id="sources-methodology" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Sources and Methodology</h2>
+      <p>
+        This guide combines Costco public information, on-page package labeling conventions, and nutrition references from USDA-style databases. For official nutrient references, see
+        <a href="https://fdc.nal.usda.gov/" class="text-red-700 font-semibold hover:underline" target="_blank" rel="noopener noreferrer"> USDA FoodData Central</a>.
+      </p>
+      <p>
+        All values here are practical planning estimates, not medical advice. Suppliers, serving sizes, and food-court policies can change by region and date.
+      </p>
+      <p class="text-sm text-gray-500 mt-2">
+        Last editorial update: 2026-05-08. Next scheduled review: 2026 Q3.
       </p>
     </div>
 
