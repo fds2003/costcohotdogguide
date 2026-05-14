@@ -10,72 +10,106 @@ const faqItems = [
   {
     id: 'kosher',
     question: 'Is Costco hot dog kosher?',
-    short:
-      'No. Costco\'s Kirkland Signature all-beef hot dog is not certified kosher.',
-    detail:
-      'It is beef-based, but without rabbinical certification and standard cross-contact controls, it doesn\'t meet kosher labeling. Observant buyers should rely on kosher-certified brands instead.',
+    short: 'No. Costco\'s Kirkland Signature all-beef hot dog is not certified kosher.',
+    detail: 'It is beef-based, but without rabbinical certification and standard cross-contact controls, it doesn\'t meet kosher labeling. Observant buyers should rely on kosher-certified brands instead.',
     moreHref: '/faq/kosher/',
     moreLabel: 'Kosher FAQ',
   },
   {
     id: 'sodium',
     question: 'How much sodium is in a Costco hot dog?',
-    short:
-      'About 1,700mg sodium for the combo (hot dog with bun)—roughly 74% of a 2,300mg daily limit.',
-    detail:
-      'Individual meals vary slightly by toppings and buns from different bakeries; people on low-sodium diets should skip condiments high in salt and confirm current labels at the kiosk.',
+    short: 'About 1,700mg sodium for the combo — roughly 74% of a 2,300mg daily limit.',
+    detail: 'The frank contributes ~1,100mg, the bun adds ~400–600mg, and condiments can push it higher. People on low-sodium diets should skip the bun or choose mustard over ketchup.',
     moreHref: '/hot-dog/sodium/',
     moreLabel: 'full sodium breakdown',
   },
   {
-    id: 'bun-dairy',
-    question: 'Does the Costco hot dog bun contain dairy?',
-    short:
-      'Typically no intentional dairy in the enriched wheat bun, but formulations can vary by supplier and region.',
-    detail:
-      'Ingredient lists printed on packs or kiosk displays are the authoritative source—check for milk powder or whey before assuming dairy-free.',
-    moreHref: '/faq/dairy-free-buns/',
-    moreLabel: 'dairy-free bun notes',
-  },
-  {
-    id: 'cooking',
-    question: 'How does Costco cook hot dogs?',
-    short:
-      'Food-court stands usually heat rollers or similar equipment for fast throughput; specifics vary slightly by warehouse.',
-    detail:
-      'At home you can grill, boil, or air fry using our <a href="/tutorials/air-fryer/" class="text-red-700 underline font-medium">air fryer tutorial</a> for texture similar to rollers.',
-    moreHref: '/hot-dog/cooking-at-home/',
-    moreLabel: 'cooking at home',
-  },
-  {
-    id: 'ingredients-source',
-    question: 'Where do Costco hot dog ingredients come from?',
-    short:
-      'The frank is Kirkland Signature 100% beef; Costco emphasizes vertical integration and large-scale contracting for buns and toppings.',
-    detail:
-      'Exact supplier lines can rotate; packaging and regional listings remain the reliable reference for allergens and additives.',
-    moreHref: '/ingredients/',
-    moreLabel: 'ingredients hub',
-  },
-  {
     id: 'calories',
     question: 'How many calories are in a Costco hot dog?',
-    short:
-      'Roughly 570 calories for hot dog plus bun (~360 frank only; ~210 bun).',
-    detail:
-      'Drinks add 150–200+ calories depending on fountain choice; see year-by-year context on our <a href="/hot-dog/calories/" class="text-red-700 underline font-medium">calories page</a>.',
+    short: 'Roughly 570 calories for hot dog plus bun (~360 frank only; ~210 bun).',
+    detail: 'A fountain drink adds 150–200+ calories depending on choice. Switching to water saves those calories and helps with sodium processing. See our year-by-year comparison.',
     moreHref: '/hot-dog/calories/',
     moreLabel: 'calories & comparison',
   },
   {
+    id: 'ingredients',
+    question: 'What are the ingredients in a Costco hot dog?',
+    short: 'The frank is Kirkland Signature 100% beef, the bun is enriched wheat flour. No fillers, no poultry — just beef, salt, spices, and natural flavorings.',
+    detail: 'The hot dog contains beef, water, salt, corn syrup solids, spices, and sodium-based preservatives. The bun contains enriched wheat flour, water, yeast, sugar, and soybean oil. No artificial colors are used.',
+    moreHref: '/hot-dog/ingredients/',
+    moreLabel: 'full ingredients list',
+  },
+  {
+    id: 'bun-dairy',
+    question: 'Does the Costco hot dog bun contain dairy?',
+    short: 'Typically no intentional dairy, but formulations can vary by supplier and region.',
+    detail: 'Ingredient lists on packaging are the authoritative source — check for milk powder or whey before assuming dairy-free. The bun is generally just enriched flour, water, yeast, and oil.',
+    moreHref: '/faq/dairy-free-buns/',
+    moreLabel: 'dairy-free bun notes',
+  },
+  {
+    id: 'gluten',
+    question: 'Is the Costco hot dog gluten-free?',
+    short: 'The frank is gluten-free (100% beef), but the bun contains wheat flour and is NOT gluten-free.',
+    detail: 'For a gluten-free option, eat the hot dog without the bun (360 calories, ~370 calories less, keto-friendly). The frank itself has no wheat, rye, or barley ingredients.',
+    moreHref: '/hot-dog/gluten-free/',
+    moreLabel: 'gluten-free guide',
+  },
+  {
+    id: 'vegetarian',
+    question: 'Are there vegetarian options at the Costco food court?',
+    short: 'The hot dog is 100% beef and not vegetarian. The cheese pizza and soft serve ice cream are the best vegetarian options on the menu.',
+    detail: 'For vegetarians, the food court offers cheese pizza ($1.99/slice), soft serve ice cream, churros, and fries (where available). Beyond the food court, Costco sells plant-based options in the warehouse.',
+    moreHref: '/hot-dog/vegetarian/',
+    moreLabel: 'vegetarian guide',
+  },
+  {
+    id: 'cooking',
+    question: 'How does Costco cook hot dogs?',
+    short: 'Food-court stands use heated rollers for fast, even heating. Specifics vary slightly by warehouse.',
+    detail: 'At home you can grill, boil, pan-fry, or air fry. Our <a href="/tutorials/air-fryer/" class="text-red-700 underline font-medium">air fryer tutorial</a> gives you roller-style texture in 6–8 minutes at 375°F.',
+    moreHref: '/tutorials/air-fryer/',
+    moreLabel: 'air fryer tutorial',
+  },
+  {
+    id: 'price-why',
+    question: 'Why is the Costco hot dog still $1.50?',
+    short: 'It\'s a deliberate loss leader. Costco uses the hot dog to drive membership retention and food court traffic.',
+    detail: 'Former CEO Craig Jelinek famously said "If you raise the price of the hot dog, I will kill you." The $1.50 price has been held since 1985 — over 40 years without a price increase. It\'s one of the most inflation-proof food items in America.',
+    moreHref: '/hot-dog/price-history/',
+    moreLabel: 'price history',
+  },
+  {
+    id: 'water-option',
+    question: 'Can I get water instead of soda with the combo?',
+    short: 'Yes — as of 2026, Costco now offers a bottled water option as a replacement for the fountain soda in the $1.50 combo.',
+    detail: 'This is the first change to the combo in over 40 years. You can swap the 20oz fountain soda for a 16.9oz bottle of Kirkland Signature water at no extra cost. The original soda option with free refills is still available.',
+    moreHref: '/menu/hot-dog/',
+    moreLabel: 'menu details',
+  },
+  {
+    id: 'without-membership',
+    question: 'Can I buy a Costco hot dog without a membership?',
+    short: 'In most US locations, yes — the food court is accessible without a membership card.',
+    detail: 'Policies vary by location and country. In the US, most Costco food courts are located before the membership check or have a separate entrance. In some international locations (like Canada and the UK), a membership may be required. It\'s best to check with your local warehouse.',
+    moreHref: '/faq/without-membership/',
+    moreLabel: 'membership FAQ',
+  },
+  {
+    id: 'cooking-at-home',
+    question: 'Can I buy Kirkland hot dogs to cook at home?',
+    short: 'Yes — Kirkland Signature beef hot dogs are sold in the warehouse in bulk packs, typically 12–16 per package.',
+    detail: 'The food court hot dogs are the exact same product sold in the warehouse. A 12-pack costs around $12–15, making each hot dog about $1.00–1.25 — even cheaper than the food court combo. Perfect for grilling season.',
+    moreHref: '/hot-dog/cooking-at-home/',
+    moreLabel: 'cooking at home',
+  },
+  {
     id: 'safety',
     question: 'Can everyone eat Costco hot dogs safely?',
-    short:
-      'Most diners can—but avoid or modify them if you have wheat allergy, celiac disease, sodium limits, or other strict dietary rules.',
-    detail:
-      'Nitrites, sodium, and processed meat intake should follow your clinician\'s advice; moderation matters for cardiovascular health.',
-    moreHref: '/hot-dog/nutrition/',
-    moreLabel: 'nutrition facts',
+    short: 'Most people can, but avoid if you have wheat allergy, celiac disease, severe sodium restrictions, or follow strict kosher/halal diets.',
+    detail: 'Nitrites, sodium, and processed meat should be discussed with your doctor if you have cardiovascular concerns. The bun contains wheat gluten. The hot dog itself contains no dairy, but the bun may vary by supplier.',
+    moreHref: '/hot-dog/healthy/',
+    moreLabel: 'health analysis',
   },
 ];
 
@@ -98,15 +132,38 @@ const faqData = faqItems.map(({ question, short, detail }) => ({
 
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-gray-900 mb-4">Costco Hot Dog Frequently Asked Questions</h1>
-    <p class="text-lg text-gray-600 mb-8">
-      Each question opens with a one-line answer, then expands with nuance—so SERP skim readers and planners both get value.
-    </p>
+    <p class="text-lg text-gray-600 mb-6">Everything you've ever wondered about the Costco hot dog — ingredients, nutrition, price, dietary restrictions, cooking methods, and more. Each question has a one-line answer plus full context below.</p>
 
-    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Popular questions</h2>
-    <div class="space-y-6">
+    <p class="text-gray-700 leading-relaxed mb-8">The Costco hot dog is more than just a food court item — it's a cultural institution. For over 40 years, the $1.50 combo (quarter-pound all-beef frank with a 20oz fountain soda) has been one of the most remarkable deals in American food. This FAQ covers the most common questions we hear from readers: what's in it, how many calories, is it healthy, can you eat it on special diets, how does Costco keep the price so low, and more. Whether you're a longtime fan who just wants to settle a debate or a first-timer wondering what to expect, you'll find the answer here.</p>
+
+    <!-- Quick Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+      <div class="bg-red-50 rounded-xl p-4 text-center border border-red-200">
+        <p class="text-2xl font-bold text-red-700">$1.50</p>
+        <p class="text-xs text-red-800 font-medium">Price since 1985</p>
+      </div>
+      <div class="bg-blue-50 rounded-xl p-4 text-center border border-blue-200">
+        <p class="text-2xl font-bold text-blue-700">570</p>
+        <p class="text-xs text-blue-800 font-medium">Calories with bun</p>
+      </div>
+      <div class="bg-green-50 rounded-xl p-4 text-center border border-green-200">
+        <p class="text-2xl font-bold text-green-700">100%</p>
+        <p class="text-xs text-green-800 font-medium">All-Beef Frank</p>
+      </div>
+      <div class="bg-amber-50 rounded-xl p-4 text-center border border-amber-200">
+        <p class="text-2xl font-bold text-amber-700">41</p>
+        <p class="text-xs text-amber-800 font-medium">Years at $1.50</p>
+      </div>
+    </div>
+
+    <!-- Category: Nutrition & Ingredients -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Nutrition & Ingredients</h2>
+    <p class="text-gray-700 leading-relaxed mb-6">The most frequently asked questions about what's actually in a Costco hot dog, how many calories it contains, and whether it can fit into a healthy diet. The short answer: yes, occasionally — but the sodium is worth watching.</p>
+
+    <div class="space-y-6 mb-12">
       {
-        faqItems.map(({ id, question, short, detail, moreHref, moreLabel }) => (
-          <div id={id} class="rounded-lg border border-gray-200 bg-gray-50 p-5 md:p-6 shadow-sm">
+        faqItems.filter(i => ['calories', 'sodium', 'ingredients', 'safety'].includes(i.id)).map(({ id, question, short, detail, moreHref, moreLabel }) => (
+          <div id={id} class="rounded-lg border border-gray-200 bg-gray-50 p-5 md:p-6 shadow-sm hover:shadow-md transition">
             <h3 class="text-lg font-semibold text-gray-900 mb-2">{question}</h3>
             <p class="text-gray-900 font-semibold leading-snug">{short}</p>
             <p class="text-gray-700 mt-3 leading-relaxed" set:html={detail} />
@@ -120,19 +177,160 @@ const faqData = faqItems.map(({ question, short, detail }) => ({
       }
     </div>
 
-    <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Nutrition &amp; sourcing context</h2>
+    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-12">
+      <h3 class="text-lg font-bold text-blue-900 mb-3">🍽️ Quick Nutrition Summary</h3>
+      <p class="text-blue-800 text-sm leading-relaxed mb-3">The Costco hot dog with bun provides 570 calories, 24g protein, 33g fat (13g saturated), 46g carbs, and 1,700mg sodium. Without the bun, it drops to 360 calories, 24g protein, 30g fat, and just 2–3g carbs — making it keto-friendly. For the full breakdown, see our <a href="/hot-dog/nutrition/" class="text-blue-700 underline font-medium">nutrition facts page</a>.</p>
+      <div class="flex flex-wrap gap-2">
+        <a href="/hot-dog/calories/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-blue-300 text-blue-700 hover:bg-blue-100 transition">Calories Breakdown</a>
+        <a href="/hot-dog/protein/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-blue-300 text-blue-700 hover:bg-blue-100 transition">Protein Analysis</a>
+        <a href="/hot-dog/sodium/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-blue-300 text-blue-700 hover:bg-blue-100 transition">Sodium Guide</a>
+        <a href="/hot-dog/keto/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-blue-300 text-blue-700 hover:bg-blue-100 transition">Keto Compatibility</a>
+      </div>
+    </div>
+
+    <!-- Category: Dietary Restrictions -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Dietary Restrictions & Allergens</h2>
+    <p class="text-gray-700 leading-relaxed mb-6">One of the biggest questions we get is whether the Costco hot dog fits specific dietary needs. Whether you're gluten-free, dairy-free, kosher, vegetarian, keto, or have other dietary requirements — here's exactly what you need to know about the frank, the bun, and the food court alternatives.</p>
+
+    <div class="space-y-6 mb-12">
+      {
+        faqItems.filter(i => ['kosher', 'bun-dairy', 'gluten', 'vegetarian'].includes(i.id)).map(({ id, question, short, detail, moreHref, moreLabel }) => (
+          <div id={id} class="rounded-lg border border-gray-200 bg-gray-50 p-5 md:p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{question}</h3>
+            <p class="text-gray-900 font-semibold leading-snug">{short}</p>
+            <p class="text-gray-700 mt-3 leading-relaxed" set:html={detail} />
+            <p class="mt-3 text-sm">
+              <a href={moreHref} class="text-red-700 font-medium hover:underline">
+                Deep dive → {moreLabel}
+              </a>
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="bg-purple-50 border border-purple-200 rounded-xl p-6 mb-12">
+      <h3 class="text-lg font-bold text-purple-900 mb-3">⚠️ Dietary Restriction Quick Reference</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <div class="bg-white rounded-lg p-3 border border-purple-100"><span class="font-semibold">Gluten-Free:</span> Frank only (skip the bun) ✅</div>
+        <div class="bg-white rounded-lg p-3 border border-purple-100"><span class="font-semibold">Dairy-Free:</span> Frank ✅, Bun — varies by supplier</div>
+        <div class="bg-white rounded-lg p-3 border border-purple-100"><span class="font-semibold">Kosher:</span> Not certified ❌</div>
+        <div class="bg-white rounded-lg p-3 border border-purple-100"><span class="font-semibold">Halal:</span> Not certified ❌</div>
+        <div class="bg-white rounded-lg p-3 border border-purple-100"><span class="font-semibold">Vegetarian:</span> Not suitable (100% beef) ❌</div>
+        <div class="bg-white rounded-lg p-3 border border-purple-100"><span class="font-semibold">Keto/Low-Carb:</span> Without bun ✅</div>
+      </div>
+      <div class="mt-3 flex flex-wrap gap-2">
+        <a href="/hot-dog/allergens/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-purple-300 text-purple-700 hover:bg-purple-100 transition">Full Allergen Guide</a>
+        <a href="/faq/halal/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-purple-300 text-purple-700 hover:bg-purple-100 transition">Halal Status</a>
+        <a href="/hot-dog/vegan/" class="text-xs bg-white px-3 py-1.5 rounded-full border border-purple-300 text-purple-700 hover:bg-purple-100 transition">Vegan Guide</a>
+      </div>
+    </div>
+
+    <!-- Category: Price & Menu -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Price & Menu</h2>
+    <p class="text-gray-700 leading-relaxed mb-6">After 41 years at $1.50 and a recent menu update that adds a water option for the first time in decades, there's a lot to talk about. Here's the story behind the price, what the combo includes, and whether you need a membership to buy one.</p>
+
+    <div class="space-y-6 mb-12">
+      {
+        faqItems.filter(i => ['price-why', 'water-option', 'without-membership', 'cooking-at-home'].includes(i.id)).map(({ id, question, short, detail, moreHref, moreLabel }) => (
+          <div id={id} class="rounded-lg border border-gray-200 bg-gray-50 p-5 md:p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{question}</h3>
+            <p class="text-gray-900 font-semibold leading-snug">{short}</p>
+            <p class="text-gray-700 mt-3 leading-relaxed" set:html={detail} />
+            <p class="mt-3 text-sm">
+              <a href={moreHref} class="text-red-700 font-medium hover:underline">
+                Deep dive → {moreLabel}
+              </a>
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Category: Cooking -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Cooking & Preparation</h2>
+    <p class="text-gray-700 leading-relaxed mb-8">How does Costco's food court get that perfect roller-grill texture? And how can you recreate it at home? We cover the food court method and the best home cooking approaches — from air fryer to grill to stovetop. Plus, if you didn't know, Costco sells the exact same Kirkland Signature hot dogs in the warehouse for about $1 each.</p>
+
+    <div class="space-y-6 mb-12">
+      {
+        faqItems.filter(i => ['cooking'].includes(i.id)).map(({ id, question, short, detail, moreHref, moreLabel }) => (
+          <div id={id} class="rounded-lg border border-gray-200 bg-gray-50 p-5 md:p-6 shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{question}</h3>
+            <p class="text-gray-900 font-semibold leading-snug">{short}</p>
+            <p class="text-gray-700 mt-3 leading-relaxed" set:html={detail} />
+            <p class="mt-3 text-sm">
+              <a href={moreHref} class="text-red-700 font-medium hover:underline">
+                Deep dive → {moreLabel}
+              </a>
+            </p>
+          </div>
+        ))
+      }
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-5">
+        <h3 class="text-lg font-bold text-green-900 mb-3">🔥 Best Ways to Cook Kirkland Hot Dogs at Home</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <div class="bg-white rounded-lg p-3 border border-green-100">
+            <span class="font-semibold text-green-800">Air Fryer:</span>
+            <span class="text-gray-700"> 375°F, 6–8 min. Split the frank for extra crisp edges.</span>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-green-100">
+            <span class="font-semibold text-green-800">Grill:</span>
+            <span class="text-gray-700"> Medium heat, 4–6 min, rotate for even char marks.</span>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-green-100">
+            <span class="font-semibold text-green-800">Boil:</span>
+            <span class="text-gray-700"> 5–6 min in simmering water. The classic ballpark method.</span>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-green-100">
+            <span class="font-semibold text-green-800">Pan Fry:</span>
+            <span class="text-gray-700"> Medium-high, 4–5 min. Slice lengthwise for more surface area.</span>
+          </div>
+        </div>
+        <div class="mt-3">
+          <a href="/tutorials/air-fryer/" class="text-sm text-green-700 font-medium hover:underline">Full Air Fryer Tutorial →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Fun Facts & Trivia</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+      <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+        <p class="text-3xl font-bold text-yellow-700 mb-1">100M+</p>
+        <p class="text-sm text-gray-700">Hot dogs sold at Costco annually — more than all MLB stadiums combined sell in a season.</p>
+      </div>
+      <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+        <p class="text-3xl font-bold text-yellow-700 mb-1">$4.35</p>
+        <p class="text-sm text-gray-700">What the combo would cost today if the price had tracked inflation since 1985.</p>
+      </div>
+      <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+        <p class="text-3xl font-bold text-yellow-700 mb-1">1985</p>
+        <p class="text-sm text-gray-700">The year the $1.50 price was set. Gas was $1.20/gal and the average movie ticket was $3.55.</p>
+      </div>
+      <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
+        <p class="text-3xl font-bold text-yellow-700 mb-1">Kirkland</p>
+        <p class="text-sm text-gray-700">Costco switched from Hebrew National to Kirkland Signature in 2009. Same quality, better price control.</p>
+      </div>
+    </div>
+
+    <!-- Nutrition & Sourcing Context -->
+    <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Nutrition & Sourcing Context</h2>
     <p class="text-gray-700 leading-relaxed mb-4">
-      Costco posts nutrition where available—USDA{' '}
-      <a href="https://fdc.nal.usda.gov/" class="text-red-700 underline" rel="noopener noreferrer" target="_blank">FoodData Central</a>
-      {' '}and package labels complement what we summarize here.
+      Costco posts nutrition information at the food court kiosk and on product packaging. Our data is sourced from Costco's official materials, 
+      <a href="https://fdc.nal.usda.gov/" class="text-red-700 underline" rel="noopener noreferrer" target="_blank">USDA FoodData Central</a>, 
+      and manufacturer labels. Because bakery suppliers vary by region, bun nutrition (especially sodium and carb counts) may differ slightly from what we list. 
+      Always check current labels at your local warehouse for the most accurate information.
     </p>
 
     <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-4">Related Guides</h2>
     <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
       <p class="text-gray-700 mb-3">Explore more:</p>
       <div class="flex flex-wrap gap-3">
-        <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calories</a>
+        <a href="/hot-dog/calories/" class="text-blue-600 hover:text-blue-800 underline">calories breakdown</a>
         <a href="/hot-dog/nutrition/" class="text-blue-600 hover:text-blue-800 underline">nutrition facts</a>
+        <a href="/hot-dog/ingredients/" class="text-blue-600 hover:text-blue-800 underline">ingredients list</a>
+        <a href="/hot-dog/price-history/" class="text-blue-600 hover:text-blue-800 underline">price history</a>
       </div>
     </div>
 

@@ -106,4 +106,49 @@ const maxInflation = Math.max(...timeline.map(t => t.inflationAdjusted));
       </div>
     </div>
   )}
+
+  <div class="mt-10">
+    <h3 class="text-xl font-bold text-gray-900 mb-2">Costco Hot Dog vs Inflation: How Other Prices Compare</h3>
+    <p class="text-gray-600 mb-6">While the Costco hot dog has stayed at $1.50 for 41 years, almost everything else has gone up dramatically. Here's how it stacks up against gas, movie tickets, and the Big Mac.</p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-sm border-collapse border border-gray-300">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="border border-gray-300 px-3 py-2 text-left">Item</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">1985</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">1990</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">2000</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">2010</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">2020</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">2026</th>
+            <th class="border border-gray-300 px-3 py-2 text-right">% Change</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          {priceData.inflationComparison.items.map(item => {
+            const firstPrice = item.data[0].price;
+            const lastPrice = item.data[item.data.length - 1].price;
+            const pctChange = (((lastPrice - firstPrice) / firstPrice) * 100).toFixed(0);
+            const isHotDog = item.label === 'Costco Hot Dog';
+            return (
+              <tr class={isHotDog ? 'bg-red-50 font-bold' : 'bg-white'}>
+                <td class={`border border-gray-300 px-3 py-2 ${isHotDog ? 'text-red-800' : 'text-gray-900'}`}>{item.label}</td>
+                {item.data.map(d => (
+                  <td class="border border-gray-300 px-3 py-2 text-right text-gray-700">
+                    ${d.price.toFixed(2)}
+                  </td>
+                ))}
+                <td class={`border border-gray-300 px-3 py-2 text-right ${isHotDog ? 'text-green-700' : 'text-red-700'}`}>
+                  {isHotDog ? '0%' : `+${pctChange}%`}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm text-gray-500">Data sources: Bureau of Labor Statistics (gasoline), National Association of Theatre Owners (movie tickets), The Economist Big Mac Index (Big Mac). Inflation-adjusted hot dog price based on CPI-U.</p>
+  </div>
 </div>

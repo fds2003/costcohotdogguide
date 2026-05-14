@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#064E3B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="1500" fill="url(#bg3)"/>
+  <text x="500" y="200" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="44" font-weight="700" fill="#FCD34D">COSTCO FOOD COURT</text>
+  <text x="500" y="270" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="600" fill="#D1FAE5">FULL MENU & PRICES 2026</text>
+  <line x1="150" y1="320" x2="850" y2="320" stroke="#34D399" stroke-width="3"/>
+  <rect x="150" y="400" width="700" height="65" rx="10" fill="#064E3B"/>
+  <text x="500" y="440" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" fill="#FCD34D">🌭 Hot Dog &amp; Soda · $1.50 · 570 cal</text>
+  <rect x="150" y="480" width="700" height="65" rx="10" fill="transparent"/>
+  <text x="500" y="520" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#D1FAE5">🍕 Pizza Slice · $1.99 · 700 cal</text>
+  <rect x="150" y="560" width="700" height="65" rx="10" fill="#064E3B"/>
+  <text x="500" y="600" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#D1FAE5">🍗 Chicken Bake · $3.99 · 770 cal</text>
+  <rect x="150" y="640" width="700" height="65" rx="10" fill="transparent"/>
+  <text x="500" y="680" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#D1FAE5">🥗 Caesar Salad · $3.99 · 650 cal</text>
+  <rect x="150" y="720" width="700" height="65" rx="10" fill="#064E3B"/>
+  <text x="500" y="760" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#D1FAE5">🍦 Ice Cream · $1.99 · 380 cal</text>
+  <rect x="150" y="800" width="700" height="65" rx="10" fill="transparent"/>
+  <text x="500" y="840" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#D1FAE5">🥤 Berry Smoothie · $2.99 · 290 cal</text>
+  <rect x="250" y="960" width="500" height="70" rx="35" fill="#FCD34D"/>
+  <text x="500" y="1008" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="700" fill="#064E3B">VS COMPETITORS: 33-50% CHEAPER</text>
+  <text x="500" y="1180" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="400" fill="#A7F3D0">costcohotdogguide.com</text>
+  <text x="500" y="1220" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="400" fill="#6EE7B7">Full menu → /menu/</text>
+</svg>

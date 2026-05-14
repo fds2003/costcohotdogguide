@@ -118,5 +118,43 @@
       "status": "False",
       "resolution": "No testing confirmed; price remains $1.50"
     }
-  ]
+  ],
+  "inflationComparison": {
+    "title": "Costco Hot Dog vs Other Prices: 1985–2026",
+    "note": "If the $1.50 hot dog had tracked general inflation, it would cost $4.35+ today. Meanwhile, gas, movie tickets, and Big Macs all rose dramatically.",
+    "items": [
+      { "label": "Costco Hot Dog", "color": "red", "data": [
+        { "year": 1985, "price": 1.50 },
+        { "year": 1990, "price": 1.50 },
+        { "year": 2000, "price": 1.50 },
+        { "year": 2010, "price": 1.50 },
+        { "year": 2020, "price": 1.50 },
+        { "year": 2026, "price": 1.50 }
+      ]},
+      { "label": "Gas (per gallon)", "color": "amber", "data": [
+        { "year": 1985, "price": 1.20 },
+        { "year": 1990, "price": 1.16 },
+        { "year": 2000, "price": 1.51 },
+        { "year": 2010, "price": 2.84 },
+        { "year": 2020, "price": 2.24 },
+        { "year": 2026, "price": 3.10 }
+      ]},
+      { "label": "Movie Ticket", "color": "blue", "data": [
+        { "year": 1985, "price": 3.55 },
+        { "year": 1990, "price": 4.22 },
+        { "year": 2000, "price": 5.39 },
+        { "year": 2010, "price": 7.89 },
+        { "year": 2020, "price": 9.18 },
+        { "year": 2026, "price": 11.50 }
+      ]},
+      { "label": "Big Mac", "color": "green", "data": [
+        { "year": 1985, "price": 1.60 },
+        { "year": 1990, "price": 2.45 },
+        { "year": 2000, "price": 2.39 },
+        { "year": 2010, "price": 4.19 },
+        { "year": 2020, "price": 4.89 },
+        { "year": 2026, "price": 5.69 }
+      ]}
+    ]
+  }
 }
