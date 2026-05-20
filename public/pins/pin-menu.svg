@@ -7,7 +7,7 @@
   </defs>
   <rect width="1000" height="1500" fill="url(#bg3)"/>
   <text x="500" y="200" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="44" font-weight="700" fill="#FCD34D">COSTCO FOOD COURT</text>
-  <text x="500" y="270" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="600" fill="#D1FAE5">FULL MENU & PRICES 2026</text>
+  <text x="500" y="270" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="600" fill="#D1FAE5">FULL MENU &amp; PRICES 2026</text>
   <line x1="150" y1="320" x2="850" y2="320" stroke="#34D399" stroke-width="3"/>
   <rect x="150" y="400" width="700" height="65" rx="10" fill="#064E3B"/>
   <text x="500" y="440" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600" fill="#FCD34D">🌭 Hot Dog &amp; Soda · $1.50 · 570 cal</text>
