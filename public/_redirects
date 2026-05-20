@@ -22,7 +22,8 @@ https://www.costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
 /nutrition/macros/ /hot-dog/protein-vs-calories/ 301
 /nutrition/ /hot-dog/nutrition/ 301
 /price/ /hot-dog/price/ 301
-/price/price-increase/ /hot-dog/price-history/ 301
+/price/price-increase/ /hot-dog/price/ 301
+/hot-dog/price-history/ /hot-dog/price/ 301
 /business/why-so-cheap/ /hot-dog/why-so-cheap/ 301
 /cooking/air-fryer/ /tutorials/air-fryer/ 301
 /cooking/at-home/ /hot-dog/cooking-at-home/ 301
