@@ -68,6 +68,31 @@ const props = Astro.props;
     <style>
       body { font-family: 'Inter', system-ui, sans-serif; }
     </style>
+    <!-- Speculative Loading optimization for faster next-page navigations -->
+    <script type="speculationrules" is:inline>
+      {
+        "prefetch": [{
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": "/privacy-policy/" } },
+              { "not": { "href_matches": "/contact/" } }
+            ]
+          },
+          "eagerness": "moderate"
+        }],
+        "prerender": [{
+          "where": {
+            "and": [
+              { "href_matches": "/*" },
+              { "not": { "href_matches": "/privacy-policy/" } },
+              { "not": { "href_matches": "/contact/" } }
+            ]
+          },
+          "eagerness": "conservative"
+        }]
+      }
+    </script>
   </head>
   <body class="bg-gray-50 text-gray-900 min-h-screen flex flex-col">
     <Navigation />
