@@ -3,6 +3,7 @@ export interface Props {
   title: string;
   description: string;
   canonical?: string;
+  noindex?: boolean;
   type?: 'website' | 'article' | 'faq' | 'howto' | 'review';
   publishedAt?: string;
   modifiedAt?: string;
@@ -21,6 +22,7 @@ const {
   title,
   description,
   canonical,
+  noindex = false,
   type = 'website',
   publishedAt,
   modifiedAt,
@@ -159,7 +161,7 @@ const structuredDataString = JSON.stringify(structuredData);
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content={description} />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
 <link rel="canonical" href={fullCanonical} />
 
 <!-- Open Graph -->

@@ -1,5 +1,6 @@
-# Canonical host: www → apex (must match Astro `site` + GSC primary property)
+# Canonical host: http → https + www → apex
 https://www.costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
+http://costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
 
 /sitemap.xml /sitemap-index.xml 301
 
@@ -36,3 +37,34 @@ https://www.costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
 /business/history/ /hot-dog/history/ 301
 /business/ /hot-dog/history/ 301
 /hot-dog/air-fryer-guide/ /tutorials/air-fryer/ 301
+
+# Fragment consolidation: merge thin /hot-dog/ sub-pages into core hubs
+# Nutrition cluster → /hot-dog/nutrition/
+/hot-dog/calories/ /hot-dog/nutrition/ 301
+/hot-dog/carbs/ /hot-dog/nutrition/ 301
+/hot-dog/fat/ /hot-dog/nutrition/ 301
+/hot-dog/protein/ /hot-dog/nutrition/ 301
+/hot-dog/protein-vs-calories/ /hot-dog/nutrition/ 301
+/hot-dog/comparison/ /hot-dog/nutrition/ 301
+# Ingredients cluster → /hot-dog/ingredients/
+/hot-dog/allergens/ /hot-dog/ingredients/ 301
+/hot-dog/toppings/ /hot-dog/ingredients/ 301
+/hot-dog/sauce/ /hot-dog/ingredients/ 301
+/hot-dog/cheese/ /hot-dog/ingredients/ 301
+/hot-dog/food-court/ /hot-dog/ingredients/ 301
+# Health/diet cluster → /hot-dog/healthy/
+/hot-dog/diet-tips/ /hot-dog/healthy/ 301
+/hot-dog/vegan/ /hot-dog/healthy/ 301
+/hot-dog/keto/ /hot-dog/healthy/ 301
+# History cluster → /hot-dog/history/
+/hot-dog/fun-facts/ /hot-dog/history/ 301
+/hot-dog/controversies/ /hot-dog/history/ 301
+# FAQ cluster → /hot-dog/faq/
+/hot-dog/faq/ /hot-dog/faq/ 301
+
+# Irrelevant content — redirect to relevant hot dog pages
+/articles/employee-retention/ /hot-dog/price-history/ 301
+/articles/supply-chain-efficiency/ /hot-dog/why-so-cheap/ 301
+/articles/pricing-strategy/ /hot-dog/price-history/ 301
+/reviews/furniture/ /reviews/ 301
+/reviews/vitamins/ /reviews/ 301

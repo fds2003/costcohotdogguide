@@ -1,57 +1,35 @@
 ---
 import { loadMenuItems } from '../lib/csv-loader.js';
 
-const menuItems = await loadMenuItems();
-const menuChildren = menuItems.map(item => ({
-  label: item.name,
-  href: `/menu/${item.slug}/`,
-}));
-menuChildren.push({ label: 'New & Discontinued', href: '/menu/new/' });
+// Menu items from CSV are no longer used in navigation (simplified)
+// Kept for potential future use
+const _menuItems = await loadMenuItems();
 
 const navItems = [
-  { label: 'Menu', href: '/menu/', children: menuChildren },
   { label: 'Hot Dog Guide', href: '/guide/', children: [
     { label: 'Complete Directory', href: '/hot-dog/' },
-    { label: 'Nutrition', href: '/hot-dog/nutrition/' },
+    { label: 'Nutrition Facts', href: '/hot-dog/nutrition/' },
     { label: 'Calories', href: '/hot-dog/calories/' },
-    { label: 'Protein vs Calories', href: '/hot-dog/protein-vs-calories/' },
-    { label: 'WW Points', href: '/nutrition/weight-watchers-points/' },
     { label: 'Ingredients', href: '/hot-dog/ingredients/' },
-    { label: 'Beef or Pork?', href: '/ingredients/beef-or-pork/' },
-    { label: 'Brand', href: '/ingredients/brand/' },
-    { label: 'Dietary Info', href: '/hot-dog/healthy/' },
+    { label: 'Price & History', href: '/hot-dog/price/' },
     { label: 'Cooking at Home', href: '/hot-dog/cooking-at-home/' },
-    { label: 'Recipe', href: '/cooking/recipe/' },
-    { label: 'FAQ', href: '/faq/' },
-    { label: 'History', href: '/hot-dog/history/' },
-    { label: 'Price', href: '/hot-dog/price/' },
+    { label: 'Dietary Info', href: '/hot-dog/healthy/' },
+    { label: 'FAQ', href: '/hot-dog/faq/' },
   ]},
-  { label: 'Articles', href: '/articles/', children: [
-    { label: 'Supply Chain', href: '/articles/supply-chain-efficiency/' },
-    { label: 'Pricing Strategy', href: '/articles/pricing-strategy/' },
-    { label: 'Membership Worth It?', href: '/articles/membership-worth-it/' },
-    { label: '$1.50 Miracle', href: '/articles/150-miracle/' },
-    { label: 'Food Court Menu', href: '/articles/food-court-menu/' },
-    { label: 'Employee Retention', href: '/articles/employee-retention/' },
-    { label: 'Is It Healthy?', href: '/articles/is-it-healthy/' },
-  ]},
-  { label: 'Tutorials', href: '/tutorials/', children: [
-    { label: 'Air Fryer Tutorial', href: '/tutorials/air-fryer/' },
-    { label: 'Calories Without Bun', href: '/tutorials/calories-without-bun/' },
-    { label: 'Food Court Calories', href: '/tutorials/food-court-calories/' },
+  { label: 'Food Court', href: '/menu/', children: [
+    { label: 'Full Menu', href: '/menu/' },
+    { label: 'New & Discontinued', href: '/menu/new/' },
+    { label: 'Crowd Prediction', href: '/data/crowd-prediction/' },
   ]},
   { label: 'Tools', href: '/tools/', children: [
-    { label: 'Nutrition Calculator', href: '/tools/nutrition-calculator/' },
     { label: 'Price History', href: '/tools/price-history/' },
+    { label: 'Nutrition Calculator', href: '/tools/nutrition-calculator/' },
   ]},
-  { label: 'Reviews', href: '/reviews/', highlight: true, children: [
-    { label: 'Kitchen Appliances', href: '/reviews/kitchen-appliances/' },
-    { label: 'Best Air Fryer', href: '/reviews/kitchen/best-air-fryer/' },
-    { label: 'Best Kitchen Scale', href: '/reviews/kitchen/best-kitchen-scale/' },
-    { label: 'Vitamins & Supplements', href: '/reviews/vitamins/' },
-    { label: 'Bulk Foods', href: '/reviews/bulk-foods/' },
-    { label: 'Camping Gear', href: '/reviews/camping-gear/' },
-    { label: 'Furniture', href: '/reviews/furniture/' },
+  { label: 'Articles', href: '/articles/', children: [
+    { label: 'Is It Healthy?', href: '/articles/is-it-healthy/' },
+    { label: 'Food Court Menu', href: '/articles/food-court-menu/' },
+    { label: 'Membership Worth It?', href: '/articles/membership-worth-it/' },
+    { label: '$1.50 Miracle', href: '/articles/150-miracle/' },
   ]},
   { label: 'Guides', href: '/guides/' },
   { label: 'Savings', href: '/savings/' },

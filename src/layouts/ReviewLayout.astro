@@ -17,6 +17,7 @@ export interface Props {
   publishedAt?: string;
   modifiedAt?: string;
   image?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -34,6 +35,7 @@ const {
   publishedAt = new Date().toISOString().split('T')[0],
   modifiedAt = new Date().toISOString().split('T')[0],
   image,
+  noindex,
 } = Astro.props;
 
 const siteOrigin = Astro.site?.origin ?? 'https://costcohotdogguide.com';
@@ -76,6 +78,7 @@ const productSchema = {
   publishedAt={publishedAt}
   modifiedAt={modifiedAt}
   image={image}
+  noindex={noindex}
 >
   <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
 

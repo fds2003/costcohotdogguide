@@ -28,12 +28,6 @@
     ],
     "/articles/150-miracle/": [
       {
-        "url": "/articles/employee-retention/",
-        "title": "Why Costco Employees Stay for Decades",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/articles/food-court-menu/",
         "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
         "funnelStage": "",
@@ -48,44 +42,6 @@
       {
         "url": "/articles/membership-worth-it/",
         "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/pricing-strategy/",
-        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/articles/employee-retention/": [
-      {
-        "url": "/articles/150-miracle/",
-        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/food-court-menu/",
-        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/is-it-healthy/",
-        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/membership-worth-it/",
-        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/pricing-strategy/",
-        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
         "funnelStage": "",
         "score": 0.7
       }
@@ -98,12 +54,6 @@
         "score": 0.7
       },
       {
-        "url": "/articles/employee-retention/",
-        "title": "Why Costco Employees Stay for Decades",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/articles/is-it-healthy/",
         "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
         "funnelStage": "",
@@ -112,12 +62,6 @@
       {
         "url": "/articles/membership-worth-it/",
         "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/pricing-strategy/",
-        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
         "funnelStage": "",
         "score": 0.7
       }
@@ -130,12 +74,6 @@
         "score": 0.7
       },
       {
-        "url": "/articles/employee-retention/",
-        "title": "Why Costco Employees Stay for Decades",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/articles/food-court-menu/",
         "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
         "funnelStage": "",
@@ -144,12 +82,6 @@
       {
         "url": "/articles/membership-worth-it/",
         "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/pricing-strategy/",
-        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
         "funnelStage": "",
         "score": 0.7
       }
@@ -162,12 +94,6 @@
         "score": 0.7
       },
       {
-        "url": "/articles/employee-retention/",
-        "title": "Why Costco Employees Stay for Decades",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/articles/food-court-menu/",
         "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
         "funnelStage": "",
@@ -176,118 +102,46 @@
       {
         "url": "/articles/is-it-healthy/",
         "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/pricing-strategy/",
-        "title": "7 Pricing Lessons from Costco's $1.50 Hot Dog",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/articles/pricing-strategy/": [
-      {
-        "url": "/articles/150-miracle/",
-        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/employee-retention/",
-        "title": "Why Costco Employees Stay for Decades",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/food-court-menu/",
-        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/is-it-healthy/",
-        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/membership-worth-it/",
-        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/articles/supply-chain-efficiency/": [
-      {
-        "url": "/articles/150-miracle/",
-        "title": "The $1.50 Miracle: Why Costco Hot Dog Never Changed Price",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/employee-retention/",
-        "title": "Why Costco Employees Stay for Decades",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/food-court-menu/",
-        "title": "Complete Costco Food Court Menu: Prices & Calories (2026)",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/is-it-healthy/",
-        "title": "Is the Costco Hot Dog Healthy? Evidence-Based Analysis",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/articles/membership-worth-it/",
-        "title": "Is Costco Membership Worth It? Full Cost-Benefit Analysis",
         "funnelStage": "",
         "score": 0.7
       }
     ],
     "/hot-dog/history/": [
       {
-        "url": "/business/",
-        "title": "Costco Hot Dog Business Story",
-        "funnelStage": "",
-        "score": 0.7
+        "url": "/tutorials/air-fryer/",
+        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
+        "funnelStage": "B",
+        "score": 0.8
       },
       {
-        "url": "/business/why-so-cheap/",
-        "title": "Why Is the Costco Hot Dog So Cheap?",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/business/": [
-      {
-        "url": "/hot-dog/history/",
-        "title": "Costco Hot Dog History: 40 Years of $1.50",
-        "funnelStage": "",
-        "score": 0.7
+        "url": "/hot-dog/cheese/",
+        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
+        "funnelStage": "B",
+        "score": 0.8
       },
       {
-        "url": "/business/why-so-cheap/",
-        "title": "Why Is the Costco Hot Dog So Cheap?",
-        "funnelStage": "",
-        "score": 0.7
+        "url": "/hot-dog/sauce/",
+        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
+        "funnelStage": "B",
+        "score": 0.8
+      },
+      {
+        "url": "/tutorials/air-fryer/",
+        "title": "Air Fryer Costco Hot Dog | Complete Guide",
+        "funnelStage": "B",
+        "score": 0.75
+      },
+      {
+        "url": "/hot-dog/cooking-at-home/",
+        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
+        "funnelStage": "B",
+        "score": 0.75
       }
     ],
     "/business/why-so-cheap/": [
       {
         "url": "/hot-dog/history/",
         "title": "Costco Hot Dog History: 40 Years of $1.50",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/business/",
-        "title": "Costco Hot Dog Business Story",
         "funnelStage": "",
         "score": 0.7
       }
@@ -1284,65 +1138,21 @@
     ],
     "/tutorials/air-fryer/": [
       {
-        "url": "/tutorials/air-fryer/",
-        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
-        "funnelStage": "B",
-        "score": 0.85
-      },
-      {
-        "url": "/hot-dog/faq/",
-        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
-        "funnelStage": "A",
+        "url": "/tutorials/calories-without-bun/",
+        "title": "Costco Hot Dog Calories Without Bun — Complete Breakdown",
+        "funnelStage": "",
         "score": 0.7
       },
       {
-        "url": "/hot-dog/allergens/",
-        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
-        "funnelStage": "A",
-        "score": 0.65
-      },
-      {
-        "url": "/hot-dog/calories/",
-        "title": "Costco Hot Dog Calories | Complete Breakdown",
-        "funnelStage": "A",
-        "score": 0.65
-      },
-      {
-        "url": "/hot-dog/carbs/",
-        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
-        "funnelStage": "A",
-        "score": 0.65
-      }
-    ],
-    "/tutorials/air-fryer/": [
-      {
-        "url": "/tutorials/air-fryer/",
-        "title": "Air Fryer Costco Hot Dog | Complete Guide",
-        "funnelStage": "B",
-        "score": 0.85
-      },
-      {
-        "url": "/hot-dog/faq/",
-        "title": "Costco Hot Dog FAQ | All Your Questions Answered",
-        "funnelStage": "A",
-        "score": 0.79
-      },
-      {
-        "url": "/hot-dog/allergens/",
-        "title": "Costco Hot Dog Allergens | Dairy, Soy, Gluten & More",
-        "funnelStage": "A",
+        "url": "/tutorials/food-court-calories/",
+        "title": "Costco Food Court Calories — Complete Guide",
+        "funnelStage": "",
         "score": 0.7
       },
       {
-        "url": "/hot-dog/calories/",
-        "title": "Costco Hot Dog Calories | Complete Breakdown",
-        "funnelStage": "A",
-        "score": 0.7
-      },
-      {
-        "url": "/hot-dog/carbs/",
-        "title": "Costco Hot Dog Carbs | Total & Net Carbohydrates",
-        "funnelStage": "A",
+        "url": "/tutorials/",
+        "title": "Tutorials & Guides — Costco Hot Dog Guide",
+        "funnelStage": "",
         "score": 0.7
       }
     ],
@@ -1763,38 +1573,6 @@
       }
     ],
     "/hot-dog/healthy/": [
-      {
-        "url": "/tutorials/air-fryer/",
-        "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
-        "funnelStage": "B",
-        "score": 0.8
-      },
-      {
-        "url": "/hot-dog/cheese/",
-        "title": "Best Cheese for Costco Hot Dog | Topping Guide",
-        "funnelStage": "B",
-        "score": 0.8
-      },
-      {
-        "url": "/hot-dog/sauce/",
-        "title": "Best Sauces for Costco Hot Dog | Condiment Guide",
-        "funnelStage": "B",
-        "score": 0.8
-      },
-      {
-        "url": "/tutorials/air-fryer/",
-        "title": "Air Fryer Costco Hot Dog | Complete Guide",
-        "funnelStage": "B",
-        "score": 0.75
-      },
-      {
-        "url": "/hot-dog/cooking-at-home/",
-        "title": "How to Cook Costco Hot Dog at Home | 4 Methods",
-        "funnelStage": "B",
-        "score": 0.75
-      }
-    ],
-    "/hot-dog/history/": [
       {
         "url": "/tutorials/air-fryer/",
         "title": "Costco Hot Dog Air Fryer | Perfect Cooking Guide",
@@ -2392,32 +2170,20 @@
     ],
     "/tutorials/calories-without-bun/": [
       {
-        "url": "/nutrition/calories/",
-        "title": "Costco Hot Dog Calories",
+        "url": "/tutorials/air-fryer/",
+        "title": "How to Cook Costco Hot Dog in Air Fryer",
         "funnelStage": "",
         "score": 0.7
       },
       {
-        "url": "/nutrition/",
-        "title": "Costco Hot Dog Nutrition Facts",
+        "url": "/tutorials/food-court-calories/",
+        "title": "Costco Food Court Calories — Complete Guide",
         "funnelStage": "",
         "score": 0.7
       },
       {
-        "url": "/nutrition/macros/",
-        "title": "Costco Hot Dog Macros: Fat, Carbs & Protein",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/nutrition/protein/",
-        "title": "Costco Hot Dog Protein",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/nutrition/weight-watchers-points/",
-        "title": "Costco Hot Dog Weight Watchers Points",
+        "url": "/tutorials/",
+        "title": "Tutorials & Guides — Costco Hot Dog Guide",
         "funnelStage": "",
         "score": 0.7
       }
@@ -2632,12 +2398,6 @@
         "score": 0.7
       },
       {
-        "url": "/reviews/furniture/",
-        "title": "Best Furniture Deals at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/reviews/",
         "title": "Costco Product Reviews",
         "funnelStage": "",
@@ -2646,12 +2406,6 @@
       {
         "url": "/reviews/kitchen-appliances/",
         "title": "Best Kitchen Appliances at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/vitamins/",
-        "title": "Best Vitamins to Buy at Costco",
         "funnelStage": "",
         "score": 0.7
       }
@@ -2664,12 +2418,6 @@
         "score": 0.7
       },
       {
-        "url": "/reviews/furniture/",
-        "title": "Best Furniture Deals at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/reviews/",
         "title": "Costco Product Reviews",
         "funnelStage": "",
@@ -2678,44 +2426,6 @@
       {
         "url": "/reviews/kitchen-appliances/",
         "title": "Best Kitchen Appliances at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/vitamins/",
-        "title": "Best Vitamins to Buy at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/reviews/furniture/": [
-      {
-        "url": "/reviews/bulk-foods/",
-        "title": "Best Bulk Foods at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/camping-gear/",
-        "title": "Best Camping Gear at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/",
-        "title": "Costco Product Reviews",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/kitchen-appliances/",
-        "title": "Best Kitchen Appliances at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/vitamins/",
-        "title": "Best Vitamins to Buy at Costco",
         "funnelStage": "",
         "score": 0.7
       }
@@ -2734,20 +2444,8 @@
         "score": 0.7
       },
       {
-        "url": "/reviews/furniture/",
-        "title": "Best Furniture Deals at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/reviews/kitchen-appliances/",
         "title": "Best Kitchen Appliances at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/vitamins/",
-        "title": "Best Vitamins to Buy at Costco",
         "funnelStage": "",
         "score": 0.7
       }
@@ -2782,52 +2480,8 @@
         "score": 0.7
       },
       {
-        "url": "/reviews/furniture/",
-        "title": "Best Furniture Deals at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
         "url": "/reviews/",
         "title": "Costco Product Reviews",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/vitamins/",
-        "title": "Best Vitamins to Buy at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/reviews/vitamins/": [
-      {
-        "url": "/reviews/bulk-foods/",
-        "title": "Best Bulk Foods at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/camping-gear/",
-        "title": "Best Camping Gear at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/furniture/",
-        "title": "Best Furniture Deals at Costco",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/",
-        "title": "Costco Product Reviews",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/reviews/kitchen-appliances/",
-        "title": "Best Kitchen Appliances at Costco",
         "funnelStage": "",
         "score": 0.7
       }
@@ -2886,46 +2540,6 @@
       {
         "url": "/tools/nutrition-calculator/",
         "title": "Costco Food Court Nutrition Calculator",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/tutorials/air-fryer/": [
-      {
-        "url": "/tutorials/calories-without-bun/",
-        "title": "Costco Hot Dog Calories Without Bun — Complete Breakdown",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/tutorials/food-court-calories/",
-        "title": "Costco Food Court Calories — Complete Guide",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/tutorials/",
-        "title": "Tutorials & Guides — Costco Hot Dog Guide",
-        "funnelStage": "",
-        "score": 0.7
-      }
-    ],
-    "/tutorials/calories-without-bun/": [
-      {
-        "url": "/tutorials/air-fryer/",
-        "title": "How to Cook Costco Hot Dog in Air Fryer",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/tutorials/food-court-calories/",
-        "title": "Costco Food Court Calories — Complete Guide",
-        "funnelStage": "",
-        "score": 0.7
-      },
-      {
-        "url": "/tutorials/",
-        "title": "Tutorials & Guides — Costco Hot Dog Guide",
         "funnelStage": "",
         "score": 0.7
       }
