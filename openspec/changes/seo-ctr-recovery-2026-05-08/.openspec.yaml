@@ -1,0 +1,7 @@
+schema: spec-driven
+created: 2026-05-08
+source_doc: "doc/costcohotdogguide.com SEO优化需求文档.md"
+solution_doc: "doc/costcohotdogguide.com-SEO-solution-v4-final.md"
+evidence: "/Users/fengdashuang/Downloads/costcohotdogguide.com-Performance-on-Search-2026-05-08.xlsx"
+repo_impl: "src/"
+latest_impl_commit: "e173b82"

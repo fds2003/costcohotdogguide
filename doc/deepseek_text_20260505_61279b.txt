@@ -1,0 +1,75 @@
+
+#### 2.2 “孤岛拯救”行动——系统性内链
+
+**原则：** 参考 `SITE-FRAMEWORK-CONTENT-DIRECTORY.md` 的信息架构，确保：
+- 每个页面在正文中**自然地**链接到同集群的其他页面。
+- 没有任何“孤岛”页面（没有任何其他页面链接过去的页面）。
+- 从首页到任何重要页面不超过3次点击。
+
+**执行清单：**
+
+- [ ] 在 `/hot-dog/calories/` 页面中，添加链接：“想全面了解营养成分？查看完整的 **Costco Hot Dog Nutrition Facts** 页面。”
+- [ ] 在 `/hot-dog/price/` 页面中，添加链接：“这个价格从1985年至今从未涨过，背后故事请看 **Price History Analysis**。”
+- [ ] 在 `/hot-dog/ingredients/` 页面中，添加链接：“有过敏担忧？查看完整的 **Allergen & Dietary FAQ**。”
+- [ ] 检查 `/guide/` 页面（展示量127次，点击0次），将其改造为内容导航目录，系统性地链向所有核心子页面。
+
+### 检查点
+
+- [ ] 网站所有主要页面是否都有清晰的、唯一的H1标签？
+- [ ] 核心页面是否都有H2/H3结构化的内容骨架？
+- [ ] 是否存在“孤岛”页面？能否从首页3次点击内到达所有重要页面？
+
+---
+
+## 阶段三：技术优化——结构化数据（中优先级 | 2-3周）
+
+### 理论依据
+
+**来源：** `SITE-FRAMEWORK-CONTENT-DIRECTORY.md` + Google搜索最佳实践
+
+- 你的站点已有 `SEO.astro` 公共组件，具备统一添加结构化数据的技术基础。
+- `/faq/` 下有大量问答型内容，`/cooking/recipe/` 是标准食谱页，这些天然适合做结构化数据标记。
+- Google 的 Rich Results（丰富网页摘要）能显著提升CTR，如FAQ下拉框、食谱卡片等。
+
+### 执行内容
+
+在你的 `SEO.astro` 组件中，根据页面类型动态添加 JSON-LD：
+
+**FAQPage Schema（FAQ相关页面）：**
+
+- 适用页面：`/faq/halal/`, `/faq/kosher/`, `/faq/nitrates/`, `/faq/how-big/` 等所有 `/faq/` 子页面。
+- 目标效果：在搜索结果中直接展示问答内容，占据更大SERP面积，提升CTR。
+
+**Recipe Schema（食谱页面）：**
+
+- 适用页面：`/cooking/recipe/`
+- 目标效果：在搜索结果中展示图片、评分、烹饪时间等丰富摘要。
+
+**Review Schema（评测页面）：**
+
+- 适用页面：`/reviews/kitchen/best-air-fryer/` 等所有 `/reviews/` 子页面
+- 目标效果：在搜索结果中展示星级评分。
+
+### 检查点
+
+- [ ] 使用 Google 的 [Rich Results Test](https://search.google.com/test/rich-results) 工具验证标记是否生效。
+- [ ] GSC中是否出现“常见问题”或“食谱”等富媒体搜索结果的展现数据。
+
+---
+
+## 阶段四：顶部入口页升级——`/guide/` 改造（中优先级 | 第2周）
+
+### 理论依据
+
+**数据来源：** GSC“网页”表
+
+- `/guide/` 页面展示量高达 **127次**，是网站最高展示页面之一，但点击为 **0次**。
+- 这说明页面当前未能满足用户预期。用户点进来想看到“终极指南”，但得到的可能只是一篇普通文章。
+
+### 执行内容
+
+将 `/guide/` 改造为一个**结构化导航中心**，而非普通文章页。让用户一眼就能找到想要的信息入口。
+
+**标题示例：** `The Ultimate Costco Hot Dog Guide 2026: Everything You Need to Know`
+
+**页面结构示例：**

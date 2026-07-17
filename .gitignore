@@ -1,0 +1,23 @@
+# Build output
+dist/
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+
+# Cache/temp
+.agnes/
+.firecrawl/
+.claude/
+.omc/
+.qoder/
+_tmp/
+
+# OS
+Thumbs.db

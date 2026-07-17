@@ -1,0 +1,42 @@
+topic: "从热点趋势到产品落地的完整流程"
+created: 2026-04-29
+current_round: 8
+
+decisions:
+  - id: D01
+    title: "为单人技术工程师推荐热词"
+    status: confirmed
+    confirmed_at: 6
+    doc_path: decisions/D01-recommended-keywords-for-solopreneur.md
+    summary: |
+      推荐3个适合单人工程师的热词：
+      1. Costco Hot Dog 指南站（3-5天，常青话题）
+      2. 数字梗解释站（2-3天，蓝海机会）
+      3. OPEC 油价追踪站（5-7天，高变现价值）
+
+  - id: D02
+    title: "否决 Inflaction Calculator 和 Oil Price 独立站"
+    status: rejected
+    confirmed_at: 6
+    doc_path: notes/keyword-competition-analysis.md
+    summary: |
+      Inflaction Calculator - 政府机构霸榜（bls.gov 21.3M外链）
+      Oil Price - 顶级媒体+政府机构霸屏
+
+  - id: D03
+    title: "Costco Hot Dog 降级为SEO练手/流量钩子"
+    status: confirmed
+    confirmed_at: 8
+    doc_path: notes/costco-hotdog-longtail-kd-analysis.md
+    summary: |
+      商业天花板极低（$80-350/月），无法商业闭环。
+      15+个KD<15长尾词适合练手，但仅作为流量钩子附属主站。
+
+  - id: D04
+    title: "GLP-1 Supplement Guide 确认为首选产品方向"
+    status: confirmed
+    confirmed_at: 8
+    doc_path: notes/glp1-supplement-product-opportunity.md
+    summary: |
+      评分3.0/3.0，49.5K月搜索量，+900%增长，
+      SERP无中立垂直站，Affiliate佣金$5-15/单。
