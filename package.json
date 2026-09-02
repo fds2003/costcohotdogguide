@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate-content": "node scripts/validate-content.js",
-    "build-content-index": "node scripts/build-content-index.js"
+    "build-content-index": "node scripts/build-content-index.js",
+    "indexnow": "node scripts/submit-indexnow.js"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",

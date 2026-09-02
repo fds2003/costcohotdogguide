@@ -1,8 +1,25 @@
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
-Disallow: /contact/
-Disallow: /about/
-Disallow: /privacy-policy/
-Disallow: /business/
+
+# Allow all content pages for crawling
+# Contact/About/Privacy are functional pages, not blocking them
+
 Sitemap: https://costcohotdogguide.com/sitemap-index.xml
+
+# Allow AI crawlers to index for AI Overview / Featured Snippets
+User-agent: GPTBot
+Allow: /
+Disallow:
+
+User-agent: Claude-Bot
+Allow: /
+Disallow:
+
+User-agent: CCBot
+Allow: /
+Disallow:
+
+User-agent: Applebot
+Allow: /
+Disallow:

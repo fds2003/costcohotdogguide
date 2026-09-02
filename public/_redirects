@@ -1,10 +1,18 @@
 # Canonical host: http → https + www → apex
-https://www.costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
+# Primary domain: costcohotdogguide.com (no www)
+
+# 1) http → https (all subpaths)
 http://costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
 
+# 2) www → apex (all subpaths)
+https://www.costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
+
+# 3) sitemap redirect
 /sitemap.xml /sitemap-index.xml 301
 
-# SEO dedup: redirect old duplicate URLs to canonical pages
+# === SEO dedup: redirect old duplicate URLs to canonical pages ===
+
+# Old dietetic pages → hot-dog/ equivalents
 /dietary/gluten-free/ /hot-dog/gluten-free/ 301
 /dietary/vegan/ /hot-dog/vegan/ 301
 /dietary/halal/ /faq/halal/ 301
@@ -13,22 +21,33 @@ http://costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
 /dietary/dairy-free/ /faq/dairy-free-buns/ 301
 /dietary/pork/ /ingredients/beef-or-pork/ 301
 /dietary/ /hot-dog/healthy/ 301
+
+# Old faq/ → hot-dog/ equivalents
 /faq/gluten-free/ /hot-dog/gluten-free/ 301
 /faq/vegan/ /hot-dog/vegan/ 301
 /faq/all-beef/ /ingredients/brand/ 301
 /faq/pork-content/ /ingredients/beef-or-pork/ 301
 /faq/beef/ /ingredients/beef-or-pork/ 301
+
+# Old nutrition/ → hot-dog/ equivalents
 /nutrition/calories/ /hot-dog/calories/ 301
 /nutrition/protein/ /hot-dog/protein/ 301
 /nutrition/macros/ /hot-dog/protein-vs-calories/ 301
 /nutrition/ /hot-dog/nutrition/ 301
+
+# Old price/ → hot-dog/ equivalents
 /price/ /hot-dog/price/ 301
 /price/price-increase/ /hot-dog/price/ 301
-/hot-dog/price-history/ /hot-dog/price/ 301
+
+# Old business/ → hot-dog/ equivalents
 /business/why-so-cheap/ /hot-dog/why-so-cheap/ 301
+
+# Old cooking/ → tutorials/ or hot-dog/ equivalents
 /cooking/air-fryer/ /tutorials/air-fryer/ 301
 /cooking/at-home/ /hot-dog/cooking-at-home/ 301
 /cooking/ /hot-dog/cooking-at-home/ 301
+
+# Old ingredients/ → hot-dog/ equivalents
 /ingredients/ingredients-list/ /hot-dog/ingredients/ 301
 
 # Round 2: additional duplicate content dedup
@@ -38,29 +57,27 @@ http://costcohotdogguide.com/* https://costcohotdogguide.com/:splat 301!
 /business/ /hot-dog/history/ 301
 /hot-dog/air-fryer-guide/ /tutorials/air-fryer/ 301
 
-# Fragment consolidation: merge thin /hot-dog/ sub-pages into core hubs
-# Nutrition cluster → /hot-dog/nutrition/
-/hot-dog/calories/ /hot-dog/nutrition/ 301
-/hot-dog/carbs/ /hot-dog/nutrition/ 301
-/hot-dog/fat/ /hot-dog/nutrition/ 301
-/hot-dog/protein/ /hot-dog/nutrition/ 301
-/hot-dog/protein-vs-calories/ /hot-dog/nutrition/ 301
-/hot-dog/comparison/ /hot-dog/nutrition/ 301
-# Ingredients cluster → /hot-dog/ingredients/
-/hot-dog/allergens/ /hot-dog/ingredients/ 301
-/hot-dog/toppings/ /hot-dog/ingredients/ 301
-/hot-dog/sauce/ /hot-dog/ingredients/ 301
-/hot-dog/cheese/ /hot-dog/ingredients/ 301
-/hot-dog/food-court/ /hot-dog/ingredients/ 301
-# Health/diet cluster → /hot-dog/healthy/
-/hot-dog/diet-tips/ /hot-dog/healthy/ 301
-/hot-dog/vegan/ /hot-dog/healthy/ 301
-/hot-dog/keto/ /hot-dog/healthy/ 301
-# History cluster → /hot-dog/history/
-/hot-dog/fun-facts/ /hot-dog/history/ 301
-/hot-dog/controversies/ /hot-dog/history/ 301
-# FAQ cluster → /hot-dog/faq/
-/hot-dog/faq/ /hot-dog/faq/ 301
+# === IMPORTANT: Removed fragment consolidation redirects ===
+# These were hurting SEO by redirecting high-impression standalone pages:
+# /hot-dog/calories/ → /hot-dog/nutrition/ (581 impressions lost!)
+# /hot-dog/carbs/ → /hot-dog/nutrition/ (21 impressions)
+# /hot-dog/fat/ → /hot-dog/nutrition/
+# /hot-dog/protein/ → /hot-dog/nutrition/ (6 impressions)
+# /hot-dog/protein-vs-calories/ → /hot-dog/nutrition/
+# /hot-dog/comparison/ → /hot-dog/nutrition/ (16 impressions)
+# /hot-dog/allergens/ → /hot-dog/ingredients/
+# /hot-dog/toppings/ → /hot-dog/ingredients/
+# /hot-dog/sauce/ → /hot-dog/ingredients/
+# /hot-dog/cheese/ → /hot-dog/ingredients/
+# /hot-dog/food-court/ → /hot-dog/ingredients/
+# /hot-dog/diet-tips/ → /hot-dog/healthy/
+# /hot-dog/vegan/ → /hot-dog/healthy/
+# /hot-dog/keto/ → /hot-dog/healthy/
+# /hot-dog/fun-facts/ → /hot-dog/history/
+# /hot-dog/controversies/ → /hot-dog/history/
+#
+# These pages have unique content and deserve their own index slots.
+# Internal linking between them handles the topic cluster naturally.
 
 # Irrelevant content — redirect to relevant hot dog pages
 /articles/employee-retention/ /hot-dog/price-history/ 301

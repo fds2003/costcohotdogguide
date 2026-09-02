@@ -5,7 +5,7 @@ import AdUnit from '../components/AdUnit.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 
 const publishedAt = '2026-04-29';
-const modifiedAt = '2026-05-08';
+const modifiedAt = '2026-07-17';
 ---
 
 <BaseLayout
@@ -46,10 +46,13 @@ const modifiedAt = '2026-05-08';
         <a href="/hot-dog/sodium/" class="text-red-700 hover:underline font-medium">Sodium content</a>
         <a href="/ingredients/" class="text-red-700 hover:underline font-medium">Ingredients</a>
         <a href="/hot-dog/price/" class="text-red-700 hover:underline font-medium">Price &amp; regions</a>
-        <a href="/tools/price-history/" class="text-red-700 hover:underline font-medium">Interactive price history</a>
-        <a href="/hot-dog/price-history/" class="text-red-700 hover:underline font-medium">Price story &amp; timeline</a>
-        <a href="/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
-        <a href="/menu/new/" class="text-red-700 hover:underline font-medium">Menu changes</a>
+        <a href="/hot-dog/combo-calories/" class="text-red-700 hover:underline font-medium">Combo calories (with drink)</a>
+        <a href="/menu/hot-dog-menu/" class="text-red-700 hover:underline font-medium">Menu &amp; combos 2026</a>
+        <a href="/hot-dog/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
+        <a href="/hot-dog/history/" class="text-red-700 hover:underline font-medium">History</a>
+        <a href="/hot-dog/healthy/" class="text-red-700 hover:underline font-medium">Health analysis</a>
+        <a href="/tutorials/air-fryer/" class="text-red-700 hover:underline font-medium">Air fryer cooking</a>
+        <a href="/tools/price-history/" class="text-red-700 hover:underline font-medium">Price history tool</a>
       </div>
     </nav>
 
@@ -91,7 +94,7 @@ const modifiedAt = '2026-05-08';
           <p class="text-lg font-semibold text-gray-900">Interactive chart</p>
         </div>
       </div>
-      <a href="/tools/price-history/" class="inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700">查看交互式历史图表 -></a>
+      <a href="/tools/price-history/" class="inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700">View Interactive Price History →</a>
     </section>
 
     <section class="not-prose mb-10" aria-label="Popular FAQ direct answers">
@@ -100,27 +103,27 @@ const modifiedAt = '2026-05-08';
         <div class="rounded-lg border border-gray-200 bg-white p-4">
           <h3 class="text-lg font-semibold text-gray-900">Is Costco hot dog kosher?</h3>
           <p class="text-gray-700 mt-1">No. It is all-beef but not officially kosher certified.</p>
-          <a href="/hot-dog/faq/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[了解更多]</a>
+          <a href="/faq/kosher-status/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[Learn more]</a>
         </div>
         <div class="rounded-lg border border-gray-200 bg-white p-4">
           <h3 class="text-lg font-semibold text-gray-900">How much sodium is in a Costco hot dog?</h3>
           <p class="text-gray-700 mt-1">Roughly 1,700mg per hot dog with bun.</p>
-          <a href="/hot-dog/faq/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[了解更多]</a>
+          <a href="/hot-dog/sodium/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[Learn more]</a>
         </div>
         <div class="rounded-lg border border-gray-200 bg-white p-4">
           <h3 class="text-lg font-semibold text-gray-900">Does the bun contain dairy?</h3>
           <p class="text-gray-700 mt-1">Usually no dairy, but formulas can vary by supplier and region.</p>
-          <a href="/hot-dog/faq/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[了解更多]</a>
+          <a href="/faq/dairy-free-buns/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[Learn more]</a>
         </div>
         <div class="rounded-lg border border-gray-200 bg-white p-4">
           <h3 class="text-lg font-semibold text-gray-900">How are Costco hot dogs cooked?</h3>
           <p class="text-gray-700 mt-1">They are typically heated/held at food-court service equipment for fast turnover.</p>
-          <a href="/hot-dog/faq/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[了解更多]</a>
+          <a href="/hot-dog/cooking-at-home/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[Learn more]</a>
         </div>
         <div class="rounded-lg border border-gray-200 bg-white p-4">
-          <h3 class="text-lg font-semibold text-gray-900">Where are Costco hot dogs sourced?</h3>
-          <p class="text-gray-700 mt-1">Kirkland all-beef supply is managed through Costco's own production system.</p>
-          <a href="/hot-dog/faq/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[了解更多]</a>
+          <h3 class="text-lg font-semibold text-gray-900">How does Costco make their hot dogs?</h3>
+          <p class="text-gray-700 mt-1">Through a vertically integrated supply chain — direct beef sourcing, contracted manufacturing, and efficient distribution.</p>
+          <a href="/articles/how-costco-makes-hot-dogs/" class="text-red-700 text-sm font-medium hover:underline mt-2 inline-block">[Learn more]</a>
         </div>
       </div>
     </section>
@@ -144,7 +147,7 @@ const modifiedAt = '2026-05-08';
           <li>Price: $1.50 (unchanged since 1985)</li>
           <li>Weight: 1/4 pound (4 oz)</li>
           <li>Meat: 100% USDA Choice beef</li>
-          <li>Drink: 20 oz soda with free refills</li>
+          <li>Drink: 20 oz soda with free refills (or water since 2026)</li>
           <li>Available at: Costco food courts worldwide</li>
         </ul>
       </div>
@@ -171,12 +174,12 @@ const modifiedAt = '2026-05-08';
         </tbody>
       </table>
       <p class="mt-4">
-        <a href="/hot-dog/nutrition/" class="text-red-700 font-semibold hover:underline">View detailed nutrition information &rarr;</a>
+        <a href="/hot-dog/nutrition/" class="text-red-700 font-semibold hover:underline">View detailed nutrition information →</a>
       </p>
 
       <h2 id="fast-food-comparison" class="text-2xl font-bold text-gray-900 mt-10 mb-4">How Costco Compares to Other Fast Food Hot Dogs</h2>
       <p>
-        The Costco combo feels high-calorie at first glance, but context matters: portion size and price-per-calorie are very different from convenience-store or stadium hot dogs. Use this quick benchmark before deciding whether Costco is “worse” or just “bigger.”
+        The Costco combo feels high-calorie at first glance, but context matters: portion size and price-per-calorie are very different from convenience-store or stadium hot dogs. Use this quick benchmark before deciding whether Costco is "worse" or just "bigger."
       </p>
       <table class="w-full border-collapse border border-gray-300 mt-4">
         <thead>
@@ -219,7 +222,7 @@ const modifiedAt = '2026-05-08';
       </p>
 
       <div class="my-8">
-        <AdUnit slot="in_content_2" type="in-article" format="auto" minHeight="250px" />
+        <AdUnit type="in-article" format="auto" slot="in_content_2" minHeight="250px" />
       </div>
 
       <h2 id="ingredients" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Ingredients</h2>
@@ -230,7 +233,7 @@ const modifiedAt = '2026-05-08';
         The bun contains: enriched wheat flour, water, sugar, yeast, soybean oil, salt, and preservatives.
       </p>
       <p class="mt-4">
-        <a href="/ingredients/" class="text-red-700 font-semibold hover:underline">Full ingredients breakdown &rarr;</a>
+        <a href="/ingredients/beef-vs-pork/" class="text-red-700 font-semibold hover:underline">Full ingredients breakdown →</a>
       </p>
 
       <h2 id="dietary-restrictions" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Dietary Restrictions</h2>
@@ -243,12 +246,12 @@ const modifiedAt = '2026-05-08';
           <span class="font-semibold text-gray-900">Gluten Free</span>
           <span class="block text-sm text-gray-600 mt-1">No — bun contains wheat flour</span>
         </a>
-        <a href="/faq/halal/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
-          <span class="font-semibold text-gray-900">Halal</span>
+        <a href="/faq/kosher-status/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">Kosher</span>
           <span class="block text-sm text-gray-600 mt-1">Not officially certified</span>
         </a>
-        <a href="/faq/kosher/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
-          <span class="font-semibold text-gray-900">Kosher</span>
+        <a href="/faq/halal/" class="block p-4 bg-white border border-gray-200 rounded-lg hover:border-red-300 hover:shadow transition">
+          <span class="font-semibold text-gray-900">Halal</span>
           <span class="block text-sm text-gray-600 mt-1">Not officially certified</span>
         </a>
       </div>
@@ -262,14 +265,14 @@ const modifiedAt = '2026-05-08';
         Costco's hot dog is a loss leader — the company deliberately keeps the price low to drive foot traffic and reinforce its brand image as the ultimate value retailer. Former CEO W. Craig Jelinek once told Costco co-founder Jim Sinegal that he couldn't keep the price at $1.50. Sinegal's response: "If you raise the price of the hot dog, I will kill you. Figure it out."
       </p>
       <p class="mt-4">
-        <a href="/hot-dog/why-so-cheap/" class="text-red-700 font-semibold hover:underline">Read the full business story &rarr;</a>
+        <a href="/hot-dog/why-so-cheap/" class="text-red-700 font-semibold hover:underline">Read the full business story →</a>
       </p>
 
       <h2 id="extended-faq" class="text-2xl font-bold text-gray-900 mt-10 mb-4">Extended FAQ (10 Quick Answers)</h2>
       <div class="space-y-4">
         <div>
           <h3 class="text-xl font-semibold text-gray-800">1) How many calories are in a Costco hot dog with bun?</h3>
-          <p>About 570 calories for hot dog plus bun; without the bun it is roughly 360 calories.</p>
+          <p>About 570 calories for hot dog plus bun; without the bun it is roughly 360 calories. <a href="/hot-dog/combo-calories/" class="text-red-700 hover:underline">See full combo breakdown.</a></p>
         </div>
         <div>
           <h3 class="text-xl font-semibold text-gray-800">2) How much sodium does it have?</h3>
@@ -277,7 +280,7 @@ const modifiedAt = '2026-05-08';
         </div>
         <div>
           <h3 class="text-xl font-semibold text-gray-800">3) Is Costco hot dog kosher?</h3>
-          <p>No official kosher certification at the food-court level.</p>
+          <p>No official kosher certification at the food-court level. <a href="/faq/kosher-status/" class="text-red-700 hover:underline">Learn why →</a></p>
         </div>
         <div>
           <h3 class="text-xl font-semibold text-gray-800">4) Is it gluten-free?</h3>
@@ -293,7 +296,7 @@ const modifiedAt = '2026-05-08';
         </div>
         <div>
           <h3 class="text-xl font-semibold text-gray-800">7) Does the combo always include soda?</h3>
-          <p>Typical US combo includes fountain drink options; availability can vary by warehouse and policy updates.</p>
+          <p>Typical US combo includes fountain drink options; <a href="/menu/hot-dog-menu/" class="text-red-700 hover:underline">water option added in 2026</a>.</p>
         </div>
         <div>
           <h3 class="text-xl font-semibold text-gray-800">8) Is it healthy for regular consumption?</h3>
@@ -318,7 +321,7 @@ const modifiedAt = '2026-05-08';
         All values here are practical planning estimates, not medical advice. Suppliers, serving sizes, and food-court policies can change by region and date.
       </p>
       <p class="text-sm text-gray-500 mt-2">
-        Last editorial update: 2026-05-08. Next scheduled review: 2026 Q3.
+        Last editorial update: 2026-07-17. Next scheduled review: 2026 Q4.
       </p>
     </div>
 
@@ -344,9 +347,13 @@ const modifiedAt = '2026-05-08';
       <h3 class="text-xl font-bold text-gray-900 mb-4">Explore More</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <a href="/hot-dog/nutrition/" class="text-red-700 hover:underline font-medium">Nutrition Details</a>
-        <a href="/ingredients/" class="text-red-700 hover:underline font-medium">Ingredients List</a>
+        <a href="/ingredients/beef-vs-pork/" class="text-red-700 hover:underline font-medium">Ingredients List</a>
         <a href="/hot-dog/cooking-at-home/" class="text-red-700 hover:underline font-medium">Cook at Home</a>
-        <a href="/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
+        <a href="/hot-dog/faq/" class="text-red-700 hover:underline font-medium">FAQ</a>
+        <a href="/menu/hot-dog-menu/" class="text-red-700 hover:underline font-medium">Menu & Combos</a>
+        <a href="/articles/how-costco-makes-hot-dogs/" class="text-red-700 hover:underline font-medium">Supply Chain</a>
+        <a href="/hot-dog/combo-calories/" class="text-red-700 hover:underline font-medium">Combo Calories</a>
+        <a href="/faq/kosher-status/" class="text-red-700 hover:underline font-medium">Kosher Status</a>
       </div>
     </div>
   </article>
